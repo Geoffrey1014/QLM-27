@@ -1,7 +1,7 @@
 # QLM Artifact
 
-Reproduction package for the paper *"QLM: Compositional CodeQL Query
-Synthesis from Bug-Fix Seed Patches"* (submission version).
+Reproduction package for the paper *"Seed Patches to CodeQL Queries: Compositional
+Synthesis with Proof-of-Concept Validation"* (submission version).
 
 QLM synthesizes CodeQL queries that detect a bug pattern, using a
 single bug-fix commit (the *seed*) as the specification. This artifact
