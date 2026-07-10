@@ -1,0 +1,33 @@
+{
+  "seed_id": "err-4",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "c021e0235770",
+  "subject": "usb: gadget: legacy: fix error return code of multi_bind()",
+  "c_file": "drivers/usb/gadget/legacy/multi.c",
+  "pattern": "error-return-code",
+  "llm_calls": 4,
+  "compile_iters": 4,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "48a3746e01f5f67e2482c477e0eb3375badb3aa9234572044b33bfafe938dff5",
+  "predicate_iters": {
+    "isStatusReturnFunction": 1,
+    "isFailureBranchGoto": 1,
+    "statusUnsetAtGoto": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 468,
+  "notes": [
+    "Second-retry generation (Anthropic weekly-limit reset confirmed via probe).",
+    "POC regenerated once after the initial variant-rich draft tripped verifier-v1 on F2.if/F3.goto/F5.return counts; second draft trimmed to just the _buggy and _fixed twin functions mirroring the seed slice, verifier-v1 OK (F1.acq=0 F1.rel=0 F3.goto=2 F5.ret=5 F2.if=2).",
+    "Plan mirrors the err-1-rep1 design pattern but parametrises on the local-variable name found in this seed (`status` instead of `err`). Stage-4 dependency wiring: statusUnsetAtGoto duplicates isFailureBranchGoto in its standalone test query (dependency body is re-inlined as required by topo-order rule).",
+    "All three predicates validated on the first compile+run iteration; final.ql compiled clean and the Stage-5 oracle pass on first attempt: 1 row, multi_bind_buggy line 34, silent on multi_bind_fixed."
+  ]
+}

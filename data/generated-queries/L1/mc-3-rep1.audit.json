@@ -1,0 +1,17 @@
+{
+  "seed_id": "mc-3",
+  "repeat": 1,
+  "cell": "L1",
+  "fix_sha": "6fc232db9e8c",
+  "llm_calls": 0,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"derefBeforeNullCheck": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 145.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused features/POC/plan/poc-db from L0/mc-3-rep1 (verifier already passed, POC sha unchanged). Plan has 1 predicate (<=2 cap). Predicate compiled 1st try, final compiled 1st try. Analyze completed on poc-db with 1 result on rfkill_register_buggy. Accepted per L1 (compile OK; pair-wise oracle OFF)."
+}

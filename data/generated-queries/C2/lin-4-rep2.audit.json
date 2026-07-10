@@ -1,0 +1,24 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-4",
+  "repeat": 2,
+  "commit_sha": "1332661e09304b7b8e84e5edc11811ba08d12abe",
+  "llm_calls": 7,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "acquires_node": 0,
+    "releases_node": 0,
+    "same_node": 0,
+    "reaches_without_release": 0,
+    "leak_at": 0
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 120.0,
+  "final_predicates_differ_from_stage3": false,
+  "notes": "Subagent acted as the LLM; predicates filled and assembled in one pass and compiled successfully on first attempt. Bug pattern: of_parse_phandle/of_node_put refcount leak (same family as lin-1)."
+}

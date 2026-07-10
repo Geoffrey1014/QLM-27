@@ -1,0 +1,33 @@
+{
+  "seed_id": "err-1",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "620b90d30c08",
+  "subject": "mtd: maps: fix error return code of physmap_flash_remove()",
+  "c_file": "drivers/mtd/maps/physmap-core.c",
+  "pattern": "error-return-code",
+  "llm_calls": 4,
+  "compile_iters": 5,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "42f42953e78e0adb49b3bdccf339fca50e16b6e5b3ac2d337cdfe673378578ac",
+  "predicate_iters": {
+    "isErrReturnFunction": 1,
+    "isFailureBranchGoto": 1,
+    "errIsZeroAtGoto": 2
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 618,
+  "notes": [
+    "Probe run for weekly-limit reset; pipeline completed end-to-end.",
+    "POC regenerated once after the initial variant-rich draft failed verifier-v1 on F1/F2/F3/F5 counts; second draft keeps only _buggy and _fixed twin functions mirroring the seed slice, verifier-v1 OK.",
+    "errIsZeroAtGoto needed one refine iteration (iter 1 over-fired on the `if (err) goto out;` branch in both variants; iter 2 added an exclusion for if-conditions that read err itself).",
+    "Stage-5 oracle: final.ql fires on physmap_flash_remove_buggy line 48, silent on physmap_flash_remove_fixed. No FP variants present in POC."
+  ]
+}

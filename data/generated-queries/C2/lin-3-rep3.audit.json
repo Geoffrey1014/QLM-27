@@ -1,0 +1,22 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-3",
+  "repeat": 3,
+  "commit_sha": "bf4a9b2467b775717d0e9034ad916888e19713a3",
+  "llm_calls": 7,
+  "compile_iters": 6,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "acquiresNode": 1,
+    "releasesNode": 1,
+    "returnReachableFrom": 2,
+    "noReleaseOnPath": 1
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 212,
+  "final_predicates_differ_from_stage3": false
+}

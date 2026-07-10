@@ -1,0 +1,29 @@
+{
+  "cell": "C1",
+  "seed_id": "lin-3",
+  "rep": 4,
+  "seed_sha": "bf4a9b2467b7",
+  "c_file": "sound/soc/samsung/aries_wm8994.c",
+  "subject": "ASoC: samsung: Fix refcount leak in aries_audio_probe",
+  "status": "pass",
+  "llm_calls": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_lenient": false,
+  "verifier_verdict": "OK(F1.acq=2 F1.rel=2 F3.goto=0 F5.ret=9 F2.if=4)",
+  "poc_sha256": "ee51448c0514eb93569905d81183a11d33b16fa1212f91b0586bd530bbfceb73",
+  "compile_iters": 0,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-3-rep4/query.ql",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-3-rep4/POC.c",
+  "poc_db_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-3-rep4/poc-db/db",
+  "wall_seconds": 261,
+  "notes": [
+    "POC seeded from lin-3-rep1-work/POC.c.tmp (well-formed and compiles).",
+    "Crafted a paired buggy+fixed verifier-only seed slice so v1 count-comparison passes strict (POC also has 2 functions; counts match).",
+    "Query passed compile and POC oracle on first attempt: 0 repair iters."
+  ]
+}

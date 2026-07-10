@@ -1,0 +1,20 @@
+{
+  "seed_id": "mc-4",
+  "repeat": 2,
+  "cell": "C3",
+  "fix_sha": "c9c63915519b",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isSmbusReadApi": 1,
+    "isUsedInArithExprUnchecked": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 491.0,
+  "notes": "POC needed one structural rewrite to match seed verifier counts (drop void-variant implicit returns; collapse oracle into 2 primary functions). Both predicates validated first try; final.ql fires on set_fan_div_buggy only — silent on set_fan_div_fixed."
+}

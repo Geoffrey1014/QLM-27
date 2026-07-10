@@ -1,0 +1,22 @@
+{
+  "seed_id": "lu-4",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "9bbfceea12a8",
+  "llm_calls": 3,
+  "compile_iters": 1,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isPlatformDeviceAlloc": 1,
+    "isPlatformDevicePut": 1,
+    "getAcquiredVariable": 1,
+    "hasReturnAfterAcquireWithoutPut": 2
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 26952,
+  "notes": "Retry after D3-main spend-limit abort; reused prior features.json and seed.c skeleton; regenerated POC to match verifier-v1 counts (if=7 goto=3 ret=7). wall_seconds includes prior aborted attempt start_ts."
+}

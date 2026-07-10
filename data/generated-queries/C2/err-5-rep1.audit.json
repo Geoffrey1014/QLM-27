@@ -1,0 +1,27 @@
+{
+  "cell": "C2",
+  "seed_id": "err-5",
+  "repeat": 1,
+  "commit_sha": "31d82c2c787d5cf65fedd35ebbc0c1bd95c1a679",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_alloc_call": 0,
+    "alloc_to_var": 0,
+    "null_check_of": 0,
+    "is_cleanup_goto": 1,
+    "assigns_error_code": 0,
+    "null_goto_missing_errcode": 0
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 60.0,
+  "notes": [
+    "Seed err-5 is an error-return missing-errcode bug, not a resource-leak; interpreted target_api=allocator, post_operation=assignment of -errno to ret before goto cleanup.",
+    "Single compile-repair iteration: GotoStmt.getTarget() returns Stmt without getName; replaced with g.getName() which returns label name directly."
+  ]
+}

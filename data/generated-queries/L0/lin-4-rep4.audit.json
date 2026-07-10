@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-4",
+  "repeat": 4,
+  "cell": "L0",
+  "fix_sha": "1332661e0930",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isDeviceNodeAcquisition": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 263.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC verifier v1 OK on first pass. Final compile+analyze both succeeded on POC mini-DB; fired on of_get_dram_timings_buggy (recorded, not gating for L0)."
+}

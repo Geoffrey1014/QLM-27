@@ -1,0 +1,28 @@
+{
+  "cell": "C2",
+  "seed_id": "err-4",
+  "repeat": 2,
+  "commit_sha": "c021e0235770",
+  "c_file": "drivers/usb/gadget/legacy/multi.c",
+  "subject": "usb: gadget: legacy: fix error return code of multi_bind()",
+  "llm_calls": 4,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "alloc_assignment": 0,
+    "null_check_guard": 0,
+    "goto_inside_null_branch": 0,
+    "status_like_variable": 0,
+    "status_assigned_in_branch": 0,
+    "missing_status_set": 0
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "notes": [
+    "Stage4 single repair: renamed local 'as' to 'assignStmt' (reserved keyword collision)."
+  ]
+}

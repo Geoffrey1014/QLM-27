@@ -1,0 +1,27 @@
+{
+  "cell": "C2",
+  "seed_id": "err-5",
+  "repeat": 2,
+  "commit_sha": "31d82c2c787d",
+  "c_file": "kernel/kexec_file.c",
+  "subject": "kernel: kexec_file: fix error return code of kexec_calculate_store_digests()",
+  "llm_calls": 8,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_alloc_call": 0,
+    "assigned_from_alloc": 0,
+    "is_cleanup_goto": 0,
+    "null_check_then_goto": 0,
+    "assigns_error_to_ret": 0,
+    "missing_error_assignment": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 71.0,
+  "final_predicates_differ_from_stage3": false,
+  "notes": "Compositional 6-predicate decomposition targeting err-return pattern: alloc -> NULL-check -> goto cleanup without assigning negative error code to ret. Compile passed on iter 0."
+}

@@ -1,0 +1,23 @@
+{
+  "cell": "C1",
+  "seed_id": "dgfp-1",
+  "rep": 3,
+  "status": "pass",
+  "llm_calls": 2,
+  "compile_iters": 0,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "lenient_pass": true,
+  "verifier_verdict": "MISMATCH(F2.if: seed=1, poc=2) [lenient: F2.if delta=1]",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_sha256": "fb4a7feb00c9754a19449663d5a606601cd307e624fd854c8222842d254fd185",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-1-rep3.ql",
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "notes": [
+    "POC regen 1: aligned _buggy/_fixed control flow with kernel resume function.",
+    "Seed-extract refined to align F2.if and F5.return counts (lenient F2.if delta=1).",
+    "Query uses %_resume% / %_suspend% etc. wildcard matches so it fires on _buggy variant without hard-coding _buggy/_fixed."
+  ]
+}

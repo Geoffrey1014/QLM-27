@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-1",
+  "repeat": 3,
+  "cell": "L1",
+  "fix_sha": "74139a64e8ce",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isOfNodeAcquire": 1, "hasOfNodePutIn": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 95.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. N_PRED=2 (isOfNodeAcquire + hasOfNodePutIn); assembly folds null-guard/fixed-variant exclusion. Features/POC/poc-db reused from C3 rep3 (verifier-v1 OK). Both preds and final compiled first try (no refine iters needed); final analyze on poc-db returned 1 buggy row (not gated per L1 ablation)."
+}

@@ -1,0 +1,36 @@
+{
+  "seed_id": "lin-5",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "10d6bdf53290",
+  "subject": "ata: pata_octeon_cf: Fix refcount leak in octeon_cf_probe",
+  "c_file": "drivers/ata/pata_octeon_cf.c",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "2bb6bf450690a4daa56b93f1e690e67360312c093cd7cc9f2874e71894979eb0",
+  "poc_reused_from": "lin-5-rep1",
+  "predicate_iters": {
+    "isAcquire": 1,
+    "isRelease": 1,
+    "hasMissingRelease": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "oracle": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 167,
+  "notes": [
+    "Reused features.json, seed.c, poc.c, poc-db from lin-5-rep1 (POC sha256 verified, no drift).",
+    "POC contains only single _buggy variant; oracle satisfied since no _fixed/fp variants present to false-positive on.",
+    "Plan decomposed into 3 predicates: isAcquire (of_find_device_by_node), isRelease (put_device), hasMissingRelease (acquire without put_device anywhere in enclosing function).",
+    "All predicates passed validation on first iteration; final query compiled and ran with expected oracle outcome."
+  ]
+}

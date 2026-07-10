@@ -1,0 +1,26 @@
+{
+  "cell": "C2",
+  "seed_id": "err-1",
+  "repeat": 5,
+  "commit_sha": "620b90d30c08684dc6ebee07c72755d997f9d1f6",
+  "c_file": "drivers/mtd/maps/physmap-core.c",
+  "function_name": "physmap_flash_remove",
+  "llm_calls": 8,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isErrorReturnVar": 0,
+    "isCleanupGoto": 0,
+    "isFailureCheckIf": 0,
+    "gotoOnFailurePath": 0,
+    "assignsErrorBeforeGoto": 0,
+    "missingErrorAssignment": 0
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 100
+}

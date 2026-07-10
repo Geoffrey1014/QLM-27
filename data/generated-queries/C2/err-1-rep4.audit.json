@@ -1,0 +1,22 @@
+{
+  "cell": "C2",
+  "seed_id": "err-1",
+  "repeat": 4,
+  "commit_sha": "620b90d30c08",
+  "llm_calls": 6,
+  "compile_iters": 5,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "errReturningFunction": 1,
+    "zeroInitErrVariable": 1,
+    "gotoInNullCheckWithoutErrAssign": 1,
+    "gotoTargetReturnsErr": 1
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 202
+}

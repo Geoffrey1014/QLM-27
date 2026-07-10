@@ -1,0 +1,20 @@
+{
+  "cell": "C1",
+  "seed_id": "err-3",
+  "rep": 3,
+  "seed_sha": "26594c6bbb60",
+  "c_file": "drivers/rpmsg/qcom_glink_native.c",
+  "subject": "rpmsg: qcom_glink_native: fix error return code of qcom_glink_rx_data()",
+  "poc_sha256": "71095890ada325e9bd2fb0ae07e20459c9729bcb8b1fa8f562e10cf212fd278e",
+  "llm_calls": 4,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": false,
+  "verifier_note": "verifier-v1 build step failed because seed-buggy.c is raw kernel source with non-self-contained header deps (infra limitation, not POC quality). Proceeded with POC after manual review of patch + buggy function; POC mirrors control flow (init ret=0, error path takes goto to cleanup label without ret reassignment, returns ret).",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "status": "ok",
+  "wall_seconds": 274
+}

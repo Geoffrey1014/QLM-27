@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-4",
+  "repeat": 2,
+  "cell": "L1",
+  "fix_sha": "9bbfceea12a8",
+  "llm_calls": 0,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isPlatformDeviceAllocCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 119.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused features/POC/plan/POC-DB from prior L0/lu-4-rep2 run (all artifacts already verifier-v1 OK). N_PRED=1 (isPlatformDeviceAllocCall). Both predicate .ql and final.ql compiled cleanly on first attempt; no compile-repair iterations needed (0 out of L1 cap of 2). Final query analyzed on poc-db and produced 3 hits (including line 126, the true bug return). L1 accepts on compile+analyze success without pair-wise oracle gating."
+}

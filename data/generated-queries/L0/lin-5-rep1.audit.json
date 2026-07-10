@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-5",
+  "repeat": 1,
+  "cell": "L0",
+  "fix_sha": "10d6bdf53290",
+  "llm_calls": 4,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isAcquireCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 640.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC regenerated once to satisfy verifier-v1 count-equality. Final query compiles and fires on _buggy in POC (pair-wise oracle NOT gated per L0 spec)."
+}

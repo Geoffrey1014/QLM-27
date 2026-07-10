@@ -1,0 +1,36 @@
+{
+  "cell": "C2",
+  "seed_id": "mc-1",
+  "repeat": 4,
+  "commit_sha": "e85bb0beb649",
+  "c_file": "drivers/input/touchscreen/ad7879.c",
+  "subject": "Input: ad7879 - add check for read errors in interrupt",
+  "llm_calls": 6,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isRegmapBulkReadCall": 0,
+    "returnValueDiscarded": 0,
+    "notUsedInCondition": 0,
+    "uncheckedRegmapBulkRead": 0
+  },
+  "assembly_iters": 0,
+  "final_predicates_differ_from_stage3": false,
+  "features": {
+    "target_api": "regmap_bulk_read",
+    "post_operation": "check return value (error code)",
+    "critical_variable": "return value of regmap_bulk_read",
+    "path_conditions": "any call site where the int return value is discarded; subsequent code depends on read buffer being valid",
+    "fits_pattern": true,
+    "fit_test_reasoning": "regmap_bulk_read returns an int error code that callers must inspect before relying on the read buffer. The bug is the canonical missing-check pattern: call without examining the return value. Post-operation here is an error-check guard rather than a release call, fitting the missing-check variant of the four-features schema."
+  },
+  "wall_seconds": 26.0,
+  "notes": [
+    "C2 cell: compositional decomposition into 4 named predicates, no POC, compile-only validation.",
+    "Both compile invocations (predicate scaffold and final assembly) passed first try, no repairs needed."
+  ]
+}

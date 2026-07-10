@@ -1,0 +1,22 @@
+{
+  "seed_id": "lu-1",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "b6631c6031c7",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isAcquireCall": 1,
+    "isReleaseCall": 1,
+    "isErrorReturnAfter": 1,
+    "noReleaseBetween": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 147.0,
+  "notes": "Retry of prior aborted attempt. Pre-existing stage 1-5 outputs from 2026-06-30 05:53-06:00 reused after re-verification: POC re-verified OK against verifier-v1 (single-row count parity), poc-db rebuilt with CodeQL 2.25.6, final.ql recompiled and re-analyzed on poc-db (fires twice on sctp_sf_do_5_2_4_dupcook_buggy at error-return lines 23 and 26; no _fixed/_fp_ variants in POC so silence vacuous)."
+}

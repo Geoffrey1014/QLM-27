@@ -1,0 +1,34 @@
+{
+  "seed_id": "err-3",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "26594c6bbb60",
+  "subject": "rpmsg: qcom_glink_native: fix error return code of qcom_glink_rx_data()",
+  "c_file": "drivers/rpmsg/qcom_glink_native.c",
+  "pattern": "error-return-code",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "34d4ced2630475b0fd5342d0d29348ddc14970171b24d32166cdc55e954b70fa",
+  "predicate_iters": {
+    "isErrReturnFunction": 1,
+    "isFailureBranchGoto": 1,
+    "retIsZeroAtGoto": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 606,
+  "notes": [
+    "2nd retry after weekly-limit reset; pipeline ran end-to-end without refines.",
+    "POC adopted the err-1-rep1 twin-shape recipe: _buggy mirrors the pre-fix slice; _fixed adds `ret = -ENOENT;` before each goto on both error branches (deliberately stronger than the real fix, which only patched the !intent branch — needed so Stage-5 oracle stays clean).",
+    "verifier-v1 OK on first try (F1.acq=0 F1.rel=0 F3.goto=4 F5.ret=5 F2.if=6).",
+    "predicate-3 (retIsZeroAtGoto) is the discriminator: fires twice on _buggy (both !channel and !intent gotos) and zero times on _fixed.",
+    "final.ql: 2 hits on _buggy (lines 55, 66), 0 on _fixed — oracle pass."
+  ]
+}

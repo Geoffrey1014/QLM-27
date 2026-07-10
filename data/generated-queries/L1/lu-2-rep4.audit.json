@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-2",
+  "repeat": 4,
+  "cell": "L1",
+  "fix_sha": "2289adbfa559",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isAcquisition": 1, "hasMatchingRelease": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 229.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused features/poc/poc-db from lu-2-rep1 prep (verifier already passed). Two-predicate plan (isAcquisition + hasMatchingRelease); both predicates compiled iter 1; assemble compiled iter 1; analyze completed (empty result on poc-db is fine — L1 does not gate on pair-wise oracle)."
+}

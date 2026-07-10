@@ -1,0 +1,26 @@
+{
+  "cell": "C1",
+  "seed_id": "lu-1",
+  "rep": 1,
+  "status": "pass",
+  "llm_calls": 3,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "verifier_lenient_pass": false,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=2 F5.ret=6 F2.if=4)",
+  "poc_sha256": "9dcd486fcc4eec4a3e54260d1965c08857cbb45e480478a2a5a9b0b35e6840dd",
+  "compile_iters": 2,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_fired_on_buggy": true,
+  "poc_fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-1-rep1.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-1-rep1/",
+  "wall_seconds": 428,
+  "notes": [
+    "POC regen 1: initial POC had if/goto/return counts mismatched against seed slice; regenerated with simplified control-flow scaffold to match seed totals (4 ifs, 2 gotos, 6 returns).",
+    "Repair iter 1: query required existence of a same-variable cleanup call elsewhere in the function — POC's _buggy intentionally has no such call, so query produced 0 rows; removed that requirement.",
+    "Repair iter 2 (final): discriminator is 'if-then contains a ReturnStmt, the if-condition does not mention the pointer, and the then-branch performs no call on the pointer'. Fires on _buggy.sctp_sf_do_5_2_4_dupcook_buggy:46 and stays silent on _fixed.",
+    "POC sha unchanged across the run (drift check passed)."
+  ]
+}

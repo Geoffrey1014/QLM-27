@@ -1,0 +1,38 @@
+{
+  "cell": "C1",
+  "seed_id": "lin-2",
+  "seed_sha": "9a2ea132df86",
+  "rep_id": "rep3",
+  "poc_sha256": "3a581d7c474bfe4971c39bef6823e081e9fad63e3a76b2f1979c2c6d83bcb13d",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=3 F5.ret=4 F2.if=6)",
+  "verifier_mode": "strict",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_results": {
+    "fired_locations": ["POC.c:116 (inside ssi_probe_buggy)"],
+    "fired_on_buggy": true,
+    "fired_on_fixed": false
+  },
+  "artifacts": {
+    "query_ql": "experiments/rq3/d3/C1/lin-2-rep3.ql",
+    "rep_dir": "experiments/rq3/d3/C1/lin-2-rep3-work/",
+    "poc": "experiments/rq3/d3/C1/lin-2-rep3-work/POC.c",
+    "poc_db": "experiments/rq3/d3/C1/lin-2-rep3-work/poc-db-stage/db",
+    "qlpack": "experiments/rq3/d3/C1/lin-2-rep3-work/qlpack.yml",
+    "poc_run_csv": "experiments/rq3/d3/C1/lin-2-rep3-work/poc-run.csv",
+    "seed_slice": "experiments/rq3/d3/C1/lin-2-rep3-work/seed-slice.c",
+    "poc_for_verifier": "experiments/rq3/d3/C1/lin-2-rep3-work/poc-for-verifier.c"
+  },
+  "wall_time_seconds_estimate": 480,
+  "notes": [
+    "Acted-as-LLM (Claude Opus 4.7 in-session) for POC + query generation per D3-main spec.",
+    "First POC passed verifier-v1 strictly on the first try; no regen needed (poc_regens=0).",
+    "Query compiled cleanly on first synthesis. compile_iters=2 = first eval was silent (acquire was in while-condition, not body), so one refine iteration was applied broadening 'exprInsideStmt' to 'exprInLoop' (handles loop header expressions). After repair, oracle PASS: fires once at POC.c:116 inside ssi_probe_buggy (the leaking 'goto out3') and silent on ssi_probe_fixed.",
+    "POC frozen with chmod 444 and sha256 recorded in experiments/rq3/poc-sha.json under key '9a2ea132df86-rep3-C1'.",
+    "qlpack.yml scaffolding written next to query.ql so 'codeql query compile' resolves codeql/cpp-all dependency."
+  ]
+}

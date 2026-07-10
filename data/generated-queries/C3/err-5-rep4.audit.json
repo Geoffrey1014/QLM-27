@@ -1,0 +1,34 @@
+{
+  "seed_id": "err-5",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "31d82c2c787d",
+  "subject": "kernel: kexec_file: fix error return code of kexec_calculate_store_digests()",
+  "c_file": "kernel/kexec_file.c",
+  "pattern": "error-return-code",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "ee9bcf5e8b44d17e728c5d8bf712b4b48f738d7faf1e8b413ffeddcc2ca13c23",
+  "predicate_iters": {
+    "isErrReturnFunction": 1,
+    "isFailureBranchGoto": 1,
+    "errIsZeroAtGoto": 2
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 449,
+  "notes": [
+    "2nd retry after weekly-limit reset probe; pipeline completed end-to-end.",
+    "POC verifier-v1 passed on first attempt: OK(F1.acq=4 F1.rel=6 F3.goto=16 F5.ret=3 F2.if=28).",
+    "Reused err-1 family query design (3 compositional predicates) but generalized the err-variable name set to {err, ret, rc} since this seed uses `ret` (and the broader error-return-code pattern across the kernel uses all three).",
+    "errIsZeroAtGoto needed one refine iteration: iter 1 over-fired on `if (IS_ERR(tfm)) { ret = PTR_ERR(tfm); goto out; }` branches because PTR_ERR(tfm) is a FunctionCall with no constant Value, so the exclusion `a.getRValue().getValue() != \"0\"` failed to filter it. Iter 2 inverted the logic to `not a.getRValue().getValue() = \"0\"`, which correctly treats any non-literal-0 assignment (including function-call results) as setting the err variable.",
+    "Final.ql fires exactly once on kexec_calculate_store_digests_buggy:83 (the if (!sha_regions) goto out_free_desc; with ret still 0), silent on _fixed (ret = -ENOMEM precedes goto). No FP variants present in POC."
+  ]
+}

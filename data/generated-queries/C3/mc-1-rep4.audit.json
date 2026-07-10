@@ -1,0 +1,24 @@
+{
+  "seed_id": "mc-1",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "e85bb0beb649",
+  "c_file": "drivers/input/touchscreen/ad7879.c",
+  "commit_subject": "Input: ad7879 - add check for read errors in interrupt",
+  "pattern": "missing-check",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isRegmapReadApi": 1,
+    "isReturnDiscarded": 1,
+    "isInFixedFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 378.0,
+  "notes": "Reused features.json/seed.c from prior mc-1-rep1 prep (same input, deterministic stage 1). Initial POC (v2 from rep1) failed verifier-v1 (F2.if=2 vs seed=1, F5.return=12 vs seed=2); regenerated as a slim _buggy-only POC matching seed structural counts exactly (F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=2 F2.if=1). All 3 predicates validated first pass. Final.ql compiled first pass and fires only on ad7879_irq_buggy as expected. Audit poc_regens=1 reflects the one POC redesign; LLM calls counted as 3 (features+poc+plan) since rep1's features/seed were deterministic re-use."
+}

@@ -1,0 +1,37 @@
+{
+  "seed_id": "lu-5",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "450c3d416683",
+  "subject": "affs: fix a memory leak in affs_remount",
+  "c_file": "fs/affs/super.c",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 7,
+  "poc_regens": 3,
+  "verifier_passes": true,
+  "poc_sha256": "1aa6f1c678b65032841c138b978892699893461bda320f1f549abb2090bbfd46",
+  "predicate_iters": {
+    "isKstrdup": 1,
+    "isKfree": 1,
+    "getAcquiredVar": 1,
+    "freesVar": 1,
+    "hasLeakingReturn": 1,
+    "isInFixedFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 612,
+  "notes": [
+    "Retry generation after spend-limit abort; fresh artifacts for rep4.",
+    "POC regenerated 3 times (cap) before verifier-v1 accepted (release=3, goto=0, return=6, if=5 matched seed).",
+    "Final POC structurally mirrors the seed (single affs_remount_buggy + main) per the verifier-v1-strict convention used by lu-4-rep1.",
+    "Final.ql fires on affs_remount_buggy (line 72 kstrdup); no _fixed/_fp_ functions in mini-DB so silence trivially satisfied.",
+    "Stage4 used 6 compile iters across 6 predicates (1 each); Stage5 used 1 compile iter (rerun after select-message tweak)."
+  ]
+}

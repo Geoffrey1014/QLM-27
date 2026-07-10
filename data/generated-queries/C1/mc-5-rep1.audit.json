@@ -1,0 +1,27 @@
+{
+  "cell": "C1",
+  "seed_id": "mc-5",
+  "rep": 1,
+  "seed_sha": "d6cb77228e3a",
+  "c_file": "drivers/pinctrl/intel/pinctrl-baytrail.c",
+  "subject": "pinctrl: baytrail: Fix potential NULL pointer dereference",
+  "status": "pass",
+  "poc_sha256": "5b55d8c508d1312a0275828759b4a30e3db87de30c896825a3b6764c3d749c45",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "verifier_lenient": false,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=5 F2.if=4)",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "wall_seconds": 284,
+  "STATUS": "ok",
+  "notes": [
+    "Seed-slice authored manually (full kernel TU does not compile standalone).",
+    "POC regenerated once to align F2.if and F5.return counts with seed-slice (verifier strict pass on round 2).",
+    "Query passed compile and POC oracle on first iteration (no repair iters needed)."
+  ]
+}

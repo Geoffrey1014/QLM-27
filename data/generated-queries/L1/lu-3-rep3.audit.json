@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-3",
+  "repeat": 3,
+  "cell": "L1",
+  "fix_sha": "f141a422159a",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isPmGetSync": 1, "returnsWithoutPut": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 269.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF"
+}

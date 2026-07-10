@@ -1,0 +1,28 @@
+{
+  "cell": "C2",
+  "seed_id": "lu-2",
+  "repeat": 5,
+  "commit_sha": "2289adbfa559050d2a38bcd9caac1c18b800e928",
+  "llm_calls": 6,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "allocates_resource": 1,
+    "frees_variable": 1,
+    "function_has_cleanup_free": 1,
+    "early_return_skips_free": 1
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 140.0,
+  "features": {
+    "target_api": "kmalloc",
+    "post_operation": "kfree",
+    "critical_variable": "buf",
+    "path_conditions": "Early return without freeing kmalloc'd buffer when function has cleanup label/path",
+    "fits_pattern": true
+  }
+}

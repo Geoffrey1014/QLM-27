@@ -1,0 +1,21 @@
+{
+  "seed_id": "err-3",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "26594c6bbb60",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isRetReturnFunction": 1,
+    "isFailureBranchGoto": 1,
+    "retIsZeroAtGoto": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 590.0,
+  "notes": "POC fixed-variant tightened mid-run so the !channel branch also assigns ret = -ENOENT, so retIsZeroAtGoto stays silent on _fixed. Verifier-v1 OK row: F1.acq=2 F1.rel=0 F3.goto=4 F5.ret=9 F2.if=12. Final query fires on both gotos in _buggy and is silent on _fixed."
+}

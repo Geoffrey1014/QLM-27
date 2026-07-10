@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-4",
+  "repeat": 2,
+  "cell": "C3",
+  "fix_sha": "9bbfceea12a8",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isAcquire": 1, "isRelease": 1, "leakyReturn": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 182.0,
+  "notes": "Resumed from prior aborted run (features/poc/verifier/plan already in place). Stage 4 + Stage 5 completed this session: 3 predicates validated each in 1 iter; final.ql compiles and fires only on _buggy variant (no _fixed/_fp variants in POC)."
+}

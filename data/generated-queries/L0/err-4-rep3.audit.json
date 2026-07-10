@@ -1,0 +1,17 @@
+{
+  "seed_id": "err-4",
+  "repeat": 3,
+  "cell": "L0",
+  "fix_sha": "c021e0235770",
+  "llm_calls": 4,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isErrnoAssignedOnPath": 1},
+  "final_compiles": false,
+  "final_runs_on_poc": false,
+  "status": "fail",
+  "fail_stage": "predicate:isErrnoAssignedOnPath",
+  "wall_seconds": 348.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Predicate compile failed: getAControlFlowNode() not resolvable for AssignExpr in cpp lib; no repair allowed under L0."
+}

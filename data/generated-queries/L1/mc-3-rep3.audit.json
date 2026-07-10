@@ -1,0 +1,31 @@
+{
+  "seed_id": "mc-3",
+  "repeat": 3,
+  "cell": "L1",
+  "fix_sha": "6fc232db9e8c",
+  "c_file": "net/rfkill/core.c",
+  "subject": "rfkill: Fix incorrect check to avoid NULL pointer dereference",
+  "pattern": "missing-check",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=7 F2.if=2)",
+  "poc_sha256": "7c2f40dff8e2ee56cc1537f6229b9c56619241955cedcbccda658d7e314c3459",
+  "predicate_iters": {
+    "derefsPointerParam": 1,
+    "nullChecksParam": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "oracle": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "note": "L1 does not gate on oracle; recorded for audit only"
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 267.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. N_PRED=2 (derefsPointerParam, nullChecksParam). Features/POC reused from prior mc-3 setup (verifier-v1 OK). Both predicates compiled clean on 1st iter; assembly compiled clean on 1st iter; analyze completed. L1 accepts on compile+analyze success regardless of pair-wise oracle (which coincidentally also passed: buggy fires, fixed silent)."
+}

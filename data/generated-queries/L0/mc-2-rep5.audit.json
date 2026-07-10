@@ -1,0 +1,17 @@
+{
+  "seed_id": "mc-2",
+  "repeat": 5,
+  "cell": "L0",
+  "fix_sha": "09acf29c8246",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isKernelAllocCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 335.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC/features/seed reused from mc-2-rep1 (identical seed, verifier-v1 OK re-run with rep5 stem). Predicate isKernelAllocCall compiles cleanly and runs on poc-db; final.ql compiles and produces 3 rows on POC (init_priv_buggy + tp2 + tp3 as expected)."
+}

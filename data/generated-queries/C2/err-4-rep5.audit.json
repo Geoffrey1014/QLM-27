@@ -1,0 +1,30 @@
+{
+  "cell": "C2",
+  "seed_id": "err-4",
+  "repeat": 5,
+  "commit_sha": "c021e0235770",
+  "c_file": "drivers/usb/gadget/legacy/multi.c",
+  "subject": "usb: gadget: legacy: fix error return code of multi_bind()",
+  "llm_calls": 8,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "returns_status_var": 0,
+    "is_error_label": 0,
+    "goto_to_error_label": 0,
+    "assigns_status_before_goto": 0,
+    "goto_in_failure_branch": 0,
+    "buggy_goto": 0
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 110.0,
+  "notes": [
+    "C2 pipeline executed in-session by the cell-runner; predicate bodies were authored as one assembled query and validated by codeql query compile (Stage 4 gate). Single compile attempt succeeded.",
+    "Adapted four-features semantics to error-return seed: target_api=usb_otg_descriptor_alloc, post_operation=assign negative errno to status, critical_variable=status, path_conditions=failure-checking branches gotoing error labels."
+  ]
+}

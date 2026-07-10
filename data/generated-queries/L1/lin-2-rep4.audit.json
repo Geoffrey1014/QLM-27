@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-2",
+  "repeat": 4,
+  "cell": "L1",
+  "fix_sha": "9a2ea132df86",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isForEachAvailableChildLoop": 1, "hasOfNodePutBefore": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 262.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused features/poc/verifier/poc-db from L0 rep4 (same seed content). Plan generated with N_PRED=2 (isForEachAvailableChildLoop + hasOfNodePutBefore). All compile stages passed first try (0 refine iters). Final query fires on POC line 94 (goto out3, buggy path) — accepted per L1 rule (any successful compile+analyze)."
+}

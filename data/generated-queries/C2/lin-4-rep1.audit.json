@@ -1,0 +1,31 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-4",
+  "repeat": 1,
+  "commit_sha": "1332661e09304b7b8e84e5edc11811ba08d12abe",
+  "llm_calls": 7,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isAcquireCall": 0,
+    "acquiredInto": 0,
+    "isReleaseCall": 0,
+    "returnsWithoutRelease": 0,
+    "hasRefcountLeak": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 60.0,
+  "features": {
+    "target_api": "of_parse_phandle",
+    "post_operation": "of_node_put",
+    "critical_variable": "np_ddr",
+    "path_conditions": "Every return path after of_parse_phandle() succeeds must call of_node_put() on the returned device_node before returning, including error paths.",
+    "fits_pattern": true,
+    "fit_test_reasoning": "of_parse_phandle returns a device_node with incremented refcount (acquire). of_node_put is a release/cleanup, not data transformation. Missing the release causes a refcount leak on the device_node, which is a resource leak. Follows acquire/use/release semantics."
+  },
+  "final_predicates_differ_from_stage3": false
+}

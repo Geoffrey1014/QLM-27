@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "lin-3",
+  "repeat_idx": 2,
+  "commit_sha": "bf4a9b2467b775717d0e9034ad916888e19713a3",
+  "c_file": "sound/soc/samsung/aries_wm8994.c",
+  "commit_subject": "ASoC: samsung: Fix refcount leak in aries_audio_probe",
+  "llm_calls": 1,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 65.0,
+  "model": "claude-opus-4-7",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

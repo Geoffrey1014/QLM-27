@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-4",
+  "repeat": 5,
+  "cell": "L0",
+  "fix_sha": "9bbfceea12a8",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isMissingPutOnErrorPath": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 578.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC regenerated once to match seed structural feature counts for verifier-v1 (F2.if=7 F3.goto=3 F5.ret=7). Final query fires on 2 returns in POC (line 80 = if (!dwc->dwc3) return -ENOMEM benign FP; line 105 = the true bug return ret after platform_device_add_properties)."
+}

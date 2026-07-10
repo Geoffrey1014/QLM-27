@@ -1,0 +1,21 @@
+{
+  "seed_id": "lin-3",
+  "repeat": 1,
+  "cell": "L1",
+  "fix_sha": "bf4a9b2467b7",
+  "c_file": "sound/soc/samsung/aries_wm8994.c",
+  "subject": "ASoC: samsung: Fix refcount leak in aries_audio_probe",
+  "pattern": "four-features-Lin",
+  "llm_calls": 0,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "da261be375dfafb164a97ce5e3d329acc95f317c0d090d1699896eeecdd60509",
+  "predicate_iters": {"hasReturnBeforeRelease": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 167.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Features/POC/plan/poc-db reused verbatim from L0 lin-3-rep1 cache (POC is invariant to query-side ablations). Plan has 1 predicate (within L1 cap of 2). Predicate hasReturnBeforeRelease compiled first try (no refine iters used, well under L1 cap of 2). Final query compiled first try (no assemble-refine iters used, well under L1 cap of 2). Ran on poc-db and fired on the buggy variant. L1 accepts any successfully compiled final regardless of pair-wise oracle. llm_calls=0 because all LLM outputs (features, poc, plan) were cached from L0/C3."
+}

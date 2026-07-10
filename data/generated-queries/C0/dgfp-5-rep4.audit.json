@@ -1,0 +1,19 @@
+{
+  "cell": "C0",
+  "seed_id": "dgfp-5",
+  "repeat_idx": 4,
+  "commit_sha": "9f96b9b7d836",
+  "c_file": "drivers/pci/endpoint/functions/pci-epf-test.c",
+  "commit_subject": "PCI: endpoint: Replace mdelay with usleep_range() in pci_epf_test_write()",
+  "llm_calls": 1,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 92,
+  "model": "claude-opus-4-7",
+  "temperature": 0.2,
+  "stop_reason": "ok",
+  "query_sha256": "b53b0815cd3c1706c9868c3bb20874c0fb0658802ad99f79e7616606b3d43c4d"
+}

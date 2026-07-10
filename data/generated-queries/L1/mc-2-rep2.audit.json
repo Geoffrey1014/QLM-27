@@ -1,0 +1,17 @@
+{
+  "seed_id": "mc-2",
+  "repeat": 2,
+  "cell": "L1",
+  "fix_sha": "09acf29c8246",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 3,
+  "verifier_passes": true,
+  "predicate_iters": {"isAllocCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 159.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused L0 mc-2-rep2 features/POC/plan (Stage 1-3 identical); predicate isAllocCall compiled clean iter 1 (no refine), final.ql compiled clean iter 1 (no refine). L1 compile-repair caps (<=2 per pred, <=2 assemble) not exercised."
+}

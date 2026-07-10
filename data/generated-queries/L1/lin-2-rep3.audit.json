@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-2",
+  "repeat": 3,
+  "cell": "L1",
+  "fix_sha": "9a2ea132df86",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"usesForEachAvailChild": 1, "lacksOfNodePut": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 229.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused shared prep artifacts (features/poc/seed/verifier/poc-db) from d5-prep/L0/lin-2-rep3. N_PRED=2 (within cap 2). Both predicates compiled iter 1; final compiled iter 1; analyze fires on probe_buggy."
+}

@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-1",
+  "repeat": 1,
+  "cell": "L1",
+  "fix_sha": "b6631c6031c7",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"allocatesResource": 1, "hasMissingRelease": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 166.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. 2 predicates (allocatesResource, hasMissingRelease). All compiled first try. Reused features/POC/DB from L0 rep1 (same seed)."
+}

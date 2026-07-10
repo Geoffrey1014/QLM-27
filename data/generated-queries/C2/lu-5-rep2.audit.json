@@ -1,0 +1,27 @@
+{
+  "cell": "C2",
+  "seed_id": "lu-5",
+  "repeat": 2,
+  "commit_sha": "450c3d416683",
+  "llm_calls": 6,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_alloc_call_to_var": 1,
+    "is_free_call_on_var": 1,
+    "function_frees_var": 1,
+    "function_returns_var": 0,
+    "alloc_in_function_without_full_release": 0
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 141,
+  "final_predicates_differ_from_stage3": false,
+  "notes": [
+    "Features: target_api=kstrdup, post_operation=kfree, critical_variable=new_opts",
+    "Pattern: missing kfree on success/error paths after kstrdup; ownership not transferred"
+  ]
+}

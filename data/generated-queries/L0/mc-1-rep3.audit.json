@@ -1,0 +1,17 @@
+{
+  "seed_id": "mc-1",
+  "repeat": 3,
+  "cell": "L0",
+  "fix_sha": "e85bb0beb649",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isReadCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 104.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC verifier OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=2 F2.if=1). Final query fires on regmap_bulk_read call in ad7879_irq_buggy (poc.c:47)."
+}

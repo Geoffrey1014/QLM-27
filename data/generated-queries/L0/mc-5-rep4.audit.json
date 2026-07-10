@@ -1,0 +1,27 @@
+{
+  "seed_id": "mc-5",
+  "repeat": 4,
+  "cell": "L0",
+  "fix_sha": "d6cb77228e3a",
+  "c_file": "drivers/pinctrl/intel/pinctrl-baytrail.c",
+  "subject": "pinctrl: baytrail: Fix potential NULL pointer dereference",
+  "pattern": "missing-check",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=7 F2.if=4)",
+  "predicate_iters": {"isAllocCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_oracle_recorded": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "buggy_hits": ["byt_gpio_probe_buggy:line42", "probe_buggy_tp1:line79"]
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 143.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Features and POC reused from mc-5 C3 rep4 (same seed, identical LLM/prompt). Plan emits exactly 1 predicate (isAllocCall) with dereference / null-check-absence / fixture-exclusion logic folded into assembly where-clause. Final compile succeeded on first try (L0 accept criterion). POC oracle recorded but not used as accept criterion."
+}

@@ -1,0 +1,20 @@
+{
+  "cell": "C1",
+  "seed_id": "mc-1",
+  "rep": 2,
+  "status": "fail",
+  "reason": "poc-verifier-fail",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 2,
+  "verifier_passes": false,
+  "lenient_pass": false,
+  "final_compiles": false,
+  "final_runs_on_poc": false,
+  "verdict_last": ["MISMATCH(F2.if: seed=1, poc=2)", "MISMATCH(F5.return: seed=1, poc=3)"],
+  "notes": [
+    "verifier-v1 calibrated for resource-leak (acquire/release) patterns; missing-check (mc) seed structurally cannot match return-count gate because POC requires _buggy()+_fixed()+main() = 3 returns minimum vs seed slice = 1.",
+    "Per C1 prompt §3 lenient_pass only covers F2.if/F3.goto with |delta|<=1; F5.return mismatch is hard-fail.",
+    "3 POC regens exhausted (initial + 2 retries trying void return, ternary fold)."
+  ]
+}

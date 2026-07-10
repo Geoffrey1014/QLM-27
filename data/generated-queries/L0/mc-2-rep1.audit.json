@@ -1,0 +1,27 @@
+{
+  "seed_id": "mc-2",
+  "repeat": 1,
+  "cell": "L0",
+  "fix_sha": "09acf29c8246",
+  "c_file": "drivers/staging/rtl8192u/r8192U_core.c",
+  "subject": "staging: rtl8192u: null check the kzalloc",
+  "pattern": "missing-check",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=11 F1.rel=2 F3.goto=0 F5.ret=17 F2.if=6)",
+  "predicate_iters": {"isAllocCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_oracle_recorded": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "buggy_hits": ["init_priv_buggy:line39", "init_blob_buggy_tp2:line70", "init_blob_buggy_tp3:line79"]
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 204.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Features and POC reused from mc-2 C3 rep1 (same seed, identical LLM/prompt). Plan emits exactly 1 predicate (isAllocCall) with the null-check/deref/exclusion logic folded into the assembly where-clause. Final compile succeeded on first try (L0 accept criterion). POC oracle recorded but not used as accept criterion."
+}

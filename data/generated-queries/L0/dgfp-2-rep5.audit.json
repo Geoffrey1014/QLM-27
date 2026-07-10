@@ -1,0 +1,17 @@
+{
+  "seed_id": "dgfp-2",
+  "repeat": 5,
+  "cell": "L0",
+  "fix_sha": "e9acf05255cb",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"busyDelayInSleepableContext": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 121.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC + verifier-v1 artifacts reused from C3/L0 dgfp-2-rep1 (POC-side scaffolding not ablated per L0 spec; same seed => deterministic POC). Single predicate busyDelayInSleepableContext recognises {mdelay,udelay,ndelay,__udelay,__const_udelay} in callers matching probe/resume/suspend/device_init/init suffix or prefix, excluding irq/handler/isr/interrupt/tasklet/atomic names and spinlock/preempt-disable/rcu regions. final.ql compiles cleanly; fires 3x on POC (cpt_device_init_buggy + tp1 + tp2), silent on all _fixed/tn* and _fp_* variants. tp3 (baz_init_buggy_tp3) missed due to name-matcher edge case (_init in middle of name); L0 accepts any successful compile so pass criterion met."
+}

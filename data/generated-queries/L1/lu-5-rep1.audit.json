@@ -1,0 +1,26 @@
+{
+  "seed_id": "lu-5",
+  "repeat": 1,
+  "cell": "L1",
+  "fix_sha": "450c3d416683",
+  "c_file": "fs/affs/super.c",
+  "subject": "affs: fix a memory leak in affs_remount",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isKstrdupAlloc": 1,
+    "hasFreeOfVar": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": false,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 396.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Both predicates compiled on first try; final query compiled and analyzed successfully. Empty result on poc-db is acceptable at L1 (pair-wise oracle disabled)."
+}

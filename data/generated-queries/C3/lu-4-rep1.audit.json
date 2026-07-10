@@ -1,0 +1,21 @@
+{
+  "seed_id": "lu-4",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "9bbfceea12a8",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isPlatformDeviceAlloc": 1,
+    "acquiredVariable": 1,
+    "hasReleaseOnAllErrorPaths": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 135.0,
+  "notes": "Retry after spend-limit abort. Prior session had completed: features.json, poc.c (verifier-passed, sha256 654bd7f9, mode 444), poc-db, plan.json, and 1/3 predicates (isPlatformDeviceAlloc). This session re-validated predicate 1, wrote and validated predicates 2 & 3 (acquiredVariable, hasReleaseOnAllErrorPaths), assembled final.ql (compiled clean, only unused-predicate warnings since assembly inlines logic), and ran on poc-db: fires once on the platform_device_alloc call in dwc3_pci_probe_buggy at line 66. POC has no _fixed/_fp_ variants (single buggy probe matching seed counts per verifier-v1), so silence on those is vacuous. No refinement iterations were needed."
+}

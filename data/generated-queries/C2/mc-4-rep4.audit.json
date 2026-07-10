@@ -1,0 +1,33 @@
+{
+  "cell": "C2",
+  "seed_id": "mc-4",
+  "repeat": 4,
+  "commit_sha": "c9c63915519b1def7043b184680f33c24cd49d7b",
+  "c_file": "drivers/hwmon/lm80.c",
+  "subject": "hwmon: (lm80) fix a missing check of the status of SMBus read",
+  "llm_calls": 4,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isFailableReadCall": 0,
+    "returnValueUsedUnsafely": 0,
+    "hasErrorCheckGuard": 0,
+    "uncheckedFailableRead": 0
+  },
+  "assembly_iters": 0,
+  "final_predicates_differ_from_stage3": false,
+  "features": {
+    "target_api": "lm80_read_value",
+    "post_operation": "check return value < 0 then return error",
+    "critical_variable": "return value of lm80_read_value (assigned to local int rv)",
+    "path_conditions": "Any callsite where the returned int is consumed (e.g. arithmetic/bitwise composition into a register value) without first comparing to < 0 and propagating the error.",
+    "fits_pattern": true,
+    "fit_test_reasoning": "Classic missing-check pattern: lm80_read_value() returns an int that is negative on SMBus failure but the buggy code embeds it directly into a bitwise expression. The fix introduces an rv intermediate, a `if (rv < 0) return rv` guard, and only then uses rv. Fits the (failable_call, error_check_guard, unsafe_use) decomposition naturally; not a resource-lifecycle pattern but a return-status-check pattern."
+  },
+  "plan_summary": "4 predicates: isFailableReadCall (name-matched smbus/i2c/read_value helpers returning int) -> returnValueUsedUnsafely (call result feeds arithmetic/bitwise op or assignment-then-arith use) -> hasErrorCheckGuard (some `<0` comparison on call result or variable receiving it exists in the function) -> uncheckedFailableRead (combine: failable & unsafe-use & no guard).",
+  "wall_seconds": 30.0
+}

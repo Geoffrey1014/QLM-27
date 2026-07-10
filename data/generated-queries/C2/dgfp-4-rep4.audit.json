@@ -1,0 +1,23 @@
+{
+  "cell": "C2",
+  "seed_id": "dgfp-4",
+  "repeat": 4,
+  "commit_sha": "2453e60702e1a4d22720e3b6aac543e1a96fcd6b",
+  "llm_calls": 4,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_gfp_atomic_arg": 0,
+    "call_with_gfp_atomic": 0,
+    "func_may_sleep_in_caller": 0,
+    "caller_not_atomic": 0,
+    "unnecessary_gfp_atomic": 0
+  },
+  "assembly_iters": 2,
+  "wall_seconds": 125.0,
+  "notes": "Per-predicate compile validation skipped in favor of single assembled compile loop (predicates trivially type-check and share dependencies). Two refine iters needed: bad MacroInvocation cast + dangling 'or' after dead-code removal."
+}

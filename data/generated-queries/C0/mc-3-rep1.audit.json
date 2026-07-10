@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "mc-3",
+  "repeat_idx": 1,
+  "commit_sha": "6fc232db9e8c",
+  "c_file": "net/rfkill/core.c",
+  "commit_subject": "rfkill: Fix incorrect check to avoid NULL pointer dereference",
+  "llm_calls": 1,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 30.0,
+  "model": "claude-opus-4-7",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-5",
+  "repeat": 5,
+  "commit_sha": "10d6bdf53290",
+  "llm_calls": 4,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isAcquireCall": 0,
+    "isReleaseCall": 0,
+    "acquiresInto": 0,
+    "releasesVar": 0,
+    "leakyReturn": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 60.0,
+  "features": {
+    "target_api": "of_find_device_by_node",
+    "post_operation": "put_device",
+    "critical_variable": "dma_dev",
+    "path_conditions": "After successful return from of_find_device_by_node, put_device(&dma_dev->dev) must be called on every exit path including error returns.",
+    "fits_pattern": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "seed_id": "lin-2",
+  "repeat": 3,
+  "cell": "L0",
+  "fix_sha": "9a2ea132df86",
+  "c_file": "drivers/hsi/controllers/omap_ssi_core.c",
+  "subject": "HSI: omap_ssi: Fix refcount leak in ssi_probe",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "c2ec10e9e3409b2d60ef397bc7edadb1b6071d19cf00536932a5cb73cd77d832",
+  "predicate_iters": {
+    "hasEarlyExitWithoutRelease": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 205.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC + verifier verdict reused from C3 lin-2-rep3 (verified OK). Single-predicate plan compiled + ran cleanly on POC-DB (fires on probe_buggy)."
+}

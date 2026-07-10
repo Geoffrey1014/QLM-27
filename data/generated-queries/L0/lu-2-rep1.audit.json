@@ -1,0 +1,22 @@
+{
+  "seed_id": "lu-2",
+  "repeat": 1,
+  "cell": "L0",
+  "fix_sha": "2289adbfa559",
+  "c_file": "drivers/media/usb/dvb-usb/af9005.c",
+  "subject": "media: usb: fix memory leak in af9005_identify_state",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=1 F1.rel=1 F3.goto=1 F5.ret=3 F2.if=4)",
+  "predicate_iters": {"isAcquisition": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "final_poc_hits": 0,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 979,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Final query compiles and runs cleanly on POC-DB but returns 0 hits because the simple hasMatchingRelease predicate over-matches (kfree(buf) at err: label still counts as 'released', missing the path-sensitive early-return leak). Per L0 spec: any successful compile after verifier-approved POC = pass; pair-wise oracle not required."
+}

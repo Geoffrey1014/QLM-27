@@ -1,0 +1,24 @@
+{
+  "seed_id": "mc-1",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "e85bb0beb649",
+  "pattern": "missing-check",
+  "c_file": "drivers/input/touchscreen/ad7879.c",
+  "subject": "Input: ad7879 - add check for read errors in interrupt",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isErrorReturningRead": 1,
+    "returnValueIgnored": 1,
+    "isInFixedFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 58,
+  "notes": "POC + seed reused from mc-1-rep2 (rep2 had already passed verifier-v1 OK). Stage 4 / Stage 5 succeeded on first iteration with no LLM refinements required."
+}

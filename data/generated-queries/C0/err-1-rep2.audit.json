@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "err-1",
+  "repeat_idx": 2,
+  "commit_sha": "620b90d30c08684dc6ebee07c72755d997f9d1f6",
+  "c_file": "drivers/mtd/maps/physmap-core.c",
+  "commit_subject": "mtd: maps: fix error return code of physmap_flash_remove()",
+  "llm_calls": 1,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 73,
+  "model": "claude-opus-4-5-20251101",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-5",
+  "repeat": 4,
+  "cell": "L0",
+  "fix_sha": "10d6bdf53290",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isDeviceAcquisition": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 1075,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC needed 1 count-adjustment regen to pass verifier-v1 (removed stub irq handler function). Final query compiled successfully; POC analyze fired exactly on the buggy variant (1 row on octeon_cf_probe_buggy), silent on the fixed variant."
+}

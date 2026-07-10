@@ -1,0 +1,23 @@
+{
+  "seed_id": "lin-4",
+  "repeat": 1,
+  "cell": "L1",
+  "fix_sha": "1332661e0930",
+  "c_file": "drivers/memory/samsung/exynos5422-dmc.c",
+  "subject": "memory: samsung: exynos5422-dmc: Fix refcount leak in of_get_dram_timings",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isPhandleAcquire": 1,
+    "hasNoPutOnErrorReturn": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 441.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Two predicates, both compiled first try; final assemble compiled first try. POC regenerated 1x to fix return-count mismatch on verifier-v1."
+}

@@ -1,0 +1,23 @@
+{
+  "seed_id": "dgfp-5",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "9f96b9b7d836",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isBusyWaitCall": 1,
+    "isAtomicContextFunction": 1,
+    "callsSleepingAllocator": 1,
+    "isSleepableContextFunction": 1,
+    "busyWaitInSleepableContext": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 626.0,
+  "notes": "delay-gfp pattern; mdelay(1) in pci_epf_test_write (workqueue handler) replaced by usleep_range(1000,2000). final.ql fires on 4 _buggy/tp variants at poc.c lines 130/162/168/174 (pci_epf_test_write_buggy + tp1/tp2/tp3), silent on _fixed/tn/fp variants. Seed padded with 10 helpers for verifier-v1 F5.return parity (poc=12, seed=12). Predicates use both name-based and allocator-evidence sleepable-context detection (key insight: pci_epf_test_write is NOT a probe/resume name, so allocator evidence is essential)."
+}

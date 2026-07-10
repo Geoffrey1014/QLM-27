@@ -1,0 +1,23 @@
+{
+  "seed_id": "mc-2",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "09acf29c8246",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isAllocCall": 1,
+    "isInFixedFunction": 1,
+    "isInFpFunction": 1,
+    "isResultDereferenced": 2,
+    "hasNullCheckBeforeDeref": 2
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 473.0,
+  "notes": "Reused poc.c/seed.c from mc-2-rep1 (identical content, verifier OK). Final query fires on 4 buggy variants (init_priv_buggy, alloc_blob_buggy_tp1, init_blob_buggy_tp2, init_blob_buggy_tp3) and is silent on all _fixed/_tn/_fp variants."
+}

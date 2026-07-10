@@ -1,0 +1,6062 @@
+{
+  "cell": "C3",
+  "pattern": "four-features-Lin",
+  "kbh_db": "linux-v5.15-arm-am",
+  "gt_file": "aphp-lin-v5.15.json",
+  "n_queries_found": 25,
+  "n_pairs": 30,
+  "wall_seconds": 9374.2,
+  "aggregate": {
+    "n_queries": 25,
+    "pair_wise_mean": 0.1107,
+    "pair_wise_best": 0.3333,
+    "recall_in_db_mean": 0.239,
+    "recall_in_db_best": 0.4649,
+    "fires_buggy_rate_mean": 0.1973,
+    "n_kbh_ok": 24
+  },
+  "per_query": [
+    {
+      "query": "lin-1-rep1",
+      "seed_id": "lin-1",
+      "held_out_sha": "74139a64e8ce",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 8,
+        "pair_wise_pass_rate": 0.26666666666666666,
+        "fires_buggy_count": 9,
+        "fires_buggy_rate": 0.3,
+        "fires_fixed_count": 1,
+        "fires_fixed_rate": 0.03333333333333333,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 115,
+        "hits": 35,
+        "recall_raw": 0.2134,
+        "recall_in_db": 0.3043,
+        "coverage_in_db": 0.7012,
+        "fires_total": null
+      },
+      "wall_pair_s": 245.2,
+      "wall_kbh_s": 57.7
+    },
+    {
+      "query": "lin-1-rep2",
+      "seed_id": "lin-1",
+      "held_out_sha": "74139a64e8ce",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 6,
+        "pair_wise_pass_rate": 0.2,
+        "fires_buggy_count": 6,
+        "fires_buggy_rate": 0.2,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 115,
+        "hits": 27,
+        "recall_raw": 0.1646,
+        "recall_in_db": 0.2348,
+        "coverage_in_db": 0.7012,
+        "fires_total": null
+      },
+      "wall_pair_s": 235.4,
+      "wall_kbh_s": 56.4
+    },
+    {
+      "query": "lin-1-rep3",
+      "seed_id": "lin-1",
+      "held_out_sha": "74139a64e8ce",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 8,
+        "pair_wise_pass_rate": 0.26666666666666666,
+        "fires_buggy_count": 9,
+        "fires_buggy_rate": 0.3,
+        "fires_fixed_count": 1,
+        "fires_fixed_rate": 0.03333333333333333,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 115,
+        "hits": 39,
+        "recall_raw": 0.2378,
+        "recall_in_db": 0.3391,
+        "coverage_in_db": 0.7012,
+        "fires_total": null
+      },
+      "wall_pair_s": 256.2,
+      "wall_kbh_s": 59.1
+    },
+    {
+      "query": "lin-1-rep4",
+      "seed_id": "lin-1",
+      "held_out_sha": "74139a64e8ce",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 8,
+        "pair_wise_pass_rate": 0.26666666666666666,
+        "fires_buggy_count": 9,
+        "fires_buggy_rate": 0.3,
+        "fires_fixed_count": 1,
+        "fires_fixed_rate": 0.03333333333333333,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 115,
+        "hits": 38,
+        "recall_raw": 0.2317,
+        "recall_in_db": 0.3304,
+        "coverage_in_db": 0.7012,
+        "fires_total": null
+      },
+      "wall_pair_s": 253.5,
+      "wall_kbh_s": 57.0
+    },
+    {
+      "query": "lin-1-rep5",
+      "seed_id": "lin-1",
+      "held_out_sha": "74139a64e8ce",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 8,
+        "pair_wise_pass_rate": 0.26666666666666666,
+        "fires_buggy_count": 9,
+        "fires_buggy_rate": 0.3,
+        "fires_fixed_count": 1,
+        "fires_fixed_rate": 0.03333333333333333,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 115,
+        "hits": 38,
+        "recall_raw": 0.2317,
+        "recall_in_db": 0.3304,
+        "coverage_in_db": 0.7012,
+        "fires_total": null
+      },
+      "wall_pair_s": 288.5,
+      "wall_kbh_s": 67.2
+    },
+    {
+      "query": "lin-2-rep1",
+      "seed_id": "lin-2",
+      "held_out_sha": "9a2ea132df86",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 0,
+        "fires_buggy_rate": 0.0,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 115,
+        "hits": 6,
+        "recall_raw": 0.0366,
+        "recall_in_db": 0.0522,
+        "coverage_in_db": 0.7012,
+        "fires_total": null
+      },
+      "wall_pair_s": 246.2,
+      "wall_kbh_s": 181.0
+    },
+    {
+      "query": "lin-2-rep2",
+      "seed_id": "lin-2",
+      "held_out_sha": "9a2ea132df86",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 0,
+        "fires_buggy_rate": 0.0,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 115,
+        "hits": 0,
+        "recall_raw": 0.0,
+        "recall_in_db": 0.0,
+        "coverage_in_db": 0.7012,
+        "fires_total": null
+      },
+      "wall_pair_s": 292.7,
+      "wall_kbh_s": 37.8
+    },
+    {
+      "query": "lin-2-rep3",
+      "seed_id": "lin-2",
+      "held_out_sha": "9a2ea132df86",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 0,
+        "fires_buggy_rate": 0.0,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 115,
+        "hits": 0,
+        "recall_raw": 0.0,
+        "recall_in_db": 0.0,
+        "coverage_in_db": 0.7012,
+        "fires_total": null
+      },
+      "wall_pair_s": 226.3,
+      "wall_kbh_s": 29.1
+    },
+    {
+      "query": "lin-2-rep4",
+      "seed_id": "lin-2",
+      "held_out_sha": "9a2ea132df86",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 0,
+        "fires_buggy_rate": 0.0,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "analyze_fail",
+        "err": "TIMEOUT after 1200s"
+      },
+      "wall_pair_s": 251.8,
+      "wall_kbh_s": 1200.1
+    },
+    {
+      "query": "lin-2-rep5",
+      "seed_id": "lin-2",
+      "held_out_sha": "9a2ea132df86",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 0,
+        "fires_buggy_rate": 0.0,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 115,
+        "hits": 0,
+        "recall_raw": 0.0,
+        "recall_in_db": 0.0,
+        "coverage_in_db": 0.7012,
+        "fires_total": null
+      },
+      "wall_pair_s": 295.0,
+      "wall_kbh_s": 47.5
+    },
+    {
+      "query": "lin-3-rep1",
+      "seed_id": "lin-3",
+      "held_out_sha": "bf4a9b2467b7",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 3,
+        "pair_wise_pass_rate": 0.1,
+        "fires_buggy_count": 13,
+        "fires_buggy_rate": 0.43333333333333335,
+        "fires_fixed_count": 10,
+        "fires_fixed_rate": 0.3333333333333333,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 114,
+        "hits": 52,
+        "recall_raw": 0.3171,
+        "recall_in_db": 0.4561,
+        "coverage_in_db": 0.6951,
+        "fires_total": null
+      },
+      "wall_pair_s": 233.7,
+      "wall_kbh_s": 59.7
+    },
+    {
+      "query": "lin-3-rep2",
+      "seed_id": "lin-3",
+      "held_out_sha": "bf4a9b2467b7",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 10,
+        "pair_wise_pass_rate": 0.3333333333333333,
+        "fires_buggy_count": 11,
+        "fires_buggy_rate": 0.36666666666666664,
+        "fires_fixed_count": 1,
+        "fires_fixed_rate": 0.03333333333333333,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 114,
+        "hits": 43,
+        "recall_raw": 0.2622,
+        "recall_in_db": 0.3772,
+        "coverage_in_db": 0.6951,
+        "fires_total": null
+      },
+      "wall_pair_s": 247.8,
+      "wall_kbh_s": 53.9
+    },
+    {
+      "query": "lin-3-rep3",
+      "seed_id": "lin-3",
+      "held_out_sha": "bf4a9b2467b7",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 3,
+        "pair_wise_pass_rate": 0.1,
+        "fires_buggy_count": 13,
+        "fires_buggy_rate": 0.43333333333333335,
+        "fires_fixed_count": 10,
+        "fires_fixed_rate": 0.3333333333333333,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 114,
+        "hits": 53,
+        "recall_raw": 0.3232,
+        "recall_in_db": 0.4649,
+        "coverage_in_db": 0.6951,
+        "fires_total": null
+      },
+      "wall_pair_s": 252.1,
+      "wall_kbh_s": 58.3
+    },
+    {
+      "query": "lin-3-rep4",
+      "seed_id": "lin-3",
+      "held_out_sha": "bf4a9b2467b7",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 3,
+        "pair_wise_pass_rate": 0.1,
+        "fires_buggy_count": 13,
+        "fires_buggy_rate": 0.43333333333333335,
+        "fires_fixed_count": 10,
+        "fires_fixed_rate": 0.3333333333333333,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 114,
+        "hits": 53,
+        "recall_raw": 0.3232,
+        "recall_in_db": 0.4649,
+        "coverage_in_db": 0.6951,
+        "fires_total": null
+      },
+      "wall_pair_s": 248.7,
+      "wall_kbh_s": 56.2
+    },
+    {
+      "query": "lin-3-rep5",
+      "seed_id": "lin-3",
+      "held_out_sha": "bf4a9b2467b7",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 3,
+        "pair_wise_pass_rate": 0.1,
+        "fires_buggy_count": 8,
+        "fires_buggy_rate": 0.26666666666666666,
+        "fires_fixed_count": 5,
+        "fires_fixed_rate": 0.16666666666666666,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 114,
+        "hits": 36,
+        "recall_raw": 0.2195,
+        "recall_in_db": 0.3158,
+        "coverage_in_db": 0.6951,
+        "fires_total": null
+      },
+      "wall_pair_s": 216.9,
+      "wall_kbh_s": 59.2
+    },
+    {
+      "query": "lin-4-rep1",
+      "seed_id": "lin-4",
+      "held_out_sha": "1332661e0930",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 2,
+        "pair_wise_pass_rate": 0.06666666666666667,
+        "fires_buggy_count": 7,
+        "fires_buggy_rate": 0.23333333333333334,
+        "fires_fixed_count": 5,
+        "fires_fixed_rate": 0.16666666666666666,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 114,
+        "hits": 35,
+        "recall_raw": 0.2134,
+        "recall_in_db": 0.307,
+        "coverage_in_db": 0.6951,
+        "fires_total": null
+      },
+      "wall_pair_s": 259.7,
+      "wall_kbh_s": 133.0
+    },
+    {
+      "query": "lin-4-rep2",
+      "seed_id": "lin-4",
+      "held_out_sha": "1332661e0930",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 3,
+        "pair_wise_pass_rate": 0.1,
+        "fires_buggy_count": 8,
+        "fires_buggy_rate": 0.26666666666666666,
+        "fires_fixed_count": 5,
+        "fires_fixed_rate": 0.16666666666666666,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 114,
+        "hits": 35,
+        "recall_raw": 0.2134,
+        "recall_in_db": 0.307,
+        "coverage_in_db": 0.6951,
+        "fires_total": null
+      },
+      "wall_pair_s": 244.9,
+      "wall_kbh_s": 64.4
+    },
+    {
+      "query": "lin-4-rep3",
+      "seed_id": "lin-4",
+      "held_out_sha": "1332661e0930",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 3,
+        "pair_wise_pass_rate": 0.1,
+        "fires_buggy_count": 8,
+        "fires_buggy_rate": 0.26666666666666666,
+        "fires_fixed_count": 5,
+        "fires_fixed_rate": 0.16666666666666666,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 114,
+        "hits": 36,
+        "recall_raw": 0.2195,
+        "recall_in_db": 0.3158,
+        "coverage_in_db": 0.6951,
+        "fires_total": null
+      },
+      "wall_pair_s": 302.8,
+      "wall_kbh_s": 68.2
+    },
+    {
+      "query": "lin-4-rep4",
+      "seed_id": "lin-4",
+      "held_out_sha": "1332661e0930",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 3,
+        "pair_wise_pass_rate": 0.1,
+        "fires_buggy_count": 8,
+        "fires_buggy_rate": 0.26666666666666666,
+        "fires_fixed_count": 5,
+        "fires_fixed_rate": 0.16666666666666666,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 114,
+        "hits": 36,
+        "recall_raw": 0.2195,
+        "recall_in_db": 0.3158,
+        "coverage_in_db": 0.6951,
+        "fires_total": null
+      },
+      "wall_pair_s": 380.3,
+      "wall_kbh_s": 82.9
+    },
+    {
+      "query": "lin-4-rep5",
+      "seed_id": "lin-4",
+      "held_out_sha": "1332661e0930",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 2,
+        "pair_wise_pass_rate": 0.06666666666666667,
+        "fires_buggy_count": 7,
+        "fires_buggy_rate": 0.23333333333333334,
+        "fires_fixed_count": 5,
+        "fires_fixed_rate": 0.16666666666666666,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 114,
+        "hits": 35,
+        "recall_raw": 0.2134,
+        "recall_in_db": 0.307,
+        "coverage_in_db": 0.6951,
+        "fires_total": null
+      },
+      "wall_pair_s": 360.1,
+      "wall_kbh_s": 155.4
+    },
+    {
+      "query": "lin-5-rep1",
+      "seed_id": "lin-5",
+      "held_out_sha": "10d6bdf53290",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 2,
+        "pair_wise_pass_rate": 0.06666666666666667,
+        "fires_buggy_count": 2,
+        "fires_buggy_rate": 0.06666666666666667,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 115,
+        "hits": 10,
+        "recall_raw": 0.061,
+        "recall_in_db": 0.087,
+        "coverage_in_db": 0.7012,
+        "fires_total": null
+      },
+      "wall_pair_s": 325.6,
+      "wall_kbh_s": 53.8
+    },
+    {
+      "query": "lin-5-rep2",
+      "seed_id": "lin-5",
+      "held_out_sha": "10d6bdf53290",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 2,
+        "pair_wise_pass_rate": 0.06666666666666667,
+        "fires_buggy_count": 2,
+        "fires_buggy_rate": 0.06666666666666667,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 115,
+        "hits": 10,
+        "recall_raw": 0.061,
+        "recall_in_db": 0.087,
+        "coverage_in_db": 0.7012,
+        "fires_total": null
+      },
+      "wall_pair_s": 213.3,
+      "wall_kbh_s": 60.6
+    },
+    {
+      "query": "lin-5-rep3",
+      "seed_id": "lin-5",
+      "held_out_sha": "10d6bdf53290",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 2,
+        "pair_wise_pass_rate": 0.06666666666666667,
+        "fires_buggy_count": 2,
+        "fires_buggy_rate": 0.06666666666666667,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 115,
+        "hits": 13,
+        "recall_raw": 0.0793,
+        "recall_in_db": 0.113,
+        "coverage_in_db": 0.7012,
+        "fires_total": null
+      },
+      "wall_pair_s": 211.3,
+      "wall_kbh_s": 55.0
+    },
+    {
+      "query": "lin-5-rep4",
+      "seed_id": "lin-5",
+      "held_out_sha": "10d6bdf53290",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 2,
+        "pair_wise_pass_rate": 0.06666666666666667,
+        "fires_buggy_count": 2,
+        "fires_buggy_rate": 0.06666666666666667,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 115,
+        "hits": 13,
+        "recall_raw": 0.0793,
+        "recall_in_db": 0.113,
+        "coverage_in_db": 0.7012,
+        "fires_total": null
+      },
+      "wall_pair_s": 211.9,
+      "wall_kbh_s": 45.9
+    },
+    {
+      "query": "lin-5-rep5",
+      "seed_id": "lin-5",
+      "held_out_sha": "10d6bdf53290",
+      "pair_wise": {
+        "total_pairs": 30,
+        "analyze_ok": 30,
+        "analyze_fail": 0,
+        "pair_wise_passes": 2,
+        "pair_wise_pass_rate": 0.06666666666666667,
+        "fires_buggy_count": 2,
+        "fires_buggy_rate": 0.06666666666666667,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "05654431a18f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0589e8889dce",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "071d068b89e9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "0737e018a05e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "11ec18b1d8d9",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "176fda56d72a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d09697ff229",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "1d1fb9618bdd",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "255b650cbec6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3755278f0784",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3b4961313d31",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "41cd312dfe98",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4528668ca331",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "505b5b1616e2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "533bec143a4c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "61afafe8b938",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "65e54987508b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6caa5a2b78f5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6d6ef58c2470",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "8fd3f18ea31a",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a2106f38077e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a34840c4eb32",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "a58c22cfbbf6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "b5899a3e2f78",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "ba1b71b008e9",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "bbde14682eba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c56de483093d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "da1afe8e6099",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f4b98e314888",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa1ad9d4cc47",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 165,
+        "gt_after_holdout": 164,
+        "gt_excluded": 1,
+        "bugs_in_db": 115,
+        "hits": 13,
+        "recall_raw": 0.0793,
+        "recall_in_db": 0.113,
+        "coverage_in_db": 0.7012,
+        "fires_total": null
+      },
+      "wall_pair_s": 223.1,
+      "wall_kbh_s": 51.5
+    }
+  ]
+}

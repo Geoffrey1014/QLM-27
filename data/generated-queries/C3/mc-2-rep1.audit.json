@@ -1,0 +1,34 @@
+{
+  "seed_id": "mc-2",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "09acf29c8246",
+  "c_file": "drivers/staging/rtl8192u/r8192U_core.c",
+  "subject": "staging: rtl8192u: null check the kzalloc",
+  "pattern": "missing-check",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=11 F1.rel=2 F3.goto=0 F5.ret=17 F2.if=6)",
+  "predicate_iters": {
+    "isAllocCall": 1,
+    "getAllocResultTarget": 1,
+    "isNullCheckOf": 1,
+    "hasNullCheckBetween": 1,
+    "isDerefOf": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_oracle": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "buggy_hits": ["init_priv_buggy:line39", "init_blob_buggy_tp2:line70", "init_blob_buggy_tp3:line79"],
+    "buggy_misses": ["alloc_blob_buggy_tp1 (deref via function-arg, not pfa/pde — query is conservative)"]
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 504.0,
+  "notes": "Pattern fit: kzalloc result missing NULL check. Verifier passed on first try (POC used as seed slice per §5.5.6 — both have identical structural counts). All 5 predicates validated on first iteration. Final query compiles cleanly and fires on 3 of 4 buggy variants (tp1 missed: deref via function argument rather than direct pointer-field access — by design, query is conservative on indirect derefs). Silent on all 3 fixed variants and all 3 fp lookalikes."
+}

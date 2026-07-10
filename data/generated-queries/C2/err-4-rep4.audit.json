@@ -1,0 +1,33 @@
+{
+  "cell": "C2",
+  "seed_id": "err-4",
+  "repeat": 4,
+  "commit_sha": "c021e0235770",
+  "c_file": "drivers/usb/gadget/legacy/multi.c",
+  "subject": "usb: gadget: legacy: fix error return code of multi_bind()",
+  "llm_calls": 4,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isAllocLikeCall": 0,
+    "isNullCheckOf": 0,
+    "nullBranchHasGoto": 0,
+    "assignsIntConstantTo": 0,
+    "isReturnedStatusVar": 0,
+    "missingErrorAssignBeforeGoto": 0
+  },
+  "assembly_iters": 0,
+  "final_predicates_differ_from_stage3": false,
+  "features": {
+    "target_api": "usb_otg_descriptor_alloc",
+    "post_operation": "assignment of negative errno to the function's returned status variable",
+    "critical_variable": "status",
+    "path_conditions": "On the NULL-check failure branch of an alloc-like call, the goto leads to a shared error label whose returned status was not set to a negative errno.",
+    "fits_pattern": true,
+    "fit_test_reasoning": "The bug fits a compositional 'missing error code' pattern: an acquire-like call (usb_otg_descriptor_alloc) returns a pointer that may be NULL; the NULL-check then-branch performs a goto to a shared cleanup that returns 'status'; the missing post-operation is the assignment of -ENOMEM to status before the goto, so the function silently returns 0. We decompose this into: alloc-like-call, null-check, then-branch-goto, returned-int-status, and the absence-of-assignment combinator."
+  }
+}

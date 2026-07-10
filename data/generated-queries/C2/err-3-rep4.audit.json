@@ -1,0 +1,25 @@
+{
+  "cell": "C2",
+  "seed_id": "err-3",
+  "repeat": 4,
+  "commit_sha": "26594c6bbb60c6bc87e3762a86ceece57d164c66",
+  "llm_calls": 8,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isStatusVar": 0,
+    "functionReturnsStatusVar": 0,
+    "statusVarInitializedZero": 0,
+    "isErrorGuard": 0,
+    "gotoInsideErrorBranch": 0,
+    "statusVarNotSetInErrorBranch": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 95.0,
+  "final_predicates_differ_from_stage3": false,
+  "notes": "C2 compositional, POC-OFF. Error-return missing assignment pattern for goto-to-cleanup. 6 predicates, compiled on first attempt."
+}

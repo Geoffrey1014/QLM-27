@@ -1,0 +1,17 @@
+{
+  "seed_id": "dgfp-4",
+  "repeat": 4,
+  "cell": "L0",
+  "fix_sha": "2453e60702e1",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isAtomicUsbSubmit": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 577.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Query fires on 3 usb_submit_urb(GFP_ATOMIC) sites in poc.c em28xx_init_usb_xfer_buggy."
+}

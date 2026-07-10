@@ -1,0 +1,22 @@
+{
+  "seed_id": "err-2",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "45c7eaeb29d6",
+  "llm_calls": 3,
+  "compile_iters": 5,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "returnsRetVar": 1,
+    "isErrorBranchGoto": 1,
+    "assignsRetInBranch": 1,
+    "errorGotoMissingRetAssign": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 476.0,
+  "notes": "POC required 1 regeneration to match verifier-v1 count-equality (initial multi-variant POC had 16 gotos / 20 returns vs seed's 5/3; mirrored seed structure exactly to pass). Final query fires 3 times on populate_buggy in poc-db; no _fixed or _fp_ variants present so fixed_fires=false, fp_fires=false."
+}

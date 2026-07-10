@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-2",
+  "repeat": 5,
+  "cell": "L0",
+  "fix_sha": "2289adbfa559",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isKmallocAssignment": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 1196.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC verifier OK(F1.acq=1 F1.rel=1 F3.goto=1 F5.ret=3 F2.if=4); initial POC had extra return via main() — dropped main to match seed count. Final query compiled and fires on both early-return sites in af9005_identify_state_buggy POC."
+}

@@ -1,0 +1,22 @@
+{
+  "seed_id": "dgfp-5",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "9f96b9b7d836",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isBusyWaitCall": 1,
+    "isAtomicContextFunction": 1,
+    "isSleepableContextFunction": 1,
+    "busyWaitInSleepableContext": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 564.0,
+  "notes": "delay-gfp pattern; seed pci_epf_test_write() invoked from INIT_DELAYED_WORK->cmd_handler (workqueue, sleepable). final.ql fires on 4 *_buggy mdelay() sites (poc.c lines 44/50/55/60), silent on *_fixed (usleep_range/msleep) and *_fp_* (irq handler, spin_lock region, plain udelay). Seed padded with 20 helpers for verifier-v1 F5.return parity (poc=22, seed=22)."
+}

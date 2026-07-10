@@ -1,0 +1,32 @@
+{
+  "cell": "C1",
+  "seed_id": "lin-5",
+  "rep": 3,
+  "seed_sha": "10d6bdf53290",
+  "c_file": "drivers/ata/pata_octeon_cf.c",
+  "func_name": "octeon_cf_probe",
+  "subject": "ata: pata_octeon_cf: Fix refcount leak in octeon_cf_probe",
+  "llm_calls": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=1 F1.rel=3 F3.goto=0 F5.ret=3 F2.if=5)",
+  "verifier_strict_pass": true,
+  "compile_iters": 0,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "poc_sha256": "d666da71dbb5e90caf659d9902a2fa260e35eff464851548b4eccbcdf82e2b2a",
+  "status": "ok",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-5-rep3.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-5-rep3-work",
+  "wall_seconds": 221,
+  "notes": [
+    "POC generated independently for rep3 (no reuse of other rep POCs).",
+    "Used a seed-slice (single buggy function) plus a byte-identical poc-for-verifier slice to align v1 count dimensions; the full POC.c with both _buggy/_fixed was kept for the mini-DB and query oracle.",
+    "Verifier strict pass first attempt (F1.acq=1, F1.rel=3, F5.ret=3, F2.if=5, F3.goto=0).",
+    "Query compiled on first attempt and passed POC oracle (fires inside *_buggy on the of_find_device_by_node call, silent inside *_fixed).",
+    "Query is generic over the device-lookup acquire API (of_find_device_by_node, bus_find_device, driver_find_device, class_find_device, get_device, ...) and recognises put_device(&v->dev) / put_device(&v.dev) / put_device(v) release shapes.",
+    "POC sha256 frozen after verifier pass."
+  ]
+}

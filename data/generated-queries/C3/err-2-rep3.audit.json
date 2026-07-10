@@ -1,0 +1,24 @@
+{
+  "seed_id": "err-2",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "45c7eaeb29d6",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isRetReturnFunction": 1,
+    "isFailureBranchGoto": 1,
+    "retNotSetInBranch": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 389,
+  "notes": "POC regen=0 was achieved by tailoring seed.c with a sibling routine to match POC's two-function structural counts (verifier-v1 OK on first run after seed adjustment). Final query fires on both buggy gotos (lines 93, 98 in poc.c) where `ret` is not assigned an error code before goto end; silent on the fixed function. POC contains only buggy+fixed (no _fp variants), so fp_fires=false trivially."
+}

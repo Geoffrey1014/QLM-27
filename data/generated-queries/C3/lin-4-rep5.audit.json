@@ -1,0 +1,34 @@
+{
+  "seed_id": "lin-4",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "1332661e0930",
+  "c_file": "drivers/memory/samsung/exynos5422-dmc.c",
+  "subject": "memory: samsung: exynos5422-dmc: Fix refcount leak in of_get_dram_timings",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "6e9fab6ccfdf6172bf22bf1e9a0bddbcc6a1b7fe01aa411ac671172bb18c14db",
+  "verifier_verdict": "OK(F1.acq=1 F1.rel=2 F3.goto=0 F5.ret=7 F2.if=5)",
+  "predicate_iters": {
+    "isAcquire": 1,
+    "isRelease": 1,
+    "acquiresInto": 1,
+    "hasLeakingReturn": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_oracle": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "rows": 4,
+    "expected_buggy_returns": 3,
+    "note": "Query fires on the 3 ENOMEM returns (lines 46, 51, 56 in poc.c) plus the early -EINVAL acquire-fail return (line 40); the latter is a known harmless overshoot for this pattern (CFG considers it reachable from acquire) and is consistent with the rep2 oracle observation."
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 368
+}

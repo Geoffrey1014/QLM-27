@@ -1,0 +1,17 @@
+{
+  "seed_id": "dgfp-3",
+  "repeat": 2,
+  "cell": "L0",
+  "fix_sha": "a0732548ba03",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isGfpAtomicKernelAlloc": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 139.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC + verifier-v1 artifacts reused from C3 dgfp-3-rep2 (POC-side scaffolding not ablated per L0 spec). Single predicate isGfpAtomicKernelAlloc matches a GFP-taking kernel allocator called with GFP_ATOMIC literal; sleepable- and atomic-context name tests are inlined in the assembly where-clause. final.ql compiles and fires once on POC (tipc_bcast_init_buggy), silent on _fixed / tn* / fp*."
+}

@@ -1,0 +1,28 @@
+{
+  "cell": "C1",
+  "seed_id": "lin-4",
+  "rep": 1,
+  "seed_sha": "1332661e0930",
+  "c_file": "drivers/memory/samsung/exynos5422-dmc.c",
+  "func_name": "of_get_dram_timings",
+  "subject": "memory: samsung: exynos5422-dmc: Fix refcount leak in of_get_dram_timings",
+  "poc_sha256": "25725d406843a9d17b99ab5beb9ad80b8b3c21b48de02048f7c37a5b96702f18",
+  "llm_calls": 3,
+  "poc_regens": 0,
+  "compile_iters": 2,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=1 F1.rel=3 F3.goto=0 F5.ret=8 F2.if=6)",
+  "verifier_lenient": false,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "status": "ok",
+  "wall_seconds": 382,
+  "notes": [
+    "Reused calibration-verified seed-slice + poc-for-verifier from lin-4-rep2 (verifier passes strict).",
+    "Full POC.c has both _buggy and _fixed (per R1). poc-for-verifier.c contains only _buggy for whole-file count alignment with seed-slice.",
+    "Iter1 query fired on _fixed (early `if(!np_ddr) return -EINVAL` reachable-without-release). Iter2 added nonNullStartBB filter — starts CFG search from the successor of the null-check guard, eliminating the failed-acquire path.",
+    "Final query fires only inside of_get_dram_timings_buggy (POC.c lines 48/53/58 returns reachable without of_node_put). Silent on _fixed."
+  ]
+}

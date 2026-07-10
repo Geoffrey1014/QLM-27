@@ -1,0 +1,22 @@
+{
+  "cell": "C1",
+  "seed_id": "dgfp-3",
+  "rep": 2,
+  "status": "pass",
+  "llm_calls": 2,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "verifier_lenient_pass": false,
+  "verifier_verdict": "OK(F1.acq=2 F1.rel=2 F3.goto=4 F5.ret=4 F2.if=4)",
+  "compile_iters": 1,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_sha256": "820c6ce9dba011cf355d72bfc820ba06ac63d8649da78ebf62c14cebf4922fb7",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-3-rep2.ql",
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "notes": [
+    "POC v1 had F5.return mismatch (extra main()); v2 dropped main() -> strict OK",
+    "Query compiled and validated on POC mini-DB in iter1"
+  ]
+}

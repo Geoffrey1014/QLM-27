@@ -1,0 +1,29 @@
+{
+  "cell": "C2",
+  "seed_id": "dgfp-1",
+  "repeat": 5,
+  "commit_sha": "e58650b57ee0078ac8986650febeb55263f9ebdf",
+  "llm_calls": 6,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isMdelayCall": 1,
+    "isSleepableContext": 1,
+    "inSleepableFunction": 0,
+    "mdelayInSleepableContext": 0
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 75.0,
+  "features": {
+    "target_api": "mdelay",
+    "post_operation": "msleep (replacement, not lifecycle post-op)",
+    "critical_variable": "N/A (wrong-API-in-sleepable-context pattern)",
+    "path_conditions": "Caller is in sleepable context (PM resume/suspend/probe/remove callbacks).",
+    "fits_pattern": true,
+    "fit_test_reasoning": "Delay-GFP variant: pattern is wrong-API selection rather than resource lifecycle. mdelay() busy-waits and is wasteful in sleepable contexts. The fit test for delay-gfp seeds asks whether a sleepable equivalent exists (msleep) and whether the enclosing context is provably non-atomic (PM callbacks, probe). Both hold here."
+  }
+}

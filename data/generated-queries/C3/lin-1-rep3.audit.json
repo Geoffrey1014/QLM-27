@@ -1,0 +1,27 @@
+{
+  "seed_id": "lin-1",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "74139a64e8ce",
+  "llm_calls": 3,
+  "compile_iters": 6,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "ea985de49d8dd1c390efca0e7d7a27674714d2728801520de486582a898b034c",
+  "poc_reused_from": "lin-1-rep1",
+  "predicate_iters": {
+    "isOfNodeAcquire": 1,
+    "acquireTargetVar": 1,
+    "hasOfNodePutOn": 1,
+    "hasNullGuard": 1,
+    "isInFixedVariant": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 120.0
+}

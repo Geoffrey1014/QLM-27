@@ -1,0 +1,31 @@
+{
+  "cell": "C1",
+  "seed_id": "err-3",
+  "rep": 2,
+  "seed_sha": "26594c6bbb60",
+  "c_file": "drivers/rpmsg/qcom_glink_native.c",
+  "func_name": "qcom_glink_rx_data",
+  "subject": "rpmsg: qcom_glink_native: fix error return code of qcom_glink_rx_data()",
+  "llm_calls": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=2 F5.ret=2 F2.if=3)",
+  "verifier_strict_pass": true,
+  "compile_iters": 2,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "poc_sha256": "5a4501a4f556d42451e14dd13d6f807b2a90013196f23c342d9349b612ce6da3",
+  "status": "ok",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-3-rep2.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/err-3-rep2-work",
+  "wall_seconds": 360,
+  "notes": [
+    "Independent POC generated for rep2 (not reused).",
+    "Strict verifier pass on first POC attempt: F1.acq=0 F1.rel=0 F3.goto=2 F5.ret=2 F2.if=3 (using poc-for-verifier.c, a buggy-only slice, to align counts with seed-slice).",
+    "Initial query required a negative-assignment to exist in the function as a sanity filter; that filter wrongly excluded _buggy because the bug is precisely the absence of any negative assignment. Repaired in 1 iter by removing the gating predicate and instead requiring NO negative assignment between the log call and the return.",
+    "Final query (~95 LOC) is generic over the kernel: matches any function declaring int ret/err/rc/error/status = 0, an error-log call (dev_err/pr_err/netdev_err/WARN*), a goto whose label-target reaches `return v;`, with no negative assignment to v between log and return. No POC artifact names hard-coded.",
+    "POC sha256 frozen at 5a4501a4f55... and verified unchanged after Stage F."
+  ]
+}

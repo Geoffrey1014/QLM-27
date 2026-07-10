@@ -1,0 +1,27 @@
+{
+  "seed_id": "mc-3",
+  "repeat": 2,
+  "cell": "L1",
+  "fix_sha": "6fc232db9e8c",
+  "c_file": "net/rfkill/core.c",
+  "subject": "rfkill: Fix incorrect check to avoid NULL pointer dereference",
+  "pattern": "missing-check",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=7 F2.if=2)",
+  "predicate_iters": {"isPointerParam": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_oracle_recorded": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "buggy_hits": ["rfkill_register_buggy:poc.c:34 (&rfkill->dev before BUG_ON at line 37)"]
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 177.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Features/POC/mini-DB/plan reused from L0 rep2 (same seed, deterministic LLM/prompt at temperature 0.2). Plan emits exactly 1 predicate (isPointerParam) within L1's N_PRED<=2 cap; deref/null-check ordering logic in assembly. Predicate compile OK on iter 1 (no refine needed; L1 cap was 2). Final compile OK on iter 1 (no refine needed; L1 cap was 2). L1 accepts on compile-OK; oracle recorded but not gated: buggy fires at poc.c:34 (rfkill_register_buggy), silent on rfkill_register_fixed."
+}

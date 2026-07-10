@@ -1,0 +1,17 @@
+{
+  "seed_id": "dgfp-4",
+  "repeat": 2,
+  "cell": "L0",
+  "fix_sha": "2453e60702e1",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isUrbSubmitWithAtomic": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 205.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC + verifier-v1 artifacts reused from C3 dgfp-4-rep2 (POC-side scaffolding not ablated per L0 spec). Single predicate isUrbSubmitWithAtomic recognises calls to *usb_submit_urb* with GFP_ATOMIC (macro or literal 32); sleepable/atomic-context tests inlined in assembly where-clause. final.ql compiles and fires 1x on POC em28xx_init_usb_xfer_buggy."
+}

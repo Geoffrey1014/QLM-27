@@ -1,0 +1,26 @@
+{
+  "cell": "C1",
+  "seed_id": "mc-3",
+  "rep": 1,
+  "status": "pass",
+  "llm_calls": 2,
+  "poc_regens": 0,
+  "compile_iters": 0,
+  "verifier_passes": true,
+  "verifier_strict": true,
+  "lenient_pass": false,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "poc_sha256": "b2d915e0a55a07a284e69608617df09e8b3c69a079c9a506ddefc2a803d86ead",
+  "verdict_last": ["OK(F1.acq=0 F1.rel=0 F3.goto=3 F5.ret=2 F2.if=4)"],
+  "wall_seconds": 301,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-3-rep1.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3-prep/C1/mc-3-rep1",
+  "notes": [
+    "Strict verifier-v1 pass on first POC attempt: counts (acq=0, rel=0, goto=3, ret=2, if=4) match seed slice exactly.",
+    "Achieved by carefully mirroring rfkill_register's structural shape and dropping BUG_ON in _fixed to keep balance.",
+    "Monolithic query compiled clean on first attempt; fired exactly on the deref inside _buggy (line 63), silent on _fixed."
+  ]
+}

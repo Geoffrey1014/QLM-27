@@ -1,0 +1,21 @@
+{
+  "seed_id": "lin-3",
+  "repeat": 1,
+  "cell": "L0",
+  "fix_sha": "bf4a9b2467b7",
+  "c_file": "sound/soc/samsung/aries_wm8994.c",
+  "subject": "ASoC: samsung: Fix refcount leak in aries_audio_probe",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "da261be375dfafb164a97ce5e3d329acc95f317c0d090d1699896eeecdd60509",
+  "predicate_iters": {"hasReturnBeforeRelease": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 181.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC + features + poc-db reused from C3 cache (POC is invariant to query-side ablations). poc_regens=1 recorded from the cached C3 verifier pass (verdict.csv copied verbatim); llm_calls counts the L0 plan call (this session generated only the plan, since features and POC were reused). Final query compiled on first try and fired on the buggy variant in poc-db."
+}

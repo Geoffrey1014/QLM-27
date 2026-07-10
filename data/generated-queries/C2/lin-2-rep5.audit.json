@@ -1,0 +1,28 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-2",
+  "repeat": 5,
+  "commit_sha": "9a2ea132df860177b33c9fd421b26c4e9a0a9396",
+  "llm_calls": 6,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "iter_child_variable": 0,
+    "exits_loop_early": 0,
+    "puts_child_before": 0,
+    "leaks_iterator_refcount": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 96.0,
+  "features": {
+    "target_api": "for_each_available_child_of_node",
+    "post_operation": "of_node_put",
+    "critical_variable": "child",
+    "path_conditions": "Required on goto/return/break exits from the for_each_available_child_of_node loop body before completing iteration.",
+    "fits_pattern": true
+  }
+}

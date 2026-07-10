@@ -1,0 +1,29 @@
+{
+  "cell": "C2",
+  "seed_id": "lu-3",
+  "repeat": 1,
+  "commit_sha": "f141a422159a199f4c8dedb7e0df55b3b2cf16cd",
+  "llm_calls": 6,
+  "compile_iters": 5,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isTargetCall": 1,
+    "isPutCall": 1,
+    "errorCheckOnTarget": 1,
+    "errorBlockMissingPut": 1
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 180.0,
+  "features": {
+    "target_api": "pm_runtime_get_sync",
+    "post_operation": "pm_runtime_put",
+    "critical_variable": "dev",
+    "path_conditions": "When pm_runtime_get_sync returns a negative error code, pm_runtime_put must still be called because the usage counter is incremented even on failure.",
+    "fits_pattern": true
+  },
+  "final_predicates_differ_from_stage3": false
+}

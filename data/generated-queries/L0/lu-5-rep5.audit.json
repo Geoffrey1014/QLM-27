@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-5",
+  "repeat": 5,
+  "cell": "L0",
+  "fix_sha": "450c3d416683",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isAllocByKstrdup": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 90.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC + features reused from C3 rep5 prep (poc verifier had passed). Final query compiled and ran on POC DB with 0 rows; L0 accepts on compile success regardless of oracle."
+}

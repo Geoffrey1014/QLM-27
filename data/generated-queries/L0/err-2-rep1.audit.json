@@ -1,0 +1,17 @@
+{
+  "seed_id": "err-2",
+  "repeat": 1,
+  "cell": "L0",
+  "fix_sha": "45c7eaeb29d6",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"gotoWithoutErrorAssign": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 379.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC required 1 regen to match seed structural feature counts (verifier-v1). Final query compiles and detects 2 buggy locations on POC mini-DB."
+}

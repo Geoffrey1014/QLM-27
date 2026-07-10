@@ -1,0 +1,42 @@
+{
+  "cell": "C1",
+  "seed_id": "lin-4",
+  "seed_sha": "1332661e0930",
+  "rep_id": "rep3",
+  "status": "ok",
+  "poc_sha256": "b5acb697b225a2cf1dbf9834542d42d63ac583250e0c557f51fbcbd0d995adfe",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=1 F1.rel=3 F3.goto=0 F5.ret=8 F2.if=6)",
+  "verifier_mode": "strict",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_results": {
+    "fired_locations": [
+      "POC.c:58 (inside of_get_dram_timings_buggy)",
+      "POC.c:63 (inside of_get_dram_timings_buggy)",
+      "POC.c:68 (inside of_get_dram_timings_buggy)"
+    ],
+    "fired_on_buggy": true,
+    "fired_on_fixed": false
+  },
+  "artifacts": {
+    "query_ql": "experiments/rq3/d3/C1/lin-4-rep3.ql",
+    "rep_dir": "experiments/rq3/d3/C1/lin-4-rep3/",
+    "poc": "experiments/rq3/d3/C1/lin-4-rep3/POC.c",
+    "poc_db": "experiments/rq3/d3/C1/lin-4-rep3/poc-db/db",
+    "qlpack": "experiments/rq3/d3/C1/lin-4-rep3/qlpack.yml",
+    "poc_run_csv": "experiments/rq3/d3/C1/lin-4-rep3/poc-run.csv",
+    "seed_slice": "experiments/rq3/d3/C1/lin-4-rep3/seed-slice.c",
+    "poc_for_verifier": "experiments/rq3/d3/C1/lin-4-rep3/poc-for-verifier.c"
+  },
+  "wall_time_seconds": 278,
+  "notes": [
+    "Acted-as-LLM (Claude Opus 4.7 in-session) for POC + query generation; in D3-main these become API calls.",
+    "POC structurally mirrors rep2 (faithful to the patch's buggy form: early returns from kmalloc-fail without of_node_put). First POC passed verifier-v1 strictly.",
+    "compile_iters=2: initial query was function-wide presence-of-of_node_put (too lenient -- _buggy has of_node_put on success path so reported nothing); refined to path-sensitive CFG-based 'return reachable from acquire without intervening put', then added null-check return filter to suppress the if(!sink) return path (which would have fired inside _fixed at line 98).",
+    "rep3 variance: path-sensitive (CFG-reachability) formulation rather than the function-wide presence check used in lin-1-repN."
+  ]
+}

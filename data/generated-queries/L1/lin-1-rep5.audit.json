@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-1",
+  "repeat": 5,
+  "cell": "L1",
+  "fix_sha": "74139a64e8ce",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isOfNodeAcquire": 1, "hasOfNodePut": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 92.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. N_PRED=2 (isOfNodeAcquire, hasOfNodePut) both compiled on first try; assemble compiled on first try. Final query fires on state_node acquire in POC amx3_idle_init_buggy. Features/POC/poc-db reused from L0 rep5 verified-OK artifacts."
+}

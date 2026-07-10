@@ -1,0 +1,23 @@
+{
+  "seed_id": "lu-2",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "2289adbfa559",
+  "c_file": "drivers/media/usb/dvb-usb/af9005.c",
+  "subject": "media: usb: fix memory leak in af9005_identify_state",
+  "pattern": "four-features-Lu",
+  "llm_calls": 6,
+  "compile_iters": 1,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "ac3487320ebc69b029b89eb12d467dd9401796c733ace73de1232029b9e5e926",
+  "predicate_iters": {"isAcquire": 1, "isRelease": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 186.0
+}

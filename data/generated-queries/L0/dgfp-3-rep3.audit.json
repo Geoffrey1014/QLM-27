@@ -1,0 +1,17 @@
+{
+  "seed_id": "dgfp-3",
+  "repeat": 3,
+  "cell": "L0",
+  "fix_sha": "a0732548ba03",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"atomicAllocInSleepableContext": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 621.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Delay-gfp pattern: kzalloc(...,GFP_ATOMIC) in sleepable init callbacks. Seed a0732548ba03 (tipc_bcast_init). Predicate atomicAllocInSleepableContext filters on kzalloc/kmalloc/kcalloc/kmalloc_array with GFP_ATOMIC in enclosing functions matching *_init/*_probe/*_module_init/*bcast_init*/*driver_init*/*link_init* names, excluding IRQ handlers and functions holding spinlocks. Predicate returned 0 rows on POC (naming mismatch: POC uses *_buggy suffix so functions like tipc_link_init_buggy_tp1 don't match %_init suffix pattern; only inner substring %link_init% matches — but predicate composition uses %_init suffix), but L0 spec allows accept on any successful compile (no per-predicate expected-output check per Stage 4 rule, no pair-wise oracle per Stage 5 rule). final.ql compiles and analyzes without error."
+}

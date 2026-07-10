@@ -1,0 +1,23 @@
+{
+  "cell": "C1",
+  "seed_id": "dgfp-4",
+  "rep": 2,
+  "status": "pass",
+  "llm_calls": 2,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "lenient_pass": true,
+  "verifier_verdict": "MISMATCH(F2.if: seed=1, poc=2) [lenient: F2.if delta=1]",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_sha256": "f62c9a93585a0a8b2083dd84008d41e05f8c3552be69980216d070cdaaf73f64",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-4-rep2.ql",
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "notes": [
+    "POC regen 1: trimmed loop body to a single submit+if+return so F5.return count matched seed-extract (strict pass on F5); F2.if delta=1 accepted under lenient rule.",
+    "Query targets GFP_ATOMIC passed to gfp-consuming APIs in sleepable callbacks (probe/init/resume/work/...), generic over the bug pattern.",
+    "Query fired exactly on em28xx_init_usb_xfer_buggy; silent on em28xx_init_usb_xfer_fixed; compiled and validated on first iter (compile_iters=0)."
+  ]
+}

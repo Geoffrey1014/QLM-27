@@ -1,0 +1,24 @@
+{
+  "cell": "C0",
+  "seed_id": "mc-3",
+  "repeat_idx": 2,
+  "commit_sha": "6fc232db9e8cd50b9b83534de9cd91ace711b2d7",
+  "c_file": "net/rfkill/core.c",
+  "commit_subject": "rfkill: Fix incorrect check to avoid NULL pointer dereference",
+  "llm_calls": 1,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 89,
+  "model": "claude-opus-4-7 (in-session)",
+  "temperature": 0.2,
+  "stop_reason": "ok",
+  "notes": [
+    "Single-shot generation targeted the deref-before-null-check pattern (use-before-check / wrong-order check).",
+    "Predicate dereferences() covers *p, p->f, &p->f (the exact rfkill_register shape), and p[i]; isNullCheck() covers ==NULL, !=NULL, !p, and bare if(p) guards.",
+    "Reachability via CFG successor closure; suppresses cases where the variable is reassigned between deref and check.",
+    "Compiled clean on first attempt (0 repair iters); no POC for C0."
+  ]
+}

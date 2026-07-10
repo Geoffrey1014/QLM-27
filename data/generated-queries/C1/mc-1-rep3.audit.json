@@ -1,0 +1,22 @@
+{
+  "cell": "C1",
+  "seed_id": "mc-1",
+  "rep": 3,
+  "status": "ok",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "lenient_pass": false,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=2 F2.if=1)",
+  "poc_sha256": "264d061ef53e1cb93351c5fb2ed49dcffb2f9dbe61e9f2fae39125fbc18d048c",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-1-rep3.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-1-rep3-work",
+  "fix_sha": "e85bb0beb649",
+  "c_file": "drivers/input/touchscreen/ad7879.c",
+  "subject": "Input: ad7879 - add check for read errors in interrupt"
+}

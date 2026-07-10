@@ -1,0 +1,29 @@
+{
+  "seed_id": "lin-3",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "bf4a9b2467b7",
+  "c_file": "sound/soc/samsung/aries_wm8994.c",
+  "subject": "ASoC: samsung: Fix refcount leak in aries_audio_probe",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 5,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isAcquire": 1,
+    "isRelease": 1,
+    "getAcquiredVar": 1,
+    "hasReleaseOnVar": 1,
+    "hasEarlyReturnBeforeRelease": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 381,
+  "poc_sha256": "6459fa28564e28392ea345359c50208fe4920491b92f56808687a8b974ffa8d4"
+}

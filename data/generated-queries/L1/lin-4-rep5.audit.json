@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-4",
+  "repeat": 5,
+  "cell": "L1",
+  "fix_sha": "1332661e0930",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isDeviceNodeAcquisition": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 274.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF"
+}

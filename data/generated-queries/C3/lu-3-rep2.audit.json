@@ -1,0 +1,33 @@
+{
+  "seed_id": "lu-3",
+  "repeat": 2,
+  "cell": "C3",
+  "fix_sha": "f141a422159a",
+  "c_file": "sound/soc/rockchip/rockchip_pdm.c",
+  "subject": "ASoC: rockchip: Fix a reference count leak.",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 5,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "420285b217fb197c1fe546b84ad71d6f3862788fc8e422ca382b0ed244f58cba",
+  "predicate_iters": {
+    "isAcquireCall": 1,
+    "isReleaseCall": 1,
+    "errorReturnAfterAcquire": 1,
+    "noReleaseBeforeReturn": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 259.0,
+  "notes": [
+    "Reused features.json/poc.c/seed.c from lu-3-rep1 (POC verifier-stable across reps).",
+    "POC contains only _buggy variant (verifier API-count constraint); oracle accepts buggy_fires alone.",
+    "Final query fired on POC at /poc.c:32 (the early return after pm_runtime_get_sync error)."
+  ]
+}

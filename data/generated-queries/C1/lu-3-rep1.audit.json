@@ -1,0 +1,19 @@
+{
+  "cell": "C1",
+  "seed_id": "lu-3",
+  "rep": 1,
+  "status": "pass",
+  "llm_calls": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_strict": true,
+  "compile_iters": 1,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_sha256": "6482c5cb95c7c78b603c865b9bab0c688fc923ee5421fed46c9cf602c458bb54",
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "wall_seconds": 303,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-3-rep1.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-3-rep1-work"
+}

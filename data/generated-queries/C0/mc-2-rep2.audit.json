@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "mc-2",
+  "repeat_idx": 2,
+  "commit_sha": "09acf29c8246",
+  "c_file": "drivers/staging/rtl8192u/r8192U_core.c",
+  "commit_subject": "staging: rtl8192u: null check the kzalloc",
+  "llm_calls": 2,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 40,
+  "model": "claude-opus-4-5-20251101",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

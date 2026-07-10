@@ -1,0 +1,24 @@
+{
+  "cell": "C2",
+  "seed_id": "lu-2",
+  "repeat": 3,
+  "commit_sha": "2289adbfa559050d2a38bcd9caac1c18b800e928",
+  "llm_calls": 3,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isAllocCall": 0,
+    "isFreeCall": 0,
+    "allocatedVar": 0,
+    "hasCleanupFree": 0,
+    "earlyReturnBypassesFree": 0
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 109.0,
+  "final_predicates_differ_from_stage3": false,
+  "notes": "C2 cell: features + plan + single-shot assembled query (5 predicates). Compiled cleanly on first attempt with codeql-2.25.6. Pattern: memory leak when early return bypasses err-label kfree."
+}

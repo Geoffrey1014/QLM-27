@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-2",
+  "repeat": 2,
+  "cell": "L1",
+  "fix_sha": "2289adbfa559",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isKmallocCall": 1, "isKfreeCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 205.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused features/POC/DB from L0 lu-2-rep2 (same seed, verifier already OK). N_PRED=2 (isKmallocCall, isKfreeCall) - both compiled on iter 1; assemble compiled iter 1; analyze completed - 2 hits on _buggy early returns (line 45 -ENOMEM, line 57 -EIO). Accept per L1 knob (compile-ok only, no pair-wise oracle)."
+}

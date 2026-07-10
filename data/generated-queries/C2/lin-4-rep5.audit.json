@@ -1,0 +1,33 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-4",
+  "repeat": 5,
+  "commit_sha": "1332661e09304b7b8e84e5edc11811ba08d12abe",
+  "c_file": "drivers/memory/samsung/exynos5422-dmc.c",
+  "subject": "memory: samsung: exynos5422-dmc: Fix refcount leak in of_get_dram_timings",
+  "features": {
+    "target_api": "of_parse_phandle",
+    "post_operation": "of_node_put",
+    "critical_variable": "np_ddr",
+    "path_conditions": "of_node_put must be called on np_ddr on every error return path after of_parse_phandle succeeds; pre-patch missed it on three -ENOMEM paths.",
+    "fits_pattern": true,
+    "fit_test_reasoning": "of_parse_phandle returns a node pointer with incremented refcount that must be explicitly released via of_node_put. The post-op is a release/cleanup (not data transformation). Missing the call causes a refcount leak (resource leak). Follows acquire/use/release semantics."
+  },
+  "plan_predicates": ["acquires_node", "releases_node", "early_return_without_release", "leaks_node_refcount"],
+  "llm_calls": 6,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "acquires_node": 0,
+    "releases_node": 0,
+    "early_return_without_release": 0,
+    "leaks_node_refcount": 0
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 65.0
+}

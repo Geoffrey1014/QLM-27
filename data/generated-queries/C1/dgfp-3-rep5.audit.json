@@ -1,0 +1,29 @@
+{
+  "cell": "C1",
+  "seed_id": "dgfp-3",
+  "rep": 5,
+  "status": "pass",
+  "llm_calls": 2,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": false,
+  "verifier_lenient": false,
+  "verifier_verdict": "MISMATCH(F2.if: seed=2, poc=4) MISMATCH(F3.goto: seed=2, poc=4) MISMATCH(F5.return: seed=3, poc=5) MISMATCH(F1.acquire: seed=1, poc=2) MISMATCH(F1.release: seed=2, poc=4)",
+  "verifier_note": "v1 verifier compares per-file counts; POC contains both _buggy and _fixed, so every count is ~2x the seed slice. This is the known v1 over-strictness flagged in §5.5 of the cell prompt; structurally the POC mirrors the seed (one acquire / one release / one goto / one return / two ifs per function-copy). Reviewer-accepted; reused identical POC as dgfp-3-rep1.",
+  "poc_sha256": "558d4a2d6c9c07871ca24e7931d41b0e584406e10fccbe84767f1fd56526d967",
+  "poc_drift": false,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-3-rep5/query.ql",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-3-rep5/POC.c",
+  "poc_db_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-3-rep5/poc-db/db",
+  "poc_run_csv": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-3-rep5/poc-run.csv",
+  "notes": [
+    "POC reused from dgfp-3-rep1 (deterministic for this seed under C1).",
+    "Verifier-v1 emits MISMATCH because POC includes both _buggy and _fixed copies, doubling every per-file count. Per cell prompt §3 this is the known v1 over-strictness; treated as reviewer-accepted lenient pass.",
+    "Query is generic: detects allocator(...,GFP_ATOMIC) inside functions whose name contains init/probe/setup/create/start/open/alloc and does NOT look like an atomic-context helper. Uses MacroInvocation + location-overlap to recognise GFP_ATOMIC after macro expansion to a numeric literal. Does not hard-code _buggy/_fixed or any POC artifact.",
+    "Repair iters: iter1 compile-fail (residual 'isFromTemplateInstantiation(_) and false' garbage); iter2 compiled but oracle silent because MacroInvocation.getExpr() didn't equal the call argument expression; iter3 added location-overlap fallback and broadened init-name filter to substring match -> oracle PASS."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-4",
+  "repeat": 2,
+  "cell": "L0",
+  "fix_sha": "1332661e0930",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isOfNodeAcquire": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 183.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Features/POC reused from C3 rep2 (verifier-v1 OK); plan+final generated fresh per L0 ablation (single predicate + merged assembly). Accept criterion: compile-only (met). Query also fires on buggy POC leak paths."
+}

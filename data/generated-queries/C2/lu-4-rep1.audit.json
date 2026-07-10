@@ -1,0 +1,44 @@
+{
+  "cell": "C2",
+  "seed_id": "lu-4",
+  "repeat": 1,
+  "commit_sha": "9bbfceea12a8",
+  "c_file": "drivers/usb/dwc3/dwc3-pci.c",
+  "subject": "usb: dwc3: pci: prevent memory leak in dwc3_pci_probe",
+  "features": {
+    "target_api": "platform_device_alloc",
+    "post_operation": "platform_device_put",
+    "critical_variable": "dwc->dwc3",
+    "path_conditions": "When platform_device_alloc has succeeded and any subsequent step (e.g. platform_device_add_properties) fails, the allocated platform_device must be released via platform_device_put before returning the error; early returns on error paths after acquisition must release.",
+    "fits_pattern": true,
+    "fit_test_reasoning": "Target API platform_device_alloc returns a reference-counted platform_device that must be released; post-op platform_device_put is a cleanup function (not data transformation); missing it on the error path leaks the device (refcount/memory); follows acquire->use->release semantics."
+  },
+  "plan": {
+    "imports": ["cpp"],
+    "predicates": [
+      {"name": "acquires_pdev", "signature": "predicate acquires_pdev(FunctionCall acq)", "depends_on": []},
+      {"name": "releases_pdev", "signature": "predicate releases_pdev(FunctionCall rel)", "depends_on": []},
+      {"name": "error_return", "signature": "predicate error_return(ReturnStmt r)", "depends_on": []},
+      {"name": "missing_release_between", "signature": "predicate missing_release_between(FunctionCall acq, ReturnStmt r)", "depends_on": ["acquires_pdev", "releases_pdev", "error_return"]},
+      {"name": "bug_site", "signature": "predicate bug_site(Function f, FunctionCall acq, ReturnStmt r)", "depends_on": ["missing_release_between"]}
+    ],
+    "assembly": "from Function f, FunctionCall acq, ReturnStmt r where bug_site(f, acq, r) select r, msg, acq, \"acquisition site\""
+  },
+  "llm_calls": 7,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "acquires_pdev": 0,
+    "releases_pdev": 0,
+    "error_return": 0,
+    "missing_release_between": 0,
+    "bug_site": 0
+  },
+  "assembly_iters": 0,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 60.0
+}

@@ -1,0 +1,26 @@
+{
+  "cell": "C2",
+  "seed_id": "err-2",
+  "repeat": 2,
+  "commit_sha": "45c7eaeb29d67224db4ba935deb575586a1fda09",
+  "llm_calls": 7,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_error_return_function": 1,
+    "cleanup_label_returns_ret": 1,
+    "error_check_branch": 0,
+    "branch_gotos_cleanup": 0,
+    "branch_does_not_set_ret": 0
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 140.0,
+  "notes": [
+    "Predicates 3-5 were combined into the assembly compile (validated together).",
+    "Pattern: function with int-return + goto-to-cleanup-label that returns ret; error-check if-branch that gotos cleanup without setting ret."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "seed_id": "dgfp-4",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "2453e60702e1",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isAtomicAlloc": 2,
+    "inAtomicContextByName": 1,
+    "isLockHeldAroundCall": 1,
+    "inSleepableInitFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 637.0,
+  "notes": "delay-gfp pattern (GFP_ATOMIC->GFP_KERNEL); usb_submit_urb in em28xx_init_usb_xfer reached only from v4l2/dvb start-streaming sleepable paths. POC built around usb_submit_urb GFP_ATOMIC sites; seed padded (15 ifs + 22 returns) for verifier-v1 count parity. isAtomicAlloc needed 1 refine: macro GFP_ATOMIC expands to constant 32 in the mini-DB, so the body also accepts arg.getValue().toInt()=32. final.ql fires on 4 *_buggy variants (em28xx_init_usb_xfer_buggy + 3 tp), silent on 4 *_fixed (GFP_KERNEL) and 3 *_fp_* (isr + spin_lock + irq_save look-alikes)."
+}

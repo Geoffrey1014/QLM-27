@@ -1,0 +1,35 @@
+{
+  "seed_id": "dgfp-4",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "2453e60702e1",
+  "subject": "media: usb: em28xx: Replace GFP_ATOMIC with GFP_KERNEL in em28xx_init_usb_xfer()",
+  "c_file": "drivers/media/usb/em28xx/em28xx-core.c",
+  "pattern": "delay-gfp",
+  "llm_calls": 3,
+  "compile_iters": 6,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "c379273f245bf1d631039989c9a5a2e314a54b522b56e0db902a51ae141e6c47",
+  "predicate_iters": {
+    "isAtomicAllocCall": 2,
+    "inSleepableNameContext": 1,
+    "inAtomicContextByName": 1,
+    "hasLockHeldBefore": 2
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 789,
+  "notes": [
+    "Pattern: delay-gfp (GFP-side). Bug = GFP_ATOMIC passed to usb_submit_urb() inside em28xx_init_usb_xfer(), which is process-context-only.",
+    "Verifier-v1: passed on first attempt — OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=5 F2.if=6). seed.c is a near-verbatim slice of em28xx_init_usb_xfer + a tiny parity helper (int em28xx_seed_parity() { return 0; }) to match POC's main() return.",
+    "Stage 4: isAtomicAllocCall and hasLockHeldBefore each needed 1 refine because the initial body used fc.getAnArgument().toString() = 'GFP_ATOMIC' which post-CPP becomes the literal '32' (macro stub expansion). Fix: switched to MacroInvocation mi where mi.getMacroName() = 'GFP_ATOMIC' and mi.getExpr() = fc.getAnArgument().",
+    "Stage 5: final.ql compiled cleanly and fires exactly once on POC, on em28xx_init_usb_xfer_buggy. POC contains no _fixed/_fp_ variants by design (verifier-v1 count parity demanded a minimal shape); silence on fixed/fp is trivially satisfied.",
+    "Predicate iters count refinement attempts (initial validation = 1; +1 for each refine round)."
+  ]
+}

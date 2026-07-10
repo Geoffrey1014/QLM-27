@@ -1,0 +1,22 @@
+{
+  "cell": "C2",
+  "seed_id": "mc-4",
+  "repeat": 2,
+  "commit_sha": "c9c63915519b",
+  "llm_calls": 4,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isTargetCall": 0,
+    "resultStoredIn": 0,
+    "isErrorCheckedBeforeUse": 0,
+    "missingErrorCheck": 0
+  },
+  "assembly_iters": 2,
+  "wall_seconds": 115.0,
+  "final_predicates_differ_from_stage3": false
+}

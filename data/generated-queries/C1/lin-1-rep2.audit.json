@@ -1,0 +1,31 @@
+{
+  "cell": "C1",
+  "seed_id": "lin-1",
+  "rep": 2,
+  "seed_sha": "74139a64e8ce",
+  "c_file": "arch/arm/mach-omap2/pm33xx-core.c",
+  "func_name": "amx3_idle_init",
+  "subject": "ARM: OMAP2+: pm33xx-core: ix device node reference leaks in amx3_idle_init",
+  "llm_calls": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=2 F1.rel=0 F3.goto=0 F5.ret=2 F2.if=5)",
+  "verifier_strict_pass": true,
+  "compile_iters": 1,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "poc_sha256": "5a4e63a523f6019eb51bd3d1c3652d8207dde90ad9f295775a3c4d1d7c1c5397",
+  "status": "ok",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-1-rep2.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-1-rep2-work",
+  "wall_seconds": 260,
+  "notes": [
+    "POC generated independently for rep2 (no reuse of rep1 POC).",
+    "Verifier needed a slice-of-_buggy (poc-for-verifier.c) to align counts with seed-slice; this is the same setup rep1 used.",
+    "Initial query had a select-clause if-then-else expression syntax error; fixed in 1 repair iter by factoring into helper predicate exitKind/1.",
+    "Query is generic: matches any device_node-acquiring API (of_parse_phandle, of_find_*, of_get_*) and any continue/break exit lacking of_node_put on the variable.",
+    "POC sha256 frozen after verifier pass; recorded in experiments/rq3/poc-sha.json."
+  ]
+}

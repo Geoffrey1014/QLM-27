@@ -1,0 +1,23 @@
+{
+  "cell": "C1",
+  "seed_id": "lu-3",
+  "rep": 3,
+  "status": "ok",
+  "llm_calls": 4,
+  "poc_regens": 0,
+  "compile_iters": 2,
+  "verifier_passes": true,
+  "verifier_pass_mode": "strict",
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=5 F2.if=2)",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "poc_sha256": "29e0f60b1284dab2fb067bf03eea29c908c7dd42bf60210f921f89e3d779ff4a",
+  "fix_sha": "f141a422159a",
+  "c_file": "sound/soc/rockchip/rockchip_pdm.c",
+  "func_name": "rockchip_pdm_resume",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-3-rep3.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-3-rep3-work",
+  "wall_seconds": 359
+}

@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "err-2",
+  "repeat_idx": 1,
+  "commit_sha": "45c7eaeb29d6",
+  "c_file": "drivers/thermal/thermal_of.c",
+  "commit_subject": "thermal: thermal_of: Fix error return code of thermal_of_populate_bind_params()",
+  "llm_calls": 1,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 145,
+  "model": "claude-opus-4-5-20251101",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

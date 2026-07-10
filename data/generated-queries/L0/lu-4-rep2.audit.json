@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-4",
+  "repeat": 2,
+  "cell": "L0",
+  "fix_sha": "9bbfceea12a8",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isPlatformDeviceAllocCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 820.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC verifier initially mismatched F5.return (7 vs 6) due to implicit return in auxiliary void poc_main; regenerated POC (removed poc_main) passed verifier. Final query compiled and executed on POC-DB (fired on 3 return statements, including the true bug at line 126); L0 accepts on compile success alone."
+}

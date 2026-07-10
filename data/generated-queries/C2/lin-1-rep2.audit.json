@@ -1,0 +1,22 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-1",
+  "repeat": 2,
+  "commit_sha": "74139a64e8cedb6d971c78d5d17384efeced1725",
+  "llm_calls": 6,
+  "compile_iters": 5,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_target_acquire": 1,
+    "is_release_of": 1,
+    "acquired_into": 1,
+    "early_exit_after": 1
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 194.0,
+  "final_predicates_differ_from_stage3": false
+}

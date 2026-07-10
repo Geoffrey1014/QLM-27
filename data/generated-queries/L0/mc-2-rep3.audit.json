@@ -1,0 +1,17 @@
+{
+  "seed_id": "mc-2",
+  "repeat": 3,
+  "cell": "L0",
+  "fix_sha": "09acf29c8246",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isAllocReturningCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 318.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC/features/seed/db reused from rep1 (verifier-v1 OK). Fresh plan.json + final.ql synthesized for rep3. Final query compiles cleanly and fires on 3 buggy variants (init_priv_buggy, init_blob_buggy_tp2, init_blob_buggy_tp3), silent on fixed/fp variants."
+}

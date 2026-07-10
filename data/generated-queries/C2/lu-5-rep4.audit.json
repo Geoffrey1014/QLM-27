@@ -1,0 +1,22 @@
+{
+  "cell": "C2",
+  "seed_id": "lu-5",
+  "repeat": 4,
+  "commit_sha": "450c3d416683",
+  "llm_calls": 6,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_alloc_call": 1,
+    "is_free_call_on": 0,
+    "alloc_assigned_to": 0,
+    "return_without_free": 0
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 125.0,
+  "final_predicates_differ_from_stage3": false
+}

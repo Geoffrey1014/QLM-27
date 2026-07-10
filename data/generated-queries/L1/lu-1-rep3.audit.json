@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-1",
+  "repeat": 3,
+  "cell": "L1",
+  "fix_sha": "b6631c6031c7",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "predicate_iters": {"acquiresNewAsoc": 1, "notFreedInFunction": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 162.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. N_PRED=2 (acquiresNewAsoc, notFreedInFunction). All compiles succeeded on first attempt; no compile-repair iterations needed. POC and features reused from L0 lu-1-rep3 (already verifier-v1 OK). Final query fires on _buggy in POC (informational, not L1 gate)."
+}

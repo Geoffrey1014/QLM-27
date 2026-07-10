@@ -1,0 +1,22 @@
+{
+  "cell": "C2",
+  "seed_id": "mc-5",
+  "repeat": 2,
+  "commit_sha": "d6cb77228e3a",
+  "llm_calls": 6,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isAllocCall": 0,
+    "assignsToTarget": 0,
+    "sameTarget": 0,
+    "hasNullCheckAfter": 0,
+    "isDereferencedAfter": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 53.0
+}

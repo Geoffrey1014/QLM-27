@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "lu-4",
+  "repeat_idx": 4,
+  "commit_sha": "9bbfceea12a8",
+  "c_file": "drivers/usb/dwc3/dwc3-pci.c",
+  "commit_subject": "usb: dwc3: pci: prevent memory leak in dwc3_pci_probe",
+  "llm_calls": 1,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 89,
+  "model": "claude-opus-4-7",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-5",
+  "repeat": 2,
+  "cell": "L0",
+  "fix_sha": "10d6bdf53290",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isPlatformDeviceAcquisition": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 732,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Final query compiled and fired on the POC buggy variant (cf_probe_buggy) at of_find_device_by_node; L0 acceptance criterion (successful compile) satisfied."
+}

@@ -1,0 +1,34 @@
+{
+  "seed_id": "lin-4",
+  "repeat": 2,
+  "cell": "C3",
+  "fix_sha": "1332661e0930",
+  "c_file": "drivers/memory/samsung/exynos5422-dmc.c",
+  "subject": "memory: samsung: exynos5422-dmc: Fix refcount leak in of_get_dram_timings",
+  "pattern": "four-features-Lin",
+  "llm_calls": 4,
+  "compile_iters": 1,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "56d46eb998c2e00b270618eb590847a606aa750e55629a1e1a689f30abad9b8d",
+  "predicate_iters": {
+    "isAcquire": 1,
+    "isRelease": 1,
+    "acquiredVariable": 1,
+    "releasesVarBetween": 1,
+    "leakingReturn": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_oracle": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "rows": 4,
+    "expected_buggy_returns": 3,
+    "note": "Query fires on the 3 buggy returns (lines 55, 59, 63) plus the early -EINVAL return at line 50 (acquire-failed path). The latter is a known harmless overshoot for this pattern."
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 239
+}

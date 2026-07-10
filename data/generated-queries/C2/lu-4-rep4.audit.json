@@ -1,0 +1,22 @@
+{
+  "cell": "C2",
+  "seed_id": "lu-4",
+  "repeat": 4,
+  "commit_sha": "9bbfceea12a8",
+  "llm_calls": 7,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isTargetApiCall": 0,
+    "isPostOpCall": 0,
+    "holdsAllocResult": 0,
+    "isErrorReturn": 0,
+    "missingCleanupOnErrorPath": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 60.0
+}

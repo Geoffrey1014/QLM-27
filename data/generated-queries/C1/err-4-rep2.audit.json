@@ -1,0 +1,22 @@
+{
+  "cell": "C1",
+  "seed_id": "err-4",
+  "rep": 2,
+  "status": "ok",
+  "llm_calls": 2,
+  "poc_regens": 0,
+  "compile_iters": 1,
+  "verifier_passes": true,
+  "verifier_lenient": false,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=1 F3.goto=4 F5.ret=2 F2.if=5)",
+  "poc_sha256": "18b11887e7647e8fa6fb796aa42ea3e9d10d46fa78995800f5fa821054502a27",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-4-rep2.ql",
+  "workdir": "<REPO_ROOT>/experiments/rq3/d3/C1/err-4-rep2-work",
+  "fix_sha": "c021e0235770",
+  "c_file": "drivers/usb/gadget/legacy/multi.c",
+  "subject": "usb: gadget: legacy: fix error return code of multi_bind()"
+}

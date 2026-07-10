@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-1",
+  "repeat": 3,
+  "cell": "L0",
+  "fix_sha": "74139a64e8ce",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isOfNodeAcquire": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 178.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Features/POC reused from C3 rep3 (verifier-v1 OK); plan+final generated fresh per L0 ablation (single predicate + merged assembly)."
+}

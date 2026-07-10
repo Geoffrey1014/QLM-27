@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-5",
+  "repeat": 1,
+  "cell": "L1",
+  "fix_sha": "10d6bdf53290",
+  "llm_calls": 4,
+  "compile_iters": 3,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isAcquireCall": 1, "hasPutDeviceRelease": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 156.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused verifier-v1 approved POC + mini-DB from L0 rep1 (identical seed/rep). 2 predicates (isAcquireCall, hasPutDeviceRelease); each compiled on iter 1. Assembly compiled on iter 1. Final analyze fires on octeon_cf_probe_buggy in POC. Accepted as any-compile-OK per L1 spec."
+}

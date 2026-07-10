@@ -1,0 +1,23 @@
+{
+  "cell": "C2",
+  "seed_id": "dgfp-5",
+  "repeat": 4,
+  "commit_sha": "9f96b9b7d836a71733f83ba813d9e0c658090c5d",
+  "llm_calls": 6,
+  "compile_iters": 5,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isBusyWaitDelay": 1,
+    "enclosingFunction": 1,
+    "noAtomicGuard": 1,
+    "calledFromWorkqueue": 1
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 150.0,
+  "final_predicates_differ_from_stage3": false,
+  "notes": "Seed is delay-misuse pattern (mdelay in non-atomic workqueue ctx); mapped to 4-feature schema loosely: target_api=mdelay, post_operation=usleep_range, critical_variable=N/A, path_conditions=non-atomic caller. All 4 predicates compiled first try; assembly compiled first try."
+}

@@ -1,0 +1,31 @@
+{
+  "cell": "C1",
+  "seed_id": "lin-5",
+  "seed_sha": "10d6bdf53290",
+  "rep_id": "rep1",
+  "status": "ok",
+  "poc_sha256": "55dbf288618244e8874687370786841cdd48299cd5e19f7a57f7ce9136d1660f",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=1 F1.rel=3 F3.goto=0 F5.ret=3 F2.if=4)",
+  "verifier_mode": "strict",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_results": {
+    "fired_locations": ["POC.c:70 (inside octeon_cf_probe_buggy)"],
+    "fired_on_buggy": true,
+    "fired_on_fixed": false
+  },
+  "artifacts": {
+    "query_ql": "experiments/rq3/d3/C1/lin-5-rep1.ql",
+    "rep_dir": "experiments/rq3/d3/C1/lin-5-rep1/",
+    "poc": "experiments/rq3/d3/C1/lin-5-rep1/POC.c",
+    "poc_db": "experiments/rq3/d3/C1/lin-5-rep1/poc-db/db",
+    "qlpack": "experiments/rq3/d3/C1/lin-5-rep1/qlpack.yml",
+    "poc_run_csv": "experiments/rq3/d3/C1/lin-5-rep1/poc-run.csv",
+    "seed_slice": "experiments/rq3/d3/C1/lin-5-rep1/seed-slice.c",
+    "poc_for_verifier": "experiments/rq3/d3/C1/lin-5-rep1/poc-for-verifier.c"
+  }
+}

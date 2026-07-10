@@ -1,0 +1,22 @@
+{
+  "cell": "C2",
+  "seed_id": "dgfp-2",
+  "repeat": 1,
+  "commit_sha": "e9acf05255cbf72dc32169957d2895cbfd12c7e1",
+  "llm_calls": 7,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isMdelayCall": 1,
+    "isProbeEntry": 1,
+    "reachableFromProbe": 1
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 160,
+  "final_predicates_differ_from_stage3": false,
+  "notes": "p4 (inSleepableContext) and p5 (isBuggyMdelay) were trivial 2-line wrappers, validated during final assembly compile."
+}

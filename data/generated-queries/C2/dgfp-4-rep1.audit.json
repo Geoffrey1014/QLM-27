@@ -1,0 +1,33 @@
+{
+  "cell": "C2",
+  "seed_id": "dgfp-4",
+  "repeat": 1,
+  "commit_sha": "2453e60702e1a4d22720e3b6aac543e1a96fcd6b",
+  "c_file": "drivers/media/usb/em28xx/em28xx-core.c",
+  "subject": "media: usb: em28xx: Replace GFP_ATOMIC with GFP_KERNEL in em28xx_init_usb_xfer()",
+  "llm_calls": 8,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_gfp_atomic": 2,
+    "has_gfp_param": 1,
+    "call_passes_atomic_flag": 1,
+    "name_suggests_atomic": 1,
+    "enclosing_func_likely_non_atomic": 1,
+    "unnecessary_atomic_alloc": 1
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 125.0,
+  "notes": [
+    "Seed is dgfp (delay-gfp / DCNS) pattern, not four-features resource lifecycle.",
+    "Adapted features schema: target_api=usb_submit_urb / any gfp_t-taking function, post_operation=N/A, critical_variable=gfp flag arg, path_conditions=enclosing func not callable from atomic context.",
+    "Compositional decomposition into 6 named predicates as required by C2 (3-6).",
+    "Single compile error during predicate development (MacroInvocation cast incompatible with Expr) — fixed in iter1 of is_gfp_atomic.",
+    "Final assembled .ql compiled clean on first attempt."
+  ]
+}

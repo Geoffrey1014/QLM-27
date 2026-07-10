@@ -1,0 +1,31 @@
+{
+  "cell": "C2",
+  "seed_id": "lu-4",
+  "repeat": 2,
+  "commit_sha": "9bbfceea12a8",
+  "c_file": "drivers/usb/dwc3/dwc3-pci.c",
+  "function_name": "dwc3_pci_probe",
+  "llm_calls": 6,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_target_alloc": 0,
+    "is_release_call": 0,
+    "stores_alloc_result": 0,
+    "error_return_without_release": 0,
+    "leaky_function": 0
+  },
+  "assembly_iters": 0,
+  "features": {
+    "target_api": "platform_device_alloc",
+    "post_operation": "platform_device_put",
+    "critical_variable": "dwc->dwc3",
+    "path_conditions": "Every error return after a successful platform_device_alloc must release the allocated platform_device via platform_device_put (typically via goto err).",
+    "fits_pattern": true
+  },
+  "notes": ["unused predicate warning for stores_alloc_result (non-fatal)"]
+}

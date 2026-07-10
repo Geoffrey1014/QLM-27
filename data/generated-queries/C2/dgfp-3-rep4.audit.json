@@ -1,0 +1,23 @@
+{
+  "cell": "C2",
+  "seed_id": "dgfp-3",
+  "repeat": 4,
+  "commit_sha": "a0732548ba03c27fb42da4cf8e1eecc205760f12",
+  "llm_calls": 7,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isGfpAtomicMacro": 0,
+    "isAllocCallWithGfpAtomic": 0,
+    "isInitLikeFunction": 0,
+    "mayBeCalledFromAtomic": 0,
+    "enclosingFunctionIsSleepable": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 30.0,
+  "final_predicates_differ_from_stage3": false
+}

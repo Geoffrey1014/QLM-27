@@ -1,0 +1,17 @@
+{
+  "seed_id": "err-5",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "31d82c2c787d",
+  "llm_calls": 5,
+  "compile_iters": 0,
+  "poc_regens": 3,
+  "verifier_passes": false,
+  "predicate_iters": {},
+  "final_compiles": false,
+  "final_runs_on_poc": false,
+  "status": "fail",
+  "fail_stage": "verifier",
+  "wall_seconds": 337.0,
+  "notes": "POC verifier-v1 count-equality gate exhausted 3 regen budget. Final mismatch was a single off-by-one on return-stmt count (seed=18, poc=19); all four other dimensions (acquire/release/goto/if) matched exactly on the last attempt. Pattern fit: true. POC structurally captures the bug (vzalloc NULL -> goto without ret=-ENOMEM) and a clean fixed variant + FP look-alike. Documented v1 weakness: count-equality is too strict."
+}

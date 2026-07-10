@@ -1,0 +1,27 @@
+{
+  "seed_id": "mc-3",
+  "repeat": 2,
+  "cell": "L0",
+  "fix_sha": "6fc232db9e8c",
+  "c_file": "net/rfkill/core.c",
+  "subject": "rfkill: Fix incorrect check to avoid NULL pointer dereference",
+  "pattern": "missing-check",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=7 F2.if=2)",
+  "predicate_iters": {"isPointerParam": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_oracle_recorded": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "buggy_hits": ["rfkill_register_buggy:poc.c:34 (&rfkill->dev before BUG_ON at line 37)"]
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 174.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Features/POC/mini-DB reused from mc-3 rep3 (same seed, deterministic LLM/prompt at temperature 0.2). Plan emits exactly 1 predicate (isPointerParam) with the deref/null-check ordering logic folded into the assembly where-clause. Final compile succeeded on first try (L0 accept criterion). POC oracle recorded but not used as accept criterion: fires on rfkill_register_buggy at poc.c:34, silent on rfkill_register_fixed."
+}

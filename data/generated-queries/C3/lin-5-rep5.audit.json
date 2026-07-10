@@ -1,0 +1,29 @@
+{
+  "seed_id": "lin-5",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "10d6bdf53290",
+  "subject": "ata: pata_octeon_cf: Fix refcount leak in octeon_cf_probe",
+  "c_file": "drivers/ata/pata_octeon_cf.c",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isAcquire": 1, "isRelease": 1, "hasMissingRelease": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "poc_sha256": "2bb6bf450690a4daa56b93f1e690e67360312c093cd7cc9f2874e71894979eb0",
+  "poc_reused_from": "lin-5-rep1",
+  "wall_seconds": 144.0,
+  "notes": [
+    "POC.c reused from lin-5-rep1 (same sha256); poc-db rsync'd from rep4 to skip rebuild.",
+    "POC has only _buggy variant (no _fixed/_fp), so oracle = buggy_fires only.",
+    "All 3 predicates validated on first compile+run iteration."
+  ]
+}

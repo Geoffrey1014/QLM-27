@@ -1,0 +1,37 @@
+{
+  "seed_id": "lu-5",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "450c3d416683",
+  "subject": "affs: fix a memory leak in affs_remount",
+  "c_file": "fs/affs/super.c",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "poc_sha256": "486488dc7b55176f0f78ea568fcd8f6c62769b93b0ee593ca79d47d844635eb8",
+  "predicate_iters": {
+    "isAcquisition": 1,
+    "isReleaseCall": 1,
+    "getAcquiredVariable": 1,
+    "hasMatchingRelease": 1,
+    "hasNullCheck": 1,
+    "isInFixedFunction": 1,
+    "hasReleaseOnAllPaths": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 626,
+  "notes": [
+    "POC regenerated 2x to satisfy verifier-v1 count-equality (target counts seed=F1.acq=0, F1.rel=2, F3.goto=0, F5.ret=4, F2.if=4); regen #2 collapsed the success-path arms into a single early-return giving POC=(0,2,0,4,4) OK.",
+    "Single _buggy variant used (no _fixed/_fp_ in POC); function-name oracle satisfies (buggy_fires=true, fixed_fires=false, fp_fires=false) trivially since fixed/fp absent.",
+    "Pattern: missing kfree on success path after kstrdup; hasReleaseOnAllPaths uses count-based heuristic releases >= returns-1, which holds for fixed-style functions and not for buggy.",
+    "Built on lu-1-rep1 template scaffold but added hasReleaseOnAllPaths predicate to ensure proper path-coverage discrimination instead of mere presence-of-release."
+  ]
+}

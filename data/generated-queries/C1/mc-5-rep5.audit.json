@@ -1,0 +1,32 @@
+{
+  "cell": "C1",
+  "seed_id": "mc-5",
+  "seed_sha": "d6cb77228e3a",
+  "rep_id": "rep5",
+  "rep": 5,
+  "status": "pass",
+  "llm_calls": 2,
+  "poc_regens": 0,
+  "compile_iters": 1,
+  "verifier_passes": true,
+  "verifier_lenient": false,
+  "verifier_mode": "strict",
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=3 F2.if=1)",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "poc_sha256": "2a0b608744d446b9beb56a486c76724322e149f9275ab09748cf6b236f7df238",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-5-rep5/POC.c",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-5-rep5/query.ql",
+  "poc_db": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-5-rep5/poc-db/db",
+  "poc_run_csv": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-5-rep5/poc-run.csv",
+  "notes": [
+    "Stage A: POC generated first try modeling devm_kcalloc -> saved_context without NULL check (_buggy) vs with !ptr check returning -ENOMEM (_fixed); matches patch d6cb77228e3a.",
+    "Stage B: verifier-v1 strict OK against buggy-only seed-slice and poc-for-verifier slice (F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=3 F2.if=1).",
+    "Stage C: POC frozen at sha 2a0b6087..., chmod 444, sha unchanged at end of run (no drift).",
+    "Stage D: poc-db built cleanly (gcc -O0 -w -c POC.c).",
+    "Stage E: single monolithic query.ql (single from-where-select, <200 LOC); generic missing-NULL-check detector over an allocator API surface (kmalloc/devm_kmalloc/vmalloc/kv*/kstrdup families).",
+    "Stage F: compiled cleanly first try (1 compile iter, 0 repair iters); analyze on POC DB produced exactly one row at byt_gpio_probe_buggy line 55 (devm_kcalloc call), silent on byt_gpio_probe_fixed."
+  ]
+}

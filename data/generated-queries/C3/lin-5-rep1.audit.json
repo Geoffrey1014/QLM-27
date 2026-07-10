@@ -1,0 +1,34 @@
+{
+  "seed_id": "lin-5",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "10d6bdf53290",
+  "subject": "ata: pata_octeon_cf: Fix refcount leak in octeon_cf_probe",
+  "c_file": "drivers/ata/pata_octeon_cf.c",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "2bb6bf450690a4daa56b93f1e690e67360312c093cd7cc9f2874e71894979eb0",
+  "predicate_iters": {
+    "isPlatformDeviceAcquisition": 1,
+    "isPutDevice": 1,
+    "getAcquiredVariable": 1,
+    "hasMatchingPutDevice": 1,
+    "hasNullCheck": 1,
+    "isInFixedFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_oracle": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 214.0,
+  "out_dir": "<REPO_ROOT>/experiments/rq3/d3-prep/C3/lin-5-rep1",
+  "final_query": "<REPO_ROOT>/experiments/rq3/d3/C3/lin-5-rep1.ql"
+}

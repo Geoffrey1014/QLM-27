@@ -1,0 +1,26 @@
+{
+  "cell": "C1",
+  "seed_id": "mc-5",
+  "rep": 3,
+  "status": "pass",
+  "llm_calls": 2,
+  "poc_regens": 0,
+  "compile_iters": 0,
+  "verifier_passes": true,
+  "verifier_strict": true,
+  "lenient_pass": false,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "poc_sha256": "c843f618650e18e050758243484c694ec8b84f6d7e71e31a0d48bcc892c0d2b5",
+  "verdict_last": ["OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=7 F2.if=4)"],
+  "wall_seconds": 401,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-5-rep3.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-5-rep3-work",
+  "notes": [
+    "Strict verifier-v1 pass on POC v2 (v1 had if/return count mismatch; rebalanced by aligning seed slice counts to ifs=4 returns=7).",
+    "POC models the bug as alloc-via-devm_kcalloc then deref of vg->saved_context[i] with no NULL check; the real kernel deref site is in suspend/resume callbacks but the lifecycle is captured.",
+    "Monolithic query compiled clean on first attempt; fired on the two deref lines inside _buggy (POC.c:63 and 64), silent on _fixed."
+  ]
+}

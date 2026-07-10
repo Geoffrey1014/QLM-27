@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-5",
+  "repeat": 5,
+  "cell": "L1",
+  "fix_sha": "450c3d416683",
+  "llm_calls": 0,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isAllocByKstrdup": 1, "hasMissingKfree": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 216.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. N_PRED=2 (isAllocByKstrdup, hasMissingKfree). Reused features/POC/POC-DB from L0/lu-5-rep5 (verifier-v1 OK). Both predicates and final.ql compiled first try (0 compile-repair iters used out of L1 cap of 2). Analyze on poc-db returned 0 rows (POC is a single _buggy variant that already frees new_opts on the parse_options error path, so the intra-procedural query correctly does not fire; L1 accepts on compile+analyze success regardless of oracle)."
+}

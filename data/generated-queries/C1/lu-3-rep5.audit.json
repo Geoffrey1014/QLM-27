@@ -1,0 +1,29 @@
+{
+  "cell": "C1",
+  "seed_id": "lu-3",
+  "rep": 5,
+  "status": "pass",
+  "llm_calls": 2,
+  "poc_regens": 0,
+  "compile_iters": 1,
+  "verifier_passes": true,
+  "verifier_lenient": false,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=2 F2.if=1)",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "poc_sha256": "e0c3c2c31bb031f63ff59f3da937e5edbb3ce03fba072c31f9c8516e7de61d5d",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-3-rep5/POC.c",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-3-rep5.ql",
+  "poc_db": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-3-rep5/poc-db/db",
+  "poc_run_csv": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-3-rep5/poc-run.csv",
+  "notes": [
+    "Stage A: POC generated first try; pm_runtime_get_sync + missing pm_runtime_put on negative-return path.",
+    "Stage B: verifier-v1 strict OK after providing buggy-only slice (poc-for-verifier.c) matching seed-slice counts (F5.ret=2 F2.if=1).",
+    "Stage C: POC frozen at sha e0c3c2c3..., chmod 444, sha unchanged at end (no drift).",
+    "Stage D: poc-db built cleanly (gcc -O0 -w -c POC.c).",
+    "Stage E: monolithic query.ql synthesized (~70 LOC, single from-where-select, generic - matches pm_runtime_get_sync + pm_runtime_resume_and_get and all pm_runtime_put* variants).",
+    "Stage F: compile OK first try; single result fired on POC.c line 33 inside rockchip_pdm_resume_buggy; silent on _fixed (which has pm_runtime_put inside the if-then). No repair iters needed."
+  ]
+}

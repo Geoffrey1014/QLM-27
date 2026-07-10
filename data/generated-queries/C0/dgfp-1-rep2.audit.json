@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "dgfp-1",
+  "repeat_idx": 2,
+  "commit_sha": "e58650b57ee0078ac8986650febeb55263f9ebdf",
+  "c_file": "drivers/input/touchscreen/wdt87xx_i2c.c",
+  "commit_subject": "Input: wdt87xx_i2c - replace mdelay() with msleep() in wdt87xx_resume()",
+  "llm_calls": 1,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 35.0,
+  "model": "claude-opus-4-5-20251101",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

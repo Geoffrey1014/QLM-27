@@ -1,0 +1,37 @@
+{
+  "seed_id": "err-2",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "45c7eaeb29d6",
+  "subject": "thermal: thermal_of: Fix error return code of thermal_of_populate_bind_params()",
+  "c_file": "drivers/thermal/thermal_of.c",
+  "pattern": "error-return-code",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=2 F1.rel=3 F3.goto=5 F5.ret=2 F2.if=8)",
+  "predicate_iters": {
+    "isErrorCleanupLabel": 1,
+    "labelReturnsRet": 1,
+    "gotoInErrorCondition": 1,
+    "gotoMissingRetAssign": 2
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "final_oracle_result": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "fire_count_on_poc": 3,
+    "fire_sites": [
+      "do_bind_buggy:74 (goto end after !count)",
+      "do_bind_buggy:79 (goto end after !buf)",
+      "do_bind_buggy:84 (goto free_buf after trips[i].np==NULL)"
+    ]
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 659.0,
+  "notes": "POC kept minimal with a single _buggy function; no _fixed/_fp variants present in mini-DB, so oracle's not-fixed_fires and not-fp_fires conditions hold trivially while buggy_fires is true. Verifier-v1 OK on first POC try; the only regen-class adjustment was removing main() to match seed return-count (counted as poc_regens=1)."
+}

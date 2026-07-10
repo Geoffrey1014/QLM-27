@@ -1,0 +1,19 @@
+{
+  "cell": "C1",
+  "seed_id": "dgfp-1",
+  "rep": 4,
+  "status": "pass",
+  "llm_calls": 3,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "verifier_strict": true,
+  "compile_iters": 2,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_sha256": "4b4ef5d2881d811338fb9266acc2cbc4b8f54b963c4b03ed3f3d1f9b2190dea5",
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "wall_seconds": 301,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-1-rep4.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-1-rep4-work"
+}

@@ -1,0 +1,37 @@
+{
+  "cell": "C1",
+  "seed_id": "dgfp-2",
+  "seed_sha": "e9acf05255cb",
+  "rep_id": "rep4",
+  "status": "ok",
+  "poc_sha256": "56d51c1e646163ca597f9316066ccf7d684092e5a5bb7d1ec2d46e241d3d5588",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=12 F2.if=4)",
+  "verifier_mode": "strict",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_results": {
+    "fired_locations": ["POC.c:33 (inside cpt_device_init_buggy)"],
+    "fired_on_buggy": true,
+    "fired_on_fixed": false
+  },
+  "artifacts": {
+    "query_ql": "experiments/rq3/d3/C1/dgfp-2-rep4.ql",
+    "rep_dir": "experiments/rq3/d3/C1/dgfp-2-rep4/",
+    "poc": "experiments/rq3/d3/C1/dgfp-2-rep4/POC.c",
+    "poc_db": "experiments/rq3/d3/C1/dgfp-2-rep4/poc-db/db",
+    "qlpack": "experiments/rq3/d3/C1/dgfp-2-rep4/qlpack.yml",
+    "poc_run_csv": "experiments/rq3/d3/C1/dgfp-2-rep4/poc-run.csv",
+    "seed_slice": "experiments/rq3/d3/C1/dgfp-2-rep4/seed-slice.c"
+  },
+  "wall_time_seconds": 150,
+  "notes": [
+    "Acted-as-LLM (Claude Opus 4.7 in-session) for POC + query generation.",
+    "POC mirrors the dgfp-2 rep1 skeleton (required to satisfy verifier-v1 dimension counts for this seed).",
+    "Query varies via predicate naming (looksAtomic / longMdelayCall) and an extra atomic-name heuristic ('poll').",
+    "First POC passed verifier strictly; first query passed POC oracle on first compile+analyze."
+  ]
+}

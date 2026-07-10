@@ -1,0 +1,25 @@
+{
+  "seed_id": "err-4",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "c021e0235770",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isStatusVar": 1,
+    "isNegativeConstant": 1,
+    "isFailGoto": 2,
+    "missingStatusAssignBeforeGoto": 2,
+    "labelReturnsVarWithoutNegativeAssign": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 593.0
+}

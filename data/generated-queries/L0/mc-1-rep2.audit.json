@@ -1,0 +1,17 @@
+{
+  "seed_id": "mc-1",
+  "repeat": 2,
+  "cell": "L0",
+  "fix_sha": "e85bb0beb649",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isCheckableReadCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 162.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC/features/seed reused from C3 rep2 (verifier-v1 OK). Final query fires on ad7879_irq_buggy's regmap_bulk_read call as expected."
+}

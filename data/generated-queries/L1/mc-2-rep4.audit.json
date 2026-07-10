@@ -1,0 +1,17 @@
+{
+  "seed_id": "mc-2",
+  "repeat": 4,
+  "cell": "L1",
+  "fix_sha": "09acf29c8246",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isKernelAlloc": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 210.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. N_PRED=1; predicate + assemble compiled first-try (no refine iters needed). POC/features/seed/poc-db/plan/preds reused from mc-2-rep4 L0 artifacts (same seed+rep, stable POC per C3 cache convention). Final query fires on 3 of 4 buggy variants in POC (tp1 uses function-call consume not direct deref, correctly excluded). L1 accepts any successful compile+analyze as pass."
+}

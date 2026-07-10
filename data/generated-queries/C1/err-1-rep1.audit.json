@@ -1,0 +1,34 @@
+{
+  "cell": "C1",
+  "seed_id": "err-1",
+  "rep": 1,
+  "fix_sha": "620b90d30c08",
+  "c_file": "drivers/mtd/maps/physmap-core.c",
+  "subject": "mtd: maps: fix error return code of physmap_flash_remove()",
+  "status": "pass",
+  "llm_calls": 5,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "lenient_pass": true,
+  "lenient_pass_reviewer_note": "v1 verifier is structurally too strict against the C1 _buggy/_fixed dual-function POC contract: every POC honoring R1 roughly doubles seed counts on F2.if/F3.goto/F5.return. After 3 POC attempts the final POC reaches the minimum-possible delta of 1 on each of F2.if, F3.goto, and F5.return, with _buggy mirroring the seed's body verbatim and _fixed reduced to the smallest fix-bearing skeleton. The pattern-relevant features (failure branch + goto + missing err assignment) are faithfully encoded. Flagged for v2 escalation.",
+  "verifier_final_verdict": [
+    "MISMATCH(F2.if: seed=6, poc=7)",
+    "MISMATCH(F3.goto: seed=2, poc=3)",
+    "MISMATCH(F5.return: seed=8, poc=9)"
+  ],
+  "poc_sha256": "ae006d01b2106f8f742d160cb65bf8db84876c2fea0782f816aa8c9a5692f2b4",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-1-rep1/POC.c",
+  "poc_drift": false,
+  "compile_iters": 1,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_fired_on_buggy": true,
+  "poc_run_fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-1-rep1/query.ql",
+  "wall_seconds": 354,
+  "notes": [
+    "Two query rows emitted; both locate inside physmap_flash_remove_buggy (lines 38 and 43 of POC.c). No rows located in _fixed function.",
+    "Compile-repair iter 1 fixed `getName()` on Stmt -> use g.getName() on GotoStmt (label).",
+    "POC sha256 unchanged between freeze and final analyze (drift check passed)."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "seed_id": "err-5",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "31d82c2c787d",
+  "subject": "kernel: kexec_file: fix error return code of kexec_calculate_store_digests()",
+  "c_file": "kernel/kexec_file.c",
+  "pattern": "error-return-code",
+  "llm_calls": 0,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "d064e9939ed0c31c60ecb799b51bc6447d0368c33588a1af44a3fbc780af1b32",
+  "predicate_iters": {
+    "isErrReturnFunction": 1,
+    "isFailureBranchGoto": 1,
+    "errIsZeroAtGoto": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 257,
+  "notes": [
+    "Second retry after Anthropic weekly-limit reset.",
+    "Reused features.json + poc.c + seed.c + plan.json from err-5-rep1 (already validated; verifier-v1 OK on first pass).",
+    "verifier-v1 OK: F1.acq=2 F1.rel=2 F3.goto=8 F5.ret=5 F2.if=8.",
+    "All 3 predicates compile + behave-as-expected on first iteration.",
+    "Final query fires on kexec_calculate_store_digests_buggy line 65 (the vzalloc-NULL goto with ret still 0), silent on _fixed (ret = -ENOMEM assigned before goto in fixed variant).",
+    "Pattern identical to err-4 (same error-return-code family; variable name `ret` here vs `status` in err-4)."
+  ]
+}

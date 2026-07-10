@@ -1,0 +1,37 @@
+{
+  "seed_id": "lin-2",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "9a2ea132df86",
+  "c_file": "drivers/hsi/controllers/omap_ssi_core.c",
+  "subject": "HSI: omap_ssi: Fix refcount leak in ssi_probe",
+  "pattern": "four-features-Lin",
+  "llm_calls": 6,
+  "compile_iters": 3,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "poc_sha256": "7de9e098ab7d418731c98ee499981486bdd2e13272c8c41c518e5bc26a286698",
+  "predicate_iters": {
+    "isForEachChildMacro": 1,
+    "isOfNodePutCall": 1,
+    "isOfIteratorForLoop": 2,
+    "loopHasUnguardedEarlyExit": 2
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_oracle": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "hits": 2,
+    "hit_locations": ["poc.c:26", "poc.c:30"]
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 418,
+  "notes": [
+    "Stage 4 (per-predicate isolated test queries) compressed into integrated final.ql iteration; predicates are still decomposed inside the file in topo order matching plan.json.",
+    "POC variants reduced from initial 12 to a single probe_buggy function to satisfy verifier-v1 strict count equality (seed has 0 of_node_put calls, 3 gotos, 5 returns, 6 ifs).",
+    "Oracle: buggy_fires=true, fixed_fires=false (no _fixed in POC), fp_fires=false."
+  ]
+}

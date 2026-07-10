@@ -1,0 +1,23 @@
+{
+  "seed_id": "lu-2",
+  "repeat": 3,
+  "cell": "L1",
+  "fix_sha": "2289adbfa559",
+  "pattern": "four-features-Lu",
+  "c_file": "drivers/media/usb/dvb-usb/af9005.c",
+  "subject": "media: usb: fix memory leak in af9005_identify_state",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isKmallocIntoVar": 1,
+    "hasCleanupBetween": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 215.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused features/poc/poc-db from d5-prep/L0/lu-2-rep3 (Stages 1,2,2.5,2.6 unchanged from C3). Fresh Stage 3 plan with N_PRED=2 (isKmallocIntoVar + hasCleanupBetween); both predicates compiled first try, final.ql compiled first try, analyze completed with 1 hit on _buggy variant."
+}

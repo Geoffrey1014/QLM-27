@@ -1,0 +1,38 @@
+{
+  "cell": "C1",
+  "seed_id": "lu-2",
+  "seed_sha": "2289adbfa559",
+  "rep_id": "rep1",
+  "status": "ok",
+  "poc_sha256": "a46cdbe7e4b34a7a32e32b1ff9cc3ed0b2ec6e442afe580dfdaf2ec3d7888760",
+  "llm_calls": 2,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=1 F1.rel=1 F3.goto=1 F5.ret=3 F2.if=4)",
+  "verifier_mode": "strict",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_results": {
+    "fired_locations": ["POC.c:63 (inside af9005_identify_state_buggy)"],
+    "fired_on_buggy": true,
+    "fired_on_fixed": false
+  },
+  "artifacts": {
+    "query_ql": "experiments/rq3/d3/C1/lu-2-rep1.ql",
+    "rep_dir": "experiments/rq3/d3/C1/lu-2-rep1/",
+    "poc": "experiments/rq3/d3/C1/lu-2-rep1/POC.c",
+    "poc_db": "experiments/rq3/d3/C1/lu-2-rep1/poc-db/db",
+    "qlpack": "experiments/rq3/d3/C1/lu-2-rep1/qlpack.yml",
+    "poc_run_csv": "experiments/rq3/d3/C1/lu-2-rep1/poc-run.csv",
+    "seed_slice": "experiments/rq3/d3/C1/lu-2-rep1/seed-slice.c",
+    "poc_for_verifier": "experiments/rq3/d3/C1/lu-2-rep1/poc-for-verifier.c"
+  },
+  "wall_time_seconds": 322,
+  "notes": [
+    "Acted-as-LLM (Claude Opus 4.7 in-session) for POC + query generation; in D3-main these become API calls.",
+    "First POC passed verifier-v1 strictly on the first try (F1.acq=1 F1.rel=1 F3.goto=1 F5.ret=3 F2.if=4 matched seed slice).",
+    "compile_iters=2: iter 1 compiled but query fired on _fixed's return -ENOMEM guard and on both returns of _buggy; iter 2 added returnGuardsNullAcquisition() to exclude alloc-failure guard returns. Final fires only on the leaking `return -EIO;` at POC.c:63 inside _buggy.",
+    "POC sha verified unchanged after query repair iterations (drift prevention §5.5 satisfied)."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "seed_id": "mc-4",
+  "repeat": 5,
+  "cell": "L0",
+  "fix_sha": "c9c63915519b",
+  "c_file": "drivers/hwmon/lm80.c",
+  "subject": "hwmon: (lm80) fix a missing check of the status of SMBus read",
+  "pattern": "missing-check",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=14 F2.if=1)",
+  "predicate_iters": {"isFailCapableReadCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_oracle_recorded": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "buggy_hits": ["set_fan_div_buggy:line55", "read_alarm_buggy_tp1:line63", "read_temp_buggy_tp2:line70", "read_in_buggy_tp3:line77"]
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 685.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC required 1 regen to satisfy verifier-v1 count parity (initial POC had F5.return=21 vs seed=14 and F2.if=5 vs seed=1; v2 shrank branch/return count to match). Plan emits exactly 1 predicate (isFailCapableReadCall) with missing-negativity-check logic folded into the assembly where-clause. Final compile succeeded on first try. Oracle recorded: fires on all 4 _buggy variants, silent on _fixed and _tn/_fp (not used as accept criterion at L0)."
+}

@@ -1,0 +1,17 @@
+{
+  "seed_id": "dgfp-2",
+  "repeat": 4,
+  "cell": "L0",
+  "fix_sha": "e9acf05255cb",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isBusyDelayInSleepable": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 311.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC + verifier-v1 verdict + poc-db reused verbatim from dgfp-2-rep1 (POC-side scaffolding not ablated per L0 spec; same seed => same POC target). Single predicate isBusyDelayInSleepable recognises mdelay(ms>=10) whose enclosing function name matches sleepable-context entry points (probe/init/resume/suspend/device_init/work/worker); assembly where-clause inlines atomic-context exclusions (irq/handler/isr/interrupt/atomic/nmi/tasklet/locked/critical_section name matches + spin_lock/preempt_disable/rcu_read_lock call absence). final.ql compiles cleanly; on poc-db fires 4x (cpt_device_init_buggy + tp1/tp2/tp3) and stays silent on all *_fixed / *_fp_* variants. L0 accepts any successful compile as pass regardless of oracle."
+}

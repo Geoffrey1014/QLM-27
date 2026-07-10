@@ -1,0 +1,28 @@
+{
+  "cell": "C1",
+  "seed_id": "dgfp-1",
+  "rep": 5,
+  "status": "pass",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_lenient": false,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=5 F2.if=2)",
+  "poc_sha256": "445b76ecb317dc7a3caf5b066e649587fdec480194ca795154909efa91091df4",
+  "poc_drift": false,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-1-rep5/query.ql",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-1-rep5/POC.c",
+  "poc_db_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-1-rep5/poc-db/db",
+  "poc_run_csv": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-1-rep5/poc-run.csv",
+  "notes": [
+    "POC + seed-slice reused from dgfp-1-rep1 (deterministic for this seed under C1).",
+    "Verifier-v1 strict pass on first POC.",
+    "Query is generic: flags mdelay() with compile-time constant arg >= 10 ms in functions whose name doesn't suggest atomic context. Does not hardcode _buggy/_fixed.",
+    "Query compiled and validated on POC mini-DB on iter 1; no repair needed."
+  ]
+}

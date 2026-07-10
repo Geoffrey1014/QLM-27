@@ -1,0 +1,34 @@
+{
+  "seed_id": "err-5",
+  "repeat": 2,
+  "cell": "C3",
+  "fix_sha": "31d82c2c787d",
+  "subject": "kernel: kexec_file: fix error return code of kexec_calculate_store_digests()",
+  "c_file": "kernel/kexec_file.c",
+  "pattern": "error-return-code",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "d064e9939ed0c31c60ecb799b51bc6447d0368c33588a1af44a3fbc780af1b32",
+  "predicate_iters": {
+    "isErrReturnFunction": 1,
+    "isFailureBranchGoto": 1,
+    "errIsZeroAtGoto": 2
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 412,
+  "notes": [
+    "Probe-2 run (second retry after weekly-limit reset). Pipeline completed end-to-end.",
+    "Reused verifier-v1-passing artifacts from err-5-rep1 (same seed, identical features.json / seed.c / poc.c / poc-db / poc.sha256) per C3-prompt cost-notes guidance: 'POC mini-DB build cached per (seed, POC sha); if POC stable across repeats, reuse same DB.' POC verifier verdict: OK(F1.acq=2 F1.rel=2 F3.goto=8 F5.ret=5 F2.if=8).",
+    "Plan/predicates adapted from err-2-rep1 template (handles ret/err/rc/error variable names). err-5 uses `int ret = 0` so kept the initializer-must-be-zero constraint in P1 (unlike err-2 which dropped it because `ret` was uninitialized there).",
+    "errIsZeroAtGoto needed one refine iteration: initial body used `a.getRValue().getValue() != \"0\"` which fails for non-literal RHS (e.g. `ret = (int)PTR_ERR(tfm)` has no compile-time value), causing false fires on the IS_ERR/PTR_ERR error-propagation block. Refined to `not a.getRValue().getValue() = \"0\"` so a missing value is treated as a real non-zero assignment (which it is — any explicit assignment to ret means the programmer chose the error code). After fix, P3 fires only on the bare `goto out_free_desc;` (the actual bug) in _buggy at line 65.",
+    "Stage-5 oracle: final.ql fires exactly once on kexec_calculate_store_digests_buggy:65, silent on _fixed. POC carries no fp_ variants."
+  ]
+}

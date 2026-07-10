@@ -1,0 +1,30 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-2",
+  "repeat": 3,
+  "commit_sha": "9a2ea132df860177b33c9fd421b26c4e9a0a9396",
+  "llm_calls": 6,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isOfIterMacro": 0,
+    "iteratorVarOf": 0,
+    "isOfNodePutCall": 0,
+    "macroLoopBody": 0,
+    "earlyExitInLoopMissingPut": 0
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 66.0,
+  "features": {
+    "target_api": "for_each_available_child_of_node",
+    "post_operation": "of_node_put",
+    "critical_variable": "child",
+    "path_conditions": "Within a for_each_available_child_of_node() loop body, if execution leaves the loop early via break/return/goto, the iterator must be explicitly released with of_node_put().",
+    "fits_pattern": true
+  },
+  "final_predicates_differ_from_stage3": false
+}

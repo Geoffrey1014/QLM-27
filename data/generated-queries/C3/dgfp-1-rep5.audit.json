@@ -1,0 +1,35 @@
+{
+  "seed_id": "dgfp-1",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "e58650b57ee0",
+  "subject": "Input: wdt87xx_i2c - replace mdelay() with msleep() in wdt87xx_resume()",
+  "c_file": "drivers/input/touchscreen/wdt87xx_i2c.c",
+  "pattern": "delay-gfp",
+  "llm_calls": 3,
+  "compile_iters": 5,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "9a9e510e654e2823ae6807d4166aeb2d71dca5122bb741f80865507fdef60fe2",
+  "predicate_iters": {
+    "isMdelayCall": 1,
+    "isSleepableContextFunction": 1,
+    "isAtomicContextFunction": 1,
+    "callsMdelayInSleepableContext": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 375,
+  "notes": [
+    "Reused features.json (rep1) and seed.c (rep2) from prior aborted d3-prep attempts.",
+    "Initial poc.c (rep1, 11 functions) failed verifier-v1 (F5.return: seed=2, poc=12); rewrote to minimal seed-mirror with only wdt87xx_resume_buggy + main, passing OK.",
+    "Stage4: all 4 predicates validated on first iteration (no refinements).",
+    "Stage5: final.ql compiled and accepted on first attempt; fires on wdt87xx_resume_buggy only.",
+    "POC contains no _fixed/_fp_ variants by design (verifier-v1 count parity demanded a minimal shape); silence on fixed/fp is trivially satisfied."
+  ]
+}

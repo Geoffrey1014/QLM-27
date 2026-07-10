@@ -1,0 +1,4954 @@
+{
+  "cell": "C2",
+  "pattern": "error-return",
+  "kbh_db": "linux-v5.10-arm-am",
+  "gt_file": "bai-error-retcode-v5.10.json",
+  "n_queries_found": 25,
+  "n_pairs": 24,
+  "wall_seconds": 11148.0,
+  "aggregate": {
+    "n_queries": 25,
+    "pair_wise_mean": 0.0509,
+    "pair_wise_best": 0.3182,
+    "recall_in_db_mean": 0.3027,
+    "recall_in_db_best": 0.8077,
+    "fires_buggy_rate_mean": 0.3982,
+    "n_kbh_ok": 23
+  },
+  "per_query": [
+    {
+      "query": "err-1-rep1",
+      "seed_id": "err-1",
+      "held_out_sha": "620b90d30c08",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 1,
+        "fires_buggy_rate": 0.045454545454545456,
+        "fires_fixed_count": 1,
+        "fires_fixed_rate": 0.045454545454545456,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 1,
+        "recall_raw": 0.0385,
+        "recall_in_db": 0.0385,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 255.0,
+      "wall_kbh_s": 587.2
+    },
+    {
+      "query": "err-1-rep2",
+      "seed_id": "err-1",
+      "held_out_sha": "620b90d30c08",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 2,
+        "fires_buggy_rate": 0.09090909090909091,
+        "fires_fixed_count": 2,
+        "fires_fixed_rate": 0.09090909090909091,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "analyze_fail",
+        "err": "TIMEOUT after 1200s"
+      },
+      "wall_pair_s": 235.3,
+      "wall_kbh_s": 1200.2
+    },
+    {
+      "query": "err-1-rep3",
+      "seed_id": "err-1",
+      "held_out_sha": "620b90d30c08",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 4,
+        "pair_wise_pass_rate": 0.18181818181818182,
+        "fires_buggy_count": 7,
+        "fires_buggy_rate": 0.3181818181818182,
+        "fires_fixed_count": 3,
+        "fires_fixed_rate": 0.13636363636363635,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 5,
+        "recall_raw": 0.1923,
+        "recall_in_db": 0.1923,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 309.6,
+      "wall_kbh_s": 65.3
+    },
+    {
+      "query": "err-1-rep4",
+      "seed_id": "err-1",
+      "held_out_sha": "620b90d30c08",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 13,
+        "fires_buggy_rate": 0.5909090909090909,
+        "fires_fixed_count": 13,
+        "fires_fixed_rate": 0.5909090909090909,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 9,
+        "recall_raw": 0.3462,
+        "recall_in_db": 0.3462,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 284.5,
+      "wall_kbh_s": 48.1
+    },
+    {
+      "query": "err-1-rep5",
+      "seed_id": "err-1",
+      "held_out_sha": "620b90d30c08",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 2,
+        "pair_wise_pass_rate": 0.09090909090909091,
+        "fires_buggy_count": 7,
+        "fires_buggy_rate": 0.3181818181818182,
+        "fires_fixed_count": 5,
+        "fires_fixed_rate": 0.22727272727272727,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 5,
+        "recall_raw": 0.1923,
+        "recall_in_db": 0.1923,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 274.6,
+      "wall_kbh_s": 61.9
+    },
+    {
+      "query": "err-2-rep1",
+      "seed_id": "err-2",
+      "held_out_sha": "45c7eaeb29d6",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 2,
+        "pair_wise_pass_rate": 0.09090909090909091,
+        "fires_buggy_count": 17,
+        "fires_buggy_rate": 0.7727272727272727,
+        "fires_fixed_count": 15,
+        "fires_fixed_rate": 0.6818181818181818,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 16,
+        "recall_raw": 0.6154,
+        "recall_in_db": 0.6154,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 233.1,
+      "wall_kbh_s": 45.1
+    },
+    {
+      "query": "err-2-rep2",
+      "seed_id": "err-2",
+      "held_out_sha": "45c7eaeb29d6",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 4,
+        "pair_wise_pass_rate": 0.18181818181818182,
+        "fires_buggy_count": 17,
+        "fires_buggy_rate": 0.7727272727272727,
+        "fires_fixed_count": 13,
+        "fires_fixed_rate": 0.5909090909090909,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 17,
+        "recall_raw": 0.6538,
+        "recall_in_db": 0.6538,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 291.5,
+      "wall_kbh_s": 55.7
+    },
+    {
+      "query": "err-2-rep3",
+      "seed_id": "err-2",
+      "held_out_sha": "45c7eaeb29d6",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 2,
+        "pair_wise_pass_rate": 0.09090909090909091,
+        "fires_buggy_count": 13,
+        "fires_buggy_rate": 0.5909090909090909,
+        "fires_fixed_count": 11,
+        "fires_fixed_rate": 0.5,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 7,
+        "recall_raw": 0.2692,
+        "recall_in_db": 0.2692,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 292.4,
+      "wall_kbh_s": 49.8
+    },
+    {
+      "query": "err-2-rep4",
+      "seed_id": "err-2",
+      "held_out_sha": "45c7eaeb29d6",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 1,
+        "pair_wise_pass_rate": 0.045454545454545456,
+        "fires_buggy_count": 3,
+        "fires_buggy_rate": 0.13636363636363635,
+        "fires_fixed_count": 2,
+        "fires_fixed_rate": 0.09090909090909091,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 2,
+        "recall_raw": 0.0769,
+        "recall_in_db": 0.0769,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 274.5,
+      "wall_kbh_s": 65.1
+    },
+    {
+      "query": "err-2-rep5",
+      "seed_id": "err-2",
+      "held_out_sha": "45c7eaeb29d6",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 18,
+        "fires_buggy_rate": 0.8181818181818182,
+        "fires_fixed_count": 18,
+        "fires_fixed_rate": 0.8181818181818182,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 14,
+        "recall_raw": 0.5385,
+        "recall_in_db": 0.5385,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 293.2,
+      "wall_kbh_s": 107.8
+    },
+    {
+      "query": "err-3-rep1",
+      "seed_id": "err-3",
+      "held_out_sha": "26594c6bbb60",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 10,
+        "fires_buggy_rate": 0.45454545454545453,
+        "fires_fixed_count": 10,
+        "fires_fixed_rate": 0.45454545454545453,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 6,
+        "recall_raw": 0.2308,
+        "recall_in_db": 0.2308,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 262.1,
+      "wall_kbh_s": 50.5
+    },
+    {
+      "query": "err-3-rep2",
+      "seed_id": "err-3",
+      "held_out_sha": "26594c6bbb60",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 14,
+        "fires_buggy_rate": 0.6363636363636364,
+        "fires_fixed_count": 14,
+        "fires_fixed_rate": 0.6363636363636364,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 10,
+        "recall_raw": 0.3846,
+        "recall_in_db": 0.3846,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 288.7,
+      "wall_kbh_s": 61.8
+    },
+    {
+      "query": "err-3-rep3",
+      "seed_id": "err-3",
+      "held_out_sha": "26594c6bbb60",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 1,
+        "pair_wise_pass_rate": 0.045454545454545456,
+        "fires_buggy_count": 19,
+        "fires_buggy_rate": 0.8636363636363636,
+        "fires_fixed_count": 18,
+        "fires_fixed_rate": 0.8181818181818182,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "analyze_fail",
+        "err": "TIMEOUT after 1200s"
+      },
+      "wall_pair_s": 289.5,
+      "wall_kbh_s": 1200.1
+    },
+    {
+      "query": "err-3-rep4",
+      "seed_id": "err-3",
+      "held_out_sha": "26594c6bbb60",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 13,
+        "fires_buggy_rate": 0.5909090909090909,
+        "fires_fixed_count": 13,
+        "fires_fixed_rate": 0.5909090909090909,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 9,
+        "recall_raw": 0.3462,
+        "recall_in_db": 0.3462,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 310.8,
+      "wall_kbh_s": 69.6
+    },
+    {
+      "query": "err-3-rep5",
+      "seed_id": "err-3",
+      "held_out_sha": "26594c6bbb60",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 19,
+        "fires_buggy_rate": 0.8636363636363636,
+        "fires_fixed_count": 19,
+        "fires_fixed_rate": 0.8636363636363636,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 21,
+        "recall_raw": 0.8077,
+        "recall_in_db": 0.8077,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 209.2,
+      "wall_kbh_s": 42.0
+    },
+    {
+      "query": "err-4-rep1",
+      "seed_id": "err-4",
+      "held_out_sha": "c021e0235770",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 7,
+        "fires_buggy_rate": 0.3181818181818182,
+        "fires_fixed_count": 7,
+        "fires_fixed_rate": 0.3181818181818182,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 12,
+        "recall_raw": 0.4615,
+        "recall_in_db": 0.4615,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 217.5,
+      "wall_kbh_s": 47.5
+    },
+    {
+      "query": "err-4-rep2",
+      "seed_id": "err-4",
+      "held_out_sha": "c021e0235770",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 2,
+        "pair_wise_pass_rate": 0.09090909090909091,
+        "fires_buggy_count": 4,
+        "fires_buggy_rate": 0.18181818181818182,
+        "fires_fixed_count": 2,
+        "fires_fixed_rate": 0.09090909090909091,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 6,
+        "recall_raw": 0.2308,
+        "recall_in_db": 0.2308,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 264.8,
+      "wall_kbh_s": 54.5
+    },
+    {
+      "query": "err-4-rep3",
+      "seed_id": "err-4",
+      "held_out_sha": "c021e0235770",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 3,
+        "pair_wise_pass_rate": 0.13636363636363635,
+        "fires_buggy_count": 3,
+        "fires_buggy_rate": 0.13636363636363635,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 5,
+        "recall_raw": 0.1923,
+        "recall_in_db": 0.1923,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 224.7,
+      "wall_kbh_s": 64.7
+    },
+    {
+      "query": "err-4-rep4",
+      "seed_id": "err-4",
+      "held_out_sha": "c021e0235770",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 7,
+        "pair_wise_pass_rate": 0.3181818181818182,
+        "fires_buggy_count": 11,
+        "fires_buggy_rate": 0.5,
+        "fires_fixed_count": 4,
+        "fires_fixed_rate": 0.18181818181818182,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": false,
+            "pair_wise_pass": true
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 14,
+        "recall_raw": 0.5385,
+        "recall_in_db": 0.5385,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 277.5,
+      "wall_kbh_s": 78.2
+    },
+    {
+      "query": "err-4-rep5",
+      "seed_id": "err-4",
+      "held_out_sha": "c021e0235770",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 19,
+        "fires_buggy_rate": 0.8636363636363636,
+        "fires_fixed_count": 19,
+        "fires_fixed_rate": 0.8636363636363636,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 4,
+        "recall_raw": 0.1538,
+        "recall_in_db": 0.1538,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 270.6,
+      "wall_kbh_s": 83.9
+    },
+    {
+      "query": "err-5-rep1",
+      "seed_id": "err-5",
+      "held_out_sha": "31d82c2c787d",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 0,
+        "fires_buggy_rate": 0.0,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 2,
+        "recall_raw": 0.0769,
+        "recall_in_db": 0.0769,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 259.7,
+      "wall_kbh_s": 56.0
+    },
+    {
+      "query": "err-5-rep2",
+      "seed_id": "err-5",
+      "held_out_sha": "31d82c2c787d",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 0,
+        "fires_buggy_rate": 0.0,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 3,
+        "recall_raw": 0.1154,
+        "recall_in_db": 0.1154,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 290.6,
+      "wall_kbh_s": 52.3
+    },
+    {
+      "query": "err-5-rep3",
+      "seed_id": "err-5",
+      "held_out_sha": "31d82c2c787d",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 1,
+        "fires_buggy_rate": 0.045454545454545456,
+        "fires_fixed_count": 1,
+        "fires_fixed_rate": 0.045454545454545456,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 4,
+        "recall_raw": 0.1538,
+        "recall_in_db": 0.1538,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 287.0,
+      "wall_kbh_s": 92.8
+    },
+    {
+      "query": "err-5-rep4",
+      "seed_id": "err-5",
+      "held_out_sha": "31d82c2c787d",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 0,
+        "fires_buggy_rate": 0.0,
+        "fires_fixed_count": 0,
+        "fires_fixed_rate": 0.0,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 4,
+        "recall_raw": 0.1538,
+        "recall_in_db": 0.1538,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 272.2,
+      "wall_kbh_s": 70.9
+    },
+    {
+      "query": "err-5-rep5",
+      "seed_id": "err-5",
+      "held_out_sha": "31d82c2c787d",
+      "pair_wise": {
+        "total_pairs": 24,
+        "analyze_ok": 22,
+        "analyze_fail": 2,
+        "pair_wise_passes": 0,
+        "pair_wise_pass_rate": 0.0,
+        "fires_buggy_count": 1,
+        "fires_buggy_rate": 0.045454545454545456,
+        "fires_fixed_count": 1,
+        "fires_fixed_rate": 0.045454545454545456,
+        "per_pair": [
+          {
+            "sha": "143c253f42ba",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "2055a99da8a2",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "26594c6bbb60",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "282894556b83",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "31d82c2c787d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "3401ecf7fc1b",
+            "status": "ok",
+            "buggy_fires": true,
+            "fixed_fires": true,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "38c26ff3048a",
+            "status": "analyze_fail",
+            "buggy_err": "eries.\nA fatal error occurred: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/38c26ff3048a-buggy/db-cpp/default/cache/.lock\n(eventual cause: OverlappingFileLockException)\n",
+            "fixed_err": null
+          },
+          {
+            "sha": "3af32605289e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "45c7eaeb29d6",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "47386ce36f90",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "4c2b46c824a7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "620b90d30c08",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "62765d39553c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "6650d31f21b8",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "692bd2a02e2d",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "715ea61532e7",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "95667791eb6e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "9a4619ef6cc1",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "c021e0235770",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "d225ef6fda7c",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "df66617bfe87",
+            "status": "analyze_fail",
+            "buggy_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-buggy needs to be finalized before running queries; please run codeql database finalize\n",
+            "fixed_err": "Running queries.\nA fatal error occurred: Database at <REPO_ROOT>/experiments/rq3/pairwise-dbs/error-return/df66617bfe87-fixed needs to be finalized before running queries; please run codeql database finalize\n"
+          },
+          {
+            "sha": "f2b6ebf61e8f",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "f69953837ca5",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          },
+          {
+            "sha": "fa8ba6e5dc0e",
+            "status": "ok",
+            "buggy_fires": false,
+            "fixed_fires": false,
+            "pair_wise_pass": false
+          }
+        ]
+      },
+      "kbh": {
+        "status": "ok",
+        "gt_total": 27,
+        "gt_after_holdout": 26,
+        "gt_excluded": 1,
+        "bugs_in_db": 26,
+        "hits": 5,
+        "recall_raw": 0.1923,
+        "recall_in_db": 0.1923,
+        "coverage_in_db": 1.0,
+        "fires_total": null
+      },
+      "wall_pair_s": 298.5,
+      "wall_kbh_s": 69.9
+    }
+  ]
+}

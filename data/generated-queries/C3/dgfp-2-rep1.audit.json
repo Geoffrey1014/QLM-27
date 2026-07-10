@@ -1,0 +1,22 @@
+{
+  "seed_id": "dgfp-2",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "e9acf05255cb",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isBusyWaitCall": 1,
+    "isAtomicContextFunction": 1,
+    "isSleepableContextFunction": 1,
+    "busyWaitInSleepableContext": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 513.0,
+  "notes": "delay-gfp pattern; mdelay(100) in cpt_device_init invoked from PCI .probe. final.ql fires on 4 *_buggy variants at poc.c lines 39/45/50/55, silent on *_fixed and *_fp_*. Seed padded with 18 helpers for verifier-v1 F5.return parity (poc=22, seed=22)."
+}

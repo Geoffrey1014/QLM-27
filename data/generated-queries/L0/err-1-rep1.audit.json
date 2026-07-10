@@ -1,0 +1,20 @@
+{
+  "seed_id": "err-1",
+  "repeat": 1,
+  "cell": "L0",
+  "fix_sha": "620b90d30c08",
+  "c_file": "drivers/mtd/maps/physmap-core.c",
+  "subject": "mtd: maps: fix error return code of physmap_flash_remove()",
+  "pattern": "error-return",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isBuggyGotoWithoutErrAssignment": 1},
+  "final_compiles": false,
+  "final_runs_on_poc": false,
+  "status": "fail",
+  "fail_stage": "predicate:isBuggyGotoWithoutErrAssignment",
+  "wall_seconds": 371.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Emitted predicate body contained a `/* ... */` comment nested inside a QL `/* ... */` doc block; the inner `*/` closed the outer comment early, producing 9 parser errors on first-compile. Per L0 protocol (0 compile-repair iters), the predicate is marked fail and generation aborts. POC verifier-v1 passed on regen #1 after trimming variants to match seed counts (F2.if=6, F3.goto=2, F5.ret=9)."
+}

@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "dgfp-3",
+  "repeat_idx": 4,
+  "commit_sha": "a0732548ba03c27fb42da4cf8e1eecc205760f12",
+  "c_file": "net/tipc/bcast.c",
+  "commit_subject": "net: tipc: bcast: Replace GFP_ATOMIC with GFP_KERNEL in tipc_bcast_init()",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 188,
+  "model": "claude-opus-4-7",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

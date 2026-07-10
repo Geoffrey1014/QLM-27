@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "lin-4",
+  "repeat_idx": 5,
+  "commit_sha": "1332661e09304b7b8e84e5edc11811ba08d12abe",
+  "c_file": "drivers/memory/samsung/exynos5422-dmc.c",
+  "commit_subject": "memory: samsung: exynos5422-dmc: Fix refcount leak in of_get_dram_timings",
+  "llm_calls": 1,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 35.0,
+  "model": "claude-opus-4-7",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

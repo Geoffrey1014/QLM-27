@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "lin-2",
+  "repeat_idx": 5,
+  "commit_sha": "9a2ea132df860177b33c9fd421b26c4e9a0a9396",
+  "c_file": "drivers/hsi/controllers/omap_ssi_core.c",
+  "commit_subject": "HSI: omap_ssi: Fix refcount leak in ssi_probe",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 45.0,
+  "model": "claude-opus-4-7",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

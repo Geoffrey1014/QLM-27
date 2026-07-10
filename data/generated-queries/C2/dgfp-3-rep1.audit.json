@@ -1,0 +1,30 @@
+{
+  "cell": "C2",
+  "seed_id": "dgfp-3",
+  "repeat": 1,
+  "commit_sha": "a0732548ba03c27fb42da4cf8e1eecc205760f12",
+  "c_file": "net/tipc/bcast.c",
+  "function_name": "tipc_bcast_init",
+  "llm_calls": 8,
+  "compile_iters": 6,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_alloc_call": 1,
+    "uses_gfp_atomic": 2,
+    "is_atomic_context_fn": 1,
+    "may_run_in_atomic": 1,
+    "unnecessary_gfp_atomic": 1
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 295.0,
+  "notes": [
+    "Stage1 fits_pattern=true: delay-gfp pattern (GFP_ATOMIC used in non-atomic-callable function).",
+    "Pattern adapted: target_api=allocator, critical_variable=GFP_ATOMIC flag, post_op=N/A.",
+    "Predicate uses_gfp_atomic needed one refine (MacroInvocation cast issue)."
+  ]
+}

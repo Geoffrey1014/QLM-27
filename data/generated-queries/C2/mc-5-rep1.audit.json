@@ -1,0 +1,23 @@
+{
+  "cell": "C2",
+  "seed_id": "mc-5",
+  "repeat": 1,
+  "commit_sha": "d6cb77228e3a",
+  "llm_calls": 7,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isAllocCall": 0,
+    "assignsToVariable": 0,
+    "hasNullCheck": 0,
+    "isUsedAfter": 0,
+    "missingNullCheck": 0
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 86
+}

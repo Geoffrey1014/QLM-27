@@ -1,0 +1,21 @@
+{
+  "seed_id": "mc-3",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "6fc232db9e8c",
+  "llm_calls": 4,
+  "compile_iters": 4,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isNullCheckOf": 1,
+    "isDerefOf": 1,
+    "derefBeforeCheck": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 314.0,
+  "notes": "POC simplified to single _buggy variant mirroring seed feature counts (F2.if=1 F5.ret=5) after first verifier round flagged multi-variant POC. Reused features.json/seed.c from prior mc-3-rep1 prep dir; regenerated poc.c."
+}

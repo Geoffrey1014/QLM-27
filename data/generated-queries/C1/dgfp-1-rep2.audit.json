@@ -1,0 +1,32 @@
+{
+  "cell": "C1",
+  "seed_id": "dgfp-1",
+  "rep": 2,
+  "seed_sha": "e58650b57ee0",
+  "c_file": "drivers/input/touchscreen/wdt87xx_i2c.c",
+  "func_name": "wdt87xx_resume",
+  "subject": "Input: wdt87xx_i2c - replace mdelay() with msleep() in wdt87xx_resume()",
+  "llm_calls": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=4 F2.if=1)",
+  "verifier_strict_pass": true,
+  "compile_iters": 1,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "poc_sha256": "466fdcd082534605350c5114045c4087c51dadd3b3eb4525cfb7d714e9c78a77",
+  "status": "ok",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-1-rep2.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-1-rep2",
+  "wall_seconds": 246,
+  "notes": [
+    "Independent POC generated for rep2 (not reused from rep1).",
+    "Verifier-v1 needed a single-function slice (poc-for-verifier.c containing only _buggy) to align F5.return count with seed-slice (poc whole-file has 5 returns because _fixed also counts; slice has 4).",
+    "Strict pass on first POC attempt: F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=4 F2.if=1.",
+    "Initial query used `n.matches(\"%_resume\")` etc., which missed `wdt87xx_resume_buggy` (POC artifact suffix). Repaired in 1 iter by switching to token-based matching `n.matches(\"%_<tok>\")` OR `n.matches(\"%_<tok>_%\")` OR `n = <tok>` — still POC-artifact-agnostic and generic over the kernel.",
+    "Query is generic (Q6-compliant): no hardcoded paths or `_buggy`/`_fixed` substrings; matches any function whose name contains a sleepable-context token (resume/suspend/probe/init/etc.).",
+    "POC sha256 frozen at 466fdcd0... and verified unchanged after Stage F."
+  ]
+}

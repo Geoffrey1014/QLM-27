@@ -1,0 +1,34 @@
+{
+  "seed_id": "mc-2",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "09acf29c8246",
+  "subject": "staging: rtl8192u: null check the kzalloc",
+  "c_file": "drivers/staging/rtl8192u/r8192U_core.c",
+  "pattern": "missing-check",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "9160329693c51c230cade128fcb897ff2e87abe2509f595c09779e4d2d3e919b",
+  "predicate_iters": {
+    "isAllocCall": 1,
+    "allocResultStored": 1,
+    "hasNullCheck": 1,
+    "isInFixedFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 451,
+  "notes": [
+    "Reused features.json from sibling mc-2-rep1 (fits_pattern=true, bug_type=missing_null_check_after_kzalloc).",
+    "POC v1 mismatched verifier counts (4 acquire, 18 returns vs seed). Regenerated POC v2 = minimal pair (_buggy + _fixed) so kzalloc count=2 / if=1 / return=2; seed.c was widened to include both rtl8192_init_priv_variable and the caller's allocation site so counts match. Verifier-v1 OK on second attempt: OK(F1.acq=2 F1.rel=0 F3.goto=0 F5.ret=3 F2.if=1).",
+    "All 4 predicates (isAllocCall, allocResultStored, hasNullCheck, isInFixedFunction) compiled and validated on POC mini-DB first try.",
+    "final.ql fires on rtl8192_init_priv_variable_buggy (line 19, kzalloc unguarded) and is silent on rtl8192_init_priv_variable_fixed (line 27, guarded by !*pFirmware). Acceptance: buggy_fires=true, fixed_fires=false, fp_fires=false."
+  ]
+}

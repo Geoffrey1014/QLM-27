@@ -1,0 +1,37 @@
+{
+  "cell": "C1",
+  "seed_id": "err-4",
+  "rep": 3,
+  "fix_sha": "c021e0235770",
+  "c_file": "drivers/usb/gadget/legacy/multi.c",
+  "subject": "usb: gadget: legacy: fix error return code of multi_bind()",
+  "status": "pass",
+  "llm_calls": 5,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "lenient_pass": true,
+  "lenient_pass_reviewer_note": "v1 verifier is structurally too strict against the C1 _buggy/_fixed dual-function POC contract: every POC honoring R1 roughly doubles seed counts on F2.if/F3.goto/F5.return. The POC mirrors the full multi_bind() lifecycle in each function (success path through register-luns -> string-ids -> conditional otg-desc alloc -> register-configs, plus the matching fail_otg_desc/fail_string_ids/fail_set_cdev/fail2/fail1 cleanup ladder). Pattern-relevant features (alloc failure branch with goto, the missing status-assignment vs. fix branch with status = -ENOMEM, return status through cleanup label) are faithfully encoded. Flagged for v2 escalation.",
+  "verifier_final_verdict": [
+    "MISMATCH(F2.if: seed=9, poc=18)",
+    "MISMATCH(F3.goto: seed=9, poc=16)",
+    "MISMATCH(F5.return: seed=22, poc=24)",
+    "MISMATCH(F1.release: seed=1, poc=2)"
+  ],
+  "poc_sha256": "8c110e470ab0f0c1df964960267a47f679408f3575bf206b2e24176eae625fd4",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-4-rep3/POC.c",
+  "poc_drift": false,
+  "compile_iters": 3,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_fired_on_buggy": true,
+  "poc_run_fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-4-rep3.ql",
+  "wall_seconds": 605,
+  "notes": [
+    "POC fired only at POC.c:98 inside multi_bind_buggy (the `if (!usb_desc) goto fail_string_ids;` branch — exactly the seed bug site).",
+    "Repair iter 1 fixed compile error: replaced `GotoStmt.getTarget().getName()` use in select-message with a simpler message (the API exists but GotoStmt.getTarget() returns a Stmt whose name lookup tripped the compiler).",
+    "Repair iter 2 fixed `Assignment.getParent+() = ifs.getThen()`: in CodeQL cpp, Expr.getParent() walks expression tree only; switched to `AssignExpr.getEnclosingStmt().getParent*() = ifs.getThen()` and renamed Assignment -> AssignExpr.",
+    "Repair iter 3 tightened predicate: require failure-check condition does NOT reference the status variable (so `if (status) goto ...` is excluded), AND require a prior assignment to status before the IfStmt (so `if (!fi_msg) goto fail1;` with status uninitialised is excluded). After both filters, only POC.c:98 (the bug site) remains.",
+    "POC sha256 unchanged across all analyze runs (drift check passed)."
+  ]
+}

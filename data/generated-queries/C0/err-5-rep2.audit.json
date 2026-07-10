@@ -1,0 +1,22 @@
+{
+  "cell": "C0",
+  "seed_id": "err-5",
+  "repeat_idx": 2,
+  "commit_sha": "31d82c2c787d5cf65fedd35ebbc0c1bd95c1a679",
+  "c_file": "kernel/kexec_file.c",
+  "commit_subject": "kernel: kexec_file: fix error return code of kexec_calculate_store_digests()",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 128,
+  "model": "claude-opus-4-7",
+  "temperature": 0.2,
+  "stop_reason": "ok",
+  "notes": [
+    "Stage 1 query failed compile due to use of reserved keyword 'then' as a QL variable name.",
+    "Stage 2 repair iter 1: renamed 'then' -> 'branch', removed unused imports; compile clean."
+  ]
+}

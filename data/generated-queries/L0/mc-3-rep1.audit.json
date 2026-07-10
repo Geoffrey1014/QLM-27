@@ -1,0 +1,17 @@
+{
+  "seed_id": "mc-3",
+  "repeat": 1,
+  "cell": "L0",
+  "fix_sha": "6fc232db9e8c",
+  "llm_calls": 4,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"derefBeforeNullCheck": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 443.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC regen 1x (verifier-v1 count mismatch on first attempt: F2.if 1 vs 10, F5.return 1 vs 20 -- collapsed multi-variant POC to a single buggy fn to match seed counts). Final compiled; also fired on POC buggy fn (recorded, not used as accept criterion)."
+}

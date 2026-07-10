@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-3",
+  "repeat": 5,
+  "cell": "L1",
+  "fix_sha": "f141a422159a",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isPmRuntimeGetSync": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 112.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused L0 rep5 features/POC/plan (single-predicate plan satisfies N_PRED<=2). Predicate compiled first iter; final compiled first iter; analyze on poc-db completed (any compile-OK final accepted under L1)."
+}

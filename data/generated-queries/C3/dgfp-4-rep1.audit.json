@@ -1,0 +1,21 @@
+{
+  "seed_id": "dgfp-4",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "2453e60702e1",
+  "llm_calls": 3,
+  "compile_iters": 5,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isGfpAtomicCall": 1,
+    "isAtomicContextFunction": 1,
+    "isSleepableContextFunction": 1,
+    "gfpAtomicInSleepableContext": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 502.0
+}

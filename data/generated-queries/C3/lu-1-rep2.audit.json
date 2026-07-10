@@ -1,0 +1,30 @@
+{
+  "seed_id": "lu-1",
+  "repeat": 2,
+  "cell": "C3",
+  "fix_sha": "b6631c6031c7",
+  "subject": "sctp: Fix memory leak in sctp_sf_do_5_2_4_dupcook",
+  "c_file": "net/sctp/sm_statefuns.c",
+  "pattern": "four-features-Lu",
+  "llm_calls": 4,
+  "compile_iters": 4,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "75f4c5d7e62d74e1c311bf7bc92a4619377f7b86ba482d86afe306dc802d62b4",
+  "predicate_iters": {
+    "isAcquire": 1,
+    "getAcquiredVar": 1,
+    "isReleaseOf": 1,
+    "errorReturnAfterAcquire": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 235,
+  "out_dir": "<REPO_ROOT>/experiments/rq3/d3-prep/C3/lu-1-rep2",
+  "final_query_path": "<REPO_ROOT>/experiments/rq3/d3/C3/lu-1-rep2.ql"
+}

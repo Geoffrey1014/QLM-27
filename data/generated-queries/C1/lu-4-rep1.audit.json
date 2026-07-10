@@ -1,0 +1,31 @@
+{
+  "cell": "C1",
+  "seed_id": "lu-4",
+  "rep": 1,
+  "status": "ok",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_strict": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=3 F5.ret=6 F2.if=7)",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_sha256": "8949e11ad06c6a902866f2b1a7cffc0f06902904ba736f1cf3dfb7443b694b63",
+  "poc_drift": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-4-rep1.ql",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-4-rep1-work/POC.c",
+  "poc_db_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-4-rep1-work/poc-db/db",
+  "poc_run_csv": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-4-rep1-work/poc-run.csv",
+  "oracle_result": {
+    "fired_on_buggy": true,
+    "fired_on_fixed": false,
+    "hits": [
+      {"file": "/POC.c", "line": 95, "function": "dwc3_pci_probe_buggy"}
+    ]
+  },
+  "notes": [
+    "Iter 1 compile failed: predicate params needed bindingset[name]; added it.",
+    "Iter 1 analyze: 3 hits (incl. _fixed null-check FP). Iter 2 refine excluded the canonical 'if (!storage) return' pattern; oracle then PASS with single hit at line 95 inside _buggy."
+  ]
+}

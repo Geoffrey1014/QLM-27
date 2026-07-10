@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-5",
+  "repeat": 3,
+  "cell": "L1",
+  "fix_sha": "10d6bdf53290",
+  "llm_calls": 0,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"acquiresPlatformDevice": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 187.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused features/POC/plan from L0 lin-5-rep3 prep (same seed+rep, verifier-passed POC). Predicate compiled first try; final compiled first try; analyze on poc-db produced 1 row on probe_buggy. No refine iters needed."
+}

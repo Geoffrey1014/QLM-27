@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "lu-3",
+  "repeat_idx": 2,
+  "commit_sha": "f141a422159a199f4c8dedb7e0df55b3b2cf16cd",
+  "c_file": "sound/soc/rockchip/rockchip_pdm.c",
+  "commit_subject": "ASoC: rockchip: Fix a reference count leak.",
+  "llm_calls": 1,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 91,
+  "model": "claude-opus-4-7",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

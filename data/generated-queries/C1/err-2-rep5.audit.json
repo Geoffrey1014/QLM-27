@@ -1,0 +1,31 @@
+{
+  "cell": "C1",
+  "seed_id": "err-2",
+  "rep": 5,
+  "status": "pass",
+  "llm_calls": 4,
+  "compile_iters": 2,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "verifier_lenient": false,
+  "verifier_verdict": "OK(F1.acq=4 F1.rel=6 F3.goto=10 F5.ret=4 F2.if=16)",
+  "poc_sha256": "24b93d4d2b9cee0df0ba7e1128459a194d5337206e4feb869c2c80504ba8e2ff",
+  "poc_drift": false,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-2-rep5/query.ql",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-2-rep5/POC.c",
+  "poc_db_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-2-rep5/poc-db/db",
+  "poc_run_csv": "<REPO_ROOT>/experiments/rq3/d3/C1/err-2-rep5/poc-run.csv",
+  "notes": [
+    "Seed err-2: commit 45c7eaeb29d6 — thermal_of_populate_bind_params() missed error-return-code assignment on two goto-cleanup paths (!count, !__tcbp).",
+    "POC regenerated once: round 1 had structural mismatches (POC lacked enough acquire/release/if/goto/return structure); round 2 mirrored seed-slice structurally and passed verifier-v1 STRICT.",
+    "Quirk: gcc-compiled empty `int main(void){}` causes CodeQL to count an implicit ReturnStmt, breaking F5.return. Solution: drop main; verifier-v1 does not require it.",
+    "Query iter 1 compiled & fired 4 rows: 2 true bugs in _buggy + 2 false positives in both _buggy and _fixed at inner `if (ret < 0) goto free_tcbp` (where ret was just assigned the call result).",
+    "Query iter 2: added `not checked = ret` clause to exclude self-checks of the status variable. Result: 2 rows, both inside _buggy, none in _fixed. Oracle PASS.",
+    "POC frozen at sha256 24b93d4d... and verified unchanged after query iterations (no drift).",
+    "Query is generic: detects any function where an if-block tests a non-status-variable error condition, then `goto`s a cleanup label that returns a status variable, without assigning an error code to that status variable in the if-then block."
+  ]
+}

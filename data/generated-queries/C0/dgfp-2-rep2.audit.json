@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "dgfp-2",
+  "repeat_idx": 2,
+  "commit_sha": "e9acf05255cb",
+  "c_file": "drivers/crypto/cavium/cpt/cptpf_main.c",
+  "commit_subject": "crypto: cavium - Replace mdelay with msleep in cpt_device_init",
+  "llm_calls": 1,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 94,
+  "model": "claude-opus-4-7",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

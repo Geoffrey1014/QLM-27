@@ -1,0 +1,21 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-5",
+  "repeat": 4,
+  "commit_sha": "10d6bdf53290",
+  "llm_calls": 6,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "acquiresDeviceRef": 0,
+    "holdsAcquiredDevice": 0,
+    "releasesDeviceRef": 0,
+    "leakingReturn": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 60.0
+}

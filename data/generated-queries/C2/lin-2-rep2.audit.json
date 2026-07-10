@@ -1,0 +1,21 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-2",
+  "repeat": 2,
+  "commit_sha": "9a2ea132df860177b33c9fd421b26c4e9a0a9396",
+  "llm_calls": 6,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "iter_macro_loop": 0,
+    "early_exit_in_loop": 0,
+    "puts_child_before": 0,
+    "leak_site": 0
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false
+}

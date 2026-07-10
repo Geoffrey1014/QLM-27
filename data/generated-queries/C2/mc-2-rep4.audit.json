@@ -1,0 +1,30 @@
+{
+  "cell": "C2",
+  "seed_id": "mc-2",
+  "repeat": 4,
+  "commit_sha": "09acf29c8246",
+  "c_file": "drivers/staging/rtl8192u/r8192U_core.c",
+  "subject": "staging: rtl8192u: null check the kzalloc",
+  "llm_calls": 6,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isAllocCall": 0,
+    "assignsResultTo": 0,
+    "laterAccessOfSameVar": 0,
+    "hasNullCheck": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 56.0,
+  "features": {
+    "target_api": "kzalloc",
+    "post_operation": "NULL check on return value",
+    "critical_variable": "priv->pFirmware",
+    "path_conditions": "After kzalloc returns, the result must be NULL-checked before dereference; on failure, propagate -ENOMEM",
+    "fits_pattern": true
+  }
+}

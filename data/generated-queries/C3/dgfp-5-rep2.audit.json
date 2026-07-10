@@ -1,0 +1,21 @@
+{
+  "seed_id": "dgfp-5",
+  "repeat": 2,
+  "cell": "C3",
+  "fix_sha": "9f96b9b7d836",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isBusyDelayCall": 1,
+    "inAtomicContextByName": 2,
+    "holdsSpinLockBefore": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 502.0,
+  "notes": "delay-gfp pattern; mdelay(1) in pci_epf_test_write() invoked from a workqueue handler (INIT_DELAYED_WORK in pci_epf_test_probe). Final.ql fires on pci_epf_test_write_buggy + tp1/tp2/tp3 (work_handler/resume/probe), silent on _fixed and fp1/fp2/fp3 (irq_handler/locked_op/nmi_callback). inAtomicContextByName needed one refinement (drop bare '%handler%' which over-matched work_handler). Seed padded with 10 void helpers for verifier-v1 F5.return parity (poc=12 returns, seed=12)."
+}

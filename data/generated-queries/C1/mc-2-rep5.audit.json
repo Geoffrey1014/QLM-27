@@ -1,0 +1,28 @@
+{
+  "cell": "C1",
+  "seed_id": "mc-2",
+  "rep": 5,
+  "status": "fail",
+  "reason": "poc-verifier-fail",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 2,
+  "verifier_passes": false,
+  "lenient_pass": false,
+  "final_compiles": false,
+  "final_runs_on_poc": false,
+  "verdict_last": [
+    "MISMATCH(F2.if: seed=0, poc=1)",
+    "MISMATCH(F5.return: seed=2, poc=3)",
+    "MISMATCH(F1.acquire: seed=1, poc=2)"
+  ],
+  "notes": [
+    "verifier-v1 is calibrated for resource-leak (acquire/release) patterns; missing-check (mc) seed mc-2 (kzalloc null-check missing in rtl8192_init_priv_variable, fix sha 09acf29c8246) cannot pass structural gates.",
+    "F1.acquire: POC needs both _buggy() and _fixed() each containing kzalloc => count=2, while seed slice has 1; per Stage A R1 the two-function structure is non-negotiable, so this mismatch is structural.",
+    "F5.return: seed slice has 2 returns (the seed fn implicit + main), POC has 3 (two fns + main); lenient_pass per cell prompt sec.3 only covers F2.if/F3.goto with |delta|<=1.",
+    "F2.if mismatch (delta=1) is itself within lenient bounds, but combined with the two hard mismatches the verifier still fails.",
+    "Same structural failure mode as mc-1-rep2 audit; documented as expected outcome for mc seeds under verifier-v1.",
+    "Per Stage B failure path: 3 POC regens exhausted, no .ql emitted.",
+    "POC freeze (chmod 444 + sha record) not performed since verifier never passed."
+  ]
+}

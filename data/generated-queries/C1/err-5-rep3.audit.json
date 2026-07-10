@@ -1,0 +1,33 @@
+{
+  "cell": "C1",
+  "seed_id": "err-5",
+  "rep": 3,
+  "fix_sha": "31d82c2c787d",
+  "c_file": "kernel/kexec_file.c",
+  "subject": "kernel: kexec_file: fix error return code of kexec_calculate_store_digests()",
+  "status": "pass",
+  "llm_calls": 5,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "lenient_pass": true,
+  "lenient_pass_reviewer_note": "v1 verifier is structurally too strict against the C1 _buggy/_fixed dual-function POC contract. After 3 POC iterations the final POC matches the seed exactly on F1.acquire (=2), F1.release (=3), and F5.return (=14, achieved by promoting stubs from extern to static-with-body), with only F2.if (delta=1) and F3.goto (delta=1) mismatching by the minimum possible amount due to the mandatory _fixed sibling function. The bug pattern (failure branch + goto-to-cleanup + missing err assignment) is faithfully encoded; _fixed is reduced to the smallest patch-bearing skeleton. Flagged for v2 escalation.",
+  "verifier_final_verdict": [
+    "MISMATCH(F2.if: seed=6, poc=7)",
+    "MISMATCH(F3.goto: seed=5, poc=6)"
+  ],
+  "poc_sha256": "498800c6367b1b1129c152b5bec3780001ad5726d5875e87897b6f8dcc74cdf9",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-5-rep3/POC.c",
+  "poc_drift": false,
+  "compile_iters": 1,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_fired_on_buggy": true,
+  "poc_run_fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-5-rep3.ql",
+  "wall_seconds": 478,
+  "notes": [
+    "One query row emitted; located at POC.c line 74 inside kexec_calculate_store_digests_buggy (the `goto out_free_desc` on the !sha_regions failure branch). No rows located in _fixed function.",
+    "First-iter query template (modelled on err-1-rep1's proven detector) failed POC oracle: required the cleanup label to be the target of >= 2 distinct gotos, but in this seed `out_free_desc` is reached by exactly one goto. One repair iteration replaced that filter with a cascading-cleanup heuristic (label is followed by at least one other label before the function-exit return), which both fires on the seed's `out_free_X:` chain and still excludes one-shot helpers.",
+    "POC freeze sha verified unchanged at end of run."
+  ]
+}

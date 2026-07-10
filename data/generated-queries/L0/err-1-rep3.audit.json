@@ -1,0 +1,17 @@
+{
+  "seed_id": "err-1",
+  "repeat": 3,
+  "cell": "L0",
+  "fix_sha": "620b90d30c08",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"errIsZeroAtFailureGoto": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 240.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC/features/verifier reused from C3 err-1-rep1 (deterministic per seed); plan+preds+final generated fresh for rep3. Final query fires on _buggy, silent on _fixed on POC (recorded but not used as accept criterion per L0 spec)."
+}

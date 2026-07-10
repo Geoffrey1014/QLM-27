@@ -1,0 +1,22 @@
+{
+  "cell": "C1",
+  "seed_id": "mc-4",
+  "rep": 5,
+  "seed_sha": "c9c63915519b",
+  "c_file": "drivers/hwmon/lm80.c",
+  "subject": "hwmon: (lm80) fix a missing check of the status of SMBus read",
+  "poc_sha256": "a9c4ff4dd856a58c85a91b2e228c50f5b7e2048e17809d67b8964d676519b90c",
+  "llm_calls": 2,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "verifier_pass_mode": "strict",
+  "verifier_final_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=3 F2.if=1)",
+  "compile_iters": 1,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "status": "ok",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-4-rep5.ql",
+  "workdir": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-4-rep5"
+}

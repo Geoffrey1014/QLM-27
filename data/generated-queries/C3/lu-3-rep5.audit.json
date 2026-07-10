@@ -1,0 +1,37 @@
+{
+  "seed_id": "lu-3",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "f141a422159a",
+  "c_file": "sound/soc/rockchip/rockchip_pdm.c",
+  "subject": "ASoC: rockchip: Fix a reference count leak.",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=2 F2.if=1)",
+  "poc_sha256": "420285b217fb197c1fe546b84ad71d6f3862788fc8e422ca382b0ed244f58cba",
+  "predicate_iters": {
+    "isAcquire": 1,
+    "isRelease": 1,
+    "errorReturnAfterAcquire": 1,
+    "noReleaseBeforeReturn": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 156.0,
+  "notes": [
+    "Retry after monthly-spend-limit abort; reused features.json/plan.json/poc.c/seed.c/poc-db and validated isAcquire+isRelease predicates from pre-existing prep workdir.",
+    "Completed remaining predicates (errorReturnAfterAcquire, noReleaseBeforeReturn) + assembly+validation in this generation.",
+    "POC contains only _buggy variant (verifier-v1 count-equality constraint); oracle accepts buggy_fires alone (no _fixed/_fp variants present so they trivially do not fire). Consistent with lu-3-rep1/rep2 convention.",
+    "Final query fired on POC at /poc.c:19 (pm_runtime_get_sync call; early return at line 21)."
+  ],
+  "out_dir": "<REPO_ROOT>/experiments/rq3/d3-prep/C3/lu-3-rep5/",
+  "final_query": "<REPO_ROOT>/experiments/rq3/d3/C3/lu-3-rep5.ql"
+}

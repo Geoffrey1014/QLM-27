@@ -1,0 +1,21 @@
+{
+  "seed_id": "lin-2",
+  "repeat": 1,
+  "cell": "L1",
+  "fix_sha": "9a2ea132df86",
+  "c_file": "drivers/hsi/controllers/omap_ssi_core.c",
+  "subject": "HSI: omap_ssi: Fix refcount leak in ssi_probe",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isOfIteratorMacro": 1, "isOfNodePut": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "final_poc_rows": 2,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 297.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. All stages passed first attempt (no refine iterations needed). POC + seed reused from d3-prep/C3/lin-2-rep1 (verifier-v1 OK)."
+}

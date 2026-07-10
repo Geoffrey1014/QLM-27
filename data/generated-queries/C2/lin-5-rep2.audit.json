@@ -1,0 +1,31 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-5",
+  "repeat": 2,
+  "commit_sha": "10d6bdf53290",
+  "c_file": "drivers/ata/pata_octeon_cf.c",
+  "subject": "ata: pata_octeon_cf: Fix refcount leak in octeon_cf_probe",
+  "features": {
+    "target_api": "of_find_device_by_node",
+    "post_operation": "put_device",
+    "critical_variable": "dma_dev",
+    "path_conditions": "After of_find_device_by_node returns a non-null platform_device pointer, put_device(&dev->dev) must be called on all return paths before the pointer goes out of scope.",
+    "fits_pattern": true
+  },
+  "llm_calls": 6,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isTargetAcquireCall": 0,
+    "acquiredVariable": 0,
+    "isReleaseCallOn": 0,
+    "reachesReturnWithoutRelease": 0
+  },
+  "assembly_iters": 0,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 83.0
+}

@@ -1,0 +1,36 @@
+{
+  "seed_id": "dgfp-3",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "a0732548ba03",
+  "subject": "net: tipc: bcast: Replace GFP_ATOMIC with GFP_KERNEL in tipc_bcast_init()",
+  "c_file": "net/tipc/bcast.c",
+  "pattern": "delay-gfp",
+  "llm_calls": 3,
+  "compile_iters": 5,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256_file": "poc.sha256",
+  "predicate_iters": {
+    "isAtomicAllocCall": 2,
+    "inSleepableNameContext": 1,
+    "inAtomicContextByName": 1,
+    "hasLockHeldBefore": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 385,
+  "notes": [
+    "Reused features.json, plan.json, poc.c, poc-db, poc-verifier-verdict.csv from prior aborted d3-prep attempt (Jun 30 13:46-13:47).",
+    "Verifier-v1 already OK from prior attempt (no regeneration needed).",
+    "Stage 4 predicate isAtomicAllocCall needed 1 refinement: initial body matched GFP_ATOMIC by argument toString(), but POC's GFP_ATOMIC #define is expanded by gcc to integer 32 before CodeQL extraction; broadened to also match flag.getValue()=\"32\" and any MacroInvocation named GFP_ATOMIC.",
+    "Other 3 predicates compiled and ran OK on first iteration with no refinements.",
+    "POC contains only _buggy + _fixed variants (no _tp/_tn/_fp lookalikes) because the seed slice is small; oracle: silence on _fixed verified, silence on _fp_ trivially satisfied.",
+    "Stage 5 final.ql compiled and accepted on first attempt; one row firing on tipc_bcast_init_buggy at the GFP_ATOMIC kzalloc call site."
+  ]
+}

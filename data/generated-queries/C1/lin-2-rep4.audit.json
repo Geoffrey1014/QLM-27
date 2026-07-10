@@ -1,0 +1,20 @@
+{
+  "cell": "C1",
+  "seed_id": "lin-2",
+  "rep": 4,
+  "status": "pass",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_mode": "strict",
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=1 F3.goto=6 F5.ret=9 F2.if=12)",
+  "poc_sha256": "7422079215b05656a9fa9a8ec2d61252b476ce8fbe511ba32b8e87dd43e6d8f4",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-2-rep4.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3-prep/C1/lin-2-rep4",
+  "wall_seconds": 336
+}

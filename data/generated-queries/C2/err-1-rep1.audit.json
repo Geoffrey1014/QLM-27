@@ -1,0 +1,33 @@
+{
+  "cell": "C2",
+  "seed_id": "err-1",
+  "repeat": 1,
+  "commit_sha": "620b90d30c08684dc6ebee07c72755d997f9d1f6",
+  "c_file": "drivers/mtd/maps/physmap-core.c",
+  "subject": "mtd: maps: fix error return code of physmap_flash_remove()",
+  "llm_calls": 8,
+  "compile_iters": 6,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isErrorRetVar": 1,
+    "initializedToZero": 1,
+    "isNullCheckOnCallResult": 1,
+    "gotoInsideThen": 1,
+    "noErrAssignBeforeGoto": 1,
+    "missingErrorReturnCode": 0
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "features": {
+    "target_api": "platform_get_drvdata",
+    "post_operation": "assign negative errno to err (e.g., err = -EINVAL)",
+    "critical_variable": "err",
+    "path_conditions": "When platform_get_drvdata() returns NULL and the function jumps to cleanup label without setting err, the caller receives success (0) despite an error condition.",
+    "fits_pattern": true,
+    "fit_test_reasoning": "Error-return code bug. Function detects an error (NULL pointer), takes the error cleanup path via goto, but err remains 0 because the error code was never assigned. Fits the broader pattern: a check identifies an error, but the return code does not reflect it."
+  }
+}

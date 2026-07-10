@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-4",
+  "repeat": 1,
+  "cell": "L0",
+  "fix_sha": "1332661e0930",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isDeviceNodeAcquisition": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 341,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Final query compiled successfully; POC analyze produced 0 rows (query only matches Variable assignments, POC assigns via struct field access), but L0 acceptance criterion is successful compile."
+}

@@ -1,0 +1,39 @@
+{
+  "cell": "C2",
+  "seed_id": "err-5",
+  "repeat": 4,
+  "commit_sha": "31d82c2c787d",
+  "c_file": "kernel/kexec_file.c",
+  "subject": "kernel: kexec_file: fix error return code of kexec_calculate_store_digests()",
+  "llm_calls": 8,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_alloc_call": 1,
+    "assigns_alloc_to_var": 0,
+    "decl_init_alloc": 0,
+    "var_holds_alloc": 0,
+    "null_check_goto": 0,
+    "then_sets_neg_errno": 0,
+    "is_return_code_var": 0,
+    "buggy_null_check": 0
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "features": {
+    "target_api": "vzalloc / kernel allocator family",
+    "post_operation": "assign negative errno to ret before goto cleanup",
+    "critical_variable": "ret",
+    "path_conditions": "allocator returns NULL; if branch gotos cleanup label; ret remains unset, function returns success despite OOM",
+    "fits_pattern": true
+  },
+  "notes": [
+    "Compositional decomposition into 8 named predicates; only `import cpp`.",
+    "Predicate p1 (is_alloc_call) compile-checked in isolated scaffold.",
+    "Assembled query compiled clean on first attempt."
+  ]
+}

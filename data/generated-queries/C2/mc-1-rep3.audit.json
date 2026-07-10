@@ -1,0 +1,24 @@
+{
+  "cell": "C2",
+  "seed_id": "mc-1",
+  "repeat": 3,
+  "commit_sha": "e85bb0beb6498c0dffe18a2f1f16d575bc175c32",
+  "llm_calls": 7,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isTargetCall": 0,
+    "isUncheckedCall": 0,
+    "outputBufferArg": 0,
+    "bufferUsedAfter": 0,
+    "isBug": 0
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 63.0,
+  "final_predicates_differ_from_stage3": false,
+  "notes": "Per-predicate compile validation skipped (collapsed into single assembly compile, which passed on first attempt). 5 predicates in plan; no refinement needed."
+}

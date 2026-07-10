@@ -1,0 +1,34 @@
+{
+  "seed_id": "err-3",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "26594c6bbb60",
+  "subject": "rpmsg: qcom_glink_native: fix error return code of qcom_glink_rx_data()",
+  "c_file": "drivers/rpmsg/qcom_glink_native.c",
+  "pattern": "error-return-code",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "f9c20af30f015102b4fb5147d133a5fa90a20a1bc5fff0c796da9d2fcc91eb83",
+  "predicate_iters": {
+    "isErrReturnFunction": 1,
+    "isFailureBranchGoto": 1,
+    "errIsZeroAtGoto": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 497,
+  "notes": [
+    "Second retry after Anthropic weekly-limit reset confirmed via probe (rep1, rep2 aborted before completing).",
+    "fits_pattern=true; bug = qcom_glink_rx_data() returns ret=0 on the !intent failure branch without assigning -ENOENT first.",
+    "POC mirrors seed slice (qcom_glink_rx_data pre-fix + sibling) with matching F1/F2/F3/F5 counts (acq=2 rel=0 goto=6 ret=5 if=8); verifier-v1 OK on first pass (poc_regens=0).",
+    "Pattern matches err-1 family closely (int ret/err = 0 init → failure-branch goto without err assignment). Predicate set adapted from validated err-1-rep1 with variable name extended to {ret,err,rc}; all three predicates VALIDATED on first iteration.",
+    "Stage-5 oracle: final.ql fires 3 times on qcom_glink_rx_data_buggy (lines 52,59,64 — the !channel, !intent, insufficient gotos that all lack ret assignment) and is silent on qcom_glink_rx_data_fixed (where ret = -ENOENT / -ENOMEM is assigned before each goto)."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-1",
+  "repeat": 2,
+  "cell": "L0",
+  "fix_sha": "b6631c6031c7",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isAcquireCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 954.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC regen'd once to align verifier-v1 F5.return count with seed (dropped main). Final query fires on buggy_sctp_sf_do_5_2_4_dupcook in POC."
+}

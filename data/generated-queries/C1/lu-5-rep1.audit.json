@@ -1,0 +1,28 @@
+{
+  "cell": "C1",
+  "seed_id": "lu-5",
+  "seed_sha": "450c3d416683",
+  "c_file": "fs/affs/super.c",
+  "func_name": "affs_remount",
+  "rep": 1,
+  "status": "ok",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_strict_pass": true,
+  "lenient_pass": false,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=5 F3.goto=0 F5.ret=10 F2.if=9)",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "poc_sha256": "33e9dfc278d676addb078d48655569e77b7cb08bc83e75965116d11b1c78c36e",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-5-rep1.ql",
+  "wall_seconds": 184,
+  "notes": [
+    "verifier strict pass on first POC attempt",
+    "query compiled and oracle satisfied on first synthesis (no repair iters needed)",
+    "3 results all inside affs_remount_buggy (lines 61, 86, 93); zero results in _fixed"
+  ]
+}

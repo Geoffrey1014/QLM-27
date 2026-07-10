@@ -1,0 +1,28 @@
+{
+  "seed_id": "dgfp-2",
+  "repeat": 3,
+  "cell": "L0",
+  "fix_sha": "e9acf05255cb",
+  "c_file": "drivers/crypto/cavium/cpt/cptpf_main.c",
+  "subject": "crypto: cavium - Replace mdelay with msleep in cpt_device_init",
+  "pattern": "delay-gfp",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=4 F2.if=2)",
+  "poc_sha256": "6a0c6d074525cf41f682e5bfc730b9d60783926ab21b95e9f9536e4925152828",
+  "predicate_iters": {"isMdelayCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_hits": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "hit_functions": ["some_driver_probe_tp1", "pf_device_init_buggy"]
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 424.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Accepted on first compile+run. POC/seed pair reused from proven C3 rep3 pair; verifier-v1 gate passed on first attempt."
+}

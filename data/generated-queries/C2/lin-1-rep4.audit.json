@@ -1,0 +1,29 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-1",
+  "repeat": 4,
+  "commit_sha": "74139a64e8cedb6d971c78d5d17384efeced1725",
+  "llm_calls": 6,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "acquires_node": 0,
+    "releases_node": 0,
+    "function_acquires_but_never_releases": 0,
+    "has_release_bypass": 0,
+    "unhandled_acquire": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 81.0,
+  "features": {
+    "target_api": "of_parse_phandle",
+    "post_operation": "of_node_put",
+    "critical_variable": "state_node",
+    "path_conditions": "After of_parse_phandle returns a non-NULL device_node, of_node_put must be called on every path that abandons the reference (continue, break, early return) and at end of each loop iteration once it is no longer needed.",
+    "fits_pattern": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "cell": "C1",
+  "seed_id": "dgfp-3",
+  "rep": 3,
+  "status": "pass",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_lenient": false,
+  "verifier_verdict": "OK(F1.acq=2 F1.rel=4 F3.goto=4 F5.ret=5 F2.if=4)",
+  "poc_sha256": "6e5a4e95c352f504a7ca68233244445b077ba93175219600edc79e14c8291c12",
+  "poc_drift": false,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-3-rep3/query.ql",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-3-rep3/POC.c",
+  "poc_db_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-3-rep3/poc-db/db",
+  "poc_run_csv": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-3-rep3/poc-run.csv",
+  "wall_seconds": 405,
+  "notes": [
+    "Seed slice replaced with a minimal compilable stub (original net/tipc/bcast.c could not be compiled standalone because of unresolved local headers socket.h/msg.h/bcast.h/link.h/name_table.h and many kernel types u32/sk_buff/etc.).",
+    "Seed slice contains tipc_bcast_init + a sibling init helper + a dummy 1-return function so structural counts (acq=2, rel=4, goto=4, ret=5, if=4) match the POC's _buggy+_fixed+main shape.",
+    "Verifier-v1 strict pass on first POC.",
+    "Query is generic: flags GFP_ATOMIC arg of kzalloc-family allocators inside likely-non-atomic setup functions (init/probe/open/setup/start/attach/bind/create/register/resume/suspend), excluding ISR/IRQ/spin/atomic/tasklet/NMI helpers. Does NOT hardcode _buggy/_fixed or any POC-specific name.",
+    "Query compiled and validated on POC mini-DB on iter 1; no repair needed. Fired on tipc_bcast_init_buggy and stayed silent on _fixed."
+  ]
+}

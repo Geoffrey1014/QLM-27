@@ -1,0 +1,21 @@
+{
+  "seed_id": "lin-5",
+  "repeat": 4,
+  "cell": "L1",
+  "fix_sha": "10d6bdf53290",
+  "c_file": "drivers/ata/pata_octeon_cf.c",
+  "subject": "ata: pata_octeon_cf: Fix refcount leak in octeon_cf_probe",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=1 F1.rel=3 F3.goto=0 F5.ret=4 F2.if=6)",
+  "predicate_iters": {"isDeviceAcquisition": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 229.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. N_PRED=1; predicate compiled on iter 1 (no refine needed); assemble compiled on iter 1 (no refine needed). Final analyzed on poc-db and produced 1 row on octeon_cf_probe_buggy (recorded but not required for L1 accept). Reused features/POC/verifier/poc-db artifacts from lin-5-rep1 to save cost; L1 verified final.ql compile via codeql-2.25.6."
+}

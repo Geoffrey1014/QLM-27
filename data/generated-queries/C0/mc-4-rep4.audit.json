@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "mc-4",
+  "repeat_idx": 4,
+  "commit_sha": "c9c63915519b1def7043b184680f33c24cd49d7b",
+  "c_file": "drivers/hwmon/lm80.c",
+  "commit_subject": "hwmon: (lm80) fix a missing check of the status of SMBus read",
+  "llm_calls": 2,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 60,
+  "model": "claude-opus-4-7",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

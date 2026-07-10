@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-3",
+  "repeat": 4,
+  "cell": "L1",
+  "fix_sha": "bf4a9b2467b7",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isPhandleAcquireLeaked": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 128.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. N_PRED=1 (<=2 cap). Predicate compiled first try (0 of 2 refines used); assemble compiled first try (0 of 2 refines used). Reused features/POC/plan from L0 lin-3-rep4 (same seed inputs, deterministic prior artifacts); POC verifier-v1 already passed after 1 minimisation. Final query fires on aries_audio_probe_buggy at poc.c:24 (accepted per L1 rule: compile OK + analyze OK; pair-wise oracle OFF)."
+}

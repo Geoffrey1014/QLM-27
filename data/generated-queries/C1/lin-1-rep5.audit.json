@@ -1,0 +1,29 @@
+{
+  "cell": "C1",
+  "seed_id": "lin-1",
+  "rep": 5,
+  "status": "pass",
+  "llm_calls": 2,
+  "poc_regens": 0,
+  "compile_iters": 1,
+  "verifier_passes": true,
+  "verifier_lenient": false,
+  "verifier_verdict": "OK(F1.acq=2 F1.rel=0 F3.goto=0 F5.ret=2 F2.if=5)",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "poc_sha256": "1cbfd14cd6b0e6ead21e13ca36b39a9869b3b8621397c914ef97960a54b1fbc3",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-1-rep5/POC.c",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-1-rep5/query.ql",
+  "poc_db": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-1-rep5/poc-db/db",
+  "poc_run_csv": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-1-rep5/poc-run.csv",
+  "notes": [
+    "Stage A: POC generated first try (matches structural counts of seed slice).",
+    "Stage B: verifier-v1 strict OK after providing buggy-only slice (poc-for-verifier.c).",
+    "Stage C: POC frozen at sha 1cbfd14c..., chmod 444, sha unchanged at end.",
+    "Stage D: poc-db built cleanly (gcc -O0 -w -c).",
+    "Stage E: monolithic query.ql synthesized (≤200 LOC, single from-where-select).",
+    "Stage F: 1 compile + 1 analyze, no repair iterations needed; fired exactly on _buggy line 32, silent on _fixed."
+  ]
+}

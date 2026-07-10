@@ -1,0 +1,22 @@
+{
+  "cell": "C1",
+  "seed_id": "err-1",
+  "rep": 2,
+  "status": "ok",
+  "llm_calls": 2,
+  "poc_regens": 0,
+  "compile_iters": 1,
+  "verifier_passes": true,
+  "verifier_lenient": false,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=2 F5.ret=1 F2.if=6)",
+  "poc_sha256": "d80a4a305968c724678e1dadf4bffdd734481b102fd457cb4e931a5431cfba42",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-1-rep2.ql",
+  "workdir": "<REPO_ROOT>/experiments/rq3/d3/C1/err-1-rep2-work",
+  "fix_sha": "620b90d30c08",
+  "c_file": "drivers/mtd/maps/physmap-core.c",
+  "subject": "mtd: maps: fix error return code of physmap_flash_remove()"
+}

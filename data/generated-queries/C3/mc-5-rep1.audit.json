@@ -1,0 +1,20 @@
+{
+  "seed_id": "mc-5",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "d6cb77228e3a",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isDevmAllocCall": 1,
+    "assignsToStructFieldOnVg": 1,
+    "fieldUnconditionallyDereferenced": 2
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 718.0
+}

@@ -1,0 +1,30 @@
+{
+  "cell": "C2",
+  "seed_id": "mc-3",
+  "repeat": 4,
+  "commit_sha": "6fc232db9e8cd50b9b83534de9cd91ace711b2d7",
+  "c_file": "net/rfkill/core.c",
+  "subject": "rfkill: Fix incorrect check to avoid NULL pointer dereference",
+  "llm_calls": 6,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_pointer_param": 0,
+    "dereferences_param": 0,
+    "null_check_of_param": 0,
+    "deref_before_null_check": 0
+  },
+  "assembly_iters": 0,
+  "final_predicates_differ_from_stage3": false,
+  "features": {
+    "target_api": "pointer parameter dereference (e.g., &rfkill->dev)",
+    "post_operation": "NULL check on the same pointer",
+    "critical_variable": "rfkill (struct rfkill *) pointer parameter",
+    "path_conditions": "A NULL check must dominate any dereference of a pointer parameter that may be NULL",
+    "fits_pattern": true
+  }
+}

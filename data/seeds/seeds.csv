@@ -1,0 +1,26 @@
+seed_id,pattern,fix_sha,subsystem,c_files,subject,intro_sha,present_v,legacy_audit
+lin-1,four-features-Lin,74139a64e8ce,arch/arm/mach-omap2,arch/arm/mach-omap2/pm33xx-core.c,ARM: OMAP2+: pm33xx-core: ix device node reference leaks in amx3_idle_init,06ee7a950b6a,v5.15,true
+lin-2,four-features-Lin,9a2ea132df86,drivers/hsi/controllers,drivers/hsi/controllers/omap_ssi_core.c,HSI: omap_ssi: Fix refcount leak in ssi_probe,b209e047bc74,v5.15,true
+lin-3,four-features-Lin,bf4a9b2467b7,sound/soc/samsung,sound/soc/samsung/aries_wm8994.c,ASoC: samsung: Fix refcount leak in aries_audio_probe,7a3a7671fa6c,v5.15,false
+lin-4,four-features-Lin,1332661e0930,drivers/memory/samsung,drivers/memory/samsung/exynos5422-dmc.c,memory: samsung: exynos5422-dmc: Fix refcount leak in of_get_dram_timings,6e7674c3c6df,v5.15,false
+lin-5,four-features-Lin,10d6bdf53290,drivers/ata,drivers/ata/pata_octeon_cf.c,ata: pata_octeon_cf: Fix refcount leak in octeon_cf_probe,43f01da0f279,v5.15,false
+lu-1,four-features-Lu,b6631c6031c7,net/sctp,net/sctp/sm_statefuns.c,sctp: Fix memory leak in sctp_sf_do_5_2_4_dupcook,2277c7cd75e3,v5.0,false
+lu-2,four-features-Lu,2289adbfa559,drivers/media/usb,drivers/media/usb/dvb-usb/af9005.c,media: usb: fix memory leak in af9005_identify_state,af4e067e1dcf,v5.0,false
+lu-3,four-features-Lu,f141a422159a,sound/soc/rockchip,sound/soc/rockchip/rockchip_pdm.c,ASoC: rockchip: Fix a reference count leak.,fc05a5b22253,v5.0,false
+lu-4,four-features-Lu,9bbfceea12a8,drivers/usb/dwc3,drivers/usb/dwc3/dwc3-pci.c,usb: dwc3: pci: prevent memory leak in dwc3_pci_probe,1a7b12f69a94,v5.0,false
+lu-5,four-features-Lu,450c3d416683,fs/affs,fs/affs/super.c,affs: fix a memory leak in affs_remount,c8f33d0bec99,v5.0,false
+mc-1,missing-check,e85bb0beb649,drivers/input/touchscreen,drivers/input/touchscreen/ad7879.c,Input: ad7879 - add check for read errors in interrupt,404a24c35db8,v4.19,false
+mc-2,missing-check,09acf29c8246,drivers/staging/rtl8192u,drivers/staging/rtl8192u/r8192U_core.c,staging: rtl8192u: null check the kzalloc,9f7b8300338a,v4.19,false
+mc-3,missing-check,6fc232db9e8c,net/rfkill,net/rfkill/core.c,rfkill: Fix incorrect check to avoid NULL pointer dereference,19d337dff95c,v4.19,false
+mc-4,missing-check,c9c63915519b,drivers/hwmon,drivers/hwmon/lm80.c,hwmon: (lm80) fix a missing check of the status of SMBus read,85b3ee07b986,v4.19,false
+mc-5,missing-check,d6cb77228e3a,drivers/pinctrl/intel,drivers/pinctrl/intel/pinctrl-baytrail.c,pinctrl: baytrail: Fix potential NULL pointer dereference,fcc18deb7682,v4.19,false
+dgfp-1,delay-gfp,e58650b57ee0,drivers/input/touchscreen,drivers/input/touchscreen/wdt87xx_i2c.c,Input: wdt87xx_i2c - replace mdelay() with msleep() in wdt87xx_resume(),3e30c11c8a90,v4.14,false
+dgfp-2,delay-gfp,e9acf05255cb,drivers/crypto/cavium,drivers/crypto/cavium/cpt/cptpf_main.c,crypto: cavium - Replace mdelay with msleep in cpt_device_init,9e2c7d99941d,v4.14,false
+dgfp-3,delay-gfp,a0732548ba03,net/tipc,net/tipc/bcast.c,net: tipc: bcast: Replace GFP_ATOMIC with GFP_KERNEL in tipc_bcast_init(),323019069e8d,v4.14,false
+dgfp-4,delay-gfp,2453e60702e1,drivers/media/usb,drivers/media/usb/em28xx/em28xx-core.c,media: usb: em28xx: Replace GFP_ATOMIC with GFP_KERNEL in em28xx_init_usb_xfer(),057ca0da067c,v4.14,false
+dgfp-5,delay-gfp,9f96b9b7d836,drivers/pci/endpoint,drivers/pci/endpoint/functions/pci-epf-test.c,PCI: endpoint: Replace mdelay with usleep_range() in pci_epf_test_write(),349e7a85b25f,v4.14,false
+err-1,error-return,620b90d30c08,drivers/mtd/maps,drivers/mtd/maps/physmap-core.c,mtd: maps: fix error return code of physmap_flash_remove(),73566edf9b91,v5.10,false
+err-2,error-return,45c7eaeb29d6,drivers/thermal,drivers/thermal/thermal_of.c,thermal: thermal_of: Fix error return code of thermal_of_populate_bind_params(),a92bab8919e3,v5.10,false
+err-3,error-return,26594c6bbb60,drivers/rpmsg,drivers/rpmsg/qcom_glink_native.c,rpmsg: qcom_glink_native: fix error return code of qcom_glink_rx_data(),64f95f87920d,v5.10,false
+err-4,error-return,c021e0235770,drivers/usb/gadget,drivers/usb/gadget/legacy/multi.c,usb: gadget: legacy: fix error return code of multi_bind(),21ddc2a860ca,v5.10,false
+err-5,error-return,31d82c2c787d,kernel,kernel/kexec_file.c,kernel: kexec_file: fix error return code of kexec_calculate_store_digests(),a43cac0d9dc2,v5.10,false

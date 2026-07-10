@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-3",
+  "repeat": 5,
+  "cell": "L0",
+  "fix_sha": "bf4a9b2467b7",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isAcquire": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 234.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops"
+}

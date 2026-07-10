@@ -1,0 +1,34 @@
+{
+  "seed_id": "mc-5",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "d6cb77228e3a",
+  "subject": "pinctrl: baytrail: Fix potential NULL pointer dereference",
+  "c_file": "drivers/pinctrl/intel/pinctrl-baytrail.c",
+  "pattern": "missing-check",
+  "llm_calls": 3,
+  "compile_iters": 5,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "e58287fde98f841eba24d9dd95591f547a58f7b3a2a015dd7f215ff46d1ba995",
+  "predicate_iters": {
+    "isDevmAllocCall": 1,
+    "assignedToStructField": 1,
+    "fieldDereferencedAfter": 2,
+    "hasFieldNullCheck": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 632,
+  "notes": [
+    "Reused features.json/seed.c from mc-5-rep1 prep; POC regenerated to v3 single-function-aggregated shape for count-parity (seed has F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=6 F2.if=4; verifier-v1's API list excludes devm_*).",
+    "POC inlines tp/fp variants inside _buggy and tn variants inside _fixed so total ReturnStmt count (including implicit void returns) matches seed.",
+    "fieldDereferencedAfter refined in iter-2 to restrict 'same enclosing function' (was firing cross-function on fp3).",
+    "Final query: 5 hits, all inside byt_gpio_probe_buggy; 0 hits in byt_gpio_probe_fixed; oracle PASS (buggy_fires=true, fixed_fires=false, fp_fires=false)."
+  ]
+}

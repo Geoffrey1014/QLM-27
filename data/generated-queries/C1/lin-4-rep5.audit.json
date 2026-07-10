@@ -1,0 +1,30 @@
+{
+  "cell": "C1",
+  "seed_id": "lin-4",
+  "rep": 5,
+  "status": "pass",
+  "llm_calls": 3,
+  "poc_regens": 0,
+  "compile_iters": 2,
+  "verifier_passes": true,
+  "verifier_lenient": false,
+  "verifier_verdict": "OK(F1.acq=1 F1.rel=3 F3.goto=0 F5.ret=8 F2.if=6)",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "poc_sha256": "e06096c75242c8823271e1cde5fac0e2dde3bf85a139286ba5a7f6f4accb3ece",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-4-rep5/POC.c",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-4-rep5/query.ql",
+  "poc_db": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-4-rep5/poc-db/db",
+  "poc_run_csv": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-4-rep5/poc-run.csv",
+  "notes": [
+    "Stage A: POC generated first try (mirrors of_get_dram_timings buggy/fixed structural pattern).",
+    "Stage B: verifier-v1 strict OK on buggy-only slice (poc-for-verifier.c == seed-slice.c).",
+    "Stage C: POC frozen at sha e06096c7..., chmod 444, sha unchanged at end.",
+    "Stage D: poc-db built cleanly (gcc -O0 -w -c POC.c).",
+    "Stage E: monolithic query.ql synthesized using of_*-acquire + of_node_put-release surface; first version too lenient (any release in function suffices) -> 0 hits on _buggy.",
+    "Stage F iter1: refined to path-specific 'return reachable from acquire without intervening release'; fired on _buggy AND on _fixed (false hit on the np_ddr=NULL early return).",
+    "Stage F iter2: added guardedByNullCheckOf() filter to exclude returns inside if(!v){...} branches; result: 1 row on _buggy line 50, 0 rows on _fixed. PASS."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "seed_id": "lu-3",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "f141a422159a",
+  "llm_calls": 3,
+  "compile_iters": 5,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isPmGetSync": 1,
+    "isPmPut": 1,
+    "errorBranchReturn": 1,
+    "noPutBetween": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 121.0,
+  "notes": "Retry after monthly-spend abort. Reused all stage-1..4 artifacts (features/poc/plan/preds) from 2026-06-30 05:56-06:00 prior attempt: verifier-v1 OK, 4 predicates compile+fire as expected on poc-db. Assembled+compiled+ran final.ql in retry: fires on rockchip_pdm_resume_buggy pm_runtime_get_sync (line 33) with error-branch return (line 35). POC contains only _buggy variant (no _fixed/_fp_), so silence conditions are vacuously satisfied."
+}

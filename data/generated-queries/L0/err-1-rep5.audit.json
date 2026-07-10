@@ -1,0 +1,17 @@
+{
+  "seed_id": "err-1",
+  "repeat": 5,
+  "cell": "L0",
+  "fix_sha": "620b90d30c08",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isErrReturnFunction": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 250.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC + verifier-v1 artifacts reused from C3 err-1-rep2 (POC-side scaffolding not ablated per L0 spec, same POC sha). Single predicate isErrReturnFunction identifies int-returning functions with `int err = 0;` initializer and `return err;` tail. Assembly clause finds failure-branch goto inside an if-then whose then-block contains no assignment to err (both _buggy and _fixed shapes fire in this zero-shot variant since the assembly doesn't reason about the sibling if-branches; L0 accepts on compile-success alone per spec §2 Stage 5)."
+}

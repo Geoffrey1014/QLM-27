@@ -1,0 +1,23 @@
+{
+  "seed_id": "dgfp-4",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "2453e60702e1",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isUsbSubmitCall": 1,
+    "isGfpAtomicArg": 1,
+    "callIsInsideSpinlockSection": 1,
+    "callIsGuardedByInInterrupt": 1,
+    "isDelayGfpBug": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 360.0,
+  "notes": "POC regenerated once to align verifier-v1 feature counts with seed slice (acquire=0 release=0 goto=0 return=4 if=6); final.ql fires on em28xx_init_usb_xfer_buggy and driver_buggy_tp2 only, silent on _fixed and _fp_ variants."
+}

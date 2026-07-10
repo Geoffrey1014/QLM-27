@@ -1,0 +1,32 @@
+{
+  "cell": "C2",
+  "seed_id": "mc-2",
+  "repeat": 1,
+  "commit_sha": "09acf29c8246a20c6e255969df7e1131317181da",
+  "c_file": "drivers/staging/rtl8192u/r8192U_core.c",
+  "subject": "staging: rtl8192u: null check the kzalloc",
+  "features": {
+    "target_api": "kzalloc",
+    "post_operation": "NULL check on returned pointer (and error-path propagation)",
+    "critical_variable": "priv->pFirmware",
+    "path_conditions": "After kzalloc returns, before any use/dereference, the returned pointer must be checked for NULL; on NULL, the caller must propagate -ENOMEM.",
+    "fits_pattern": true,
+    "fit_test_reasoning": "kzalloc acquires a heap resource that may fail (return NULL). The required post-operation is a NULL check, which is a control-flow validation rather than a release/free, but it still maps to the lifecycle pattern of 'acquire -> validate before use'. The fix adds the missing post-operation (null check + error propagation). This is the canonical missing-check after allocator pattern."
+  },
+  "llm_calls": 4,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_alloc_call": 0,
+    "alloc_result_stored": 0,
+    "alloc_null_checked": 1,
+    "unchecked_alloc": 0
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 90.0
+}

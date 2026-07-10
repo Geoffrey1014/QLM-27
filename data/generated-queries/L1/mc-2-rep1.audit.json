@@ -1,0 +1,23 @@
+{
+  "seed_id": "mc-2",
+  "repeat": 1,
+  "cell": "L1",
+  "fix_sha": "09acf29c8246",
+  "c_file": "drivers/staging/rtl8192u/r8192U_core.c",
+  "subject": "staging: rtl8192u: null check the kzalloc",
+  "pattern": "missing-check",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isAllocCall": 1,
+    "hasNullCheckAfter": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 381,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Both predicates compiled on 1st iter; final compiled on 1st iter and analyze completed (fired on line 29, the buggy kzalloc)."
+}

@@ -1,0 +1,30 @@
+{
+  "cell": "C2",
+  "seed_id": "err-4",
+  "repeat": 1,
+  "commit_sha": "c021e0235770",
+  "c_file": "drivers/usb/gadget/legacy/multi.c",
+  "subject": "usb: gadget: legacy: fix error return code of multi_bind()",
+  "llm_calls": 6,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isAllocLike": 0,
+    "allocCallAssigned": 0,
+    "nullCheckOnAlloc": 0,
+    "gotoWithoutStatusSet": 0,
+    "callerReturnsStatusVar": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 60.0,
+  "final_predicates_differ_from_stage3": false,
+  "notes": [
+    "Pattern: error-return missing assignment before goto cleanup label.",
+    "Features: target_api=usb_otg_descriptor_alloc, post_operation=assign status=-ENOMEM, critical_variable=status, path_conditions=NULL check then goto.",
+    "5 predicates filled in-session; assembled query compiles on first attempt with codeql 2.25.6."
+  ]
+}

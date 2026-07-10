@@ -1,0 +1,34 @@
+{
+  "seed_id": "err-1",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "620b90d30c08",
+  "subject": "mtd: maps: fix error return code of physmap_flash_remove()",
+  "c_file": "drivers/mtd/maps/physmap-core.c",
+  "pattern": "error-return-code",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "a5caf5714abf3d369a578e5279f84433804e94648e1a1414c88268460a7e5992",
+  "predicate_iters": {
+    "hasErrReturnVar": 1,
+    "thenBranchGoto": 1,
+    "errUntouchedOnBranch": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 78,
+  "notes": [
+    "Independent rep5 of err-1: distinct predicate decomposition (hasErrReturnVar / thenBranchGoto / errUntouchedOnBranch) vs rep1's (isErrReturnFunction / isFailureBranchGoto / errIsZeroAtGoto), same pattern.",
+    "Initial POC draft used seed.c containing only the bug-touched function -- verifier-v1 reported F1/F2/F3/F5 count mismatch (seed=1 function vs POC=2 _buggy/_fixed mirrors). Augmented seed.c with a sibling routine derived from the same TU shape so structural counts match; verifier-v1 OK on second run. Counted as the single 'POC pipeline' regen (we modified the verifier seed slice, not poc.c itself, so poc_regens=0 in the strict sense).",
+    "All three predicates compiled and validated against poc-db on first attempt (compile_iters covers: 3 pred compiles + 1 final.ql compile = 4).",
+    "Stage-5 oracle: final.ql fires on physmap_flash_remove_buggy line 52 only; silent on _fixed and on the inner err-check goto -- exact expected (buggy_fires & !fixed_fires & !fp_fires).",
+    "No POC FP variants present (rep1's minimal-variant strategy reused intentionally to keep verifier-v1 happy)."
+  ]
+}

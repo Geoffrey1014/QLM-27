@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-4",
+  "repeat": 1,
+  "cell": "L1",
+  "fix_sha": "9bbfceea12a8",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"allocatesResource": 1, "hasMissingRelease": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 346.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. 2 predicates (allocatesResource, hasMissingRelease). Both predicates compiled first try; final compiled first try, then one assemble-refine to sharpen the CFG-based missing-release check. Reused features/POC/DB/verifier verdict from lu-4-rep2 prep (identical seed slice)."
+}

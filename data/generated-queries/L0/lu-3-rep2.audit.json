@@ -1,0 +1,25 @@
+{
+  "seed_id": "lu-3",
+  "repeat": 2,
+  "cell": "L0",
+  "fix_sha": "f141a422159a",
+  "c_file": "sound/soc/rockchip/rockchip_pdm.c",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isPmRuntimeGetSync": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_hit_pattern": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "note": "L0 accepts any successful compile; oracle recorded but not used as accept criterion"
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 521.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops"
+}

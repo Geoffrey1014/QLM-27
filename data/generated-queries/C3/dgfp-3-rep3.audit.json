@@ -1,0 +1,24 @@
+{
+  "seed_id": "dgfp-3",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "a0732548ba03",
+  "llm_calls": 4,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isAtomicGfpArg": 2,
+    "isKAllocCall": 1,
+    "isAtomicAlloc": 1,
+    "isInNonAtomicEntry": 1,
+    "isInAtomicEntry": 1,
+    "isInFixedSibling": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 229.0,
+  "notes": "Resumed from prior aborted attempt: features.json/poc.c/poc-db/plan.json/poc-verifier-verdict.csv pre-existing; only stages 4-6 executed in this retry. isAtomicGfpArg required 1 refine iter (initial Expr-to-MacroInvocation cast failed -> rewritten with exists(MacroInvocation mi | mi.getExpr()=arg) form). Final query fires only on tipc_bcast_init_buggy; silent on _fixed and no _fp_ false positive."
+}

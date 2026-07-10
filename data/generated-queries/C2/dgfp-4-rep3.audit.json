@@ -1,0 +1,22 @@
+{
+  "cell": "C2",
+  "seed_id": "dgfp-4",
+  "repeat": 3,
+  "commit_sha": "2453e60702e1a4d22720e3b6aac543e1a96fcd6b",
+  "llm_calls": 6,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isAllocLikeApi": 0,
+    "usesGfpAtomic": 0,
+    "isSleepableContext": 0,
+    "gfpAtomicInSleepable": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 60.0,
+  "final_predicates_differ_from_stage3": false
+}

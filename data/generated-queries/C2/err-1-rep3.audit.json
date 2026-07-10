@@ -1,0 +1,24 @@
+{
+  "cell": "C2",
+  "seed_id": "err-1",
+  "repeat": 3,
+  "commit_sha": "620b90d30c08684dc6ebee07c72755d997f9d1f6",
+  "llm_calls": 8,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isErrVariable": 0,
+    "hasZeroInitializer": 0,
+    "returnsErrAtEnd": 0,
+    "gotoTargetReturnsErr": 0,
+    "gotoInsideIfCheck": 0,
+    "errNotAssignedBeforeGoto": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 60.0,
+  "notes": "Compositional 6-predicate query for missing-error-return on goto; compiled first attempt with codeql-2.25.6."
+}

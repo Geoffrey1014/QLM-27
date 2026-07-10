@@ -1,0 +1,20 @@
+{
+  "cell": "C0",
+  "seed_id": "lin-1",
+  "repeat_idx": 1,
+  "commit_sha": "74139a64e8cedb6d971c78d5d17384efeced1725",
+  "c_file": "arch/arm/mach-omap2/pm33xx-core.c",
+  "commit_subject": "ARM: OMAP2+: pm33xx-core: ix device node reference leaks in amx3_idle_init",
+  "llm_calls": 1,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 98,
+  "model": "claude-opus-4-5-20251101",
+  "temperature": 0.2,
+  "stop_reason": "ok",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C0/lin-1-rep1.ql",
+  "notes": "C0 monolithic baseline; single-shot generation compiled on first try; targets of_parse_phandle family acquire-release pattern."
+}

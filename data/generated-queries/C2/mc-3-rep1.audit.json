@@ -1,0 +1,22 @@
+{
+  "cell": "C2",
+  "seed_id": "mc-3",
+  "repeat": 1,
+  "commit_sha": "6fc232db9e8cd50b9b83534de9cd91ace711b2d7",
+  "llm_calls": 6,
+  "compile_iters": 5,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_pointer_param": 1,
+    "param_deref": 1,
+    "param_null_check": 1,
+    "deref_not_preceded_by_check": 1
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 265,
+  "final_predicates_differ_from_stage3": false
+}

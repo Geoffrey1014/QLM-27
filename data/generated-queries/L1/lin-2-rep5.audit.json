@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-2",
+  "repeat": 5,
+  "cell": "L1",
+  "fix_sha": "9a2ea132df86",
+  "llm_calls": 4,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isOfIteratorForLoop": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 42.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused features/POC/plan/preds from L0 lin-2-rep5 (identical Stage 1-3 upstream). N_PRED=1 (within L1 cap of 2); predicate compiled clean (0 refine); final.ql compiled clean (0 refine). Accepted as compile-OK."
+}

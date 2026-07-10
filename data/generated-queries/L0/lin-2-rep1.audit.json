@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-2",
+  "repeat": 1,
+  "cell": "L0",
+  "fix_sha": "9a2ea132df86",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isForEachChildMacro": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 281.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC verifier v1 OK on first attempt. Final query compiles and fires on _buggy variants in POC (accepted per L0 rule: any compile pass wins, no pair-wise oracle)."
+}

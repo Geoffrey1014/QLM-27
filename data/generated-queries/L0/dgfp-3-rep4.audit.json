@@ -1,0 +1,17 @@
+{
+  "seed_id": "dgfp-3",
+  "repeat": 4,
+  "cell": "L0",
+  "fix_sha": "a0732548ba03",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isGfpAtomicAlloc": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 712.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. delay-gfp GFP_ATOMIC-in-sleepable variant. Verifier-v1 OK(acq=1 rel=2 goto=2 ret=12 if=2). Final query fires on foo_init_buggy + tp1/tp2/tp3, silent on tn* and fp*."
+}

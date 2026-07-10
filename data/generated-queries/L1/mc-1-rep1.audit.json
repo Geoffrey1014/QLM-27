@@ -1,0 +1,23 @@
+{
+  "seed_id": "mc-1",
+  "repeat": 1,
+  "cell": "L1",
+  "fix_sha": "e85bb0beb649",
+  "pattern": "missing-check",
+  "c_file": "drivers/input/touchscreen/ad7879.c",
+  "subject": "Input: ad7879 - add check for read errors in interrupt",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isFallibleReadCall": 1,
+    "isReturnValueDiscarded": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 383.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. POC required 1 regen to satisfy verifier-v1 count-parity (first draft had 8 if / 17 return vs seed 1/1)."
+}

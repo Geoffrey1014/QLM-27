@@ -1,0 +1,19 @@
+{
+  "cell": "C1",
+  "seed_id": "err-2",
+  "rep": 3,
+  "status": "pass",
+  "llm_calls": 3,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "verifier_strict": true,
+  "compile_iters": 1,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_sha256": "3fe0098d48309f1304d3635e04434e35b89e96facca8aa84c764230c445819bb",
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "wall_seconds": 376,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-2-rep3.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/err-2-rep3-work"
+}

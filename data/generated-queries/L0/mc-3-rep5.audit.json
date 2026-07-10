@@ -1,0 +1,17 @@
+{
+  "seed_id": "mc-3",
+  "repeat": 5,
+  "cell": "L0",
+  "fix_sha": "6fc232db9e8c",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isNullCheckOf": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 318.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC verifier OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=1 F2.if=1). Final query fires on rfkill_register_buggy (deref of &rfkill->dev before BUG_ON(!rfkill) NULL check). L0 accept criterion is successful compile; oracle recorded but not gated."
+}

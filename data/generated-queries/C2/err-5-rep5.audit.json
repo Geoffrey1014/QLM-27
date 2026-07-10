@@ -1,0 +1,32 @@
+{
+  "cell": "C2",
+  "seed_id": "err-5",
+  "repeat": 5,
+  "commit_sha": "31d82c2c787d5cf65fedd35ebbc0c1bd95c1a679",
+  "c_file": "kernel/kexec_file.c",
+  "subject": "kernel: kexec_file: fix error return code of kexec_calculate_store_digests()",
+  "llm_calls": 4,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_alloc_call": 0,
+    "is_null_check_of": 0,
+    "goto_in_block": 0,
+    "assigns_ret_in_block": 0,
+    "bad_null_handler": 0
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 79.0,
+  "features": {
+    "target_api": "vzalloc",
+    "post_operation": "assign negative errno to ret before goto error label",
+    "critical_variable": "ret",
+    "path_conditions": "When allocation returns NULL and code goto's a cleanup label, ret must be set to -ENOMEM (or other negative errno) first",
+    "fits_pattern": true,
+    "fit_test_reasoning": "Error-return-code pattern: allocation returns NULL; if-block goto's cleanup label without assigning a negative errno to return variable, causing function to return stale (often 0) ret and mask the failure."
+  }
+}

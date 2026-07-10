@@ -1,0 +1,24 @@
+{
+  "seed_id": "lu-4",
+  "repeat": 4,
+  "cell": "L1",
+  "fix_sha": "9bbfceea12a8",
+  "c_file": "drivers/usb/dwc3/dwc3-pci.c",
+  "subject": "usb: dwc3: pci: prevent memory leak in dwc3_pci_probe",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=3 F5.ret=7 F2.if=7)",
+  "predicate_iters": {
+    "allocatesPlatformDevice": 1,
+    "hasPlatformDevicePut": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "final_poc_rows": 4,
+  "status": "pass",
+  "fail_stage": null,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Query fires on 4 return sites in POC (both buggy_tpN direct-return leak sites + the target buggy variant). Not gated by pair-wise oracle per L1 spec."
+}

@@ -1,0 +1,33 @@
+{
+  "seed_id": "lin-1",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "74139a64e8ce",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256_stable": true,
+  "predicate_iters": {
+    "acquiresDeviceNode": 1,
+    "isReleaseCall": 1,
+    "boundVar": 1,
+    "releasedInSameFn": 1,
+    "guardedByNullCheck": 1,
+    "inFixedVariant": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 116.0,
+  "notes": [
+    "Reused verifier-passed POC + mini-DB from lin-1-rep1 (POC is deterministic seed slice; sha256 stable).",
+    "Generated fresh plan + final.ql variant (different predicate naming/style) for rep4 variance.",
+    "Final query compiles clean and selects only the buggy variant on poc-db."
+  ]
+}

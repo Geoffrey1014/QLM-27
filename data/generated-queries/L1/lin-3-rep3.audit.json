@@ -1,0 +1,22 @@
+{
+  "seed_id": "lin-3",
+  "repeat": 3,
+  "cell": "L1",
+  "fix_sha": "bf4a9b2467b7",
+  "c_file": "sound/soc/samsung/aries_wm8994.c",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isAcquire": 1,
+    "hasReleaseOn": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 225.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused features/poc/seed/poc-db from lin-3-rep2 (verifier-v1 OK: F1.acq=1 F1.rel=1 F3.goto=0 F5.ret=7 F2.if=7). Plan emitted 2 predicates (isAcquire, hasReleaseOn) plus assembly. Both predicates compiled on first attempt; final compiled on first attempt. Analyze on poc-db produced empty result (expected: POC probe_buggy contains an of_node_put call so the has-not-release predicate doesn't fire; L1 does not gate on this)."
+}

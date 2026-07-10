@@ -1,0 +1,30 @@
+{
+  "seed_id": "lu-3",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "f141a422159a",
+  "c_file": "sound/soc/rockchip/rockchip_pdm.c",
+  "subject": "ASoC: rockchip: Fix a reference count leak.",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=2 F2.if=1)",
+  "poc_sha256": "420285b217fb197c1fe546b84ad71d6f3862788fc8e422ca382b0ed244f58cba",
+  "predicate_iters": {
+    "isPmGetSync": 1,
+    "isPmPut": 1,
+    "errorBranchLeaks": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 284.0,
+  "out_dir": "<REPO_ROOT>/experiments/rq3/d3-prep/C3/lu-3-rep1/",
+  "final_query": "<REPO_ROOT>/experiments/rq3/d3/C3/lu-3-rep1.ql"
+}

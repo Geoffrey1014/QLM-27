@@ -1,0 +1,29 @@
+{
+  "cell": "C1",
+  "seed_id": "err-2",
+  "rep": 2,
+  "status": "pass",
+  "llm_calls": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_strict": true,
+  "compile_iters": 2,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_sha256": "5b64b4fde5719f3edcb25403fc22794e9ece26335d3a11f8a7d91c52e5d46fdf",
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "wall_seconds": 383,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-2-rep2.ql",
+  "prep_dir": "<REPO_ROOT>/experiments/rq3/d3-prep/C1/err-2-rep2",
+  "fix_sha": "45c7eaeb29d6",
+  "c_file": "drivers/thermal/thermal_of.c",
+  "subject": "thermal: thermal_of: Fix error return code of thermal_of_populate_bind_params()",
+  "verifier_verdict": "OK(F1.acq=2 F1.rel=3 F3.goto=5 F5.ret=3 F2.if=7)",
+  "poc_hits_lines": [68, 73],
+  "notes": [
+    "First POC passed verifier-v1 strictly (all 5 dimensions OK).",
+    "Repair iter 1: query fired on free_tcbp gotos in both _buggy and _fixed (FP); refined to exclude branches whose condition reads retVar AND landing pads that assign retVar before return.",
+    "Repair iter 2: query fires only on the two buggy `goto end` paths (lines 68, 73) where ret is not assigned before goto; silent on _fixed."
+  ]
+}

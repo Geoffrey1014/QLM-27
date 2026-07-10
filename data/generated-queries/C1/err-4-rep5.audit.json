@@ -1,0 +1,35 @@
+{
+  "cell": "C1",
+  "seed_id": "err-4",
+  "rep": 5,
+  "fix_sha": "c021e0235770",
+  "c_file": "drivers/usb/gadget/legacy/multi.c",
+  "subject": "usb: gadget: legacy: fix error return code of multi_bind()",
+  "status": "pass",
+  "llm_calls": 4,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "lenient_pass": true,
+  "lenient_pass_reviewer_note": "v1 verifier is structurally too strict against the C1 _buggy/_fixed dual-function POC contract: the POC includes both _buggy (mirroring the seed verbatim) and a minimal _fixed skeleton, which inflates the file-wide F2.if/F3.goto/F5.return counts by exactly 1 each over the seed slice. After 3 POC attempts the deltas are minimum-possible (1,1,1). The pattern-relevant features (failure branch + goto to shared cleanup + missing status assignment) are faithfully encoded. Flagged for v2 escalation. Pattern mirrors precedent set by err-1-rep1.",
+  "verifier_final_verdict": [
+    "MISMATCH(F2.if: seed=4, poc=5)",
+    "MISMATCH(F3.goto: seed=3, poc=4)",
+    "MISMATCH(F5.return: seed=8, poc=9)"
+  ],
+  "poc_sha256": "ad9a14c9638d7a191011c0722931aeaf106c689a404e8847955aefb4e8a1d66e",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-4-rep5-work/POC.c",
+  "poc_drift": false,
+  "compile_iters": 1,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_fired_on_buggy": true,
+  "poc_run_fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-4-rep5.ql",
+  "wall_seconds": 0,
+  "notes": [
+    "One query result emitted; located inside multi_bind_buggy at the goto fail_string_ids on the !usb_desc branch (POC.c line 42). No rows located in _fixed function.",
+    "Query compiled cleanly on first attempt (no repair iterations needed).",
+    "POC sha256 unchanged between freeze and final analyze (drift check passed).",
+    "Generalized err-1 query template: relaxed init=0 requirement on the return variable since multi_bind() in the kernel declares 'int status;' without explicit zero-init."
+  ]
+}

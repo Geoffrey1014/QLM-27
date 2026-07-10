@@ -1,0 +1,33 @@
+{
+  "seed_id": "err-2",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "45c7eaeb29d6",
+  "subject": "thermal: thermal_of: Fix error return code of thermal_of_populate_bind_params()",
+  "c_file": "drivers/thermal/thermal_of.c",
+  "pattern": "error-return-code",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "23a0cd4bff88a22cbd437233768ba65902578364b992b3bb20c2a249a7f91f53",
+  "predicate_iters": {
+    "isErrReturnFunction": 1,
+    "isFailureBranchGoto": 2,
+    "errIsZeroAtGoto": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 420,
+  "notes": [
+    "Probe-2 run (second retry after weekly-limit reset). Pipeline completed end-to-end.",
+    "Pattern is identical to err-1 (physmap_flash_remove) modulo variable name (ret vs err) and number of failure branches (2 here vs 1 there). Reused the err-1 predicate skeleton with two adaptations: (a) widened return-var name set to {ret, err, rc, error}; (b) dropped the `err = 0` initializer constraint because in this seed `ret` is not explicitly initialized to 0 — it's first assigned by of_property_read_u32, which may return 0 and leave ret==0 on entry to the failure-branch goto.",
+    "isFailureBranchGoto needed one refine iteration: initial body only matched stmt(0) of the then-block, missing failure branches where the goto follows a pr_err or assignment (this commit's `if (count <= 0) { pr_err; ret = -ENOENT; goto end; }` block-form). Fix: switched to BlockStmt.getAStmt() to allow the goto anywhere in the then-block. After fix, P2 fires on all 4 failure-branch gotos in each of _buggy and _fixed (8 rows total).",
+    "Stage-5 oracle: final.ql fires on _buggy lines 94 (!count goto) and 99 (!__tcbp goto), silent on _fixed. No fp_* variants in POC."
+  ]
+}

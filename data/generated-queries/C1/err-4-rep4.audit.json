@@ -1,0 +1,35 @@
+{
+  "cell": "C1",
+  "seed_id": "err-4",
+  "rep": 4,
+  "fix_sha": "c021e0235770",
+  "c_file": "drivers/usb/gadget/legacy/multi.c",
+  "subject": "usb: gadget: legacy: fix error return code of multi_bind()",
+  "status": "pass",
+  "llm_calls": 3,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "lenient_pass": true,
+  "lenient_pass_reviewer_note": "v1 verifier is structurally too strict against the C1 _buggy/_fixed dual-function POC contract: every POC honoring R1 roughly doubles seed counts on F2.if/F3.goto/F5.return. After 2 POC attempts the final POC reaches near-minimum delta (F2.if=+1, F3.goto=+1, F5.return=+2) by mirroring seed body verbatim in _buggy and reducing _fixed to the smallest fix-bearing skeleton (single NULL-check + status assignment + goto). The pattern-relevant features (failure branch + goto + missing err assignment) are faithfully encoded. F5.return delta of 2 is structural floor: _buggy needs 2 returns to match seed, _fixed needs at least 1, plus main(). Flagged for v2 escalation.",
+  "verifier_final_verdict": [
+    "MISMATCH(F2.if: seed=5, poc=6)",
+    "MISMATCH(F3.goto: seed=4, poc=5)",
+    "MISMATCH(F5.return: seed=2, poc=4)"
+  ],
+  "poc_sha256": "709d5cedf5e4c81ee0a2bdf13941412c81653547e671920eaebd8654874bf416",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-4-rep4/POC.c",
+  "poc_drift": false,
+  "compile_iters": 0,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_fired_on_buggy": true,
+  "poc_run_fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-4-rep4/query.ql",
+  "wall_seconds": 240,
+  "notes": [
+    "Four query rows emitted; all locate inside multi_bind_buggy (lines 44, 51, 59, 63 of POC.c). No rows located in _fixed function (lines 79-95).",
+    "Query compiled cleanly on first attempt; zero repair iterations needed.",
+    "POC sha256 unchanged between freeze and final analyze (drift check passed).",
+    "Bug: in multi_bind, the !usb_desc branch (line 51 of POC, mirrors seed line 403) gotos fail_string_ids without assigning status=-ENOMEM, so caller sees success."
+  ]
+}

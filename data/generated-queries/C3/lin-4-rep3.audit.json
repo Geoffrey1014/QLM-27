@@ -1,0 +1,30 @@
+{
+  "seed_id": "lin-4",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "1332661e0930",
+  "c_file": "drivers/memory/samsung/exynos5422-dmc.c",
+  "pattern": "four-features-Lin",
+  "llm_calls": 8,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "c7948edb42d3286c3018dc7a6245ddffc09cdc06d867a1f7859ec2d1f8e45af1",
+  "predicate_iters": {
+    "isAcquire": 1,
+    "isRelease": 1,
+    "acquiredVar": 1,
+    "hasMatchingRelease": 1,
+    "hasLeakingReturn": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_oracle": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 354
+}

@@ -1,0 +1,27 @@
+{
+  "cell": "C1",
+  "seed_id": "mc-1",
+  "rep": 4,
+  "status": "pass",
+  "fix_sha": "e85bb0beb649",
+  "c_file": "drivers/input/touchscreen/ad7879.c",
+  "subject": "Input: ad7879 - add check for read errors in interrupt",
+  "poc_sha256": "be499de1bae54921f72a00d9999c3a9582b3ab3e49639457f017fffc0272a1c7",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-1-rep4-work/POC.c",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-1-rep4.ql",
+  "llm_calls": 2,
+  "poc_regens": 2,
+  "compile_iters": 1,
+  "verifier_passes": true,
+  "verifier_lenient_pass": true,
+  "verifier_verdict": "MISMATCH(F2.if: seed=1, poc=2) — lenient pass (delta=1 on F2.if)",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "wall_seconds": 194,
+  "notes": [
+    "POC required 2 regens to reduce F5.return (main removed) and F2.if (collapsed else-if).",
+    "Final query fires once at POC.c:32 inside ad7879_irq_buggy, silent on _fixed."
+  ]
+}

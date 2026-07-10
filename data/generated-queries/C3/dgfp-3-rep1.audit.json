@@ -1,0 +1,22 @@
+{
+  "seed_id": "dgfp-3",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "a0732548ba03",
+  "llm_calls": 3,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isAtomicAlloc": 2,
+    "inAtomicContextByName": 1,
+    "isLockHeldAroundCall": 1,
+    "inSleepableInitFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 17086.0,
+  "notes": "delay-gfp pattern; kzalloc(...,GFP_ATOMIC) in tipc_bcast_init() called only from process-context module init. final.ql fires on 4 *_buggy variants at poc.c lines 50/104/126/148, silent on *_fixed* and *_fp_* (lock-held, IRQ-off, ISR-named). isAtomicAlloc needed value=\"32\" match (GFP_ATOMIC preprocessed to integer literal 32, toString GFP_ATOMIC match returned empty). Wall includes long Anthropic spend-limit wait between aborted attempts; pure execution time on this retry was a few minutes. Workdir reused features.json/seed.c/poc.c/fix.patch from prior aborted attempts. Verifier-v1 OK(F1.acq=11 F1.rel=22 F3.goto=22 F5.ret=23 F2.if=22)."
+}

@@ -1,0 +1,32 @@
+{
+  "cell": "C1",
+  "seed_id": "err-5",
+  "rep": 4,
+  "fix_sha": "31d82c2c787d",
+  "c_file": "kernel/kexec_file.c",
+  "subject": "kernel: kexec_file: fix error return code of kexec_calculate_store_digests()",
+  "status": "pass",
+  "llm_calls": 3,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "lenient_pass": true,
+  "lenient_pass_reviewer_note": "F5.return delta=1 (POC seed=2, poc=3). The +1 comes from the mandatory `int main(void){return 0;}` required by Stage A R4 (POC must compile standalone with gcc -c). All other dimensions (F1.acq, F1.rel, F3.goto, F2.if) matched exactly. Pattern-relevant features (failure branch with goto and missing -ENOMEM assignment) are faithfully encoded.",
+  "verifier_final_verdict": [
+    "MISMATCH(F5.return: seed=2, poc=3)"
+  ],
+  "poc_sha256": "43f00d7c249eb17ca8243fbf8a116e970b538b162574ba93ad7d79087e17ebb8",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3-prep/C1/err-5-rep4/POC.c",
+  "poc_drift": false,
+  "compile_iters": 1,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_fired_on_buggy": true,
+  "poc_run_fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-5-rep4.ql",
+  "wall_seconds": 340,
+  "notes": [
+    "POC regen 1: first attempt used `static` stubs for IS_ERR/PTR_ERR/kzalloc/vzalloc/kfree/vfree/crypto_alloc_shash/crypto_shash_descsize — each carried a `return ...` body, inflating F5.return to 11. Regenerated using `extern` prototypes instead (matches the seed-slice contract), bringing F5.return down to 3 (only ret-returns of _buggy/_fixed plus main).",
+    "Query compiled clean on iter 1 and fired on _buggy(goto out_free_desc on the !sha_regions branch) while staying silent on _fixed. No repair iter needed.",
+    "POC frozen with chmod 444; sha256 unchanged at end of run (drift check passed)."
+  ]
+}

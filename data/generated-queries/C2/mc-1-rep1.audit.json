@@ -1,0 +1,23 @@
+{
+  "cell": "C2",
+  "seed_id": "mc-1",
+  "repeat": 1,
+  "commit_sha": "e85bb0beb649",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isFallibleRegmapRead": 0,
+    "hasErrnoReturnType": 0,
+    "resultGuarded": 0,
+    "missingRegmapReadCheck": 0
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 126.0,
+  "final_predicates_differ_from_stage3": false,
+  "notes": "Stage 3 per-predicate compile validation collapsed into a single assemble compile (4 predicates, all type-checked together). Iter0 failed on GuardCondition.getAChild*; iter1 fixed by casting g.(Expr).getAChild*. Final query compiles cleanly."
+}

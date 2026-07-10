@@ -1,0 +1,21 @@
+{
+  "seed_id": "mc-5",
+  "repeat": 2,
+  "cell": "C3",
+  "fix_sha": "d6cb77228e3a",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isAllocApi": 1,
+    "getAllocatedTarget": 1,
+    "hasNullCheckBetween": 1,
+    "isUsedDownstream": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 561.0
+}

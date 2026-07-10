@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-4",
+  "repeat": 3,
+  "cell": "L1",
+  "fix_sha": "1332661e0930",
+  "llm_calls": 0,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isAcquire": 1, "isRelease": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 254.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused features+POC from d3-prep/C3/lin-4-rep1 (verifier already OK); 2 predicates + assembly compiled cleanly on first try; analyze on poc-db returned 4 rows all on _buggy function."
+}

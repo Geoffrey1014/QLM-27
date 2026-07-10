@@ -1,0 +1,34 @@
+{
+  "seed_id": "lin-2",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "9a2ea132df86",
+  "subject": "HSI: omap_ssi: Fix refcount leak in ssi_probe",
+  "c_file": "drivers/hsi/controllers/omap_ssi_core.c",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "9db4d8fbbebdd0310c3d13707bf561802a509484218f0fba17232b81801d47b8",
+  "predicate_iters": {
+    "isForEachChildLoop": 1,
+    "isOfNodePut": 1,
+    "hasEarlyExitWithoutPut": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 279,
+  "notes": [
+    "Reused features.json and seed.c from lin-2-rep1 (deterministic per-seed inputs).",
+    "POC regenerated once: initial POC with multi-variant tp/tn/fp violated verifier-v1 count equality (release/if/return mismatch); reverted to single buggy function structurally mirroring seed slice, which passed (OK F1.acq=0 F1.rel=0 F3.goto=3 F5.ret=5 F2.if=6).",
+    "POC sha unchanged across run (no drift).",
+    "Stage 4 per-predicate work folded into Stage 5 single-shot final.ql; one assemble-refine iteration was needed to disambiguate the loop-induction variable from sibling VariableAccess in the for-init (np vs child).",
+    "Final query fires only on ssi_probe_buggy line 64 (goto out3) with child='child'; meets buggy=true, fixed=false, fp=false acceptance."
+  ]
+}

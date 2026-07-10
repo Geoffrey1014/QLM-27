@@ -1,0 +1,23 @@
+{
+  "cell": "C2",
+  "seed_id": "dgfp-5",
+  "repeat": 3,
+  "commit_sha": "9f96b9b7d836a71733f83ba813d9e0c658090c5d",
+  "llm_calls": 8,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isBusyWaitDelayCall": 1,
+    "isAtomicContextFunction": 1,
+    "isWorkqueueOrSleepableEntry": 1,
+    "holdsSpinlockBefore": 1,
+    "delayMillisecondsArg": 1,
+    "isMisusedBusyWait": 1
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 138
+}

@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-4",
+  "repeat": 2,
+  "cell": "L1",
+  "fix_sha": "1332661e0930",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isOfNodeAcquire": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 220.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused shared prep artifacts (features/poc/plan/poc-db) from d5-prep/L0/lin-4-rep2. N_PRED=1 (within cap 2), predicate compiled iter 1, final compiled iter 1, analyze fires on np_ddr in of_get_dram_timings_buggy on 4 return paths."
+}

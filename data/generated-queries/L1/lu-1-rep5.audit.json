@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-1",
+  "repeat": 5,
+  "cell": "L1",
+  "fix_sha": "b6631c6031c7",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isAcquireCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 106.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. N_PRED=1, no refine loops needed (predicate + final compiled first try). Features/POC/plan reused from L0 rep5 (same LLM call count / stages exercised); analyze fires on sctp_sf_do_5_2_4_dupcook_buggy new_asoc leak."
+}

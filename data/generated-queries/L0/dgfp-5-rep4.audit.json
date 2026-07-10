@@ -1,0 +1,19 @@
+{
+  "seed_id": "dgfp-5",
+  "repeat": 4,
+  "cell": "L0",
+  "fix_sha": "9f96b9b7d836",
+  "c_file": "drivers/pci/endpoint/functions/pci-epf-test.c",
+  "subject": "PCI: endpoint: Replace mdelay with usleep_range() in pci_epf_test_write()",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isBusyDelayCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 344.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC/features/seed reused from rep2's validated set (verifier-v1 OK: F1.acq=1 F1.rel=1 F3.goto=3 F5.ret=12 F2.if=3). Final query fires on _buggy plus tp2/tp3, silent on tn/fp/fixed as intended (pair-wise oracle not enforced at L0)."
+}

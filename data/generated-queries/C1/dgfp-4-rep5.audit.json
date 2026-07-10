@@ -1,0 +1,29 @@
+{
+  "cell": "C1",
+  "seed_id": "dgfp-4",
+  "rep": 5,
+  "status": "pass",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_lenient": false,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=5 F2.if=2)",
+  "poc_sha256": "f8ad577f568310b1a085d1519e254bcd7e5b0f8c531a2ccec64de5e8cfeb7341",
+  "poc_drift": false,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-4-rep5/query.ql",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-4-rep5/POC.c",
+  "poc_db_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-4-rep5-work/poc-db/db",
+  "poc_run_csv": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-4-rep5/poc-run.csv",
+  "notes": [
+    "Seed dgfp-4: GFP_ATOMIC -> GFP_KERNEL in em28xx_init_usb_xfer (commit 2453e60702e1).",
+    "POC + seed-slice built fresh (no prior C1 rep had artifacts).",
+    "Verifier-v1 strict pass on first POC.",
+    "Query is generic: flags any call passing GFP_ATOMIC (macro or numeric 32) inside a function whose name does not match atomic-context heuristics (isr/irq/handler/nmi/spin_/atomic/tasklet/bh/softirq/callback/complete). No POC scaffolding hardcoded.",
+    "Query compiled and validated on POC mini-DB on iter 1; no repair needed."
+  ]
+}

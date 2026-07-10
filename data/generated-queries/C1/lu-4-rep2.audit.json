@@ -1,0 +1,31 @@
+{
+  "cell": "C1",
+  "seed_id": "lu-4",
+  "rep": 2,
+  "seed_sha": "9bbfceea12a8",
+  "c_file": "drivers/usb/dwc3/dwc3-pci.c",
+  "func_name": "dwc3_pci_probe",
+  "subject": "usb: dwc3: pci: prevent memory leak in dwc3_pci_probe",
+  "llm_calls": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_strict_pass": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=3 F5.ret=7 F2.if=7)",
+  "compile_iters": 2,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "poc_sha256": "8825a8b887787c047978ec52bd9419e7fcde4bf0b5ba9aa91dc1c6e6fa776e89",
+  "status": "ok",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-4-rep2.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-4-rep2-work",
+  "wall_seconds": 420,
+  "notes": [
+    "POC built on first try; verifier needed a buggy-only slice (poc-for-verifier.c) to match seed-slice whole-file counts (same scaffolding lin-1-rep1/rep2 used).",
+    "First query revision compiled but fired on multiple false locations (early returns before acquisition, plus the happy-path tail return).",
+    "Second revision tightened the pattern: require sibling good `goto err` and bad direct `return` IfStmts both occurring after the acquisition, with the bad-if condition not testing the acquired or any freshly-assigned pointer (filters out !ptr null-checks).",
+    "Final query produces 1 result inside dwc3_pci_probe-like _buggy at the BUG return; zero results inside _fixed.",
+    "Query is generic: no hard-coded function or file names; runs against the full Linux DB."
+  ]
+}

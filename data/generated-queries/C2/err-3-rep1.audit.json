@@ -1,0 +1,24 @@
+{
+  "cell": "C2",
+  "seed_id": "err-3",
+  "repeat": 1,
+  "commit_sha": "26594c6bbb60",
+  "llm_calls": 3,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "has_ret_local": 0,
+    "returns_ret": 0,
+    "ret_inited_zero": 0,
+    "is_null_check_if": 0,
+    "then_gotos_without_assigning_ret": 0,
+    "goto_target_returns_ret": 0
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 60.0,
+  "final_predicates_differ_from_stage3": false
+}

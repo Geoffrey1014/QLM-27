@@ -1,0 +1,27 @@
+{
+  "seed_id": "mc-4",
+  "repeat": 2,
+  "cell": "L0",
+  "fix_sha": "c9c63915519b",
+  "c_file": "drivers/hwmon/lm80.c",
+  "subject": "hwmon: (lm80) fix a missing check of the status of SMBus read",
+  "pattern": "missing-check",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=13 F2.if=1)",
+  "predicate_iters": {"isSmbusReadApi": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_oracle_recorded": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "buggy_hits": ["set_fan_div_buggy:line36", "tp1_smbus_read_or:line59", "tp2_i2c_read_mask:line66", "tp3_arith_use:line73"]
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 653.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Plan emits exactly 1 predicate (isSmbusReadApi); the missing-check / arithmetic-use / in-place-check / captured-check logic is folded into the assembly where-clause. POC verifier v1 passed on first attempt after balancing seed helpers to match POC's void-function return count. Final compile succeeded on first try (L0 accept criterion). Pair-wise oracle recorded (not required for L0): all 4 _buggy/tp* fire; _fixed, tn*, fp* silent."
+}

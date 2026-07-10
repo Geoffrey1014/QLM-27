@@ -1,0 +1,17 @@
+{
+  "seed_id": "dgfp-1",
+  "repeat": 1,
+  "cell": "L0",
+  "fix_sha": "e58650b57ee0",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isBusyDelayCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 237.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC + verifier-v1 artifacts reused from C3 dgfp-1-rep1 (POC-side scaffolding not ablated per L0 spec). Single predicate isBusyDelayCall recognises mdelay() with millisecond arg >= 10; sleepable/atomic context tests inlined in assembly where-clause. final.ql compiles and fires 4x on POC (buggy + tp1/tp2/tp3), silent on _fixed/tn*/fp*."
+}

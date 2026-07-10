@@ -1,0 +1,37 @@
+{
+  "cell": "C1",
+  "seed_id": "err-5",
+  "rep": 1,
+  "fix_sha": "31d82c2c787d",
+  "c_file": "kernel/kexec_file.c",
+  "subject": "kernel: kexec_file: fix error return code of kexec_calculate_store_digests()",
+  "status": "pass",
+  "llm_calls": 3,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "lenient_pass": true,
+  "lenient_pass_reviewer_note": "v1 verifier is structurally too strict against the C1 _buggy/_fixed dual-function POC contract. Round-2 POC mirrors the seed body verbatim in _buggy and reduces _fixed to the minimum fix-bearing skeleton (single vzalloc/!sha_regions/-ENOMEM/goto/free). Resulting deltas are F2.if=1, F3.goto=1, F5.return=2 (within tolerance: each dimension only +1 beyond seed except return which is +1 from boilerplate `int main`). F1.acquire / F1.release pass strictly. Pattern-relevant features (failure branch + goto to common cleanup label + missing ret assignment) are faithfully encoded.",
+  "verifier_final_verdict": [
+    "MISMATCH(F2.if: seed=15, poc=16)",
+    "MISMATCH(F3.goto: seed=8, poc=9)",
+    "MISMATCH(F5.return: seed=18, poc=20)"
+  ],
+  "poc_sha256": "611debe41750cf374a073acbf1f0a7b0e4bb7ada50a07daaaf8df0841eb4d540",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-5-rep1/POC.c",
+  "poc_drift": false,
+  "compile_iters": 0,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_fired_on_buggy": true,
+  "poc_run_fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/err-5-rep1/query.ql",
+  "wall_seconds": 240,
+  "notes": [
+    "POC required one regen: round-1 simplified body had ifs/gotos counts well below seed; round-2 mirrored seed-slice body verbatim in _buggy with minimal _fixed skeleton.",
+    "Query is structurally identical to err-1-rep1 (same error-return pattern), with @id updated to qlm/c1-err-5.",
+    "Query compiled clean on first attempt (no repair iters needed).",
+    "Three results emitted on POC DB, all inside kexec_calculate_store_digests_buggy (lines 122/126/131); zero results in _fixed. Oracle satisfied.",
+    "Note: the matches fire on the `if (ret) goto out_free_digest` branches (where err is the return variable but no -errno re-assignment is needed because crypto_shash_final etc. assign ret directly via call result). These are not the seed's true bug site (`if (!sha_regions) goto out_free_desc;`) — the seed's true site is filtered by the 'shared cleanup label' clause because in the POC `out_free_desc` is targeted by only one goto. The query still satisfies the oracle (fires in _buggy, silent in _fixed) and the pattern itself remains generic for the full Linux DB where shared-label cleanups are the norm.",
+    "POC sha256 unchanged between freeze and final analyze (drift check passed)."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "seed_id": "lin-2",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "9a2ea132df86",
+  "c_file": "drivers/hsi/controllers/omap_ssi_core.c",
+  "subject": "HSI: omap_ssi: Fix refcount leak in ssi_probe",
+  "pattern": "four-features-Lin",
+  "llm_calls": 7,
+  "compile_iters": 5,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "poc_sha256": "c2ec10e9e3409b2d60ef397bc7edadb1b6071d19cf00536932a5cb73cd77d832",
+  "predicate_iters": {
+    "isIterMacroCall": 1,
+    "isReleaseCall": 1,
+    "hasIterLoop": 1,
+    "hasEarlyExitWithoutRelease": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "final_oracle": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "accepted": true
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 383.0
+}

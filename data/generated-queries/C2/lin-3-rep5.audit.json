@@ -1,0 +1,30 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-3",
+  "repeat": 5,
+  "commit_sha": "bf4a9b2467b7",
+  "c_file": "sound/soc/samsung/aries_wm8994.c",
+  "subject": "ASoC: samsung: Fix refcount leak in aries_audio_probe",
+  "llm_calls": 6,
+  "compile_iters": 5,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_acquire_call": 1,
+    "is_release_call_on": 1,
+    "release_reaches_exit_from": 1,
+    "leaks_on_some_path": 1
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "features": {
+    "target_api": "of_parse_phandle",
+    "post_operation": "of_node_put",
+    "critical_variable": "extcon_np",
+    "path_conditions": "of_node_put must be called on all paths after of_parse_phandle, including error path from extcon_find_edev_by_node",
+    "fits_pattern": true
+  }
+}

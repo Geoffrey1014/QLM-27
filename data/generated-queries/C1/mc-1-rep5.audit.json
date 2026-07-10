@@ -1,0 +1,32 @@
+{
+  "cell": "C1",
+  "seed_id": "mc-1",
+  "seed_sha": "e85bb0beb649",
+  "rep_id": "rep5",
+  "status": "ok",
+  "poc_sha256": "004eb0e4d6687f6c5b06c6361d00ddfdc8d7e6ffcf1c855de3e9af2464800f74",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=1 F2.if=1)",
+  "verifier_mode": "strict",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_results": {
+    "fired_locations": ["POC.c:40 (inside ad7879_irq_buggy)"],
+    "fired_on_buggy": true,
+    "fired_on_fixed": false
+  },
+  "artifacts": {
+    "query_ql": "experiments/rq3/d3/C1/mc-1-rep5.ql",
+    "rep_dir": "experiments/rq3/d3/C1/mc-1-rep5/",
+    "poc": "experiments/rq3/d3/C1/mc-1-rep5/POC.c",
+    "poc_db": "experiments/rq3/d3/C1/mc-1-rep5/poc-db/db",
+    "qlpack": "experiments/rq3/d3/C1/mc-1-rep5/qlpack.yml",
+    "poc_run_csv": "experiments/rq3/d3/C1/mc-1-rep5/poc-run.csv",
+    "seed_slice": "experiments/rq3/d3/C1/mc-1-rep5/seed-slice.c",
+    "poc_for_verifier": "experiments/rq3/d3/C1/mc-1-rep5/poc-for-verifier.c"
+  },
+  "wall_seconds": 420
+}

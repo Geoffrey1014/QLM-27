@@ -1,0 +1,27 @@
+{
+  "cell": "C1",
+  "seed_id": "lin-2",
+  "rep": 1,
+  "seed_sha": "9a2ea132df86",
+  "subject": "HSI: omap_ssi: Fix refcount leak in ssi_probe",
+  "c_file": "drivers/hsi/controllers/omap_ssi_core.c",
+  "poc_sha256": "171ec28b338953b2299c8d7f14cec1c923f55edfeb7c78af43c829d01f6d4e0b",
+  "llm_calls": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_strict": true,
+  "compile_iters": 1,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "ok",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lin-2-rep1.ql",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3-prep/C1/lin-2-rep1/POC.c",
+  "poc_db_path": "<REPO_ROOT>/experiments/rq3/d3-prep/C1/lin-2-rep1/poc-db/db",
+  "poc_run_csv": "<REPO_ROOT>/experiments/rq3/d3-prep/C1/lin-2-rep1/poc-run.csv",
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=1 F5.ret=2 F2.if=2)",
+  "notes": [
+    "POC frozen at sha 171ec28b... before query gen",
+    "Stage E query produced one error: Block -> BlockStmt; fixed in repair iter 1",
+    "Query fires on goto out3 line in ssi_probe_buggy; silent in ssi_probe_fixed"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "seed_id": "lin-5",
+  "repeat": 5,
+  "cell": "L1",
+  "fix_sha": "10d6bdf53290",
+  "c_file": "drivers/ata/pata_octeon_cf.c",
+  "pattern": "four-features-Lin",
+  "llm_calls": 0,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isAcquireCall": 1,
+    "hasPutDeviceRelease": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 227.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused features/poc/plan from lin-5-rep1 (deterministic content), rebuilt poc-db, all 2 predicates + final compiled first try, analyze produced 1 hit on octeon_cf_probe_buggy."
+}

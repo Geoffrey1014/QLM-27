@@ -1,0 +1,40 @@
+{
+  "cell": "C1",
+  "seed_id": "err-1",
+  "seed_sha": "620b90d30c08",
+  "rep_id": "rep3",
+  "poc_sha256": "f25294ea5e41702d39c8417c68b72821b3fb5558dd260c38708a90a8598fdff7",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "verifier_mode": "strict",
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=2 F5.ret=2 F2.if=6)",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_results": {
+    "fired_locations": ["POC.c:31 (inside physmap_flash_remove_buggy)"],
+    "fired_on_buggy": true,
+    "fired_on_fixed": false
+  },
+  "status": "ok",
+  "artifacts": {
+    "query_ql": "experiments/rq3/d3/C1/err-1-rep3.ql",
+    "rep_dir": "experiments/rq3/d3-prep/C1/err-1-rep3/",
+    "poc": "experiments/rq3/d3-prep/C1/err-1-rep3/POC.c",
+    "poc_db": "experiments/rq3/d3-prep/C1/err-1-rep3/poc-db/db",
+    "qlpack": "experiments/rq3/d3-prep/C1/err-1-rep3/qlpack.yml",
+    "poc_run_csv": "experiments/rq3/d3-prep/C1/err-1-rep3/poc-run.csv",
+    "seed_slice": "experiments/rq3/d3-prep/C1/err-1-rep3/seed-slice.c",
+    "poc_for_verifier": "experiments/rq3/d3-prep/C1/err-1-rep3/poc-for-verifier.c"
+  },
+  "wall_time_seconds": 235,
+  "notes": [
+    "Acted-as-LLM (Claude Opus 4.7 in-session) for POC + query generation.",
+    "First POC was too small (F2.if=4 vs seed=6); regenerated once with more of the cleanup body included so F2.if matched seed at 6.",
+    "Verifier-v1 strict-passed on the 2nd POC (F1.acq=0/F1.rel=0 because the error-return pattern doesn't acquire/release a resource).",
+    "compile_iters=1: query had one compile fix (LocalVariable.getDeclaringFunction -> getFunction). Counted as one repair iter.",
+    "Generic detector: looks for any function declaring a zero-init int that is returned at exit, plus a failure-guarded if (!x / x==0 / NULL / IS_ERR) whose then-branch is `goto LABEL` not assigning the err var first.",
+    "Does NOT mention _buggy/_fixed names; uses no hard-coded file/function names."
+  ]
+}

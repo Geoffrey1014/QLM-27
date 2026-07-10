@@ -1,0 +1,29 @@
+{
+  "cell": "C1",
+  "seed_id": "mc-4",
+  "rep": 3,
+  "status": "pass",
+  "fix_sha": "c9c63915519b",
+  "c_file": "drivers/hwmon/lm80.c",
+  "subject": "hwmon: (lm80) fix a missing check of the status of SMBus read",
+  "poc_sha256": "1f4f156f6686aa84a7a643e7993e12f191935959abb363f874db1428d888f405",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-4-rep3-work/POC.c",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-4-rep3.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-4-rep3-work",
+  "llm_calls": 2,
+  "poc_regens": 0,
+  "compile_iters": 1,
+  "verifier_passes": true,
+  "verifier_lenient_pass": true,
+  "verifier_verdict": "MISMATCH(F2.if: seed=0, poc=1) — lenient pass (delta=1 on F2.if)",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "notes": [
+    "Seed slice required restructuring to match POC return count: both _buggy/_fixed declared void (each contributes 1 implicit ReturnStmt = 2) so slice was given matching main() returning 0 to reach 2 returns.",
+    "First POC iteration (with explicit early return in _fixed) failed verifier with F5.return delta=2; collapsed to if/else block to eliminate extra return, yielding only F2.if delta=1 (lenient pass).",
+    "Final query fires once at POC.c:26 inside set_fan_div_buggy on the lm80_read_value call used inside a bitwise-AND expression; silent on set_fan_div_fixed.",
+    "Query is generic over the pattern: matches integer-returning *_read_value / *_read_byte / regmap_read / i2c_smbus_read / *_reg_read / *_read_reg / *_read_block / *_read_word / smbus_read* helpers whose return is consumed in arithmetic/bitwise expressions without an IS_ERR / <0 / ! check."
+  ]
+}

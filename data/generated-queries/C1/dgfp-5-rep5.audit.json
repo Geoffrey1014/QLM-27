@@ -1,0 +1,28 @@
+{
+  "cell": "C1",
+  "seed_id": "dgfp-5",
+  "rep": 5,
+  "status": "pass",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_lenient": false,
+  "verifier_verdict": "OK(F1.acq=2 F1.rel=4 F3.goto=0 F5.ret=8 F2.if=4)",
+  "poc_sha256": "334c6f9a4c17e9245959dbef3f7e81d87ed08467b009995eed60f2a41a1be50d",
+  "poc_drift": false,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-5-rep5/query.ql",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-5-rep5/POC.c",
+  "poc_db_path": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-5-rep5/poc-db/db",
+  "poc_run_csv": "<REPO_ROOT>/experiments/rq3/d3/C1/dgfp-5-rep5/poc-run.csv",
+  "notes": [
+    "POC + seed-slice authored fresh for dgfp-5 (PCI: pci_epf_test_write mdelay->usleep_range).",
+    "Verifier-v1 strict pass on first POC.",
+    "Query is generic: flags mdelay() in functions whose names do not suggest atomic/IRQ/spinlock context. Does not hardcode any value threshold, since dgfp-5 uses mdelay(1).",
+    "Query compiled and validated on POC mini-DB on iter 1; no repair needed."
+  ]
+}

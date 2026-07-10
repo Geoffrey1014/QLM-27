@@ -1,0 +1,33 @@
+{
+  "cell": "C2",
+  "seed_id": "lu-5",
+  "repeat": 5,
+  "commit_sha": "450c3d4166837c496ebce03650c08800991f2150",
+  "c_file": "fs/affs/super.c",
+  "subject": "affs: fix a memory leak in affs_remount",
+  "llm_calls": 7,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isAllocCall": 0,
+    "isFreeCall": 0,
+    "localGetsAlloc": 0,
+    "freesVariable": 0,
+    "returnWithoutFree": 0
+  },
+  "assembly_iters": 0,
+  "final_predicates_differ_from_stage3": false,
+  "features": {
+    "target_api": "kstrdup",
+    "post_operation": "kfree",
+    "critical_variable": "new_opts",
+    "path_conditions": "After successful kstrdup, all return paths from affs_remount must call kfree(new_opts); only the parse_options error path frees it pre-fix, leaking on success paths.",
+    "fits_pattern": true,
+    "fit_test_reasoning": "kstrdup acquires heap memory whose owner is the local variable new_opts. kfree is the matching release. Missing kfree causes a memory leak, which is exactly the resource-leak pattern (acquire->use->release). Bug is not about input validation or transformation."
+  },
+  "wall_seconds": 78
+}

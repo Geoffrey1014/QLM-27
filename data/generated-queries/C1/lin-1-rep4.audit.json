@@ -1,0 +1,38 @@
+{
+  "cell": "C1",
+  "seed_id": "lin-1",
+  "seed_sha": "74139a64e8ce",
+  "rep_id": "rep4",
+  "status": "ok",
+  "poc_sha256": "0a91defd82c7e4a8f931f35ff472733614dce68202a01160a37a76ec329c0fef",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=2 F1.rel=0 F3.goto=0 F5.ret=2 F2.if=5)",
+  "verifier_mode": "strict",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_results": {
+    "fired_locations": ["POC.c:62 (inside amx3_idle_init_buggy)"],
+    "fired_on_buggy": true,
+    "fired_on_fixed": false
+  },
+  "artifacts": {
+    "query_ql": "experiments/rq3/d3/C1/lin-1-rep4.ql",
+    "rep_dir": "experiments/rq3/d3/C1/lin-1-rep4/",
+    "poc": "experiments/rq3/d3/C1/lin-1-rep4/POC.c",
+    "poc_db": "experiments/rq3/d3/C1/lin-1-rep4/poc-db/db",
+    "qlpack": "experiments/rq3/d3/C1/lin-1-rep4/qlpack.yml",
+    "poc_run_csv": "experiments/rq3/d3/C1/lin-1-rep4/poc-run.csv",
+    "seed_slice": "experiments/rq3/d3/C1/lin-1-rep4/seed-slice.c",
+    "poc_for_verifier": "experiments/rq3/d3/C1/lin-1-rep4/poc-for-verifier.c"
+  },
+  "wall_time_seconds": 166,
+  "notes": [
+    "Acted-as-LLM (Claude Opus 4.7 in-session) for POC + query generation; in D3-main these become API calls.",
+    "First POC passed verifier-v1 strictly on the first try (no regen needed).",
+    "compile_iters=1: single compile+analyze round; query passed POC oracle on first attempt; no repair triggered.",
+    "rep4 variance instance: POC retains the rep1 structural skeleton (necessary to match verifier dimensions for this seed); query phrasing varies via renamed helper predicates."
+  ]
+}

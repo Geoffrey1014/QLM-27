@@ -1,0 +1,16 @@
+{
+  "cell": "C0",
+  "seed_id": "dgfp-1",
+  "repeat_idx": 4,
+  "commit_sha": "e58650b57ee0078ac8986650febeb55263f9ebdf",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 60.0,
+  "model": "claude-opus-4-7",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

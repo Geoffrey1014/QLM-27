@@ -1,0 +1,33 @@
+{
+  "seed_id": "mc-5",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "d6cb77228e3a",
+  "c_file": "drivers/pinctrl/intel/pinctrl-baytrail.c",
+  "subject": "pinctrl: baytrail: Fix potential NULL pointer dereference",
+  "pattern": "missing-check",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=5 F2.if=4)",
+  "poc_sha256": "5b231c048b124507eb4fb0fae0b5feec63d70c9ea9ff745cdc6bcb2940ff73a5",
+  "predicate_iters": {
+    "isAllocApi": 1,
+    "allocResultStoredInField": 1,
+    "hasNullCheckOnTarget": 1,
+    "downstreamUsesTarget": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_oracle": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false,
+    "hits": ["byt_gpio_probe_buggy:poc.c:48"]
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 418,
+  "notes": "Pattern fit: missing NULL check after devm_kcalloc in byt_gpio_probe. Verifier-v1 OK on second POC (first POC had count mismatches: F1.acq=6/F1.rel=1 vs seed 0/0). Final POC uses devm_kcalloc only (not in verifier's acquire list) and 1 main() return + minimal-pair to align counts to seed (acq=0/rel=0/goto=0/ret=5/if=4). All 4 predicates compiled and validated on POC mini-DB first try. Final query fires on byt_gpio_probe_buggy only; silent on byt_gpio_probe_fixed. buggy_fires=true, fixed_fires=false, fp_fires=false."
+}

@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-3",
+  "repeat": 2,
+  "cell": "L0",
+  "fix_sha": "bf4a9b2467b7",
+  "llm_calls": 5,
+  "compile_iters": 0,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "predicate_iters": {"isDeviceNodeAcquire": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 403.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC regen took 2 rounds to satisfy verifier-v1 count-parity (acquire=1,release=1,goto=0,return=7,if=7). Final query compiles and fires on the buggy pattern in poc.c."
+}

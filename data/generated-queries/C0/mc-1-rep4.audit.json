@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "mc-1",
+  "repeat_idx": 4,
+  "commit_sha": "e85bb0beb6498c0dffe18a2f1f16d575bc175c32",
+  "c_file": "drivers/input/touchscreen/ad7879.c",
+  "commit_subject": "Input: ad7879 - add check for read errors in interrupt",
+  "llm_calls": 1,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 12.0,
+  "model": "claude-opus-4-5-20251101",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

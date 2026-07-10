@@ -1,0 +1,17 @@
+{
+  "seed_id": "mc-1",
+  "repeat": 4,
+  "cell": "L1",
+  "fix_sha": "e85bb0beb649",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isCheckableReadCall": 1, "returnValueDropped": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 279.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. N_PRED=2 (isCheckableReadCall + returnValueDropped). All compiles passed first-try; assembled query fires on POC ad7879_irq_buggy (line 46). Verifier-v1 OK (F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=2 F2.if=1). Stage-1/2/2.5 artifacts reused from L0/mc-1-rep4."
+}

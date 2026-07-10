@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-1",
+  "repeat": 1,
+  "cell": "L1",
+  "fix_sha": "74139a64e8ce",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isAcquireCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 157.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused shared prep artifacts (features/poc/plan) from d5-prep/L0/lin-1-rep1. N_PRED=1 (within cap 2), predicate compiled iter 1, final compiled iter 1, analyze fires on state_node in amx3_idle_init_buggy."
+}

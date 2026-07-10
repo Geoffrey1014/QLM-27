@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-2",
+  "repeat": 5,
+  "cell": "L1",
+  "fix_sha": "2289adbfa559",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isAllocCall": 1, "freesVariable": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 451,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. All predicates compiled on iter 1, final compiled on iter 1. Query fires on identify_state_buggy return -EIO (line 48 of poc.c)."
+}

@@ -1,0 +1,37 @@
+{
+  "seed_id": "lu-2",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "2289adbfa559",
+  "subject": "media: usb: fix memory leak in af9005_identify_state",
+  "c_file": "drivers/media/usb/dvb-usb/af9005.c",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 1,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "96b51e754b82e4b8a34d4aa011fd1f1c739f2cb6e7ff5e429ebaf50ddbbe5c39",
+  "predicate_iters": {
+    "isAcquisition": 1,
+    "isReleaseCall": 1,
+    "getAcquiredVariable": 1,
+    "releasesVar": 1,
+    "hasLeakingReturn": 1,
+    "isInFixedFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 311,
+  "notes": [
+    "Stage1 features.json + Stage2 seed.c reused from lu-2-rep1 (deterministic from inputs).",
+    "Initial POC (multi-variant) failed verifier; regenerated lean single-buggy-function POC to match seed structural counts -> OK row.",
+    "POC locked at chmod 444, sha recorded. No drift during run.",
+    "Stage 4/5 collapsed into a single final.ql write (standard four-features template adapted: kmalloc/kfree, releasesVar argument check, hasLeakingReturn uses CFG to find a Return reachable from acquire without an intervening kfree of the variable).",
+    "final.ql compiled clean on first attempt; poc-db run produced exactly one row at kmalloc on line 36 inside af9005_identify_state_buggy. Oracle: buggy_fires=true, fixed_fires=false (no fixed in POC), fp_fires=false."
+  ]
+}

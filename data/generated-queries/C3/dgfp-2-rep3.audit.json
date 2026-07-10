@@ -1,0 +1,21 @@
+{
+  "seed_id": "dgfp-2",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "e9acf05255cb",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isBusyDelayCall": 1,
+    "inSleepableContextByName": 1,
+    "inAtomicContextByName": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 44.0,
+  "notes": "Resumed pre-existing workdir from aborted attempt; all stages already produced valid artifacts (features/poc/plan/preds/final). Re-verified: final.ql compiles cleanly and oracle on poc-db fires on both _buggy variants (pf_device_init_buggy line 83, some_driver_probe_tp1 line 115) and is silent on _fixed and fp lookalikes. Copied final.ql to d3/C3."
+}

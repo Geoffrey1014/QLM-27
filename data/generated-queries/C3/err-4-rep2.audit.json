@@ -1,0 +1,34 @@
+{
+  "seed_id": "err-4",
+  "repeat": 2,
+  "cell": "C3",
+  "fix_sha": "c021e0235770",
+  "subject": "usb: gadget: legacy: fix error return code of multi_bind()",
+  "c_file": "drivers/usb/gadget/legacy/multi.c",
+  "pattern": "error-return-code",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "f82bbd1f8fa4ba4d6238da7c92823387dbb4116f0a19c420084b31fa1d16cb76",
+  "predicate_iters": {
+    "isStatusReturnFunction": 1,
+    "isFailureBranchGoto": 1,
+    "statusNotSetOnFailureBranch": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 473,
+  "notes": [
+    "Reused features.json from err-4-rep1 (same commit, same JAWS analysis).",
+    "POC verifier-v1 OK on first try: F1.acq=0 F1.rel=0 F3.goto=8 F5.ret=5 F2.if=10 (seed slice carries one fixed-shape sibling so structural counts match the POC twin _buggy/_fixed pair).",
+    "All three predicates validated on the first iter; no refinement loops needed.",
+    "Stage-5 oracle: final.ql fires on multi_bind_buggy line 54 (the `goto fail_string_ids;` of the !usb_desc NULL-check), silent on multi_bind_fixed. No FP variants in this POC.",
+    "Pattern reuses the err-1 P1/P2/P3 skeleton (status-return function / failure-branch goto / no-status-set-before-goto) — same error-return-code bug shape, different status-variable name."
+  ]
+}

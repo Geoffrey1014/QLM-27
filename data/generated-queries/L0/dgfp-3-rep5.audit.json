@@ -1,0 +1,26 @@
+{
+  "seed_id": "dgfp-3",
+  "repeat": 5,
+  "cell": "L0",
+  "fix_sha": "a0732548ba03",
+  "subject": "net: tipc: bcast: Replace GFP_ATOMIC with GFP_KERNEL in tipc_bcast_init()",
+  "c_file": "net/tipc/bcast.c",
+  "pattern": "delay-gfp",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256_file": "poc.sha256",
+  "predicate_iters": {
+    "isAtomicAllocCallInSleepableContext": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 545,
+  "notes": "L0 = zero-shot compositional; N_PRED=1 (all delay-gfp logic inlined into a single isAtomicAllocCallInSleepableContext predicate); no refine loops. Verifier-v1 passed on first attempt (OK F1.acq=2 F1.rel=4 F3.goto=4 F5.ret=5 F2.if=4). Predicate compiled on first try; final.ql compiled on first try; final analyze on poc-db returned exactly one row on tipc_bcast_init_buggy (buggy fires, fixed silent). Accepted per L0 rule (any successful compile passes; oracle recorded but not gating)."
+}

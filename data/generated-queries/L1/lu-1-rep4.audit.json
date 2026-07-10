@@ -1,0 +1,20 @@
+{
+  "seed_id": "lu-1",
+  "repeat": 4,
+  "cell": "L1",
+  "fix_sha": "b6631c6031c7",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "allocatesNewAsoc": 1,
+    "missingAssocFree": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 260.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Both predicates + assemble compiled on first try (no repair needed)."
+}

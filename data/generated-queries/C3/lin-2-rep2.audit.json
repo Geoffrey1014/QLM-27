@@ -1,0 +1,25 @@
+{
+  "seed_id": "lin-2",
+  "repeat": 2,
+  "cell": "C3",
+  "fix_sha": "9a2ea132df86",
+  "llm_calls": 3,
+  "compile_iters": 5,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "8c5f5e94c62775d3579800d16d0afaa12ea5acf75eaf1da0ed5b46be9c331c6b",
+  "predicate_iters": {
+    "isForEachChildLoop": 2,
+    "isOfNodePutOn": 1,
+    "isEarlyExit": 1,
+    "earlyExitMissingPut": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 442.0
+}

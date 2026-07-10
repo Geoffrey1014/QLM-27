@@ -1,0 +1,23 @@
+{
+  "seed_id": "mc-3",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "6fc232db9e8c",
+  "llm_calls": 3,
+  "compile_iters": 6,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isPointerParam": 1,
+    "derefOfParam": 1,
+    "nullCheckOnParam": 1,
+    "derefBeforeNullCheck": 1,
+    "isInFixedOrFpFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 666.0,
+  "notes": "rfkill: use-before-null-check CWE-476; 4 _buggy variants fire (rfkill_register_buggy + tp1/tp2/tp3), all _fixed/_tn/_fp variants silent. 1 POC regen needed to add ternary null-check to tp1 so the bug pattern is properly demonstrated; v1 verifier OK after structural-count alignment (F2.if=2, F5.ret=14)."
+}

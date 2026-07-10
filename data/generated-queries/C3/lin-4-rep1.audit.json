@@ -1,0 +1,30 @@
+{
+  "seed_id": "lin-4",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "1332661e0930",
+  "subject": "memory: samsung: exynos5422-dmc: Fix refcount leak in of_get_dram_timings",
+  "c_file": "drivers/memory/samsung/exynos5422-dmc.c",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "6e9fab6ccfdf6172bf22bf1e9a0bddbcc6a1b7fe01aa411ac671172bb18c14db",
+  "predicate_iters": {
+    "isAcquire": 1,
+    "isRelease": 1,
+    "acquiresInto": 1,
+    "hasLeakingReturn": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 328,
+  "out_dir": "<REPO_ROOT>/experiments/rq3/d3-prep/C3/lin-4-rep1",
+  "final_ql": "<REPO_ROOT>/experiments/rq3/d3/C3/lin-4-rep1.ql"
+}

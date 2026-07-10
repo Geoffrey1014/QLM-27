@@ -1,0 +1,19 @@
+{
+  "cell": "C1",
+  "seed_id": "lu-1",
+  "rep": 3,
+  "status": "ok",
+  "llm_calls": 3,
+  "compile_iters": 1,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "verifier_strict_pass": true,
+  "lenient_pass": false,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_sha256": "504c2893be9aa5836d91b951a359f257b13d492c5a14bb8ee91e640b6f69bf5f",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-1-rep3-work/POC.c",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-1-rep3.ql",
+  "fix_sha": "b6631c6031c7",
+  "subject": "sctp: Fix memory leak in sctp_sf_do_5_2_4_dupcook"
+}

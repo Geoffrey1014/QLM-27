@@ -1,0 +1,21 @@
+{
+  "seed_id": "lu-2",
+  "repeat": 4,
+  "cell": "L0",
+  "fix_sha": "2289adbfa559",
+  "c_file": "drivers/media/usb/dvb-usb/af9005.c",
+  "subject": "media: usb: fix memory leak in af9005_identify_state",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "ac3487320ebc69b029b89eb12d467dd9401796c733ace73de1232029b9e5e926",
+  "predicate_iters": {"leaksOnEarlyReturn": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 885.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC/seed reused from C3 rep4 (same verifier gate). Any successful compile accepted per L0 spec."
+}

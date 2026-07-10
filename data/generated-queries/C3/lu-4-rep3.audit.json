@@ -1,0 +1,37 @@
+{
+  "seed_id": "lu-4",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "9bbfceea12a8",
+  "subject": "usb: dwc3: pci: prevent memory leak in dwc3_pci_probe",
+  "c_file": "drivers/usb/dwc3/dwc3-pci.c",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 6,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=3 F5.ret=6 F2.if=7)",
+  "poc_sha256": "see out_dir/poc.sha256",
+  "predicate_iters": {
+    "isPlatformDeviceAlloc": 1,
+    "isPlatformDevicePut": 1,
+    "errorCheckReturn": 1,
+    "leakingErrorReturn": 1,
+    "isInFixedFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 378.0,
+  "out_dir": "<REPO_ROOT>/experiments/rq3/d3-prep/C3/lu-4-rep3/",
+  "final_query": "<REPO_ROOT>/experiments/rq3/d3/C3/lu-4-rep3.ql",
+  "notes": [
+    "Reused Stage 1/2/2.5 artifacts from prior aborted attempt (features.json, poc.c@444, verifier verdict OK). Built poc-db this session, ran Stage 3-5 fresh.",
+    "Stage 4: 5 predicates, all validated on first iteration (5 compile iters).",
+    "Stage 5: final.ql compiled+ran successfully on first iteration (1 compile iter); detector fires on the BUG return at poc.c line 76, no fixed/fp matches."
+  ]
+}

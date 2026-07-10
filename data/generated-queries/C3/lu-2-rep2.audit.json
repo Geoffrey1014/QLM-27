@@ -1,0 +1,34 @@
+{
+  "seed_id": "lu-2",
+  "repeat": 2,
+  "cell": "C3",
+  "fix_sha": "2289adbfa559",
+  "c_file": "drivers/media/usb/dvb-usb/af9005.c",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "b89f2af59a92ade72b8f205d26b79eca3a341947d47c1823b5549443783f811d",
+  "verifier_verdict": "OK(F1.acq=2 F1.rel=2 F3.goto=1 F5.ret=7 F2.if=4)",
+  "predicate_iters": {
+    "isAcquire": 1,
+    "getAcquired": 1,
+    "hasReleaseInFunction": 1,
+    "earlyReturnBypassingRelease": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_buggy_fires": true,
+  "poc_fixed_fires": false,
+  "poc_fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 301,
+  "notes": [
+    "POC contains only the _buggy variant; _fixed/_fp absent so silent vacuously.",
+    "Verifier-v1 OK on first attempt — counts (acq=2, rel=2, goto=1, ret=7, if=4) match seed.",
+    "All 4 predicates validated in 1 iteration each.",
+    "Final query: 2 alerts in poc-db, both in af9005_identify_state_buggy (return -ENOMEM at L50 and return -EIO at L62)."
+  ]
+}

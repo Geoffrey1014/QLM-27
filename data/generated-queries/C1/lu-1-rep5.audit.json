@@ -1,0 +1,28 @@
+{
+  "cell": "C1",
+  "seed_id": "lu-1",
+  "rep": 5,
+  "fix_sha": "b6631c6031c7",
+  "subject": "sctp: Fix memory leak in sctp_sf_do_5_2_4_dupcook",
+  "status": "pass",
+  "poc_sha256": "a511ea06a6b673e257274f90f314abb0b94319fe467442f3ad2d9e60eb5c4f43",
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "verifier_strict": true,
+  "verifier_final_row": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=3 F2.if=2)",
+  "compile_iters": 1,
+  "llm_calls": 4,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-1-rep5.ql",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-1-rep5/POC.c",
+  "poc_db_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-1-rep5/poc-db/db",
+  "wall_seconds": 468,
+  "notes": [
+    "POC regen 1: dropped null-check return path, still F5.return mismatch (delta=2).",
+    "POC regen 2: collapsed to single-return shape using rv accumulator; verifier strict PASS.",
+    "Query revised once: initial template required ReturnStmt inside if-then, but the verifier-friendly POC shape places return outside; refined to look for error-handler call (pdiscard) inside the check-guarded then-branch and absence of release on critical variable. Fires on _buggy, silent on _fixed."
+  ]
+}

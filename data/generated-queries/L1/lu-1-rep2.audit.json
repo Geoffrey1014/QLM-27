@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-1",
+  "repeat": 2,
+  "cell": "L1",
+  "fix_sha": "b6631c6031c7",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isAcquireCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 167.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. N_PRED=1 (within L1 cap of 2). Predicate compiled on iter 1; final compiled on iter 1; POC analyze produced 1 hit on buggy_sctp_sf_do_5_2_4_dupcook. Reused features/POC/plan/seed from L0 lu-1-rep2 (Stages 1-2.6 deterministic under same LLM/temp)."
+}

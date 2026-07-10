@@ -1,0 +1,32 @@
+{
+  "cell": "C2",
+  "seed_id": "mc-5",
+  "repeat": 4,
+  "commit_sha": "d6cb77228e3ae070061195a6fff6ba7c3c0b8e47",
+  "c_file": "drivers/pinctrl/intel/pinctrl-baytrail.c",
+  "subject": "pinctrl: baytrail: Fix potential NULL pointer dereference",
+  "features": {
+    "target_api": "devm_kcalloc",
+    "post_operation": "NULL check on returned pointer (if (!ptr) return -ENOMEM)",
+    "critical_variable": "vg->saved_context",
+    "path_conditions": "After devm_kcalloc returns, caller must check for NULL before using the pointer (especially before passing to suspend/resume callbacks).",
+    "fits_pattern": true,
+    "fit_test_reasoning": "Allocator (devm_kcalloc) returns a pointer that may be NULL; the required post-operation is a NULL check on the returned pointer before use. Missing the check leads to NULL pointer dereference. This fits the resource/post-op pattern adapted as missing-check."
+  },
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isAllocCall": 0,
+    "assignsAllocResult": 0,
+    "hasNullCheck": 0,
+    "usedAfterAlloc": 0
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 100.0
+}

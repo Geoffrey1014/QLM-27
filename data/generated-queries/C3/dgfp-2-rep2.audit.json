@@ -1,0 +1,34 @@
+{
+  "seed_id": "dgfp-2",
+  "repeat": 2,
+  "cell": "C3",
+  "fix_sha": "e9acf05255cb",
+  "c_file": "drivers/crypto/cavium/cpt/cptpf_main.c",
+  "subject": "crypto: cavium - Replace mdelay with msleep in cpt_device_init",
+  "pattern": "delay-gfp",
+  "llm_calls": 4,
+  "compile_iters": 6,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=11 F2.if=2)",
+  "poc_sha256": "41452046a6dc3394b5ee00406bdd1354fa4fa7446805d65f4bc69014945282ca",
+  "predicate_iters": {
+    "isMdelayCall": 1,
+    "isLongMdelay": 1,
+    "isSleepableContextFunction": 2,
+    "isAtomicContextFunction": 1,
+    "mdelayInSleepableContext": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_oracle": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false
+  },
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 514.0,
+  "out_dir": "<REPO_ROOT>/experiments/rq3/d3-prep/C3/dgfp-2-rep2",
+  "notes": "delay-gfp seed dgfp-2: mdelay(100) -> msleep(100) in cpt_device_init (PCI .probe chain). Single-variant POC (only _buggy) matches lin-1-rep2 baseline convention; verifier-v1 passed on first try. isSleepableContextFunction refined to use %_init% substring matching so the POC _buggy suffix doesn't break the structural fit."
+}

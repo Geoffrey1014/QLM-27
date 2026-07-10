@@ -1,0 +1,33 @@
+{
+  "seed_id": "err-1",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "620b90d30c08",
+  "subject": "mtd: maps: fix error return code of physmap_flash_remove()",
+  "c_file": "drivers/mtd/maps/physmap-core.c",
+  "pattern": "error-return-code",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "bbed8a91d91c2f04e8bb4a1b841f8cd5f37ee1cfffae27eb364917f3c4a4d9b5",
+  "predicate_iters": {
+    "isErrReturnFunction": 1,
+    "isFailureBranchGoto": 1,
+    "errIsZeroAtGoto": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 238,
+  "notes": [
+    "Second retry of err-1 rep4 after weekly-limit reset confirmed by probe; pipeline completed end-to-end on this attempt.",
+    "POC mirrored the seed slice with _buggy and _fixed twin functions; verifier-v1 OK on first draft (F1.acq=0 F1.rel=0 F3.goto=4 F5.ret=3 F2.if=12, identical counts to seed).",
+    "All three predicates compiled cleanly on first iteration and produced expected POC test_query results (no refine iterations needed).",
+    "Stage-5 oracle: final.ql fires on physmap_flash_remove_buggy at the NULL-branch goto (line 47), silent on physmap_flash_remove_fixed. No FP variants present in POC."
+  ]
+}

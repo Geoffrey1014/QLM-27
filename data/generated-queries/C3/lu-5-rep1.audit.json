@@ -1,0 +1,24 @@
+{
+  "seed_id": "lu-5",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "450c3d416683",
+  "llm_calls": 3,
+  "compile_iters": 1,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isAcquisition": 1,
+    "isReleaseCall": 1,
+    "getAcquiredVariable": 1,
+    "hasMatchingRelease": 1,
+    "hasNullCheck": 1,
+    "isInFixedFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 320.0,
+  "notes": "POC trimmed twice to satisfy verifier-v1 count parity (F1.rel=3, F2.if=5, F5.ret=5) and to expose the kstrdup→kfree leak structurally; final.ql modeled on lu-1-rep1 template (acquire/release/null-check/in-fixed predicates) and fires on affs_remount_buggy on POC mini-DB; no _fixed/_fp_ variants present so silence is vacuous."
+}

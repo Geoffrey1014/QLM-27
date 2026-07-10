@@ -1,0 +1,35 @@
+{
+  "seed_id": "lin-1",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "74139a64e8ce",
+  "subject": "ARM: OMAP2+: pm33xx-core: ix device node reference leaks in amx3_idle_init",
+  "c_file": "arch/arm/mach-omap2/pm33xx-core.c",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 7,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "ea985de49d8dd1c390efca0e7d7a27674714d2728801520de486582a898b034c",
+  "predicate_iters": {
+    "isDeviceNodeAcquisition": 1,
+    "isOfNodePut": 1,
+    "getAcquiredVariable": 1,
+    "hasMatchingOfNodePut": 1,
+    "hasNullCheck": 1,
+    "isInFixedFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 74,
+  "notes": [
+    "Reused completed d3-prep artifacts; POC sha unchanged (no drift).",
+    "POC fires only on amx3_idle_init_buggy line 47; acceptance criterion met.",
+    "Stage4 used 6 compile iters across 6 predicates (1 each); Stage5 used 1 compile iter."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "cell": "C1",
+  "seed_id": "lu-5",
+  "rep": 5,
+  "status": "pass",
+  "llm_calls": 2,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_lenient_pass": false,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=2 F3.goto=0 F5.ret=4 F2.if=2)",
+  "poc_sha256": "61797ab731d2a02da404fcdaf1c34cb775eba3030b5653507e91b7d90938dbf4",
+  "compile_iters": 1,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_fired_on_buggy": true,
+  "poc_fired_on_fixed": false,
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-5-rep5.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/lu-5-rep5-work/",
+  "wall_seconds": 300,
+  "notes": [
+    "Seed slice (seed-buggy.c) had to be hand-stubbed: the raw git slice from fs/affs/super.c pulled in <linux/init.h> and was not standalone-compilable for the verifier mini-DB; prior reps (lu-5 rep1..rep4) appear to have stalled at this same step (only seed.patch + raw seed files present, no audit). The slice here preserves affs_remount's control-flow shape (2 ifs, 3 returns, 2 kfrees, 0 gotos) while stubbing kernel APIs.",
+    "POC first-shot passed verifier strict (F1.acq=0 F1.rel=2 F3.goto=0 F5.ret=4 F2.if=2). _fixed function deliberately flattened (no ifs, no returns, single fall-through) so that file-wide counts match the seed's single affs_remount_buggy + main pair.",
+    "Query first-shot compiled and satisfied the POC oracle (1 row on affs_remount_buggy line 30 = early-return after asymmetric kstrdup; 0 rows on _fixed). No repair iterations needed.",
+    "POC sha unchanged across the run (drift check passed)."
+  ]
+}

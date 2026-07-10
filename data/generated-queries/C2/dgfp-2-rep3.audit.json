@@ -1,0 +1,32 @@
+{
+  "cell": "C2",
+  "seed_id": "dgfp-2",
+  "repeat": 3,
+  "commit_sha": "e9acf05255cbf72dc32169957d2895cbfd12c7e1",
+  "c_file": "drivers/crypto/cavium/cpt/cptpf_main.c",
+  "subject": "crypto: cavium - Replace mdelay with msleep in cpt_device_init",
+  "llm_calls": 6,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isBusyDelayCall": 1,
+    "isProbeLikeEntry": 1,
+    "reachableFromProbe": 1,
+    "busyDelayInProbeContext": 0
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 151.0,
+  "features": {
+    "target_api": "mdelay",
+    "post_operation": "msleep",
+    "critical_variable": "n/a (API-selection pattern)",
+    "path_conditions": "Caller is reachable only from sleepable (process) context such as PCI .probe — busy-waiting via mdelay is unnecessary; msleep should be used.",
+    "fits_pattern": true,
+    "fit_test_reasoning": "(1) Resource-like: API choice (mdelay vs msleep) substitutes for resource ownership. (2) The 'release' analog is the correct sleepable API. (3) Path condition = caller reachable from sleepable entry. (4) Bug pattern: busy-wait in sleepable context. Recast as a wrong-API-in-context pattern, the four-feature scaffold applies."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "cell": "C2",
+  "seed_id": "mc-4",
+  "repeat": 5,
+  "commit_sha": "c9c63915519b",
+  "c_file": "drivers/hwmon/lm80.c",
+  "llm_calls": 4,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isTargetReadApi": 0,
+    "isTargetReadCall": 1,
+    "isNegativeErrorCheck": 0,
+    "isGuardedByErrorCheck": 1,
+    "isMissingCheckBug": 0
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": true,
+  "wall_seconds": 105.0
+}

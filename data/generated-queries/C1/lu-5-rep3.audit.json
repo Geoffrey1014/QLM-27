@@ -1,0 +1,39 @@
+{
+  "cell": "C1",
+  "seed_id": "lu-5",
+  "seed_sha": "450c3d416683",
+  "rep_id": "rep3",
+  "poc_sha256": "2a00d4507d1abdc1a608f593df912cebe31fcb6d19fb30cf2a14e93aca521a13",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=3 F3.goto=0 F5.ret=6 F2.if=5)",
+  "verifier_mode": "strict",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_run_results": {
+    "fired_locations": ["POC.c:33 (inside demo_remount_buggy)"],
+    "fired_on_buggy": true,
+    "fired_on_fixed": false
+  },
+  "status": "ok",
+  "wall_time_seconds": 306,
+  "artifacts": {
+    "query_ql": "experiments/rq3/d3/C1/lu-5-rep3.ql",
+    "rep_dir": "experiments/rq3/d3/C1/lu-5-rep3/",
+    "poc": "experiments/rq3/d3/C1/lu-5-rep3/POC.c",
+    "poc_db": "experiments/rq3/d3/C1/lu-5-rep3/poc-db/db",
+    "qlpack": "experiments/rq3/d3/C1/lu-5-rep3/qlpack.yml",
+    "poc_run_csv": "experiments/rq3/d3/C1/lu-5-rep3/poc-run.csv",
+    "seed_slice": "experiments/rq3/d3/C1/lu-5-rep3/seed-slice.c",
+    "poc_for_verifier": "experiments/rq3/d3/C1/lu-5-rep3/poc-for-verifier.c"
+  },
+  "notes": [
+    "Acted-as-LLM (Claude Opus 4.7 in-session) for POC + query generation.",
+    "POC needed 2 minor structural regens of the verifier-slice to match seed F5.return/F2.if counts (strict pass on round 3); the _buggy/_fixed semantics of POC.c were stable across rounds — only the trailing CFG was reshaped.",
+    "Verifier-v1 strict pass: F5.return=6, F2.if=5, F1.rel=3, F3.goto=0, F1.acq=0 (kstrdup not in v1's acquire list; rows are still OK).",
+    "Query: monolithic, single from-where-select, generic over kstrdup-family allocators + kfree-family releases; uses CFG predecessor-chain to approximate \"this return has no preceding kfree of v\".",
+    "POC oracle PASS on iter 1: fired at POC.c:33 inside demo_remount_buggy (line range 27-59); zero hits inside demo_remount_fixed (lines 62-88)."
+  ]
+}

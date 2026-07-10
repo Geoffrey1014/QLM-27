@@ -1,0 +1,25 @@
+{
+  "cell": "C1",
+  "seed_id": "mc-5",
+  "rep": 4,
+  "status": "pass",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "verifier_lenient": false,
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "poc_sha256": "6e08962c8fd9cfcb531c2ce007c3630106a9fc985c36410a60bf3d372db92a62",
+  "fix_sha": "d6cb77228e3a",
+  "c_file": "drivers/pinctrl/intel/pinctrl-baytrail.c",
+  "subject": "pinctrl: baytrail: Fix potential NULL pointer dereference",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-5-rep4.ql",
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-5-rep4",
+  "wall_seconds": 454,
+  "notes": [
+    "POC regen #1: initial POC did not dereference saved_context within probe_buggy; pattern requires same-function deref for monolithic detector. Regenerated POC with loop body that writes vg->saved_context[i].val.",
+    "Verifier-v1 strict pass on regen #1: OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=2 F2.if=1). Note devm_kcalloc is not in verifier-v1 acquire API list (kcalloc/kmalloc family only), so F1 counts compare 0=0.",
+    "Query iteration #1 empty (sameStorage join broken via DataFlow on lvalue). Iter #2: rewrote to use sameStorage predicate matching PointerFieldAccess on same Field+base Variable; result fires exactly on probe_buggy and is silent on probe_fixed (NULL guard recognized via NotExpr+sameStorage)."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "seed_id": "dgfp-5",
+  "repeat": 2,
+  "cell": "L0",
+  "fix_sha": "9f96b9b7d836",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isBusyDelayCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 277,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. delay-gfp pattern (mdelay in sleepable pci_epf_test_write, invoked via workqueue). POC + seed.c + verifier-v1 verdict reused from prior C3 dgfp-5-rep2 (POC-content sha256 identical; verifier-v1 approved). Single predicate isBusyDelayCall (mdelay call site); assembly clause folds atomic-context name filter and intraprocedural spin_lock precedence filter. Final compiled first try; on POC db fires on _buggy + tp1/tp2/tp3 (all 4 buggy shapes), silent on _fixed + fp1/fp2/fp3 (correct)."
+}

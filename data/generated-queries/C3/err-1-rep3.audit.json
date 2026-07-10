@@ -1,0 +1,32 @@
+{
+  "seed_id": "err-1",
+  "repeat": 3,
+  "cell": "C3",
+  "fix_sha": "620b90d30c08",
+  "subject": "mtd: maps: fix error return code of physmap_flash_remove()",
+  "c_file": "drivers/mtd/maps/physmap-core.c",
+  "pattern": "error-return-code",
+  "llm_calls": 3,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "poc_sha256": "c031b43856ef233212e176e69f8224f8f4719bfa503ddcb1f2cf9f42f558e663",
+  "predicate_iters": {
+    "isErrReturnFunction": 1,
+    "isFailureBranchGoto": 1,
+    "errIsZeroAtGoto": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 402,
+  "notes": [
+    "Rep3 (post weekly-limit-reset retry).",
+    "Re-uses the rep1-proven decomposition (3 predicates: isErrReturnFunction / isFailureBranchGoto / errIsZeroAtGoto); twin _buggy/_fixed POC mirrors seed and gates verifier-v1 OK on first attempt (F1.acq=0 F1.rel=0 F3.goto=4 F5.ret=3 F2.if=12).",
+    "Stage-5 oracle: final.ql fires on physmap_flash_remove_buggy at poc.c:48 (the bare `goto out;` after `if (!info)`), silent on physmap_flash_remove_fixed. No FP variants present in POC."
+  ]
+}

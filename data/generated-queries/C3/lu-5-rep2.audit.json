@@ -1,0 +1,37 @@
+{
+  "seed_id": "lu-5",
+  "repeat": 2,
+  "cell": "C3",
+  "fix_sha": "450c3d416683",
+  "subject": "affs: fix a memory leak in affs_remount",
+  "c_file": "fs/affs/super.c",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 1,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "dd0a192eb191da196871db53c9f2090b241391cf624d420fbf2a28f48b092c85",
+  "predicate_iters": {
+    "isAcquisition": 1,
+    "isReleaseCall": 1,
+    "getAcquiredVariable": 1,
+    "releasesVar": 1,
+    "hasLeakingReturn": 1,
+    "isInFixedFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 383,
+  "notes": [
+    "Stage1 features.json + Stage2 seed.c reused from earlier aborted attempt (deterministic from inputs).",
+    "Initial POC (multi-variant with main()) failed verifier-v1 with 3 mismatches; regenerated lean single-buggy-function POC mirroring seed structure -> OK row F1.acq=0 F1.rel=2 F3.goto=0 F5.ret=4 F2.if=4.",
+    "POC locked at chmod 444, sha recorded.",
+    "Plan revised: hasMatchingRelease (flow-insensitive) was insufficient because affs_remount has kfree(new_opts) on the error path; switched to hasLeakingReturn (CFG reachability: ReturnStmt reachable from acquire with no intervening kfree on path).",
+    "final.ql compiled clean on first attempt; poc-db run fires exactly one row at the kstrdup call on line 46 inside affs_remount_buggy. Oracle: buggy_fires=true, fixed_fires=false (no fixed in POC), fp_fires=false."
+  ]
+}

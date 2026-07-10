@@ -1,0 +1,26 @@
+{
+  "seed_id": "mc-2",
+  "repeat": 2,
+  "cell": "C3",
+  "fix_sha": "09acf29c8246",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isKzallocLike": 1,
+    "storedTarget": 1,
+    "isNullLiteral": 1,
+    "exprMatchesTarget": 1,
+    "isNullCompare": 1,
+    "isNullCheckedBefore": 1,
+    "isDereferencedAfter": 1,
+    "isInFixedFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 580.0,
+  "notes": "First-try success: verifier OK on initial seed/POC; all 8 predicates validated on first iteration; final query compiled clean and fires only on _buggy variant."
+}

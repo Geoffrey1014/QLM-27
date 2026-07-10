@@ -1,0 +1,17 @@
+{
+  "seed_id": "err-3",
+  "repeat": 4,
+  "cell": "L0",
+  "fix_sha": "26594c6bbb60",
+  "llm_calls": 4,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"isErrReturnFunction": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 323.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC regen 1x to align verifier-v1 structural counts (if/goto/return) with seed slice. Final compiles and analyzes on poc-db; fires on _buggy only (bonus, not gating for L0 accept)."
+}

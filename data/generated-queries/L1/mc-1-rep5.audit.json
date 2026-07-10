@@ -1,0 +1,17 @@
+{
+  "seed_id": "mc-1",
+  "repeat": 5,
+  "cell": "L1",
+  "fix_sha": "e85bb0beb649",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isCheckableReadCall": 1, "isDroppedReturn": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 254.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. N_PRED=2 (isCheckableReadCall, isDroppedReturn). Reused validated features/POC from d5-prep/L0/mc-1-rep5 (verifier-v1 OK: F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=2 F2.if=1). Both predicates compiled on iter 1; final compiled on iter 1. Final analyze on poc-db yields 1 row on ad7879_irq_buggy (regmap_bulk_read line 46) — accepted (L1 does not gate on pair-wise oracle)."
+}

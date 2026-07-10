@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-4",
+  "repeat": 3,
+  "cell": "L0",
+  "fix_sha": "9bbfceea12a8",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"leaksPlatformDevice": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 311.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Reused features/POC/seed/DB fixtures from d3-prep/C3/lu-4-rep3 (same seed inputs; verifier-v1 OK(F1.acq=0 F1.rel=0 F3.goto=3 F5.ret=6 F2.if=7)). Fresh N_PRED=1 plan synthesized: single predicate leaksPlatformDevice(FunctionCall, ReturnStmt) using line-order + goto-jump-back filter. Predicate compiled on first try; final query compiled and fired on dwc3_pci_probe_buggy in POC."
+}

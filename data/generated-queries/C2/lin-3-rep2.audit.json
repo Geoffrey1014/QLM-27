@@ -1,0 +1,30 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-3",
+  "repeat": 2,
+  "commit_sha": "bf4a9b2467b7",
+  "c_file": "sound/soc/samsung/aries_wm8994.c",
+  "llm_calls": 7,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_target_acquire": 0,
+    "is_release_call": 0,
+    "early_return_between": 0,
+    "release_dominates_return": 0,
+    "leaks_on_return": 0
+  },
+  "assembly_iters": 0,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 61.0,
+  "features": {
+    "target_api": "of_parse_phandle",
+    "post_operation": "of_node_put",
+    "critical_variable": "extcon_np",
+    "fits_pattern": true
+  }
+}

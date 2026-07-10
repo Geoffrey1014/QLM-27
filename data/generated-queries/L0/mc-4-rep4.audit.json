@@ -1,0 +1,17 @@
+{
+  "seed_id": "mc-4",
+  "repeat": 4,
+  "cell": "L0",
+  "fix_sha": "c9c63915519b",
+  "llm_calls": 6,
+  "compile_iters": 0,
+  "poc_regens": 3,
+  "verifier_passes": true,
+  "predicate_iters": {"isMissingCheckOfRead": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 663.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC required 3 verifier-v1 regens to reach count-parity with seed slice (final: F1.acq=0, F1.rel=0, F3.goto=0, F5.ret=3, F2.if=1). Final query hits 1 buggy row on POC DB (set_fan_div_buggy call to lm80_read_value at line 34)."
+}

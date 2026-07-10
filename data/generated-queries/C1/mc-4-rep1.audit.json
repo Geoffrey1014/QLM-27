@@ -1,0 +1,29 @@
+{
+  "cell": "C1",
+  "seed_id": "mc-4",
+  "rep": 1,
+  "status": "pass",
+  "fix_sha": "c9c63915519b",
+  "c_file": "drivers/hwmon/lm80.c",
+  "subject": "hwmon: (lm80) fix a missing check of the status of SMBus read",
+  "poc_sha256": "703a39dabf65804f0344b41dd1c990241fd2ee06c9c892c98b08af264d20ad08",
+  "poc_path": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-4-rep1-work/POC.c",
+  "query_path": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-4-rep1.ql",
+  "llm_calls": 2,
+  "poc_regens": 1,
+  "compile_iters": 1,
+  "verifier_passes": true,
+  "verifier_strict": true,
+  "verifier_lenient_pass": false,
+  "verifier_verdict": "OK(F1.acq=0 F1.rel=0 F3.goto=0 F5.ret=2 F2.if=1)",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "work_dir": "<REPO_ROOT>/experiments/rq3/d3/C1/mc-4-rep1-work",
+  "notes": [
+    "POC required 1 regen: initial attempt produced F5.return mismatch (delta=2) because fixed-side had 2 returns; folded fixed path into single return.",
+    "seed-slice enriched with original kstrtoul()/err check to align if/return counts with POC structure (1 if, 2 returns per file).",
+    "Final query fires once at POC.c:28 inside set_fan_div_buggy on lm80_read_value() call consumed by bitwise AND without prior error check; silent on set_fan_div_fixed."
+  ]
+}

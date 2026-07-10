@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-5",
+  "repeat": 4,
+  "cell": "L1",
+  "fix_sha": "450c3d416683",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isKstrdupCall": 1, "hasLeakingReturn": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 120.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused features/POC/seed/poc-db from d5-prep/L0/lu-5-rep4 (same fixture inputs; verifier-v1 verdict OK). N_PRED=2 (isKstrdupCall, hasLeakingReturn) - both compiled first try (no refine). Final query compiled first try (no assemble refine) and fires on kstrdup call at line 72 in affs_remount_buggy (leaking return at line 74). Accepted per L1 semantics (compile + analyze OK, POC-pair oracle disabled)."
+}

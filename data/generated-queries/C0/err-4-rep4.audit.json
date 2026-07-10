@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "err-4",
+  "repeat_idx": 4,
+  "commit_sha": "c021e0235770",
+  "c_file": "drivers/usb/gadget/legacy/multi.c",
+  "commit_subject": "usb: gadget: legacy: fix error return code of multi_bind()",
+  "llm_calls": 1,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 18.0,
+  "model": "claude-opus-4-7",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

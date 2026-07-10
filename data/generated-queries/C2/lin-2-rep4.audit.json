@@ -1,0 +1,25 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-2",
+  "repeat": 4,
+  "commit_sha": "9a2ea132df860177b33c9fd421b26c4e9a0a9396",
+  "llm_calls": 8,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isOfIterMacroName": 0,
+    "isOfIterMacroInvocation": 0,
+    "ofIterChildName": 0,
+    "stmtInOfIterLoop": 0,
+    "earlyExitInOfIterLoop": 0,
+    "hasOfNodePutBeforeExit": 0,
+    "missingOfNodePutOnEarlyExit": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 79,
+  "final_predicates_differ_from_stage3": false
+}

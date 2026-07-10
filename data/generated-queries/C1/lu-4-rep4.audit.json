@@ -1,0 +1,26 @@
+{
+  "cell": "C1",
+  "seed_id": "lu-4",
+  "seed_sha": "9bbfceea12a8",
+  "c_file": "drivers/usb/dwc3/dwc3-pci.c",
+  "func_name": "dwc3_pci_probe",
+  "rep": 4,
+  "status": "pass",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "lenient_pass": true,
+  "verifier_verdict": "MISMATCH(F5.return: seed=7, poc=8) [|delta|=1 on F5.return -> lenient pass]",
+  "poc_sha256": "af3ab963e55208f830af7d39101a207b6ff52cc19f9a2e750c905895fc806b4e",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "wall_seconds": 151,
+  "notes": [
+    "Reused POC from lu-4-rep3-work (passed lenient verifier).",
+    "Query fires on dwc3_pci_probe_buggy line 52 (the early-return error path) and not on _fixed.",
+    "Generic predicate acquireReleasePair includes platform_device_alloc/put and other kernel acquire/release pairs so query is reusable on full kernel DB."
+  ]
+}

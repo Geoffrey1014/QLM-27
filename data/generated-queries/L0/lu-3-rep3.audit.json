@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-3",
+  "repeat": 3,
+  "cell": "L0",
+  "fix_sha": "f141a422159a",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"hasPmRuntimeGetSyncLeak": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 578.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Reused Stage-1/2/2.5 artifacts from C3 lu-3-rep3 (features.json, poc.c passed verifier-v1, seed.c). Collapsed C3's 4-predicate plan into a single predicate hasPmRuntimeGetSyncLeak + assembly. Predicate compiled on first try and fires on the (pm_runtime_get_sync, error-branch return) pair in rockchip_pdm_resume_buggy. Final assembled query compiles and analyze fires on poc.c line 33. L0 accepts any successful compile — pass."
+}

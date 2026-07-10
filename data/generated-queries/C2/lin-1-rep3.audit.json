@@ -1,0 +1,33 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-1",
+  "repeat": 3,
+  "commit_sha": "74139a64e8cedb6d971c78d5d17384efeced1725",
+  "llm_calls": 8,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "acquireCall": 0,
+    "releaseCall": 0,
+    "criticalVariable": 0,
+    "earlyExitStmt": 0,
+    "missingReleaseBeforeExit": 0
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 60.0,
+  "features": {
+    "target_api": "of_parse_phandle",
+    "post_operation": "of_node_put",
+    "critical_variable": "state_node",
+    "path_conditions": "of_node_put must be called on the device_node returned by of_parse_phandle on all paths before the iteration variable is overwritten or the function returns (including continue/break/return early exits).",
+    "fits_pattern": true
+  },
+  "notes": [
+    "Iter 1 assembly compile failed: FunctionCall lacks getControlFlowNode(); used inherited ControlFlowNode predicates directly on FunctionCall in iter 2.",
+    "final_predicates_differ_from_stage3: false"
+  ]
+}

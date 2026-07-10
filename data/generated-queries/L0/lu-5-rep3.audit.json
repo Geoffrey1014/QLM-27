@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-5",
+  "repeat": 3,
+  "cell": "L0",
+  "fix_sha": "450c3d416683",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"hasMissingKfreeAfterKstrdup": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 651.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC regenerated once to match seed structural counts (dropped tp/tn/fp variants). Predicate compiled first try; final query fires on affs_remount_buggy in POC."
+}

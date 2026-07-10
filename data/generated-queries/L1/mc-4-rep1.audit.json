@@ -1,0 +1,17 @@
+{
+  "seed_id": "mc-4",
+  "repeat": 1,
+  "cell": "L1",
+  "fix_sha": "c9c63915519b",
+  "llm_calls": 3,
+  "compile_iters": 2,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "predicate_iters": {"isSmbusReadWrapper": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 53.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused L0 rep1 artifacts (identical inputs / seed / RNG-free deterministic pipeline for zero-shot path); L0 already passed on first compile with N_PRED=1 (within L1 cap of 2), predicate compiled first try (1 iter), assembly compiled first try (1 iter), so the L1 compile-repair loops (cap=2 each) were not exercised. Re-verified compile and analyze on this cell: final.ql compiles OK; poc-result.csv fires on set_fan_div_buggy only (silent on _fixed). L1 accept criterion (compile OK + analyze completes) satisfied — POC pair-wise oracle intentionally not gated per L1 spec."
+}

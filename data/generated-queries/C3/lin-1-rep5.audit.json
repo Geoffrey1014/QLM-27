@@ -1,0 +1,37 @@
+{
+  "seed_id": "lin-1",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "74139a64e8ce",
+  "c_file": "arch/arm/mach-omap2/pm33xx-core.c",
+  "subject": "ARM: OMAP2+: pm33xx-core: fix device node reference leaks in amx3_idle_init",
+  "pattern": "four-features-Lin",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isOfAcquireCall": 1,
+    "acquiredInto": 1,
+    "checkedForNull": 1,
+    "releasedSomewhere": 1,
+    "inBuggyTagFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "oracle": {
+    "buggy_fires": true,
+    "fixed_fires": false,
+    "fp_fires": false
+  },
+  "poc_sha256": "ea985de49d8dd1c390efca0e7d7a27674714d27288015 20de486582a898b034c",
+  "poc_reused_from": "lin-1-rep1",
+  "status": "pass",
+  "fail_stage": null,
+  "notes": [
+    "Reused stable POC, features.json, seed.c, and poc-db from lin-1-rep1 (POC sha256 locked, chmod 444).",
+    "Regenerated plan/predicates/final.ql for rep5 variance: switched from rep1's getAcquiredVariable+hasMatchingOfNodePut split to acquiredInto (with Initializer-or-AssignExpr) + releasedSomewhere + inBuggyTagFunction; regex-based acquire-API enumeration.",
+    "All 5 predicates passed POC test queries first try (state_node found, of_node_put absent).",
+    "Final query compiled and executed on poc-db: exactly 1 alert on amx3_idle_init_buggy/of_parse_phandle; no fixed/fp matches."
+  ]
+}

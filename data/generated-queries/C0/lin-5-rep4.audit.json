@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "lin-5",
+  "repeat_idx": 4,
+  "commit_sha": "10d6bdf53290",
+  "c_file": "drivers/ata/pata_octeon_cf.c",
+  "commit_subject": "ata: pata_octeon_cf: Fix refcount leak in octeon_cf_probe",
+  "llm_calls": 1,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "model": "claude-opus-4-7",
+  "temperature": 0.2,
+  "stop_reason": "ok",
+  "notes": ["compile clean on first attempt; one warning: unused predicate 'releasesVar'"]
+}

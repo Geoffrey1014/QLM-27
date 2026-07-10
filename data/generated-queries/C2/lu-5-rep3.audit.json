@@ -1,0 +1,33 @@
+{
+  "cell": "C2",
+  "seed_id": "lu-5",
+  "repeat": 3,
+  "commit_sha": "450c3d416683",
+  "c_file": "fs/affs/super.c",
+  "subject": "affs: fix a memory leak in affs_remount",
+  "features": {
+    "target_api": "kstrdup",
+    "post_operation": "kfree",
+    "critical_variable": "new_opts",
+    "path_conditions": "After successful kstrdup, every return path (including error returns from parse_options and the normal exit paths) must call kfree on the duplicated buffer.",
+    "fits_pattern": true,
+    "fit_test_reasoning": "kstrdup acquires heap memory whose lifetime must be explicitly released; kfree is the matching release; missing kfree on any return path is a memory leak; this follows classic acquire/use/release semantics, so the four-features pattern applies."
+  },
+  "plan_predicates": ["isResourceAcquire", "isCleanupCall", "returnReachableFromAcquire", "leakOnPath"],
+  "llm_calls": 6,
+  "compile_iters": 5,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isResourceAcquire": 1,
+    "isCleanupCall": 1,
+    "returnReachableFromAcquire": 1,
+    "leakOnPath": 1
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 175.0
+}

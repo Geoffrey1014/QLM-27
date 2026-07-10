@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "lu-1",
+  "repeat_idx": 3,
+  "commit_sha": "b6631c6031c746ed004c4221ec0616d7a520f441",
+  "commit_subject": "sctp: Fix memory leak in sctp_sf_do_5_2_4_dupcook",
+  "c_file": "net/sctp/sm_statefuns.c",
+  "llm_calls": 2,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 82,
+  "model": "claude-opus-4-5-20251101",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

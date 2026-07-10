@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-5",
+  "repeat": 2,
+  "cell": "L1",
+  "fix_sha": "450c3d416683",
+  "llm_calls": 3,
+  "compile_iters": 3,
+  "poc_regens": 2,
+  "verifier_passes": true,
+  "predicate_iters": {"isKstrdupCall": 1, "freesVarInFunc": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 163.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. 2 predicates (isKstrdupCall, freesVarInFunc) both compiled on iter 1, final compiled on iter 1. Reused features/poc/poc-db from L0 rep2 (verifier already passed, 2 POC regens). Final query fires on kstrdup leak in POC (affs_remount_poc:new_opts). Total compile iters = 3 (1 per pred + 1 assemble)."
+}

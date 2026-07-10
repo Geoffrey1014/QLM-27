@@ -1,0 +1,30 @@
+{
+  "cell": "C2",
+  "seed_id": "err-5",
+  "repeat": 3,
+  "commit_sha": "31d82c2c787d5cf65fedd35ebbc0c1bd95c1a679",
+  "llm_calls": 8,
+  "compile_iters": 2,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isAllocCall": 0,
+    "isNullCheckOf": 0,
+    "gotoInThen": 0,
+    "assignsErrorCode": 0,
+    "missingErrorAssignBeforeGoto": 0
+  },
+  "assembly_iters": 1,
+  "wall_seconds": 104.0,
+  "features": {
+    "target_api": "vzalloc",
+    "post_operation": "assign ret = -ENOMEM (error code)",
+    "critical_variable": "ret",
+    "path_conditions": "When an allocation function returns NULL and control jumps via goto to a cleanup label, the return variable ret must be set to a negative errno before the goto.",
+    "fits_pattern": true
+  },
+  "final_predicates_differ_from_stage3": false
+}

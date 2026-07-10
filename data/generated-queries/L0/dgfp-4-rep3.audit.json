@@ -1,0 +1,17 @@
+{
+  "seed_id": "dgfp-4",
+  "repeat": 3,
+  "cell": "L0",
+  "fix_sha": "2453e60702e1",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isGfpAtomicCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 202.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. POC + verifier-v1 artifacts reused from C3 dgfp-4-rep1 (POC-side scaffolding not ablated per L0 spec; poc.sha256=7672873b2edc..., verifier OK on all F1/F2/F3/F5 dims). Single predicate isGfpAtomicCall recognises calls whose argument evaluates to 32 (GFP_ATOMIC numeric value in POC); sleepable/atomic context tests inlined in assembly where-clause via caller name pattern matching (init/start/probe/resume/suspend/open positive; irq/handler/atomic/completion/nmi/tasklet/critical/locked negative). final.ql compiles cleanly and fires 4x on POC (buggy + tp1/tp2/tp3), silent on _fixed/tn*/fp*. Pair-wise oracle check informational only per L0 spec (accept any successful compile)."
+}

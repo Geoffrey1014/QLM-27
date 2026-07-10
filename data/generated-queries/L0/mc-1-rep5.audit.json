@@ -1,0 +1,17 @@
+{
+  "seed_id": "mc-1",
+  "repeat": 5,
+  "cell": "L0",
+  "fix_sha": "e85bb0beb649",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isCheckableReadCall": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 377.0,
+  "notes": "L0 = zero-shot compositional; N_PRED=1; no refine loops. Verifier-v1 OK on first try. Predicate compiled and ran cleanly on POC-DB (fires on ad7879_irq_buggy). Final compiled and produced 1 row on POC (buggy variant only; no fixed variant in POC by design)."
+}

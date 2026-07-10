@@ -1,0 +1,36 @@
+{
+  "seed_id": "lu-1",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "b6631c6031c7",
+  "subject": "sctp: Fix memory leak in sctp_sf_do_5_2_4_dupcook",
+  "c_file": "net/sctp/sm_statefuns.c",
+  "pattern": "four-features-Lu",
+  "llm_calls": 3,
+  "compile_iters": 1,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "b53b154d307c029babd539568c21940ff24b941d2ef25b99d58c164a7fea5692",
+  "predicate_iters": {
+    "isAssocAcquisition": 1,
+    "isAssocFree": 1,
+    "getAcquiredVariable": 1,
+    "hasMatchingAssocFree": 1,
+    "hasNullCheck": 1,
+    "isInFixedFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 240,
+  "notes": [
+    "POC v1 mismatched returns (7 vs 6); main() removed in regen v2, verifier OK.",
+    "POC sha unchanged through Stage 5 (no drift).",
+    "Final query fires once on sctp_sf_do_5_2_4_dupcook_buggy at poc.c:77; acceptance met (only _buggy variant present).",
+    "Plan adapted from lin-1 4-features template, retargeted to sctp_unpack_cookie/sctp_association_free."
+  ]
+}

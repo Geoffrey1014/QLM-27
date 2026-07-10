@@ -1,0 +1,21 @@
+{
+  "seed_id": "dgfp-2",
+  "repeat": 4,
+  "cell": "C3",
+  "fix_sha": "e9acf05255cb",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isBusyDelayCall": 1,
+    "inSleepableContextByName": 1,
+    "inAtomicContextByName": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 62.0,
+  "notes": "Resumed from pre-existing complete workdir (prior aborted attempt left features.json/poc.c/poc.sha256/poc-verifier-verdict.csv/plan.json/preds/final.ql/poc-db). Re-validated final.ql: compiles cleanly; on poc-db fires exactly on the four _buggy / _buggy_tpN functions (cpt_device_init_buggy, foo_probe_buggy_tp1, bar_resume_buggy_tp2, baz_init_buggy_tp3) and is silent on all _fixed/_tn and _fp_ variants. poc.c is chmod 444 with sha256 matching poc.sha256. Pattern delay-gfp; fits_pattern=true."
+}

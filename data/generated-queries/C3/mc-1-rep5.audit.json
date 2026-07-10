@@ -1,0 +1,35 @@
+{
+  "seed_id": "mc-1",
+  "repeat": 5,
+  "cell": "C3",
+  "fix_sha": "e85bb0beb649",
+  "subject": "Input: ad7879 - add check for read errors in interrupt",
+  "c_file": "drivers/input/touchscreen/ad7879.c",
+  "pattern": "missing-check",
+  "llm_calls": 3,
+  "compile_iters": 6,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "poc_sha256": "f03e4010e0e3a2a4ec04c9bef59a4574b38f4960de5e2ee92ecda9909d8d74d2",
+  "predicate_iters": {
+    "isRegmapReadCall": 1,
+    "isReturnValueDiscarded": 1,
+    "isReturnValueCaptured": 1,
+    "isReturnValueChecked": 1,
+    "isInFixedFunction": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "buggy_fires": true,
+  "fixed_fires": false,
+  "fp_fires": false,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 411,
+  "notes": [
+    "Reused buggy.c/fixed.c/patch.diff/features.json/seed.c from mc-1-rep1 (deterministic git extracts).",
+    "Initial POC from rep1 (multi-variant) failed verifier-v1 with F2.if/F5.return MISMATCH; regenerated as single _buggy variant mirroring seed (1 if, 2 returns); POC poc_regens=1.",
+    "5 predicates validated first-try (compile + run on poc-db); Stage5 assemble compiled and fired correctly first-try.",
+    "Final query fires on /poc.c:49 (regmap_bulk_read inside ad7879_irq_buggy), 0 false positives. acceptance: buggy_fires=true, fixed_fires=false, fp_fires=false."
+  ]
+}

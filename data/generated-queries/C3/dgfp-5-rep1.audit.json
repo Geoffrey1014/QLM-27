@@ -1,0 +1,21 @@
+{
+  "seed_id": "dgfp-5",
+  "repeat": 1,
+  "cell": "C3",
+  "fix_sha": "9f96b9b7d836",
+  "llm_calls": 3,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {
+    "isBusyDelayCall": 1,
+    "isAtomicContextFunction": 2,
+    "isSleepableContextByName": 1
+  },
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 596.0,
+  "notes": "delay-gfp pattern; mdelay(1) in pci_epf_test_write invoked from delayed_work handler set by INIT_DELAYED_WORK in pci_epf_test_probe. final.ql fires on 4 *_buggy variants at poc.c lines 133/163/169/175, silent on *_fixed and *_fp_*. Seed padded with 10 void helpers for verifier-v1 F5.return parity (poc=12, seed=12). isAtomicContextFunction needed 1 refinement (broad %handler% pattern subsumed work_handler buggy variants -> tightened to %irq_handler%/%_isr%/etc)."
+}

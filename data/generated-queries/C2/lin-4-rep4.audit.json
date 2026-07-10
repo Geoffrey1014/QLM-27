@@ -1,0 +1,29 @@
+{
+  "cell": "C2",
+  "seed_id": "lin-4",
+  "repeat": 4,
+  "commit_sha": "1332661e09304b7b8e84e5edc11811ba08d12abe",
+  "c_file": "drivers/memory/samsung/exynos5422-dmc.c",
+  "llm_calls": 6,
+  "compile_iters": 4,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "acquiresNode": 1,
+    "releasesNode": 1,
+    "returnAfterAcquire": 1
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "features": {
+    "target_api": "of_parse_phandle",
+    "post_operation": "of_node_put",
+    "critical_variable": "np_ddr",
+    "path_conditions": "of_node_put must be called on np_ddr on all error/early-return paths after of_parse_phandle returns a non-NULL node",
+    "fits_pattern": true
+  },
+  "wall_seconds": 134
+}

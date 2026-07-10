@@ -1,0 +1,17 @@
+{
+  "seed_id": "lin-1",
+  "repeat": 2,
+  "cell": "L1",
+  "fix_sha": "74139a64e8ce",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "predicate_iters": {"isAcquire": 1, "hasReleaseOn": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 192.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. Reused features/poc/verifier/poc-db from L0 rep2 (same seed, same content). Plan re-generated with N_PRED=2 (isAcquire + hasReleaseOn). All compile stages passed first try."
+}

@@ -1,0 +1,18 @@
+{
+  "cell": "C0",
+  "seed_id": "lu-2",
+  "repeat_idx": 1,
+  "commit_sha": "2289adbfa559050d2a38bcd9caac1c18b800e928",
+  "c_file": "drivers/media/usb/dvb-usb/af9005.c",
+  "commit_subject": "media: usb: fix memory leak in af9005_identify_state",
+  "llm_calls": 1,
+  "compile_iters": 0,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "elapsed_seconds": 18.0,
+  "model": "claude-opus-4-5-20251101",
+  "temperature": 0.2,
+  "stop_reason": "ok"
+}

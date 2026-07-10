@@ -1,0 +1,17 @@
+{
+  "seed_id": "lu-5",
+  "repeat": 3,
+  "cell": "L1",
+  "fix_sha": "450c3d416683",
+  "llm_calls": 3,
+  "compile_iters": 0,
+  "poc_regens": 1,
+  "verifier_passes": true,
+  "predicate_iters": {"hasMissingKfreeAfterKstrdup": 1},
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "status": "pass",
+  "fail_stage": null,
+  "wall_seconds": 188.0,
+  "notes": "L1 = compositional + compile self-fix; POC-run oracle OFF. N_PRED=1. Reused Stage 1-2.6 artifacts (features/poc/verifier/mini-DB/plan) from L0 lu-5-rep3 since identical prior stages. Predicate and final compiled first try; analyze on poc-db returned a match on affs_remount_buggy at /poc.c:66 (kstrdup line)."
+}

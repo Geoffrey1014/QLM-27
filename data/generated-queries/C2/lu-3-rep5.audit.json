@@ -1,0 +1,22 @@
+{
+  "cell": "C2",
+  "seed_id": "lu-3",
+  "repeat": 5,
+  "commit_sha": "f141a422159a199f4c8dedb7e0df55b3b2cf16cd",
+  "llm_calls": 7,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "is_target_call": 0,
+    "is_release_call": 0,
+    "on_error_branch": 0,
+    "release_reachable_on_error": 0,
+    "missing_release_on_error": 0
+  },
+  "assembly_iters": 0,
+  "wall_seconds": 99.0
+}

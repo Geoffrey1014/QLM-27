@@ -1,0 +1,19 @@
+{
+  "cell": "C1",
+  "seed_id": "lin-3",
+  "rep": 3,
+  "seed_sha": "bf4a9b2467b7",
+  "c_file": "sound/soc/samsung/aries_wm8994.c",
+  "poc_sha256": "ee51448c0514eb93569905d81183a11d33b16fa1212f91b0586bd530bbfceb73",
+  "llm_calls": 2,
+  "compile_iters": 1,
+  "poc_regens": 0,
+  "verifier_passes": true,
+  "verifier_strict": true,
+  "verifier_verdict": "OK(F1.acq=1 F1.rel=1 F3.goto=0 F5.ret=6 F2.if=2)",
+  "final_compiles": true,
+  "final_runs_on_poc": true,
+  "fired_on_buggy": true,
+  "fired_on_fixed": false,
+  "status": "ok"
+}

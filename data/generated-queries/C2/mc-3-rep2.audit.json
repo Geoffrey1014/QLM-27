@@ -1,0 +1,24 @@
+{
+  "cell": "C2",
+  "seed_id": "mc-3",
+  "repeat": 2,
+  "commit_sha": "6fc232db9e8cd50b9b83534de9cd91ace711b2d7",
+  "c_file": "net/rfkill/core.c",
+  "subject": "rfkill: Fix incorrect check to avoid NULL pointer dereference",
+  "llm_calls": 6,
+  "compile_iters": 5,
+  "poc_regens": 0,
+  "verifier_passes": null,
+  "final_compiles": true,
+  "final_runs_on_poc": null,
+  "validation_status": "pass",
+  "per_predicate_iters": {
+    "isNullCheckOnVar": 1,
+    "isDerefOfVar": 1,
+    "paramOrLocal": 1,
+    "derefBeforeCheck": 1
+  },
+  "assembly_iters": 1,
+  "final_predicates_differ_from_stage3": false,
+  "wall_seconds": 120.0
+}
