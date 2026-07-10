@@ -1,4 +1,4 @@
-# RQ3 Cell C3 — Full JAWS pipeline (compositional ON + POC ON)
+# RQ3 Cell C3 — Full QLM pipeline (compositional ON + POC ON)
 
 > Loaded by D3-main per-generation agents. One invocation = one (seed × repeat)
 > pair. Output: a final `.ql` file + audit log JSON.
@@ -45,7 +45,7 @@ two are bind-mounted so the agent may write on the host and read from the contai
 ```
 SYSTEM:
   You are analyzing a Linux kernel bug-fix commit for a CodeQL query generator.
-  The pattern under study is <pattern>. Use the JAWS four-features schema:
+  The pattern under study is <pattern>. Use the QLM four-features schema:
   target_api / post_operation / critical_variable / path_conditions.
 
 USER:

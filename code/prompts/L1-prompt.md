@@ -14,7 +14,7 @@ Identical to C3/L0. `out_dir` default:
 
 ## 1. Ablation deltas from C3
 
-| knob | C3 (=JAWS) | **L1** |
+| knob | C3 (=QLM) | **L1** |
 |---|---|---|
 | N_PRED cap | ≤ 5 | **≤ 2** (planner may emit 1 or 2 predicates; more collapse into assembly) |
 | Per-predicate compile-repair loop | ≤ 4 iters | **≤ 2 iters** |

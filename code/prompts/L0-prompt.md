@@ -2,7 +2,7 @@
 
 > **RQ4 capability-boundary point L0**: the weakest LLM configuration on
 > the ablation ladder. Establishes the "zero-shot" floor — the raw LLM
-> output before any of JAWS's scaffolding kicks in.
+> output before any of QLM's scaffolding kicks in.
 >
 > Reads: [`C3-prompt.md`](C3-prompt.md) is the reference full pipeline;
 > this file lists only the deltas from C3.
@@ -17,7 +17,7 @@ audit → `$QLLLM_ROOT/experiments/rq3/d5/L0/<seed_id>-rep<N>.audit.json`
 
 ## 1. Ablation deltas from C3
 
-| knob | C3 (=JAWS) | **L0** |
+| knob | C3 (=QLM) | **L0** |
 |---|---|---|
 | Compositional decomposition | ON (multiple predicates) | ON, but **`N_PRED = 1`** — the planner emits exactly one predicate + assembly |
 | Per-predicate compile-repair loop | ≤ 4 iters | **0 iters** (first-compile-fail → predicate marked fail, whole gen aborts) |

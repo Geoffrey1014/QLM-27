@@ -1,5 +1,5 @@
 #!/bin/bash
-# JAWS seed<->POC consistency verifier — v1 calibration runner.
+# QLM seed<->POC consistency verifier — v1 calibration runner.
 #
 # Usage:
 #   run-verifier.sh <scenario_name> <seed_src.c> <poc_src.c>

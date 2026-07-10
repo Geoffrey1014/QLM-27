@@ -3,7 +3,7 @@
  * @description Detects a goto statement targeting a cleanup label that
  *              returns `ret`, where the enclosing error-branch if-block
  *              does not first assign a negative errno to ret. This is
- *              the JAWS error-return-code pattern (CWE-394) -- the
+ *              the QLM error-return-code pattern (CWE-394) -- the
  *              function silently returns the previous (success) value
  *              of ret out of an error path.
  *

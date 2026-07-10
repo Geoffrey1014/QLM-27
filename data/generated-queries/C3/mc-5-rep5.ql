@@ -1,5 +1,5 @@
 /**
- * @name JAWS RQ3 C3 mc-5-rep5: missing NULL check after devm_*-family
+ * @name QLM RQ3 C3 mc-5-rep5: missing NULL check after devm_*-family
  *       allocation assigned to a struct member that is later dereferenced
  * @description Flags devm_kcalloc / devm_kzalloc / devm_kmalloc_array
  *              calls whose result is stored into a struct field and whose

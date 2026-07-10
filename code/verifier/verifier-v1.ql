@@ -1,5 +1,5 @@
 /**
- * @name JAWS seed<->POC consistency verifier v1 (count-based)
+ * @name QLM seed<->POC consistency verifier v1 (count-based)
  * @description Compares structural feature counts (F1 acquire/release,
  *              F2.basic control-flow, F3.count goto, F5.count returns)
  *              between two source files in a mini-DB and reports any

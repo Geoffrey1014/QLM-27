@@ -7,7 +7,7 @@
  *              never assign a negative errno to that variable
  *              between the log and the return. The caller therefore
  *              receives 0 (success) and silently proceeds. This is
- *              the JAWS "error-return" pattern.
+ *              the QLM "error-return" pattern.
  * @kind problem
  * @problem.severity warning
  * @id qlm/c1-err-3

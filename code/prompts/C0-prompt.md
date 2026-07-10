@@ -234,7 +234,7 @@ From plan §2.7 (~3-4 LLM calls per seed for baseline, ~30 sec compile per iter)
   rounds via verifier-v1). See `C1-prompt.md`.
 - C2 (POC=OFF, comp=ON): emits QueryPlan JSON with predicates + per-predicate
   compile-only validation. See `C2-prompt.md`.
-- C3 (POC=ON, comp=ON): the full pipeline = current JAWS agent lineage. See
+- C3 (POC=ON, comp=ON): the full pipeline = current QLM agent lineage. See
   `C3-prompt.md`.
 
 The shared preamble (§3.1) is identical across all four cells so the synthesis-strategy

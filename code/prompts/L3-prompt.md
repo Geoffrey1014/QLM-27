@@ -1,7 +1,7 @@
 # RQ4 Level L3 — L2 + ≤3 LLM-applied surgical edits
 
 > **RQ4 capability-boundary point L3**: adds *≤3 targeted post-hoc
-> query edits* on top of a completed L2 (= C3 = full JAWS) query.
+> query edits* on top of a completed L2 (= C3 = full QLM) query.
 > Isolates the marginal value of a small "human-like" fix-up loop.
 >
 > Per §9.2 sign-off, edits are applied by **the LLM (Claude Opus)
@@ -205,7 +205,7 @@ Full snippets go in per-run audit.json.)
 
 Expected impact (§4.3 §RQ4.2):
 - If L3 recall ≈ L2 recall: paper claim "1-shot LLM edits provide
-  little marginal lift on top of full JAWS pipeline — the ceiling
+  little marginal lift on top of full QLM pipeline — the ceiling
   has essentially been reached at L2".
 - If L3 recall >> L2 recall on select patterns (e.g. err): paper
   claim "closed-list surgical edits recover a further +X pp of

@@ -88,7 +88,7 @@ predicate ifBodyReturnsExplicit(IfStmt ifs) {
  * The function uses `goto LABEL;` in several places as its cleanup
  * idiom — i.e. there is at least one OTHER goto to the same label
  * where the corresponding if-body DOES assign `v` to a negative-looking
- * value.  This is the JAWS "error-return-code" pattern signature:
+ * value.  This is the QLM "error-return-code" pattern signature:
  * sibling gotos prove the label is an error-cleanup label and `v`
  * is the carried error code.
  */

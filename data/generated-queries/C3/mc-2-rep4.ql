@@ -3,7 +3,7 @@
  * @description Detects allocator calls (kzalloc / kmalloc family) whose result is
  *              stored into an lvalue but never NULL-checked before subsequent use.
  *              Pattern: missing_null_check_after_kzalloc (CWE-476).
- *              JAWS compositional pipeline, POC-validated (mc-2 rep4).
+ *              QLM compositional pipeline, POC-validated (mc-2 rep4).
  * @kind problem
  * @problem.severity warning
  * @id cpp/rq3/c3/mc-2-rep4

@@ -3,7 +3,7 @@
  * @id    cpp/rq3/c3/dgfp-2-rep1
  * @kind  problem
  * @problem.severity warning
- * @description Full JAWS pipeline (compositional + POC + verifier-v1) for
+ * @description Full QLM pipeline (compositional + POC + verifier-v1) for
  *              RQ3 cell C3. Flags mdelay()/udelay() busy-wait calls in
  *              sleepable (probe/init/resume/suspend) context, where
  *              msleep() / usleep_range() should be used instead.

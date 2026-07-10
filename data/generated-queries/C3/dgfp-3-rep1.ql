@@ -3,7 +3,7 @@
  * @id    cpp/rq3/c3/dgfp-3-rep1
  * @kind  problem
  * @problem.severity warning
- * @description Full JAWS pipeline (compositional + POC + verifier-v1) for
+ * @description Full QLM pipeline (compositional + POC + verifier-v1) for
  *              RQ3 cell C3. Flags kzalloc/kmalloc/kcalloc calls that pass
  *              GFP_ATOMIC inside an initialization function (init/probe/
  *              setup/resume/suspend) when no spinlock is held and no IRQ
