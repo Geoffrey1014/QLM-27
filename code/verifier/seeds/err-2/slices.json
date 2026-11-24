@@ -1,0 +1,14 @@
+{
+ "seed": "err-2",
+ "pattern": "error-return",
+ "fix_sha": "45c7eaeb29d6",
+ "c_files": [
+  "drivers/thermal/thermal_of.c"
+ ],
+ "buggy_fns": [
+  "thermal_of_populate_bind_params"
+ ],
+ "fixed_fns": [
+  "thermal_of_populate_bind_params"
+ ]
+}

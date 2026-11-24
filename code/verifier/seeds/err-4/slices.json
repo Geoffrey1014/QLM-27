@@ -1,0 +1,14 @@
+{
+ "seed": "err-4",
+ "pattern": "error-return",
+ "fix_sha": "c021e0235770",
+ "c_files": [
+  "drivers/usb/gadget/legacy/multi.c"
+ ],
+ "buggy_fns": [
+  "multi_bind"
+ ],
+ "fixed_fns": [
+  "multi_bind"
+ ]
+}

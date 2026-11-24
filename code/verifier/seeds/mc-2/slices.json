@@ -1,0 +1,16 @@
+{
+ "seed": "mc-2",
+ "pattern": "missing-check",
+ "fix_sha": "09acf29c8246",
+ "c_files": [
+  "drivers/staging/rtl8192u/r8192U_core.c"
+ ],
+ "buggy_fns": [
+  "rtl8192_init_priv_variable",
+  "rtl8192_init"
+ ],
+ "fixed_fns": [
+  "rtl8192_init_priv_variable",
+  "rtl8192_init"
+ ]
+}

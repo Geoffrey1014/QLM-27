@@ -1,0 +1,14 @@
+{
+ "seed": "lu-5",
+ "pattern": "four-features-Lu",
+ "fix_sha": "450c3d416683",
+ "c_files": [
+  "fs/affs/super.c"
+ ],
+ "buggy_fns": [
+  "affs_remount"
+ ],
+ "fixed_fns": [
+  "affs_remount"
+ ]
+}

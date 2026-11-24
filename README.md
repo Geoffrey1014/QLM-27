@@ -60,10 +60,11 @@ qlm-artifact/
     │   ├── run-d4-batched.sh         # pattern-serial × 5-parallel driver
     │   ├── orphan-watchdog.sh        # subprocess-lifecycle safety net
     │   └── recover-from-workdir.py   # partial-recovery aggregator
-    └── verifier/
-        ├── verifier-v1.ql            # seed↔PoC structural consistency
-        ├── run-verifier.sh           # CLI wrapper
-        └── calibration-report.md     # v1 calibration test suite
+    └── verifier/                     # seed↔PoC structural fidelity check (see its README)
+        ├── verifier.py               # API derivation + verdict rules
+        ├── run_verifier.py           # CLI entry point
+        ├── ql/                       # CodeQL feature-count query
+        └── seeds/                    # 25 verbatim seed slices + fix patches
 ```
 
 > **Note on file counts.** A handful of *(cell × seed × repeat)* slots
@@ -194,7 +195,7 @@ tmux new-window -n watchdog 'bash code/scoring/orphan-watchdog.sh'
 | seeds metadata                             | 2 files      | <10 KB  |
 | generated queries + audit logs (all cells) | ~1,300 files | ~5 MB   |
 | D4 scoring aggregates                       | 20 + 1 files | ~2 MB   |
-| prompts + scripts + verifier               | ~15 files    | ~200 KB |
+| prompts + scripts + verifier (incl. seed slices) | ~120 files | ~800 KB |
 | **total**                                  | **~1,400 files** | **~8 MB** |
 
 ## Licence

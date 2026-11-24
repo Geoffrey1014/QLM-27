@@ -1,0 +1,14 @@
+{
+ "seed": "lin-1",
+ "pattern": "four-features-Lin",
+ "fix_sha": "74139a64e8ce",
+ "c_files": [
+  "arch/arm/mach-omap2/pm33xx-core.c"
+ ],
+ "buggy_fns": [
+  "amx3_idle_init"
+ ],
+ "fixed_fns": [
+  "amx3_idle_init"
+ ]
+}

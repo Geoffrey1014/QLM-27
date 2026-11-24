@@ -1,0 +1,14 @@
+{
+ "seed": "mc-3",
+ "pattern": "missing-check",
+ "fix_sha": "6fc232db9e8c",
+ "c_files": [
+  "net/rfkill/core.c"
+ ],
+ "buggy_fns": [
+  "rfkill_register"
+ ],
+ "fixed_fns": [
+  "rfkill_register"
+ ]
+}

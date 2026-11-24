@@ -1,0 +1,36 @@
+commit e9acf05255cbf72dc32169957d2895cbfd12c7e1
+Author: Jia-Ju Bai <baijiaju1990@gmail.com>
+Date:   Sun Mar 18 22:50:38 2018 +0800
+
+    crypto: cavium - Replace mdelay with msleep in cpt_device_init
+    
+    cpt_device_init() is never called in atomic context.
+    
+    The call chain ending up at cpt_device_init() is:
+    [1] cpt_device_init() <- cpt_probe()
+    cpt_probe() is only set as ".probe" in pci_driver structure
+    "cpt_pci_driver".
+    
+    Despite never getting called from atomic context, cpt_device_init() calls
+    mdelay(100), i.e. busy wait for 100ms.
+    That is not necessary and can be replaced with msleep to
+    avoid busy waiting.
+    
+    This is found by a static analysis tool named DCNS written by myself.
+    
+    Signed-off-by: Jia-Ju Bai <baijiaju1990@gmail.com>
+    Signed-off-by: Herbert Xu <herbert@gondor.apana.org.au>
+
+diff --git a/drivers/crypto/cavium/cpt/cptpf_main.c b/drivers/crypto/cavium/cpt/cptpf_main.c
+index 34a6d8bf229ef..06ad85ab5e865 100644
+--- a/drivers/crypto/cavium/cpt/cptpf_main.c
++++ b/drivers/crypto/cavium/cpt/cptpf_main.c
+@@ -436,7 +436,7 @@ static int cpt_device_init(struct cpt_device *cpt)
+ 
+ 	/* Reset the PF when probed first */
+ 	cpt_reset(cpt);
+-	mdelay(100);
++	msleep(100);
+ 
+ 	/*Check BIST status*/
+ 	bist = (u64)cpt_check_bist_status(cpt);

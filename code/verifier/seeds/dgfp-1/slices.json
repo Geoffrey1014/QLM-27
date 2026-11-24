@@ -1,0 +1,14 @@
+{
+ "seed": "dgfp-1",
+ "pattern": "delay-gfp",
+ "fix_sha": "e58650b57ee0",
+ "c_files": [
+  "drivers/input/touchscreen/wdt87xx_i2c.c"
+ ],
+ "buggy_fns": [
+  "wdt87xx_resume"
+ ],
+ "fixed_fns": [
+  "wdt87xx_resume"
+ ]
+}

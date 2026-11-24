@@ -1,0 +1,14 @@
+{
+ "seed": "dgfp-2",
+ "pattern": "delay-gfp",
+ "fix_sha": "e9acf05255cb",
+ "c_files": [
+  "drivers/crypto/cavium/cpt/cptpf_main.c"
+ ],
+ "buggy_fns": [
+  "cpt_device_init"
+ ],
+ "fixed_fns": [
+  "cpt_device_init"
+ ]
+}

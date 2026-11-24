@@ -1,0 +1,14 @@
+{
+ "seed": "mc-5",
+ "pattern": "missing-check",
+ "fix_sha": "d6cb77228e3a",
+ "c_files": [
+  "drivers/pinctrl/intel/pinctrl-baytrail.c"
+ ],
+ "buggy_fns": [
+  "byt_gpio_probe"
+ ],
+ "fixed_fns": [
+  "byt_gpio_probe"
+ ]
+}

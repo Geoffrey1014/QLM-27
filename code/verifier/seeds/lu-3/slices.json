@@ -1,0 +1,14 @@
+{
+ "seed": "lu-3",
+ "pattern": "four-features-Lu",
+ "fix_sha": "f141a422159a",
+ "c_files": [
+  "sound/soc/rockchip/rockchip_pdm.c"
+ ],
+ "buggy_fns": [
+  "rockchip_pdm_resume"
+ ],
+ "fixed_fns": [
+  "rockchip_pdm_resume"
+ ]
+}

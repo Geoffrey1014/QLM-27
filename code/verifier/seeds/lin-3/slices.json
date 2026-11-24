@@ -1,0 +1,14 @@
+{
+ "seed": "lin-3",
+ "pattern": "four-features-Lin",
+ "fix_sha": "bf4a9b2467b7",
+ "c_files": [
+  "sound/soc/samsung/aries_wm8994.c"
+ ],
+ "buggy_fns": [
+  "aries_audio_probe"
+ ],
+ "fixed_fns": [
+  "aries_audio_probe"
+ ]
+}

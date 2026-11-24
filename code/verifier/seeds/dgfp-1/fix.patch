@@ -1,0 +1,28 @@
+commit e58650b57ee0078ac8986650febeb55263f9ebdf
+Author: Jia-Ju Bai <baijiaju1990@gmail.com>
+Date:   Fri Jul 27 11:29:56 2018 -0700
+
+    Input: wdt87xx_i2c - replace mdelay() with msleep() in wdt87xx_resume()
+    
+    wdt87xx_resume() is never called in atomic context.  It calls mdelay() to
+    busily wait, which is not necessary.  mdelay() can be replaced with
+    msleep().
+    
+    This is found by a static analysis tool named DCNS written by myself.
+    
+    Signed-off-by: Jia-Ju Bai <baijiaju1990@gmail.com>
+    Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
+
+diff --git a/drivers/input/touchscreen/wdt87xx_i2c.c b/drivers/input/touchscreen/wdt87xx_i2c.c
+index 20f7f39027579..166edeb77776b 100644
+--- a/drivers/input/touchscreen/wdt87xx_i2c.c
++++ b/drivers/input/touchscreen/wdt87xx_i2c.c
+@@ -1142,7 +1142,7 @@ static int __maybe_unused wdt87xx_resume(struct device *dev)
+ 	 * The chip may have been reset while system is resuming,
+ 	 * give it some time to settle.
+ 	 */
+-	mdelay(100);
++	msleep(100);
+ 
+ 	error = wdt87xx_send_command(client, VND_CMD_START, 0);
+ 	if (error)

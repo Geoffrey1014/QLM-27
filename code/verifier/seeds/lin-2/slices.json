@@ -1,0 +1,14 @@
+{
+ "seed": "lin-2",
+ "pattern": "four-features-Lin",
+ "fix_sha": "9a2ea132df86",
+ "c_files": [
+  "drivers/hsi/controllers/omap_ssi_core.c"
+ ],
+ "buggy_fns": [
+  "ssi_probe"
+ ],
+ "fixed_fns": [
+  "ssi_probe"
+ ]
+}

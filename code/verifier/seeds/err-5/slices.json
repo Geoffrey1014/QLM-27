@@ -1,0 +1,14 @@
+{
+ "seed": "err-5",
+ "pattern": "error-return",
+ "fix_sha": "31d82c2c787d",
+ "c_files": [
+  "kernel/kexec_file.c"
+ ],
+ "buggy_fns": [
+  "kexec_calculate_store_digests"
+ ],
+ "fixed_fns": [
+  "kexec_calculate_store_digests"
+ ]
+}

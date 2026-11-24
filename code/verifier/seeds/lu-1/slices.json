@@ -1,0 +1,14 @@
+{
+ "seed": "lu-1",
+ "pattern": "four-features-Lu",
+ "fix_sha": "b6631c6031c7",
+ "c_files": [
+  "net/sctp/sm_statefuns.c"
+ ],
+ "buggy_fns": [
+  "sctp_sf_do_5_2_4_dupcook"
+ ],
+ "fixed_fns": [
+  "sctp_sf_do_5_2_4_dupcook"
+ ]
+}

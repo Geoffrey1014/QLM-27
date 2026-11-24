@@ -1,0 +1,32 @@
+commit 620b90d30c08684dc6ebee07c72755d997f9d1f6
+Author: Jia-Ju Bai <baijiaju1990@gmail.com>
+Date:   Sun Mar 7 19:44:46 2021 -0800
+
+    mtd: maps: fix error return code of physmap_flash_remove()
+    
+    When platform_get_drvdata() returns NULL to info, no error return code
+    of physmap_flash_remove() is assigned.
+    To fix this bug, err is assigned with -EINVAL in this case
+    
+    Fixes: 73566edf9b91 ("[MTD] Convert physmap to platform driver")
+    Reported-by: TOTE Robot <oslab@tsinghua.edu.cn>
+    Signed-off-by: Jia-Ju Bai <baijiaju1990@gmail.com>
+    Signed-off-by: Miquel Raynal <miquel.raynal@bootlin.com>
+    Link: https://lore.kernel.org/linux-mtd/20210308034446.3052-1-baijiaju1990@gmail.com
+
+diff --git a/drivers/mtd/maps/physmap-core.c b/drivers/mtd/maps/physmap-core.c
+index 001ed5deb622a..4f63b8430c710 100644
+--- a/drivers/mtd/maps/physmap-core.c
++++ b/drivers/mtd/maps/physmap-core.c
+@@ -69,8 +69,10 @@ static int physmap_flash_remove(struct platform_device *dev)
+ 	int i, err = 0;
+ 
+ 	info = platform_get_drvdata(dev);
+-	if (!info)
++	if (!info) {
++		err = -EINVAL;
+ 		goto out;
++	}
+ 
+ 	if (info->cmtd) {
+ 		err = mtd_device_unregister(info->cmtd);

@@ -1,0 +1,14 @@
+{
+ "seed": "mc-4",
+ "pattern": "missing-check",
+ "fix_sha": "c9c63915519b",
+ "c_files": [
+  "drivers/hwmon/lm80.c"
+ ],
+ "buggy_fns": [
+  "set_fan_div"
+ ],
+ "fixed_fns": [
+  "set_fan_div"
+ ]
+}

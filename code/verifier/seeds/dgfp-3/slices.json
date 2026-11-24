@@ -1,0 +1,14 @@
+{
+ "seed": "dgfp-3",
+ "pattern": "delay-gfp",
+ "fix_sha": "a0732548ba03",
+ "c_files": [
+  "net/tipc/bcast.c"
+ ],
+ "buggy_fns": [
+  "tipc_bcast_init"
+ ],
+ "fixed_fns": [
+  "tipc_bcast_init"
+ ]
+}

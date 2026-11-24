@@ -1,0 +1,26 @@
+commit d6cb77228e3ae070061195a6fff6ba7c3c0b8e47
+Author: Aditya Pakki <pakki001@umn.edu>
+Date:   Tue Mar 12 10:05:52 2019 -0500
+
+    pinctrl: baytrail: Fix potential NULL pointer dereference
+    
+    saved-context in byt_gpio_probe is allocated via devm_kcalloc and is
+    used without checking for NULL in later functions. This patch avoids
+    such a scenario.
+    
+    Signed-off-by: Aditya Pakki <pakki001@umn.edu>
+    Signed-off-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+
+diff --git a/drivers/pinctrl/intel/pinctrl-baytrail.c b/drivers/pinctrl/intel/pinctrl-baytrail.c
+index 241384ead4ed0..18d9ad5041947 100644
+--- a/drivers/pinctrl/intel/pinctrl-baytrail.c
++++ b/drivers/pinctrl/intel/pinctrl-baytrail.c
+@@ -1710,6 +1710,8 @@ static int byt_gpio_probe(struct byt_gpio *vg)
+ #ifdef CONFIG_PM_SLEEP
+ 	vg->saved_context = devm_kcalloc(&vg->pdev->dev, gc->ngpio,
+ 				       sizeof(*vg->saved_context), GFP_KERNEL);
++	if (!vg->saved_context)
++		return -ENOMEM;
+ #endif
+ 	ret = devm_gpiochip_add_data(&vg->pdev->dev, gc, vg);
+ 	if (ret) {

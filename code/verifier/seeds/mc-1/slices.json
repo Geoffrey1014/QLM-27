@@ -1,0 +1,14 @@
+{
+ "seed": "mc-1",
+ "pattern": "missing-check",
+ "fix_sha": "e85bb0beb649",
+ "c_files": [
+  "drivers/input/touchscreen/ad7879.c"
+ ],
+ "buggy_fns": [
+  "ad7879_irq"
+ ],
+ "fixed_fns": [
+  "ad7879_irq"
+ ]
+}

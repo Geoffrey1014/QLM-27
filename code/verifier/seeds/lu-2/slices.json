@@ -1,0 +1,14 @@
+{
+ "seed": "lu-2",
+ "pattern": "four-features-Lu",
+ "fix_sha": "2289adbfa559",
+ "c_files": [
+  "drivers/media/usb/dvb-usb/af9005.c"
+ ],
+ "buggy_fns": [
+  "af9005_identify_state"
+ ],
+ "fixed_fns": [
+  "af9005_identify_state"
+ ]
+}

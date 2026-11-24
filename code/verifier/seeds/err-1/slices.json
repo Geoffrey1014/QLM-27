@@ -1,0 +1,14 @@
+{
+ "seed": "err-1",
+ "pattern": "error-return",
+ "fix_sha": "620b90d30c08",
+ "c_files": [
+  "drivers/mtd/maps/physmap-core.c"
+ ],
+ "buggy_fns": [
+  "physmap_flash_remove"
+ ],
+ "fixed_fns": [
+  "physmap_flash_remove"
+ ]
+}

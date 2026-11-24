@@ -1,0 +1,14 @@
+{
+ "seed": "err-3",
+ "pattern": "error-return",
+ "fix_sha": "26594c6bbb60",
+ "c_files": [
+  "drivers/rpmsg/qcom_glink_native.c"
+ ],
+ "buggy_fns": [
+  "qcom_glink_rx_data"
+ ],
+ "fixed_fns": [
+  "qcom_glink_rx_data"
+ ]
+}

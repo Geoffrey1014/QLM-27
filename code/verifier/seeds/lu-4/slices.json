@@ -1,0 +1,14 @@
+{
+ "seed": "lu-4",
+ "pattern": "four-features-Lu",
+ "fix_sha": "9bbfceea12a8",
+ "c_files": [
+  "drivers/usb/dwc3/dwc3-pci.c"
+ ],
+ "buggy_fns": [
+  "dwc3_pci_probe"
+ ],
+ "fixed_fns": [
+  "dwc3_pci_probe"
+ ]
+}

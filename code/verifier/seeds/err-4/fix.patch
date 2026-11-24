@@ -1,0 +1,31 @@
+commit c021e02357703b959e20c458d64b6d4e0d5b8012
+Author: Jia-Ju Bai <baijiaju1990@gmail.com>
+Date:   Sun Mar 7 00:45:45 2021 -0800
+
+    usb: gadget: legacy: fix error return code of multi_bind()
+    
+    When usb_otg_descriptor_alloc() returns NULL to usb_desc, no error
+    return code of multi_bind() is assigned.
+    To fix this bug, status is assigned with -ENOMEM in this case.
+    
+    Reported-by: TOTE Robot <oslab@tsinghua.edu.cn>
+    Signed-off-by: Jia-Ju Bai <baijiaju1990@gmail.com>
+    Link: https://lore.kernel.org/r/20210307084545.21775-1-baijiaju1990@gmail.com
+    Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+
+diff --git a/drivers/usb/gadget/legacy/multi.c b/drivers/usb/gadget/legacy/multi.c
+index ec97498456609..7734bf77b309c 100644
+--- a/drivers/usb/gadget/legacy/multi.c
++++ b/drivers/usb/gadget/legacy/multi.c
+@@ -399,8 +399,10 @@ static int __ref multi_bind(struct usb_composite_dev *cdev)
+ 		struct usb_descriptor_header *usb_desc;
+ 
+ 		usb_desc = usb_otg_descriptor_alloc(gadget);
+-		if (!usb_desc)
++		if (!usb_desc) {
++			status = -ENOMEM;
+ 			goto fail_string_ids;
++		}
+ 		usb_otg_descriptor_init(gadget, usb_desc);
+ 		otg_desc[0] = usb_desc;
+ 		otg_desc[1] = NULL;
