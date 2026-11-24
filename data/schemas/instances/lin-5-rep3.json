@@ -1,0 +1,12 @@
+{
+ "target_api": "of_find_device_by_node",
+ "post_operation": "put_device",
+ "critical_variable": "dma_dev",
+ "path_conditions": [
+  "error early-returns after of_find_device_by_node succeeded but before put_device",
+  "normal function exit path"
+ ],
+ "fits_pattern": true,
+ "bug_type": "refcount_leak_of_find_device_by_node",
+ "cwe": "CWE-911"
+}

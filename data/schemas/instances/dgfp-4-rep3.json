@@ -1,0 +1,10 @@
+{
+ "target_api": "usb_submit_urb",
+ "post_operation": "GFP flag replacement (GFP_ATOMIC -> GFP_KERNEL)",
+ "critical_variable": "second argument of usb_submit_urb (the gfp_t flag) inside em28xx_init_usb_xfer()",
+ "path_conditions": "em28xx_init_usb_xfer() is invoked from analog/digital initialization paths in process context (e.g. em28xx-video / em28xx-vbi start_streaming via v4l2 vb2 callbacks and em28xx-dvb start_streaming) and from the dvb start helpers; none of these run in atomic context (no spinlock is held across the call, no IRQ/softirq dispatch). Therefore GFP_ATOMIC is unnecessary and the sleeping-allowed GFP_KERNEL is correct.",
+ "fits_pattern": true,
+ "bug_type": "delay_gfp_unneeded_atomic",
+ "cwe": "CWE-400",
+ "rationale": "Classic delay-gfp pattern: a memory-allocating helper (usb_submit_urb) is called with GFP_ATOMIC even though the enclosing function only ever runs in process context. The fix swaps GFP_ATOMIC for GFP_KERNEL so the allocator may sleep and the atomic memory reserve is not consumed needlessly."
+}

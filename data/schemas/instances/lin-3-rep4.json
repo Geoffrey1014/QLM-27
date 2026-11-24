@@ -1,0 +1,9 @@
+{
+ "target_api": "of_parse_phandle",
+ "post_operation": "of_node_put",
+ "critical_variable": "extcon_np",
+ "path_conditions": "Error path: when extcon_find_edev_by_node() returns an ERR_PTR and the function returns via dev_err_probe before reaching of_node_put().",
+ "fits_pattern": true,
+ "bug_type": "refcount_leak_of_parse_phandle",
+ "cwe": "CWE-911"
+}

@@ -1,0 +1,9 @@
+{
+ "target_api": "platform_device_alloc",
+ "post_operation": "platform_device_put",
+ "critical_variable": "dwc->dwc3 (struct platform_device *)",
+ "path_conditions": "error return paths after platform_device_alloc() succeeds but a subsequent setup call (e.g., platform_device_add_properties) fails; the function returns the error code directly without invoking platform_device_put on the allocated platform_device",
+ "fits_pattern": true,
+ "bug_type": "memory_leak_missing_platform_device_put",
+ "cwe": "CWE-401"
+}

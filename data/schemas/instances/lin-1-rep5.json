@@ -1,0 +1,13 @@
+{
+ "target_api": "of_parse_phandle",
+ "post_operation": "of_node_put",
+ "critical_variable": "state_node (struct device_node *)",
+ "path_conditions": [
+  "early continue when !of_device_is_available(state_node)",
+  "early break when loop counter i == CPUIDLE_STATE_MAX",
+  "normal end-of-iteration after processing"
+ ],
+ "fits_pattern": true,
+ "bug_type": "of_node_reference_leak",
+ "cwe": "CWE-772"
+}

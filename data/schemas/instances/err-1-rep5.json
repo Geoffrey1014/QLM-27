@@ -1,0 +1,11 @@
+{
+ "target_api": "platform_get_drvdata",
+ "post_operation": "assign a negative errno to the function's return-value variable `err` before jumping to the cleanup label",
+ "critical_variable": "err (int return-value local, initialized to 0)",
+ "path_conditions": "On the failure branch where `platform_get_drvdata()` returns NULL, control transfers via `goto out;` to the cleanup tail that does `return err;`. Because `err` was never reassigned to a non-zero value on this branch, the function silently returns 0 (success) even though the resource lookup failed.",
+ "fits_pattern": true,
+ "bug_type": "error_return_code_missing_on_failure_path",
+ "cwe": "CWE-394",
+ "pattern": "error-return-code",
+ "notes": "Classic missing-error-return-code pattern: int-returning function with a single err local initialized to 0, an early failure check that jumps to a shared cleanup label without first storing a negative errno into err, and the cleanup label ends in `return err;` -- so the failure path silently reports success. The fix (commit 620b90d30c08) wraps the if-body in braces and adds `err = -EINVAL;` before `goto out;`."
+}

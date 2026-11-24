@@ -1,0 +1,11 @@
+{
+ "target_api": "kzalloc",
+ "post_operation": "use GFP_KERNEL instead of GFP_ATOMIC when not in atomic context",
+ "critical_variable": "the GFP flag argument passed to allocator (kzalloc)",
+ "path_conditions": "callsite of kzalloc inside a function that is NOT reachable from atomic context (no spinlock held, not in IRQ, not in RCU read side, not a softirq/timer callback)",
+ "fits_pattern": true,
+ "bug_type": "delay_gfp_atomic",
+ "cwe": "CWE-405",
+ "pattern": "delay-gfp",
+ "notes": "tipc_bcast_init() is module/networking init path that may sleep; the unnecessary GFP_ATOMIC use makes the allocator less likely to succeed under memory pressure. Fix replaces GFP_ATOMIC -> GFP_KERNEL."
+}

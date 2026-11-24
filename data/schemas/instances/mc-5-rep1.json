@@ -1,0 +1,9 @@
+{
+ "target_api": "devm_kcalloc",
+ "post_operation": "null_check_before_dereference",
+ "critical_variable": "vg->saved_context",
+ "path_conditions": "Inside byt_gpio_probe() under #ifdef CONFIG_PM_SLEEP, vg->saved_context is assigned the result of devm_kcalloc(&vg->pdev->dev, gc->ngpio, sizeof(*vg->saved_context), GFP_KERNEL). On allocator failure devm_kcalloc returns NULL. The buggy code proceeds to devm_gpiochip_add_data and other paths; later suspend/resume code (byt_gpio_suspend / byt_gpio_resume) dereferences vg->saved_context unconditionally, causing a NULL pointer dereference. The fix adds 'if (!vg->saved_context) return -ENOMEM;' immediately after the allocation so probe fails cleanly on OOM.",
+ "fits_pattern": true,
+ "bug_type": "missing_check_devm_kcalloc_saved_context",
+ "cwe": "CWE-476"
+}

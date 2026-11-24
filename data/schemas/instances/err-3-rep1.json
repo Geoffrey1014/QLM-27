@@ -1,0 +1,11 @@
+{
+ "target_api": "idr_find",
+ "post_operation": "assign error code to return variable (e.g. ret = -ENOENT)",
+ "critical_variable": "ret (function's return value variable)",
+ "path_conditions": "Error path where idr_find() returns NULL (no intent found for the channel/liid pair) and control flows via `goto advance_rx` to the function's return statement, where `ret` has never been assigned a non-zero error code and therefore qcom_glink_rx_data() returns 0 (success) even though the message could not be delivered.",
+ "fits_pattern": true,
+ "bug_type": "error_return_code_missing_on_failure_path",
+ "cwe": "CWE-394",
+ "pattern": "error-return-code",
+ "notes": "The buggy function qcom_glink_rx_data() initializes `int ret = 0;` and on NULL `idr_find()` (intent lookup miss) jumps to `advance_rx:` without assigning a non-zero error code. The fix sets `ret = -ENOENT;` before the `goto advance_rx;`. Pattern: an int-returning function with a local `ret` variable initialized to 0, an early-error if-branch that does `goto cleanup_label;` without first assigning a non-zero value to ret, and a cleanup tail that does `return ret;`."
+}

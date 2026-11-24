@@ -1,0 +1,11 @@
+{
+ "target_api": "platform_get_drvdata",
+ "post_operation": "assign error code to return variable (e.g. err = -EINVAL)",
+ "critical_variable": "err (function's return value variable)",
+ "path_conditions": "Error path where target_api returns NULL and control flows via `goto out` to the function's return statement, where `err` has never been assigned a non-zero error code and therefore the function returns 0 (success) even though an error occurred.",
+ "fits_pattern": true,
+ "bug_type": "error_return_code_missing_on_failure_path",
+ "cwe": "CWE-394",
+ "pattern": "error-return-code",
+ "notes": "The buggy function physmap_flash_remove() initializes `err = 0` and on NULL `platform_get_drvdata()` jumps to `out:` without assigning a non-zero error code. The fix sets `err = -EINVAL` before goto. Pattern: an int-returning function with a local err variable initialized to 0, an early-error branch that does `goto cleanup_label;` without first assigning a non-zero value to err, and a cleanup tail that returns err."
+}

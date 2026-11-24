@@ -1,0 +1,9 @@
+{
+ "target_api": "of_count_phandle_with_args / kcalloc (allocation/lookup functions that return a value indicating success or failure)",
+ "post_operation": "assign error code (e.g. ret = -ENOMEM, ret = -ENOENT) before goto end / return",
+ "critical_variable": "ret (the function return code variable)",
+ "path_conditions": "After a failure check on target_api result (count==0 or kcalloc==NULL), code does goto end without setting ret, so the function returns the previous (possibly 0/success) value of ret instead of a proper negative errno.",
+ "fits_pattern": true,
+ "bug_type": "error-return-code",
+ "cwe": "CWE-394"
+}

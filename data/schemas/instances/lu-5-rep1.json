@@ -1,0 +1,9 @@
+{
+ "target_api": "kstrdup",
+ "post_operation": "kfree",
+ "critical_variable": "new_opts",
+ "path_conditions": "All return paths from affs_remount after a successful kstrdup must call kfree(new_opts). The bug: kfree(new_opts) is only present on the parse_options-failure path; all other return paths (success path returning 0 or res) leak new_opts.",
+ "fits_pattern": true,
+ "bug_type": "missing_kfree_after_kstrdup",
+ "cwe": "CWE-401"
+}

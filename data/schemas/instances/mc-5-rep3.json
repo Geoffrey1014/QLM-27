@@ -1,0 +1,9 @@
+{
+ "target_api": "devm_kcalloc",
+ "post_operation": "check_return_value_for_null_before_use",
+ "critical_variable": "vg->saved_context",
+ "path_conditions": "In byt_gpio_probe(), vg->saved_context is allocated via devm_kcalloc(&vg->pdev->dev, gc->ngpio, sizeof(*vg->saved_context), GFP_KERNEL) under #ifdef CONFIG_PM_SLEEP. devm_kcalloc may return NULL on allocation failure. The buggy version proceeds without checking the result; vg->saved_context is later dereferenced in the PM suspend/resume callbacks (byt_gpio_suspend / byt_gpio_resume), leading to a NULL pointer dereference. The fix adds 'if (!vg->saved_context) return -ENOMEM;' immediately after the allocation.",
+ "fits_pattern": true,
+ "bug_type": "missing_null_check_after_devm_kcalloc",
+ "cwe": "CWE-476"
+}

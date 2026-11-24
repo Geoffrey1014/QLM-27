@@ -1,0 +1,10 @@
+{
+ "target_api": "mdelay",
+ "post_operation": "should-be-replaced-by msleep / usleep_range",
+ "critical_variable": "(none — primitive delay call, no resource lifecycle)",
+ "path_conditions": "called from non-atomic context (PM resume callback, never holds spinlock/IRQ)",
+ "fits_pattern": true,
+ "bug_type": "busy-wait-in-sleepable-context (mdelay used where msleep would do)",
+ "cwe": "CWE-1050 (Excessive Platform Resource Consumption / Inefficient algorithm)",
+ "notes": "delay-gfp pattern variant: mdelay() busy-waits the CPU; in a non-atomic caller (here PM resume), msleep() should be used instead. Detector should flag mdelay() calls reachable only from clearly sleepable contexts (functions like *_resume, *_suspend, *_probe, *_init, *_open, *_release without enclosing spinlock/IRQ/rcu_read_lock). The 'critical variable' slot is occupied by the delay argument (constant ms) — only the constant being 'large enough' to be wasteful matters (here 100 ms)."
+}

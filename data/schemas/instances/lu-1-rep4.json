@@ -1,0 +1,13 @@
+{
+ "target_api": "sctp_unpack_cookie (allocates new_asoc via sctp_make_temp_asoc)",
+ "post_operation": "sctp_association_free",
+ "critical_variable": "new_asoc (struct sctp_association *)",
+ "path_conditions": [
+  "error return from security_sctp_assoc_request: must free new_asoc before returning",
+  "normal flow: new_asoc passed through into dupcook_{a,b,c,d} which take ownership",
+  "subsequent error paths after security check do not leak"
+ ],
+ "fits_pattern": true,
+ "bug_type": "sctp_association_leak",
+ "cwe": "CWE-401"
+}

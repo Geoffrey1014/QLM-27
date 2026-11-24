@@ -1,0 +1,9 @@
+{
+ "target_api": "pm_runtime_get_sync",
+ "post_operation": "pm_runtime_put",
+ "critical_variable": "dev (struct device *)",
+ "path_conditions": "error path when pm_runtime_get_sync returns < 0 (return value tested via `if (ret < 0)`)",
+ "fits_pattern": true,
+ "bug_type": "pm_runtime_refcount_leak_on_error",
+ "cwe": "CWE-911"
+}

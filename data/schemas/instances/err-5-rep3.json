@@ -1,0 +1,10 @@
+{
+ "target_api": "vzalloc",
+ "post_operation": "assign error code to ret (e.g. ret = -ENOMEM) before goto error label",
+ "critical_variable": "ret (the return-code variable returned at function exit)",
+ "path_conditions": "NULL-check failure path after an allocation: `if (!sha_regions) goto out_free_desc;` with no prior ret = -ERRNO assignment; the goto label leads to cleanup then returns ret which still holds the success value (0 or whatever the last successful step left it as).",
+ "fits_pattern": true,
+ "bug_type": "error_return_code",
+ "cwe": "CWE-755",
+ "notes": "Classic error-return-code pattern. Allocation returns NULL, code branches to error/cleanup goto label, but ret variable is not set to an error value (still 0), so the function silently returns success despite the allocation failure. Fix: add `ret = -ENOMEM;` before the `goto out_free_desc;`."
+}

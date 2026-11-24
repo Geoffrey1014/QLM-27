@@ -1,0 +1,10 @@
+{
+ "target_api": "kzalloc",
+ "post_operation": "none (allocation flag itself is the bug)",
+ "critical_variable": "bb (the kzalloc'd pointer in tipc_bcast_init)",
+ "path_conditions": "Caller (tipc_bcast_init) runs at module/net-namespace init time; no spinlock held, no IRQ context, no atomic section. GFP_ATOMIC is unnecessary and wasteful of the atomic reserve.",
+ "fits_pattern": true,
+ "bug_type": "delay_gfp_atomic_to_kernel",
+ "cwe": "CWE-770",
+ "notes": "delay-gfp pattern: kzalloc/kmalloc/etc called with GFP_ATOMIC from a never-atomic context (init / probe / never-callable-under-spinlock). Fix replaces flag with GFP_KERNEL. The critical signal is the *allocation flag* at the call site combined with the enclosing function being a non-atomic context (typically a *_init / probe / process-context entry point)."
+}

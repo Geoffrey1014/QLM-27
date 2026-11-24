@@ -1,0 +1,11 @@
+{
+ "target_api": "platform_get_drvdata",
+ "post_operation": "assign a non-zero error code to the return variable `err` (e.g. `err = -EINVAL;`) on the failure branch before the cleanup goto",
+ "critical_variable": "err (local int initialized to 0, also the function's return value)",
+ "path_conditions": "Failure branch where platform_get_drvdata() returns NULL and control transfers via `goto out;` to the function tail `return err;`; on that branch `err` was never assigned a non-zero value, so the int-returning function silently returns 0 (success) on what is in fact an error.",
+ "fits_pattern": true,
+ "bug_type": "error_return_code_missing_on_failure_path",
+ "cwe": "CWE-394",
+ "pattern": "error-return-code",
+ "notes": "physmap_flash_remove() declares `int i, err = 0;` and on the NULL check `if (!info) goto out;` it does NOT first set err. The label `out:` runs unconditional cleanup and returns err — which is still 0. The fix introduces `err = -EINVAL; goto out;`. Canonical error-return-code pattern (CWE-394): int-returning function, local err init to 0, failure shortcut via goto to a single cleanup tail, missing non-zero err assignment in the failure if-branch."
+}

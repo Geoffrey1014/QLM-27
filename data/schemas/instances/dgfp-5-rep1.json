@@ -1,0 +1,9 @@
+{
+ "target_api": "mdelay",
+ "post_operation": "replace_with_sleeping_primitive",
+ "critical_variable": "busy_delay_call_in_sleepable_context",
+ "path_conditions": "pci_epf_test_write() is invoked from pci_epf_test_cmd_handler(), which is set as the work function of an INIT_DELAYED_WORK() in pci_epf_test_probe(). Workqueue handlers run in process context and are sleepable, so busy-waiting with mdelay() needlessly spins the CPU. The sleeping primitive usleep_range() (or msleep) is the correct idiom. The bug fits the 'delay-gfp' pattern: a busy-wait primitive used where a sleeping equivalent should be used.",
+ "fits_pattern": true,
+ "bug_type": "mdelay_in_sleepable_context",
+ "cwe": "CWE-1050"
+}

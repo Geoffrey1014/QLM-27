@@ -1,0 +1,10 @@
+{
+ "target_api": "kcalloc / of_count_phandle_with_args",
+ "post_operation": "assignment to ret variable before goto cleanup label",
+ "critical_variable": "ret (the integer return code holding the function's error status)",
+ "path_conditions": "Error path taken on allocation failure (kcalloc returns NULL) or on missing/empty phandle list (of_count_phandle_with_args returns 0 or negative). On these paths the code does 'goto end;' without first setting ret to a negative errno, so the function returns whatever ret previously held (typically 0 from a prior of_property_read_u32 success), silently reporting success on failure.",
+ "fits_pattern": true,
+ "bug_type": "error_return_code_missing_assignment_before_goto",
+ "cwe": "CWE-252",
+ "notes": "Classic 'goto end' cleanup pattern where each error branch must set ret = -E... before jumping. Two such branches missed the assignment: the count<=0 branch and the !__tcbp branch. The fix adds ret = -ENOENT and ret = -ENOMEM respectively."
+}

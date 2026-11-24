@@ -1,0 +1,11 @@
+{
+ "target_api": "idr_find",
+ "post_operation": "assign error return code (ret = -ENOENT) before goto error label",
+ "critical_variable": "ret (function return value)",
+ "path_conditions": "error/failure path: when idr_find() returns NULL, function jumps to advance_rx label and returns ret, which would still be 0 (success) instead of an error code",
+ "fits_pattern": true,
+ "bug_type": "error_return_code",
+ "cwe": "CWE-394",
+ "pattern": "error-return-code",
+ "notes": "qcom_glink_rx_data() initializes ret=0. On the !intent failure branch, it jumps to advance_rx without setting ret to a negative errno, so the function silently returns success despite logging an error. Fix assigns ret=-ENOENT before the goto."
+}

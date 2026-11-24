@@ -1,0 +1,9 @@
+{
+ "target_api": "kzalloc",
+ "post_operation": "NULL check (if (!ptr) return -ENOMEM)",
+ "critical_variable": "priv->pFirmware (return value of kzalloc)",
+ "path_conditions": "After kzalloc returns, before any dereference of priv->pFirmware. The pointer is later dereferenced in rtl8192_adapter_start without prior NULL check.",
+ "fits_pattern": true,
+ "bug_type": "missing_null_check_after_kzalloc",
+ "cwe": "CWE-476"
+}

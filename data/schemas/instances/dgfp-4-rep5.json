@@ -1,0 +1,11 @@
+{
+ "target_api": "usb_submit_urb",
+ "post_operation": "use GFP_KERNEL instead of GFP_ATOMIC when caller is not in atomic context",
+ "critical_variable": "the gfp_t flag argument (mem_flags) passed to usb_submit_urb / kmalloc-family allocators",
+ "path_conditions": "Callsite is inside em28xx_init_usb_xfer(), an EXPORT_SYMBOL_GPL function invoked from process context (driver init / mode-switch helpers); no spinlock is held, no IRQ-disabled region, not in tasklet/timer/IRQ handler. Therefore GFP_ATOMIC is unnecessary and GFP_KERNEL (which may sleep) is the correct choice.",
+ "fits_pattern": true,
+ "bug_type": "delay_gfp_atomic",
+ "cwe": "CWE-405",
+ "pattern": "delay-gfp",
+ "notes": "em28xx_init_usb_xfer() is called from driver setup paths (em28xx_start_analog_streaming, em28xx_init_camera, etc.) which all run in process context. The static analyzer DCNS (Bai et al. 2018) found this. Fix: GFP_ATOMIC -> GFP_KERNEL in the usb_submit_urb() call inside the for-loop."
+}

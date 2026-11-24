@@ -1,0 +1,9 @@
+{
+ "target_api": "of_parse_phandle",
+ "post_operation": "of_node_put",
+ "critical_variable": "np_ddr",
+ "path_conditions": "error-return paths (!dmc->timing_row, !dmc->timing_data, !dmc->timing_power return -ENOMEM) where of_node_put(np_ddr) is missing before return",
+ "fits_pattern": true,
+ "bug_type": "refcount_leak_of_parse_phandle",
+ "cwe": "CWE-772"
+}

@@ -1,0 +1,9 @@
+{
+ "target_api": "pm_runtime_get_sync",
+ "post_operation": "pm_runtime_put",
+ "critical_variable": "ret (return value of pm_runtime_get_sync) / dev (the device whose refcount was incremented)",
+ "path_conditions": "When pm_runtime_get_sync returns a negative value (ret < 0), the runtime PM usage counter has already been incremented; the error-handling path that returns without further usage must call pm_runtime_put(dev) to balance the refcount.",
+ "fits_pattern": true,
+ "bug_type": "pm_runtime_get_sync_refcount_leak_on_error",
+ "cwe": "CWE-911"
+}

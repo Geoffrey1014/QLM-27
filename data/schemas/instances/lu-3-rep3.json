@@ -1,0 +1,9 @@
+{
+ "target_api": "pm_runtime_get_sync",
+ "post_operation": "pm_runtime_put",
+ "critical_variable": "ret (return value of pm_runtime_get_sync) / dev (the device argument used by both)",
+ "path_conditions": "Error path: when pm_runtime_get_sync returns < 0, pm_runtime_put(dev) must be called because the counter is incremented even on failure. Bug occurs when the error branch returns without calling pm_runtime_put.",
+ "fits_pattern": true,
+ "bug_type": "pm_runtime_get_sync_leak",
+ "cwe": "CWE-911"
+}

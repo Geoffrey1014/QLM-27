@@ -1,0 +1,9 @@
+{
+ "target_api": "kmalloc",
+ "post_operation": "kfree",
+ "critical_variable": "buf",
+ "path_conditions": "error path: when reply is not 0x01 or 0x02, function returns -EIO directly without calling kfree(buf), bypassing the err: label that contains kfree",
+ "fits_pattern": true,
+ "bug_type": "memleak_kmalloc_early_return",
+ "cwe": "CWE-401"
+}

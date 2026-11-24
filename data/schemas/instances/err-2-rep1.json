@@ -1,0 +1,11 @@
+{
+ "target_api": "of_count_phandle_with_args, kcalloc (allocation/lookup APIs whose failure must propagate as an error code)",
+ "post_operation": "assign a non-zero error code to the function's return variable (e.g. ret = -ENOENT / ret = -ENOMEM) before goto cleanup",
+ "critical_variable": "ret (function's local int return variable)",
+ "path_conditions": "Failure branch where an allocation/lookup returns NULL or 0 and control flows via `goto end;` to the function's tail. On entry to that goto, `ret` has not been assigned a non-zero error code on this branch, so the function returns whatever stale (possibly success) value `ret` last held — leaking a silent success to the caller despite an actual failure.",
+ "fits_pattern": true,
+ "bug_type": "error_return_code_missing_on_failure_path",
+ "cwe": "CWE-394",
+ "pattern": "error-return-code",
+ "notes": "The buggy thermal_of_populate_bind_params() has two failure branches: (1) if (!count) goto end without ret = -ENOENT, and (2) if (!__tcbp) goto end without ret = -ENOMEM. In both, `ret` may have been last assigned by of_property_read_u32() above (could be 0 on success), so the function returns 0 (success) despite a real configuration/allocation failure. Pattern shape: int-returning function with a local `ret` variable; an early-error branch that does `goto cleanup_label;` without first assigning a non-zero value to `ret`; the cleanup tail does `return ret;`. Identical shape to err-1 (physmap_flash_remove) modulo variable name (`ret` vs `err`)."
+}

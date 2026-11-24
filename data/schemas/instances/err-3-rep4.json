@@ -1,0 +1,10 @@
+{
+ "target_api": "idr_find",
+ "post_operation": "assign error code to ret before goto cleanup label",
+ "critical_variable": "ret",
+ "path_conditions": "error path taken via `goto advance_rx` when idr_find returns NULL; function exits with `return ret` and ret was only initialized to 0",
+ "fits_pattern": true,
+ "bug_type": "error_return_code",
+ "cwe": "CWE-394",
+ "description": "Function qcom_glink_rx_data initializes int ret = 0; on an error path (idr_find returns NULL for intent), code does `goto advance_rx` without assigning a negative errno to ret. The label leads to `return ret`, so the caller receives 0 (success) on a real failure. Fix sets ret = -ENOENT before the goto."
+}

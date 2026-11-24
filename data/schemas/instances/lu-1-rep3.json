@@ -1,0 +1,9 @@
+{
+ "target_api": "sctp_make_temp_asoc / sctp_assoc_update path producing new_asoc (allocated SCTP association)",
+ "post_operation": "sctp_association_free(new_asoc)",
+ "critical_variable": "new_asoc",
+ "path_conditions": "Error-return path when security_sctp_assoc_request() returns non-zero before new_asoc is inserted into hashtable (asoc->temp not yet set)",
+ "fits_pattern": true,
+ "bug_type": "missing_sctp_association_free_on_security_error",
+ "cwe": "CWE-401"
+}

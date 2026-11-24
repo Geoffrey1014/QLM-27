@@ -1,0 +1,13 @@
+{
+ "target_api": "of_parse_phandle",
+ "post_operation": "of_node_put",
+ "critical_variable": "state_node",
+ "path_conditions": [
+  "loop continues via 'continue' when of_device_is_available(state_node) is false",
+  "loop breaks via 'break' when i == CPUIDLE_STATE_MAX",
+  "fall-through at end of loop iteration"
+ ],
+ "fits_pattern": true,
+ "bug_type": "device_node_refcount_leak",
+ "cwe": "CWE-772"
+}

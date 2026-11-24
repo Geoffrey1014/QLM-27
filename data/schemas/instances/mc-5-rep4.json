@@ -1,0 +1,9 @@
+{
+ "target_api": "devm_kcalloc",
+ "post_operation": "NULL check on the returned pointer (e.g. `if (!ptr) return -ENOMEM;`)",
+ "critical_variable": "vg->saved_context (return value of devm_kcalloc)",
+ "path_conditions": "Immediately after the allocation call, before any subsequent use of the pointer; must guard ALL paths that proceed past the allocation (success and failure paths of the allocator must be distinguished).",
+ "fits_pattern": true,
+ "bug_type": "missing_null_check_after_alloc",
+ "cwe": "CWE-476"
+}

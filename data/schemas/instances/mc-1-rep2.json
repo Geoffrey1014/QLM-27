@@ -1,0 +1,9 @@
+{
+ "target_api": "regmap_bulk_read",
+ "post_operation": "check_return_value_before_use",
+ "critical_variable": "return_value_of_regmap_bulk_read",
+ "path_conditions": "In interrupt handler ad7879_irq, the return value of regmap_bulk_read must be checked. If non-zero (failure), the read buffer ts->conversion_data is unreliable and ad7879_report (which consumes it) must not be invoked. Buggy version ignores the return value entirely.",
+ "fits_pattern": true,
+ "bug_type": "missing_check_regmap_bulk_read_in_irq",
+ "cwe": "CWE-252"
+}

@@ -1,0 +1,9 @@
+{
+ "target_api": "kmalloc",
+ "post_operation": "kfree",
+ "critical_variable": "buf",
+ "path_conditions": "error/early-return path: when reply value is unexpected (else branch), function returns -EIO without releasing buf allocated by kmalloc; the err: label/kfree cleanup is bypassed",
+ "fits_pattern": true,
+ "bug_type": "memleak_kmalloc",
+ "cwe": "CWE-401"
+}

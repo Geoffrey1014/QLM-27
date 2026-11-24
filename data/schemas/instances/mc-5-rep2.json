@@ -1,0 +1,9 @@
+{
+ "target_api": "devm_kcalloc",
+ "post_operation": "null_check_before_subsequent_use",
+ "critical_variable": "vg->saved_context",
+ "path_conditions": "In byt_gpio_probe, the result of devm_kcalloc assigned to vg->saved_context (allocated under #ifdef CONFIG_PM_SLEEP) must be NULL-checked before any subsequent use elsewhere in the driver (PM resume/suspend handlers dereference it). The fix adds 'if (!vg->saved_context) return -ENOMEM;' immediately after the allocation. Buggy version drops the allocation return without any check.",
+ "fits_pattern": true,
+ "bug_type": "missing_null_check_devm_kcalloc",
+ "cwe": "CWE-476"
+}

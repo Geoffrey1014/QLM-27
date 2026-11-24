@@ -1,0 +1,9 @@
+{
+ "target_api": "lm80_read_value",
+ "post_operation": "check_negative_return_before_use",
+ "critical_variable": "return_value_of_lm80_read_value",
+ "path_conditions": "In set_fan_div(), the return of lm80_read_value(client, LM80_REG_FANDIV) is consumed directly inside a bitwise expression assigned to 'reg' without being captured into a checkable variable. Because lm80_read_value() returns a negative int on SMBus failure, that error sentinel gets masked into 'reg' and written back to the device via lm80_write_value, corrupting hardware state. The fix captures the call into 'rv', returns 'rv' when negative, and only then masks/writes.",
+ "fits_pattern": true,
+ "bug_type": "missing_check_lm80_read_value_inline_use",
+ "cwe": "CWE-252"
+}

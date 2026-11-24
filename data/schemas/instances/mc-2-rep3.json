@@ -1,0 +1,13 @@
+{
+ "target_api": "kzalloc",
+ "post_operation": "NULL check on returned pointer before subsequent dereference / use",
+ "critical_variable": "priv->pFirmware (the pointer returned by kzalloc and stored into a struct field)",
+ "path_conditions": [
+  "kzalloc may return NULL on allocation failure",
+  "Without a NULL check, priv->pFirmware is dereferenced later in rtl8192_adapter_start",
+  "The enclosing function's signature changes from void to int so the error can be propagated to the caller"
+ ],
+ "fits_pattern": true,
+ "bug_type": "missing_null_check_kzalloc",
+ "cwe": "CWE-690"
+}

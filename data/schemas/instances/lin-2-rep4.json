@@ -1,0 +1,9 @@
+{
+ "target_api": "for_each_available_child_of_node",
+ "post_operation": "of_node_put",
+ "critical_variable": "child",
+ "path_conditions": "Early exit (goto/return/break) inside the for_each_available_child_of_node loop body before the next iteration. The macro internally increments the refcount of the loop variable each iteration and only decrements when iterating to the next sibling; an early break/goto/return skips that decrement, requiring an explicit of_node_put(child).",
+ "fits_pattern": true,
+ "bug_type": "of_node_refcount_leak_for_each_available_child_of_node",
+ "cwe": "CWE-911"
+}

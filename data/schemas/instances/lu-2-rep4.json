@@ -1,0 +1,9 @@
+{
+ "target_api": "kmalloc",
+ "post_operation": "kfree",
+ "critical_variable": "buf",
+ "path_conditions": "early return on else-branch (reply not 0x01 nor 0x02) bypasses the goto err cleanup label, leaking buf",
+ "fits_pattern": true,
+ "bug_type": "memory_leak_on_error_path",
+ "cwe": "CWE-401"
+}

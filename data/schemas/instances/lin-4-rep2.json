@@ -1,0 +1,9 @@
+{
+ "target_api": "of_parse_phandle",
+ "post_operation": "of_node_put",
+ "critical_variable": "np_ddr (struct device_node *)",
+ "path_conditions": "Error return paths after of_parse_phandle() returns non-NULL: missing of_node_put before 'return -ENOMEM' on devm_kmalloc_array failures (three sites). Three error paths leak the refcount-incremented device_node.",
+ "fits_pattern": true,
+ "bug_type": "refcount_leak_of_node",
+ "cwe": "CWE-401"
+}

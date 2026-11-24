@@ -1,0 +1,13 @@
+{
+ "target_api": "mdelay",
+ "post_operation": "replace with msleep (yielding sleep) since not in atomic context",
+ "critical_variable": "delay argument (100 ms) inside wdt87xx_resume()",
+ "path_conditions": [
+  "wdt87xx_resume is a PM resume handler (process context, sleepable)",
+  "mdelay(100) busy-waits 100 ms blocking the CPU",
+  "no spinlock/IRQ-disabled region surrounds the mdelay call"
+ ],
+ "fits_pattern": true,
+ "bug_type": "delay_gfp_mdelay_in_sleepable",
+ "cwe": "CWE-400"
+}

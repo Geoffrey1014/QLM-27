@@ -1,0 +1,10 @@
+{
+ "target_api": "mdelay",
+ "post_operation": "msleep",
+ "critical_variable": "delay_duration_ms (compile-time constant >= 10)",
+ "path_conditions": "enclosing function is in a sleepable (non-atomic) context: PCI probe/init/remove/shutdown, suspend/resume, file-ops open/release, workqueue handler, kernel thread; never reached from IRQ/tasklet/timer/spinlock-held region",
+ "fits_pattern": true,
+ "bug_type": "mdelay_in_sleepable_context",
+ "cwe": "CWE-400",
+ "notes": "cpt_device_init() is called only via cpt_probe() (.probe callback). mdelay(100) busy-waits 100ms unnecessarily. msleep(100) is correct since probe runs in sleepable context."
+}

@@ -1,0 +1,11 @@
+{
+ "target_api": "vzalloc",
+ "post_operation": "assign error code to return variable (e.g. ret = -ENOMEM)",
+ "critical_variable": "ret (function's return value variable)",
+ "path_conditions": "Error path where vzalloc returns NULL and control flows via `goto out_free_desc` to the function's cleanup tail and return statement, but `ret` has never been assigned a non-zero error code on this branch and therefore the function returns 0 (success) even though allocation failed.",
+ "fits_pattern": true,
+ "bug_type": "error_return_code_missing_on_failure_path",
+ "cwe": "CWE-394",
+ "pattern": "error-return-code",
+ "notes": "The buggy function kexec_calculate_store_digests() initializes `int ret = 0;` and on NULL `vzalloc()` (allocation failure for sha_regions) jumps to `out_free_desc:` without assigning `ret = -ENOMEM`. The fix adds `ret = -ENOMEM;` before goto. Pattern matches err-1 family: int-returning function with a local err/ret variable initialized to 0, an early-error branch that does `goto cleanup_label;` without first assigning a non-zero value to err/ret, and a cleanup tail that returns err/ret. Same CWE-394, same structural shape as fix 620b90d30c08 (physmap_flash_remove)."
+}

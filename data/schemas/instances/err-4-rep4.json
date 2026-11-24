@@ -1,0 +1,11 @@
+{
+ "target_api": "usb_otg_descriptor_alloc",
+ "post_operation": "assign negative errno (e.g. status = -ENOMEM) before goto cleanup label",
+ "critical_variable": "status (int return-code variable of multi_bind)",
+ "path_conditions": "NULL-check failure path of an allocation-style call jumps to an existing cleanup label via `goto fail_string_ids;` without first assigning a non-zero errno to `status`, while the function's exit path returns `status`. Result: caller receives 0 (success) despite a real failure.",
+ "fits_pattern": true,
+ "bug_type": "error_return_code_missing_on_failure_path",
+ "cwe": "CWE-394",
+ "pattern": "error-return-code",
+ "notes": "Pre-fix multi_bind() initialises `status` (sometimes via prior assignment, but the active value at this branch is from a successful preceding call so it is 0 / non-negative success). On allocation failure the then-branch is a bare `goto fail_string_ids;` with no `status = -ENOMEM;` assignment. The fix wraps the goto in braces and inserts `status = -ENOMEM;` first. Shape: int-returning function with an int `status` variable, an IfStmt whose condition is a NULL-check on the return of an alloc call, whose then-branch is a goto to a cleanup label, and where (a) `status` is not assigned a non-zero value in that then-branch before the goto and (b) the if-condition itself does not reference `status`."
+}

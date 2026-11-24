@@ -1,0 +1,9 @@
+{
+ "target_api": "kstrdup",
+ "post_operation": "kfree",
+ "critical_variable": "new_opts",
+ "path_conditions": "After a successful kstrdup of mount data, every return path from affs_remount must call kfree(new_opts). The original code only frees new_opts on the parse_options-failure branch; all other return paths (the unconditional `return 0` after the SB_RDONLY shortcut, and the final `return res`) leak the duplicated string.",
+ "fits_pattern": true,
+ "bug_type": "missing_kfree_after_kstrdup",
+ "cwe": "CWE-401"
+}

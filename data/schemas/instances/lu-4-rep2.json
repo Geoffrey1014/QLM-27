@@ -1,0 +1,9 @@
+{
+ "target_api": "platform_device_alloc",
+ "post_operation": "platform_device_put",
+ "critical_variable": "dwc->dwc3",
+ "path_conditions": "Error return paths after platform_device_alloc() succeeds (dwc->dwc3 non-NULL). Specifically, when platform_device_add_properties() returns < 0, the function returned directly without calling platform_device_put(dwc->dwc3) via the err label.",
+ "fits_pattern": true,
+ "bug_type": "memory_leak_platform_device",
+ "cwe": "CWE-401"
+}

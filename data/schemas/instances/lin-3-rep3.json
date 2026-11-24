@@ -1,0 +1,13 @@
+{
+ "target_api": "of_parse_phandle",
+ "post_operation": "of_node_put",
+ "critical_variable": "extcon_np (struct device_node *)",
+ "path_conditions": [
+  "early return on IS_ERR(priv->usb_extcon) before of_node_put is called",
+  "normal success path: extcon_find_edev_by_node OK, fall through, of_node_put called late",
+  "fix moves of_node_put before the IS_ERR check so it executes on both error and success paths"
+ ],
+ "fits_pattern": true,
+ "bug_type": "of_node_reference_leak",
+ "cwe": "CWE-772"
+}

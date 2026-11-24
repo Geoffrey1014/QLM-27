@@ -1,0 +1,10 @@
+{
+ "target_api": "regmap_bulk_read",
+ "post_operation": "check return value (compare against 0 / propagate error before using read data)",
+ "critical_variable": "return value of regmap_bulk_read (int error code)",
+ "path_conditions": "any path after calling regmap_bulk_read inside an IRQ handler / function returning irqreturn_t — must branch on error before using ts->conversion_data",
+ "fits_pattern": true,
+ "bug_type": "missing-check-on-regmap-bulk-read-return",
+ "cwe": "CWE-252",
+ "rationale": "regmap_bulk_read() returns int; non-zero means failure. The buggy ad7879_irq() ignores the return value and proceeds to use ts->conversion_data via ad7879_report(). Fix introduces 'int error = regmap_bulk_read(...); if (error) dev_err_ratelimited(...); else if (...) mod_timer(...);'. Classic missing-return-value-check (CWE-252)."
+}

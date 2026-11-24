@@ -1,0 +1,9 @@
+{
+ "target_api": "kstrdup",
+ "post_operation": "kfree",
+ "critical_variable": "new_opts",
+ "path_conditions": "All return paths after a successful kstrdup, including the success path and any early returns (e.g. RDONLY path, success path returning res), must kfree(new_opts). Only one error path (parse_options failure) frees it in the buggy code.",
+ "fits_pattern": true,
+ "bug_type": "kstrdup_missing_kfree",
+ "cwe": "CWE-401"
+}

@@ -1,0 +1,9 @@
+{
+ "target_api": "for_each_available_child_of_node",
+ "post_operation": "of_node_put",
+ "critical_variable": "child",
+ "path_conditions": "early exit (goto/return/break) from the for_each_available_child_of_node loop body before the loop naturally completes; the macro auto-puts only when iteration finishes normally",
+ "fits_pattern": true,
+ "bug_type": "of_node_refcount_leak",
+ "cwe": "CWE-911"
+}

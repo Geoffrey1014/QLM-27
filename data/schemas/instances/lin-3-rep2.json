@@ -1,0 +1,13 @@
+{
+ "target_api": "of_parse_phandle",
+ "post_operation": "of_node_put",
+ "critical_variable": "extcon_np (struct device_node *)",
+ "path_conditions": [
+  "of_parse_phandle returns device_node with incremented refcount",
+  "on error path when IS_ERR(priv->usb_extcon), function returns via dev_err_probe without calling of_node_put",
+  "on success path of_node_put must be called once node is no longer needed"
+ ],
+ "fits_pattern": true,
+ "bug_type": "of_node_refcount_leak",
+ "cwe": "CWE-401"
+}

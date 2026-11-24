@@ -1,0 +1,9 @@
+{
+ "target_api": "usb_submit_urb",
+ "post_operation": "n/a (this is the delay-gfp pattern: argument-shape bug, not acquire-release)",
+ "critical_variable": "the GFP flag argument passed to usb_submit_urb (the 2nd argument)",
+ "path_conditions": "call site is reachable in process/sleepable context (no spinlock held, not in IRQ handler, not inside atomic section); the function em28xx_init_usb_xfer is invoked from process context (driver init path, no held lock at the call point)",
+ "fits_pattern": true,
+ "bug_type": "delay-gfp: unnecessary GFP_ATOMIC passed to usb_submit_urb in process/sleepable context",
+ "cwe": "CWE-400"
+}

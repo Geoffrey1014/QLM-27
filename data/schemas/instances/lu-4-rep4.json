@@ -1,0 +1,9 @@
+{
+ "target_api": "platform_device_alloc",
+ "post_operation": "platform_device_put",
+ "critical_variable": "dwc->dwc3",
+ "path_conditions": "error return path of platform_device_add_properties (or any error path after platform_device_alloc): must goto err (which calls platform_device_put) instead of returning directly",
+ "fits_pattern": true,
+ "bug_type": "memory_leak_missing_platform_device_put_on_error_path",
+ "cwe": "CWE-401"
+}

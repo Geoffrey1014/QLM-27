@@ -1,0 +1,13 @@
+{
+ "target_api": "of_find_device_by_node",
+ "post_operation": "put_device(&dma_dev->dev)",
+ "critical_variable": "dma_dev (struct platform_device *)",
+ "path_conditions": [
+  "early return -EINVAL when !res_dma",
+  "early return -EINVAL when !cf_port->dma_base",
+  "normal end-of-block after processing irq"
+ ],
+ "fits_pattern": true,
+ "bug_type": "platform_device_refcount_leak",
+ "cwe": "CWE-911"
+}

@@ -1,0 +1,9 @@
+{
+ "target_api": "kstrdup",
+ "post_operation": "kfree",
+ "critical_variable": "new_opts (return value of kstrdup)",
+ "path_conditions": "On success path of affs_remount (after parse_options succeeds), new_opts is never freed; only freed on error path when parse_options fails. Need kfree(new_opts) on all return paths.",
+ "fits_pattern": true,
+ "bug_type": "missing_kfree_after_kstrdup",
+ "cwe": "CWE-401"
+}

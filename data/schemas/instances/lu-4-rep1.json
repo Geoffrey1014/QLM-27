@@ -1,0 +1,9 @@
+{
+ "target_api": "platform_device_alloc",
+ "post_operation": "platform_device_put",
+ "critical_variable": "dwc->dwc3 (struct platform_device *)",
+ "path_conditions": "All error paths after a successful platform_device_alloc must call platform_device_put on the returned device. In the buggy code, when platform_device_add_properties fails (ret < 0), the function returns directly without calling platform_device_put, leaking the previously-allocated platform_device.",
+ "fits_pattern": true,
+ "bug_type": "platform_device_put_leak",
+ "cwe": "CWE-401"
+}

@@ -1,0 +1,9 @@
+{
+ "target_api": "usb_otg_descriptor_alloc",
+ "post_operation": "assign negative errno (e.g. status = -ENOMEM) before goto error-label",
+ "critical_variable": "status (the return-code variable of multi_bind)",
+ "path_conditions": "NULL-check failure path of an allocation-style API that goes to a cleanup label without setting the negative errno into the return-code variable, while normal/success return path returns that variable",
+ "fits_pattern": true,
+ "bug_type": "error-return-code-not-set",
+ "cwe": "CWE-394"
+}

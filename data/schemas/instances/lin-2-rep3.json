@@ -1,0 +1,9 @@
+{
+ "target_api": "for_each_available_child_of_node",
+ "post_operation": "of_node_put",
+ "critical_variable": "child (struct device_node *)",
+ "path_conditions": "Early exit (break/goto/return) from the for_each_available_child_of_node loop body without calling of_node_put(child) on the current iterator. The iterator macro implicitly takes a reference each iteration and releases it on normal loop continuation; an early exit must explicitly of_node_put(child).",
+ "fits_pattern": true,
+ "bug_type": "of_node_refcount_leak",
+ "cwe": "CWE-911"
+}

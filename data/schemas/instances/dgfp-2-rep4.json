@@ -1,0 +1,9 @@
+{
+ "target_api": "mdelay",
+ "post_operation": "replace_with_sleeping_primitive",
+ "critical_variable": "delay_call_in_sleepable_context",
+ "path_conditions": "cpt_device_init() is called from cpt_probe(), which is the PCI driver .probe callback installed in cpt_pci_driver. PCI .probe callbacks run in process context and are therefore sleepable; the 100 ms busy-wait via mdelay(100) wastes CPU cycles and should be replaced by msleep(100). The bug fits the 'delay-gfp' pattern: a busy-wait (atomic-only) primitive used where a sleeping equivalent is correct.",
+ "fits_pattern": true,
+ "bug_type": "mdelay_in_sleepable_context",
+ "cwe": "CWE-1050"
+}

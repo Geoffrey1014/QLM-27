@@ -1,0 +1,10 @@
+{
+ "target_api": "mdelay",
+ "post_operation": "(not a release/cleanup; replacement with usleep_range)",
+ "critical_variable": "(none — the delay duration argument, 1ms)",
+ "path_conditions": "called in non-atomic / sleepable context (here: pci_epf_test_write, invoked via INIT_DELAYED_WORK -> pci_epf_test_cmd_handler, no spinlock held, no atomic context)",
+ "fits_pattern": true,
+ "bug_type": "mdelay_in_sleepable_context",
+ "cwe": "CWE-1050",
+ "notes": "delay-gfp variant: busy-wait mdelay() of >=1ms used inside a sleepable context (workqueue handler, no atomic context). Wastes CPU; should call a sleeping primitive (usleep_range / msleep) instead. The pattern signature for CodeQL: a call to mdelay(N) with N >= 1 reachable from a function that is invoked only from non-atomic contexts (workqueue, kthread, syscall path) and does not run under spinlock/RCU/IRQ-disable."
+}

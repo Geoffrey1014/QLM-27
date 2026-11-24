@@ -1,0 +1,10 @@
+{
+ "target_api": "usb_submit_urb",
+ "post_operation": "GFP flag relaxation (GFP_ATOMIC -> GFP_KERNEL)",
+ "critical_variable": "second argument (gfp_t flag) of usb_submit_urb inside em28xx_init_usb_xfer()",
+ "path_conditions": "em28xx_init_usb_xfer() is the analog/digital USB streaming start path. Its callers (em28xx_start_analog_streaming, em28xx_start_streaming) run from V4L2 vb2 .start_streaming / DVB demux .start_feed / probe-time workers — all are process context, no spinlock held, no IRQ/softirq, no preempt-disable, no RCU read side. The function itself invokes process-context-only helpers (usb_clear_halt, init_waitqueue_head, em28xx_alloc_urbs which uses GFP_KERNEL elsewhere) before the usb_submit_urb loop, confirming the slot is sleepable. Therefore GFP_ATOMIC is unjustified; GFP_KERNEL is correct and lets the allocator sleep instead of tapping the atomic reserve.",
+ "fits_pattern": true,
+ "bug_type": "delay_gfp_unneeded_atomic",
+ "cwe": "CWE-400",
+ "rationale": "Canonical delay-gfp sub-pattern: a USB submission API is called with GFP_ATOMIC inside a function whose caller chain is entirely process context. The fix is a pure flag swap GFP_ATOMIC -> GFP_KERNEL with no data-flow or control-flow change — exactly the gfp-relaxation shape."
+}

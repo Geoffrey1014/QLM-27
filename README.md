@@ -43,6 +43,9 @@ qlm-artifact/
 │   │   ├── C3/  (124 .ql + 125 .audit.json)   # QLM (full pipeline)
 │   │   ├── L0/  (123 .ql + 125 .audit.json)   # RQ4 zero-shot
 │   │   └── L1/  ( 63 .ql +  63 .audit.json)   # RQ4 mono + compile self-fix
+│   ├── schemas/               # bug schema definition + 125 C3 schema instances
+│   │   ├── README.md
+│   │   └── instances/  (125 .json)
 │   └── scoring/               # D4 aggregate metrics
 │       ├── C{0,1,2,3}-<pattern>.json          # 4 cells × 5 patterns = 20
 │       └── run-summary.json                   # top-level 20-cell matrix

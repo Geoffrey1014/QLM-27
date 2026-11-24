@@ -1,0 +1,10 @@
+{
+ "target_api": "of_count_phandle_with_args / kcalloc",
+ "post_operation": "assignment of error code to `ret` before `goto end`",
+ "critical_variable": "ret (the return value variable)",
+ "path_conditions": "error branches that take `goto <cleanup_label>` after a failure check (count <= 0, allocation failure) without first storing a negative errno into `ret`; function returns `ret` which still holds a stale success value from an earlier call",
+ "fits_pattern": true,
+ "bug_type": "error-return-code",
+ "cwe": "CWE-252 (Unchecked Return Value) / CWE-703 (Improper Check or Handling of Exceptional Conditions)",
+ "notes": "Classic TOTE-Robot pattern: function declared `int ret` and returns `ret` at end. After a successful early call (e.g. of_property_read_u32), `ret == 0`. On a later failure path the code does `goto end` without setting `ret = -Exxx`, so the function silently returns 0 (success) despite an error having occurred. Detection: find functions whose return path is `return ret;`, where there exists a goto/branch to the cleanup label taken on an error condition, but no assignment to `ret` (or to a negative constant) precedes that goto within the failing branch."
+}

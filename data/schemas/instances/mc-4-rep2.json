@@ -1,0 +1,9 @@
+{
+ "target_api": "lm80_read_value",
+ "post_operation": "check_return_value_is_negative_before_use",
+ "critical_variable": "return_value_of_lm80_read_value",
+ "path_conditions": "Inside set_fan_div(), after calling lm80_read_value(client, LM80_REG_FANDIV) the return value is an int that is negative on SMBus failure. The buggy version directly bit-masks the result and writes it back via lm80_write_value without first checking for a negative error code, so a failed read produces garbage that is then written to the device. The fixed version captures the return into `rv`, returns early when `rv < 0`, and only otherwise uses it as a register value.",
+ "fits_pattern": true,
+ "bug_type": "missing_check_lm80_read_value",
+ "cwe": "CWE-252"
+}

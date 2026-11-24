@@ -1,0 +1,10 @@
+{
+ "target_api": "kzalloc",
+ "post_operation": "GFP flag replacement (GFP_ATOMIC -> GFP_KERNEL)",
+ "critical_variable": "second argument of kzalloc (the gfp_t flag) at line 515 in tipc_bcast_init()",
+ "path_conditions": "The enclosing function tipc_bcast_init() is an initialization function reached only from process context (TIPC module init via tipc_init_net), never from interrupt/softirq context, and is not invoked while holding any spinlock or with preemption disabled. Therefore GFP_ATOMIC is unnecessary and wastes the atomic reserve.",
+ "fits_pattern": true,
+ "bug_type": "delay_gfp_unneeded_atomic",
+ "cwe": "CWE-400",
+ "rationale": "Classic delay-gfp pattern: allocation site uses GFP_ATOMIC but the caller chain establishes that the function never executes in atomic context (initialization path, no spinlocks held, no IRQ/softirq, no RCU read side). The fix replaces GFP_ATOMIC with GFP_KERNEL so the allocator may sleep and tap the normal reserve."
+}

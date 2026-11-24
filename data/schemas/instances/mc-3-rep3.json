@@ -1,0 +1,9 @@
+{
+ "target_api": "pointer-parameter dereference inside a function body",
+ "post_operation": "explicit NULL check on the same pointer parameter (e.g. `if (!p) return -EINVAL;`) executed before any dereference",
+ "critical_variable": "rfkill (struct rfkill * parameter to rfkill_register)",
+ "path_conditions": "Inside `rfkill_register(struct rfkill *rfkill)` the parameter is dereferenced at variable initialization `struct device *dev = &rfkill->dev;` BEFORE the `BUG_ON(!rfkill)` check two lines later. Any caller passing NULL hits the dereference first; the NULL check is unreachable when it matters.",
+ "fits_pattern": true,
+ "bug_type": "use_before_null_check",
+ "cwe": "CWE-476"
+}

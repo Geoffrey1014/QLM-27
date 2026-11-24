@@ -1,0 +1,14 @@
+{
+ "target_api": "of_parse_phandle",
+ "post_operation": "of_node_put",
+ "critical_variable": "np_ddr",
+ "path_conditions": [
+  "early return on !dmc->timing_row (ENOMEM) — missing of_node_put",
+  "early return on !dmc->timing_data (ENOMEM) — missing of_node_put",
+  "early return on !dmc->timing_power (ENOMEM) — missing of_node_put",
+  "successful fall-through path has of_node_put"
+ ],
+ "fits_pattern": true,
+ "bug_type": "refcount_leak_of_node_put",
+ "cwe": "CWE-772"
+}

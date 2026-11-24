@@ -1,0 +1,9 @@
+{
+ "target_api": "of_parse_phandle",
+ "post_operation": "of_node_put",
+ "critical_variable": "extcon_np",
+ "path_conditions": "On error return path (IS_ERR(priv->usb_extcon)) after extcon_find_edev_by_node fails, function returns without calling of_node_put on the node returned by of_parse_phandle",
+ "fits_pattern": true,
+ "bug_type": "of_node_put_refcount_leak",
+ "cwe": "CWE-401"
+}
