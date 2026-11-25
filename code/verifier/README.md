@@ -13,7 +13,7 @@ Requires CodeQL CLI (tested with 2.25.6) and gcc.
 ```bash
 export QLM_CODEQL=/path/to/codeql          # default: `codeql` on PATH
 (cd ql && $QLM_CODEQL pack install)        # once: fetch codeql/cpp-all
-python3 run_verifier.py seeds/lin-1 path/to/poc.c [--allow-no-fixed] [--check-fixed]
+python3 run_verifier.py seeds/lin-1 path/to/poc.c [--check-fixed] [--require-fixed]
 ```
 
 The command prints one verdict row per line. Exit code: 0 = accepted,
@@ -58,5 +58,6 @@ Only the pattern features **the fix changes** (seed buggy ≠ seed fixed) are ju
 
 The PoC may simplify (drop code) but must keep the bug's ingredients. If the fix changes
 none of the pattern features, the verdict carries `BLIND`: the check cannot see this bug.
+The PoC only needs a `<fn>_buggy` function; `<fn>_fixed` is optional unless `--require-fixed`.
 With `--check-fixed`, PoC `_buggy` → `_fixed` must additionally move in the same direction
 as the seed's fix on every changed feature.

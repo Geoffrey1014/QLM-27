@@ -21,7 +21,7 @@ Identical to C3/L0. `out_dir` default:
 | Per-predicate POC-run validation | ON (expected_on_poc check) | **OFF** — after compile passes, mark predicate validated regardless of POC hits |
 | Assemble compile-repair loop | ≤ 4 iters | **≤ 2 iters** |
 | POC pair-wise oracle on final (buggy_fires ∧ !fixed_fires ∧ !fp_fires) | ON (accept iff pair-wise passes) | **OFF** — accept any successfully compiled final query as L1 output |
-| POC synthesis + verifier-v1 gate | ON | ON (unchanged — L1 ablates *query-side* validation, not POC-side) |
+| POC synthesis + fidelity-check gate | ON | ON (unchanged — L1 ablates *query-side* validation, not POC-side) |
 
 Everything else — model, temperature, container commands, POC synthesis
 prompt, plan schema, output layout — inherited from C3-prompt.md.

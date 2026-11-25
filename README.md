@@ -197,12 +197,10 @@ qlm-artifact/
 
 **Prerequisites**
 
-- Docker + docker-compose (the pipeline runs in a container with GCC,
-  Java 17, Python 3, and the CodeQL CLI).
+- Docker + docker-compose (the pipeline runs in a container with GCC, Python 3, and the CodeQL CLI).
 - CodeQL CLI 2.25.6 (2.23.0 for the legacy databases; see the
   supplementary material for the CLI-vs-DB version matrix).
-- An LLM API endpoint compatible with the `claude-opus-4` series
-  (temperature 0.2, max_tokens 8192) — only needed to regenerate
+- An LLM API endpoint compatible with the `claude-opus-4` series — only needed to regenerate
   queries, not to re-score the ones already shipped here.
 
 **Steps**

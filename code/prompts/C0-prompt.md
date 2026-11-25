@@ -231,7 +231,7 @@ From plan §2.7 (~3-4 LLM calls per seed for baseline, ~30 sec compile per iter)
 
 - C1 (POC=ON, comp=OFF): same monolithic prompt + adds POC.c body to the user
   message + replaces compile-only loop with compile+poc-run loop (≤3 POC regen
-  rounds via verifier-v1). See `C1-prompt.md`.
+  rounds via the structural fidelity check). See `C1-prompt.md`.
 - C2 (POC=OFF, comp=ON): emits QueryPlan JSON with predicates + per-predicate
   compile-only validation. See `C2-prompt.md`.
 - C3 (POC=ON, comp=ON): the full pipeline = current QLM agent lineage. See

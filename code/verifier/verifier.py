@@ -125,16 +125,16 @@ def _poc_fn(poc_text: str, suffix: str, seed_fns: list[str]) -> str | None:
 
 def run(pattern: str, patch: str, seed_buggy_c: Path, seed_fixed_c: Path,
         buggy_fns: list[str], fixed_fns: list[str], poc_c: Path, work: Path,
-        require_fixed: bool = True, check_fixed: bool = False) -> Verdict:
-    """`require_fixed=False` accepts a PoC without a `*_fixed` function (used to replay
-    historical PoCs, which often lack one). The verdict only judges `_buggy` unless
-    `check_fixed` (see judge)."""
+        require_fixed: bool = False, check_fixed: bool = False) -> Verdict:
+    """A PoC needs one `*_buggy` function; a `*_fixed` function is optional unless
+    `require_fixed`. The verdict only judges `_buggy` unless `check_fixed` (see judge)."""
     pattern = PATTERN_ALIASES.get(pattern, pattern)
     poc_text = poc_c.read_text()
     pb, pf = _poc_fn(poc_text, "_buggy", buggy_fns), _poc_fn(poc_text, "_fixed", fixed_fns)
-    if pb is None or (pf is None and require_fixed):
-        return Verdict(False, False, ["ERROR(PoC must define exactly one `<fn>_buggy` and one "
-                                      "`<fn>_fixed` function)"])
+    if pb is None:
+        return Verdict(False, False, ["ERROR(PoC must define exactly one `<fn>_buggy` function)"])
+    if pf is None and require_fixed:
+        return Verdict(False, False, ["ERROR(PoC must define exactly one `<fn>_fixed` function)"])
 
     if work.exists():
         shutil.rmtree(work)

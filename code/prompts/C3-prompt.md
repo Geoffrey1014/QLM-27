@@ -8,7 +8,7 @@
 | knob | value |
 |---|---|
 | compositional | **ON** (predicate decomposition + per-predicate validation) |
-| POC | **ON** (POC.c generated, verifier-v1 gated, mini-DB built) |
+| POC | **ON** (POC.c generated, gated by the structural fidelity check, mini-DB built) |
 | compile-repair iterations per predicate | ≤ 4 |
 | assembly-repair iterations | ≤ 4 |
 | POC regeneration rounds | ≤ 3 |
@@ -32,8 +32,8 @@ out_dir     experiments/rq3/d3-prep/C3/<seed_id>-rep<N>/
 | container exec | `docker compose exec -T qlllm bash -c '<cmd>'` (from `$ENV_ROOT`) |
 | CodeQL CLI | `<REPO_ROOT>/codeql-2.25.6/codeql` |
 | Linux source | `<REPO_ROOT>/linux` (container path) |
-| verifier-v1 script | `<REPO_ROOT>/scripts/verifier/run-verifier.sh` |
-| verifier-v1 query | `<REPO_ROOT>/scripts/verifier/verifier-v1.ql` |
+| fidelity check | `python3 <REPO_ROOT>/code/verifier/run_verifier.py` (CodeQL binary from `$QLM_CODEQL`) |
+| seed slices | `<REPO_ROOT>/code/verifier/seeds/<seed_id>/` (verbatim buggy/fixed function, `fix.patch`, `slices.json`) |
 
 Host paths for the same tree are under `<REPO_ROOT>/...`; the
 two are bind-mounted so the agent may write on the host and read from the container.
@@ -96,22 +96,30 @@ USER:
 
 Save to `out_dir/poc.c`.
 
-### Stage 2.5 — POC verifier gate (verifier-v1)
+### Stage 2.5 — POC fidelity gate (structural fidelity check)
+
+The seed side is the prebuilt verbatim slice in `code/verifier/seeds/<seed_id>/`;
+do not write a seed slice yourself.
 
 ```bash
-# stage seed slice (extract the bug-touched function only)
-write out_dir/seed.c       # body of the function from fix^
 write out_dir/poc.c        # from Stage 2
 
 docker compose exec -T qlllm bash -c \
-  '<REPO_ROOT>/scripts/verifier/run-verifier.sh \
-     <seed_id>-rep<N> \
-     <REPO_ROOT>/experiments/rq3/d3-prep/C3/<seed_id>-rep<N>/seed.c \
-     <REPO_ROOT>/experiments/rq3/d3-prep/C3/<seed_id>-rep<N>/poc.c'
+  'QLM_CODEQL=<REPO_ROOT>/codeql-2.25.6/codeql python3 <REPO_ROOT>/code/verifier/run_verifier.py \
+     <REPO_ROOT>/code/verifier/seeds/<seed_id> \
+     <REPO_ROOT>/experiments/rq3/d3-prep/C3/<seed_id>-rep<N>/poc.c \
+     --work <REPO_ROOT>/experiments/rq3/d3-prep/C3/<seed_id>-rep<N>/verifier'
 ```
 
-Read `verdict.csv`. Accept iff every row starts with `OK(`. Otherwise feed
-the MISMATCH messages back to the LLM with
+Read the printed verdict rows (also save them to `out_dir/poc-verifier-verdict.csv`).
+Exit code 0 = accepted (no `MISMATCH(` row); 1 = rejected (`MISMATCH(` rows, or an
+`ERROR(` row saying the PoC lacks a `<fn>_buggy` function; `<fn>_fixed` is optional); 2 = the check could not run
+(build or query error — an infrastructure failure, do not regenerate the PoC for it).
+A `BLIND(...)` row means the pattern dimensions cannot see this seed's bug; it does not
+reject the PoC. See `<REPO_ROOT>/code/verifier/README.md` for the rules
+(KEEP_BUG, NO_FIX_IN_BUGGY, KEEP_CF, NO_NEW_CF).
+Accept iff the exit code is 0. Otherwise feed
+the MISMATCH rows back to the LLM with
 `REFINE_POC_PROMPT(features, prev_poc, verdict_rows)`, regenerate POC,
 re-run verifier. **Cap = 3 regenerations.** On exhaustion → mark
 `verifier_passes=false` and abort this generation with status=fail.
@@ -259,9 +267,9 @@ Always emit:
 | path | content |
 |---|---|
 | `out_dir/features.json` | Stage-1 output |
-| `out_dir/poc.c` (mode 444) | Stage-2 output, verifier-v1 OK |
+| `out_dir/poc.c` (mode 444) | Stage-2 output, accepted by the fidelity check |
 | `out_dir/poc.sha256` | sha256 of `poc.c` |
-| `out_dir/poc-verifier-verdict.csv` | the OK row(s) from verifier-v1 |
+| `out_dir/poc-verifier-verdict.csv` | the verdict rows from the fidelity check |
 | `out_dir/plan.json` | Stage-3 output |
 | `out_dir/preds/*.ql` | per-predicate validated minimal queries |
 | `out_dir/final.ql` | the assembled, POC-validated query |

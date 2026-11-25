@@ -1,7 +1,7 @@
 # C1 Cell Prompt — Monolithic + POC ON + Verifier
 
 > Per `docs/paper/qlm-rq3-experiment-plan.md` §3.4, §5.5.
-> Cell ID: **C1**  ·  Compositional: **OFF**  ·  POC: **ON**  ·  Verifier: **v1**
+> Cell ID: **C1**  ·  Compositional: **OFF**  ·  POC: **ON**  ·  Verifier: **structural fidelity check**
 > Output: ONE monolithic `.ql` file (≤ 200 LOC, single `from–where–select`).
 
 This document is the **driver spec** loaded by every D3-main per-generation agent
@@ -39,9 +39,8 @@ into `out_dir/seed-buggy.c`, `out_dir/seed-fixed.c`, `out_dir/seed.patch`.
 Stage A: POC generation                  [LLM call #1, regen up to 3]
    │
    ▼
-Stage B: Verifier-v1 gate                [CodeQL run; if FAIL → goto A]
-   │     (pass = all dimensions OK or
-   │      explicit reviewer note attached)
+Stage B: Fidelity gate                   [CodeQL run; if FAIL → goto A]
+   │     (pass = exit code 0, no MISMATCH row)
    ▼
 Stage C: POC freeze (chmod 444 + sha)    [drift prevention §5.5]
    │
@@ -123,27 +122,27 @@ Save to `out_dir/POC.c.tmp`.
 
 ---
 
-## 3. Stage B — Verifier-v1 gate
+## 3. Stage B — Fidelity gate (structural fidelity check)
 
+The seed side is the prebuilt verbatim slice in `code/verifier/seeds/<seed_id>/`.
 Run, inside container:
 
 ```bash
 docker compose -f <REPO_ROOT>/docker-compose.yml exec -T qlllm bash -c \
-  '<REPO_ROOT>/scripts/verifier/run-verifier.sh \
-     <seed_id>-<rep_id> \
-     <REPO_ROOT>/experiments/rq3/d3-prep/C1/<seed_id>-<rep_id>/seed-buggy.c \
-     <REPO_ROOT>/experiments/rq3/d3-prep/C1/<seed_id>-<rep_id>/POC.c.tmp'
+  'QLM_CODEQL=<REPO_ROOT>/codeql-2.25.6/codeql python3 <REPO_ROOT>/code/verifier/run_verifier.py \
+     <REPO_ROOT>/code/verifier/seeds/<seed_id> \
+     <REPO_ROOT>/experiments/rq3/d3-prep/C1/<seed_id>-<rep_id>/POC.c.tmp \
+     --work <REPO_ROOT>/experiments/rq3/d3-prep/C1/<seed_id>-<rep_id>/verifier'
 ```
 
-The verifier emits one CSV row per checked dimension (F1.acquire,
-F1.release, F3.goto, F5.return, F2.if). PASS condition:
-
-- **strict pass** = every emitted row starts with `OK(...)`
-- **lenient pass** (allowed for C1 since v1 is known too-strict on F2.if /
-  F3.goto when POC adds 1 boilerplate stub branch) = only the F2.if or
-  F3.goto dimension mismatches AND the absolute delta is `≤ 1`. The audit
-  log records `lenient_pass=true` so reviewers can re-score later if v2
-  comes online.
+Read the printed verdict rows (also save them to `out_dir/poc-verifier-verdict.csv`).
+Exit code 0 = accepted (no `MISMATCH(` row); 1 = rejected (`MISMATCH(` rows, or an
+`ERROR(` row saying the PoC lacks a `<fn>_buggy` function; `<fn>_fixed` is optional); 2 = the check could not run
+(build or query error — an infrastructure failure, do not regenerate the PoC for it).
+A `BLIND(...)` row means the pattern dimensions cannot see this seed's bug; it does not
+reject the PoC. See `<REPO_ROOT>/code/verifier/README.md` for the rules
+(KEEP_BUG, NO_FIX_IN_BUGGY, KEEP_CF, NO_NEW_CF).
+PASS condition: exit code 0.
 
 On FAIL (and rounds remaining): loop back to Stage A with the previous POC
 and verdict in context.
@@ -224,7 +223,7 @@ Patch:
 POC.c (frozen, sha256=<sha>):
 <POC.c contents>
 
-Verifier-v1 verdict (passed):
+Fidelity check verdict (passed):
 <verdict rows>
 
 POC oracle:
@@ -312,7 +311,7 @@ expects. Field reference:
 | `llm_calls` | int | total Claude calls this generation |
 | `compile_iters` | int | how many of the ≤4 repair iters fired |
 | `poc_regens` | int | how many of the ≤3 POC re-generations happened (0 if first POC passed) |
-| `verifier_passes` | bool | did the final POC pass verifier-v1 (lenient or strict) |
+| `verifier_passes` | bool | did the final POC pass the fidelity check |
 | `final_compiles` | bool | does the final query.ql compile? |
 | `final_runs_on_poc` | bool | does it fire on _buggy AND stay silent on _fixed? |
 

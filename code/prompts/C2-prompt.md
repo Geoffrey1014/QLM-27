@@ -48,7 +48,7 @@ docker compose ... exec -T qlllm git -C .../linux show "$COMMIT_SHA:$C_FILE"
 - Compile-only validator: `codeql query compile <file.ql>` (exit 0 = pass).
 - Model: `claude-opus-4-7`, temperature 0.2.
 - **Forbidden** in this cell: `codeql database create`, `codeql query run`,
-  POC `.c` synthesis, anything labelled "verifier-v1", any reference to
+  POC `.c` synthesis, anything labelled "fidelity check" / "verifier", any reference to
   `cpp-queries/rq3-lib/*.qll` in `.ql` imports.
 - Allowed `.ql` imports: `import cpp` only (and optionally `import semmle.code.cpp.controlflow.Guards` if a predicate needs it; no `rq3-lib`).
 

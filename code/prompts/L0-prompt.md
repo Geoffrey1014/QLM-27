@@ -23,7 +23,7 @@ audit → `$QLLLM_ROOT/experiments/rq3/d5/L0/<seed_id>-rep<N>.audit.json`
 | Per-predicate compile-repair loop | ≤ 4 iters | **0 iters** (first-compile-fail → predicate marked fail, whole gen aborts) |
 | Assemble-refine loop | ≤ 4 iters | **0 iters** (first-compile-fail on final → gen aborts with status=fail) |
 | POC synthesis | ON | ON (still needed as fixture) |
-| verifier-v1 POC gate | ON (up to 3 regens) | ON (same; keep POC quality high — L0 ablates *query-side* scaffolding, not POC-side) |
+| fidelity-check POC gate | ON (up to 3 regens) | ON (same; keep POC quality high — L0 ablates *query-side* scaffolding, not POC-side) |
 | POC pair-wise oracle on final | ON (require fires-buggy ∧ silent-fixed) | **OFF** — L0 accepts the first compilable, POC-verifier-approved query and stops |
 
 Everything else is inherited from C3-prompt.md verbatim (LLM model,
@@ -35,7 +35,7 @@ POC synthesis prompt, plan-JSON schema, output file layout).
 ```
 Stage 1 — Features (LLM call #1)          [SAME AS C3]
 Stage 2 — POC synthesis (LLM call #2)      [SAME AS C3]
-Stage 2.5 — POC verifier gate (v1)         [SAME AS C3, ≤3 POC regens]
+Stage 2.5 — POC fidelity gate              [SAME AS C3, ≤3 POC regens]
 Stage 2.6 — Build POC mini-DB              [SAME AS C3]
 
 Stage 3 — QueryPlan synthesis (LLM call #3):
