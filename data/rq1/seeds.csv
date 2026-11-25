@@ -1,0 +1,12 @@
+query_name,bug_pattern,primary_seed,other_seeds
+MissingOfNodePut.ql,resource-leak,0f83e6b4,
+DeviceNodeReferenceCountLeak.ql,resource-leak,74139a64,
+MissingRefcountRelease.ql,resource-leak,9a2ea132,
+UnsafeReallocPattern.ql,resource-leak,c42458fc,
+SleepInAtomicV4_Depth2.ql,sleep-in-atomic,3dfd520c,
+UnvalidatedArrayIndex.ql,array-index,a402532,129fa60; 0fd56fa; 95dffe3; 304950a
+UnboundedAccumulatingCopy.ql,buffer-accum,1214bf28,30fe3f5f; 3c34471c; 5ec1d1e9
+WideningMulOverflow.ql,int-overflow,9b458e8b,5a4510c7
+SysfsEmitOverflow.ql,sysfs-emit,80ccd40568bcd,711d41ab4a0e4; e74a1c6a8e8af
+ErrPtrConfusion.ql,err-ptr,5edb7338d611,cda5dc12eb12; fc33bf0e097c
+UsbDescriptorOob.ql,usb-descriptor,fb4e2a6e8f28a,a3dd4d63eeb45; 5570ad1423ee6; fe7f7ac8e0c70
