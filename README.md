@@ -1,8 +1,4 @@
-# QLM Artifact
-
-Reproduction package for the paper *"Seed Patches to CodeQL Queries: Compositional
-Synthesis with Proof-of-Concept Validation"* (submission version).
-
+# QLM 
 ## Abstract
 
 Automating the synthesis of CodeQL vulnerability detectors from bug-fix patches is an
