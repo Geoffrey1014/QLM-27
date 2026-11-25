@@ -139,21 +139,6 @@ The 32 bugs that are fixed or confirmed had persisted for a median of 8.3 years 
 | 48 | `drivers/thermal/ti-soc-thermal/ti-thermal-common.c` | `ti_thermal_report_sensor_temperature` | ERR_PTR dereference | 2012 | 14.2 |
 | 49 | `sound/usb/midi.c` | `find_usb_ijack` | Out-of-bounds read | 2024 | 2.6 |
 
-## What's in here
-
-- **Prompts** — the LLM prompt template for every ablation cell
-  (C0–C3) and every level of the RQ4 ablation ladder (L0/L1/L3).
-- **Generated queries** — the CodeQL queries the LLM produced for each
-  *(cell × seed × repeat)* combination in the paper, each paired with a
-  stage-by-stage `*.audit.json` log.
-- **Scoring aggregates** — the D4 output, one JSON per *(cell,
-  pattern)*, plus a top-level 20-cell run summary. The paper's Tables
-  2–4 are computed from these.
-- **Pipeline scripts** — the batched scoring driver, the per-query
-  scorer, and the seed↔PoC consistency verifier.
-- **RQ1 findings** — the 49 Linux kernel bugs, as a CSV.
-- **Seed metadata** — the 25 seeds (5 patterns × 5 seeds), as JSON and
-  CSV.
 
 ## Directory layout
 
