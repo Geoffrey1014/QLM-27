@@ -25,8 +25,7 @@ analyze-survival on the full kernel database (46% → 92%).
 
 Given a seed bug-fix patch, QLM first extracts a bug schema that captures the semantic
 obligation restored by the patch. It then synthesizes a compact PoC containing buggy and
-safe cases, checks it against the seed with a structural fidelity check
-([`code/verifier/`](code/verifier/)), and compiles it into a lightweight CodeQL database.
+safe cases, checks it against the seed with a structural fidelity check, and compiles it into a lightweight CodeQL database.
 Top-down query planning translates the schema into a query skeleton and a set of
 predicate specifications; the predicates are then generated bottom-up, each validated by
 compilation and PoC execution, and assembled into the final query, which is run on the
