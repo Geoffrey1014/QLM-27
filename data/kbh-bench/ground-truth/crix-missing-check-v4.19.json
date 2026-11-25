@@ -1,0 +1,2095 @@
+[
+  {
+    "fix_sha": "31edf4bbe0ba27fd03ac7d87eb2ee3d2a231af6d",
+    "subject": "nbd: null check for nla_nest_start",
+    "c_files": [
+      "drivers/block/nbd.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/block/nbd.c",
+        "func": "nbd_genl_status",
+        "buggy_start": 2433,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "bbd20c939c8aa3f27fa30e86691af250bf92973a",
+    "subject": "fore200e: Fix incorrect checks of NULL pointer dereference",
+    "c_files": [
+      "drivers/atm/fore200e.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/atm/fore200e.c",
+        "func": "fore200e_open",
+        "buggy_start": 1414,
+        "buggy_count": 12
+      },
+      {
+        "file": "drivers/atm/fore200e.c",
+        "func": "fore200e_close",
+        "buggy_start": 1464,
+        "buggy_count": 10
+      },
+      {
+        "file": "drivers/atm/fore200e.c",
+        "func": "fore200e_send",
+        "buggy_start": 1480,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "6fc232db9e8cd50b9b83534de9cd91ace711b2d7",
+    "subject": "rfkill: Fix incorrect check to avoid NULL pointer dereference",
+    "c_files": [
+      "net/rfkill/core.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/rfkill/core.c",
+        "func": "rfkill_sync_work",
+        "buggy_start": 1002,
+        "buggy_count": 10
+      }
+    ]
+  },
+  {
+    "fix_sha": "ec3b7b6eb8c90b52f61adff11b6db7a8db34de19",
+    "subject": "drm/gma500: fix memory disclosures due to uninitialized bytes",
+    "c_files": [
+      "drivers/gpu/drm/gma500/oaktrail_crtc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/gma500/oaktrail_crtc.c",
+        "func": "mrst_sdvo_find_best_pll",
+        "buggy_start": 129,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/gpu/drm/gma500/oaktrail_crtc.c",
+        "func": "mrst_lvds_find_best_pll",
+        "buggy_start": 185,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "57a25a5f754ce27da2cfa6f413cfd366f878db76",
+    "subject": "gma/gma500: fix a memory disclosure bug due to uninitialized bytes",
+    "c_files": [
+      "drivers/gpu/drm/gma500/cdv_intel_display.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/gma500/cdv_intel_display.c",
+        "func": "cdv_intel_find_dp_pll",
+        "buggy_start": 405,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "8dbdee8e8acc4f56febb8f5bf226f1ebfdd36219",
+    "subject": "media: usb: null check create_singlethread_workqueue",
+    "c_files": [
+      "drivers/media/usb/gspca/sq905.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/usb/gspca/sq905.c",
+        "func": "sd_start",
+        "buggy_start": 378,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "68085f314d6429ddfb09756623e2bfeec2966909",
+    "subject": "media: gspca: null check create_singlethread_workqueue",
+    "c_files": [
+      "drivers/media/usb/gspca/sq905c.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/usb/gspca/sq905c.c",
+        "func": "sd_start",
+        "buggy_start": 276,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "d94dfd798c4839b642f534580109dc6dfc3901a9",
+    "subject": "Bluetooth: bpa10x: change return value",
+    "c_files": [
+      "drivers/bluetooth/bpa10x.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/bluetooth/bpa10x.c",
+        "func": "bpa10x_send_frame",
+        "buggy_start": 337,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "b95c732234fa40319c6aae2db6b35e9a7f41d79c",
+    "subject": "mt7601u: null check the allocation",
+    "c_files": [
+      "drivers/net/wireless/mediatek/mt7601u/init.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/mediatek/mt7601u/init.c",
+        "func": "mt76_init_sband_2g",
+        "buggy_start": 557,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "09acf29c8246a20c6e255969df7e1131317181da",
+    "subject": "staging: rtl8192u: null check the kzalloc",
+    "c_files": [
+      "drivers/staging/rtl8192u/r8192U_core.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/rtl8192u/r8192U_core.c",
+        "func": "rtl8192_SetWirelessMode",
+        "buggy_start": 2096,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/staging/rtl8192u/r8192U_core.c",
+        "func": "rtl8192_init_priv_variable",
+        "buggy_start": 2223,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/staging/rtl8192u/r8192U_core.c",
+        "func": "rtl8192_init_priv_variable",
+        "buggy_start": 2236,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/staging/rtl8192u/r8192U_core.c",
+        "func": "rtl8192_init",
+        "buggy_start": 2605,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "afd6d4f5a52c16e1483328ac074abb1cde92c29f",
+    "subject": "drm/panel: check failure cases in the probe func",
+    "c_files": [
+      "drivers/gpu/drm/panel/panel-raspberrypi-touchscreen.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/panel/panel-raspberrypi-touchscreen.c",
+        "func": "rpi_touchscreen_probe",
+        "buggy_start": 399,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/gpu/drm/panel/panel-raspberrypi-touchscreen.c",
+        "func": "rpi_touchscreen_probe",
+        "buggy_start": 408,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/gpu/drm/panel/panel-raspberrypi-touchscreen.c",
+        "func": "rpi_touchscreen_probe",
+        "buggy_start": 428,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "3008e06fdf0973770370f97d5f1fba3701d8281d",
+    "subject": "st_nci_hci_connectivity_event_received: null check the allocation",
+    "c_files": [
+      "drivers/nfc/st-nci/se.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/nfc/st-nci/se.c",
+        "func": "st_nci_hci_connectivity_event_received",
+        "buggy_start": 333,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "9891d06836e67324c9e9c4675ed90fc8b8110034",
+    "subject": "st21nfca_connectivity_event_received: null check the allocation",
+    "c_files": [
+      "drivers/nfc/st21nfca/se.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/nfc/st21nfca/se.c",
+        "func": "st21nfca_connectivity_event_received",
+        "buggy_start": 317,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "bb1320834b8a80c6ac2697ab418d066981ea08ba",
+    "subject": "allocate_flower_entry: should check for null deref",
+    "c_files": [
+      "drivers/net/ethernet/chelsio/cxgb4/cxgb4_tc_flower.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/chelsio/cxgb4/cxgb4_tc_flower.c",
+        "func": "static",
+        "buggy_start": 67,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "20d437ee8f4899573e6ea76c06ef0206e98bccb6",
+    "subject": "net: ixgbevf: fix a missing check of ixgbevf_write_msg_read_ack",
+    "c_files": [
+      "drivers/net/ethernet/intel/ixgbevf/vf.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/intel/ixgbevf/vf.c",
+        "func": "ixgbevf_update_mc_addr_list_vf",
+        "buggy_start": 508,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "e08f0761234def47961d3252eac09ccedfe4c6a0",
+    "subject": "media: vpss: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/media/platform/davinci/vpss.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/davinci/vpss.c",
+        "func": "vpss_init",
+        "buggy_start": 518,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "23015b22e47c5409620b1726a677d69e5cd032ba",
+    "subject": "rapidio: fix a NULL pointer dereference when create_workqueue() fails",
+    "c_files": [
+      "drivers/rapidio/rio_cm.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/rapidio/rio_cm.c",
+        "func": "riocm_add_mport",
+        "buggy_start": 2147,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "a2be42f18d409213bb7e7a736e3ef6ba005115bb",
+    "subject": "ASoC: cs43130: fix a NULL pointer dereference",
+    "c_files": [
+      "sound/soc/codecs/cs43130.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/codecs/cs43130.c",
+        "func": "cs43130_probe",
+        "buggy_start": 2322,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "51dd97d1df5fb9ac58b9b358e63e67b530f6ae21",
+    "subject": "ASoC: rt5645: fix a NULL pointer dereference",
+    "c_files": [
+      "sound/soc/codecs/rt5645.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/codecs/rt5645.c",
+        "func": "rt5645_probe",
+        "buggy_start": 3419,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "06d5d6b7f9948a89543e1160ef852d57892c750d",
+    "subject": "slimbus: fix a potential NULL pointer dereference in of_qcom_slim_ngd_register",
+    "c_files": [
+      "drivers/slimbus/qcom-ngd-ctrl.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/slimbus/qcom-ngd-ctrl.c",
+        "func": "of_qcom_slim_ngd_register",
+        "buggy_start": 1342,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "d5414c2355b20ea8201156d2e874265f1cb0d775",
+    "subject": "rsi: Fix NULL pointer dereference in kmalloc",
+    "c_files": [
+      "drivers/net/wireless/rsi/rsi_91x_mac80211.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/rsi/rsi_91x_mac80211.c",
+        "func": "rsi_is_cipher_wep",
+        "buggy_start": 188,
+        "buggy_count": 27
+      },
+      {
+        "file": "drivers/net/wireless/rsi/rsi_91x_mac80211.c",
+        "func": "rsi_register_rates_channels",
+        "buggy_start": 227,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/net/wireless/rsi/rsi_91x_mac80211.c",
+        "func": "rsi_mac80211_attach",
+        "buggy_start": 2064,
+        "buggy_count": 11
+      }
+    ]
+  },
+  {
+    "fix_sha": "0ed2a005347400500a39ea7c7318f1fea57fb3ca",
+    "subject": "net: cw1200: fix a NULL pointer dereference",
+    "c_files": [
+      "drivers/net/wireless/st/cw1200/main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/st/cw1200/main.c",
+        "func": "cw1200_init_common",
+        "buggy_start": 345,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "611025983b7976df0183390a63a2166411d177f1",
+    "subject": "mmc_spi: add a status check for spi_sync_locked",
+    "c_files": [
+      "drivers/mmc/host/mmc_spi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/mmc/host/mmc_spi.c",
+        "func": "mmc_spi_readblock",
+        "buggy_start": 819,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "507b820009a457afa78202da337bcb56791fbb12",
+    "subject": "PCI: endpoint: Fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/pci/endpoint/functions/pci-epf-test.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pci/endpoint/functions/pci-epf-test.c",
+        "func": "pci_epf_test_init",
+        "buggy_start": 591,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "e183d4e414b64711baf7a04e214b61969ca08dfa",
+    "subject": "net/smc: fix a NULL pointer dereference",
+    "c_files": [
+      "net/smc/smc_ism.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/smc/smc_ism.c",
+        "func": "smcd_alloc_dev",
+        "buggy_start": 289,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "d1a0846006e4325cc951ca0b05c02ed1d0865006",
+    "subject": "security: inode: fix a missing check for securityfs_create_file",
+    "c_files": [
+      "security/inode.c"
+    ],
+    "hunks": [
+      {
+        "file": "security/inode.c",
+        "func": "securityfs_init",
+        "buggy_start": 339,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "1adc90c7395742827d754a5f02f446818a77c379",
+    "subject": "pinctrl: axp209: Fix NULL pointer dereference after allocation",
+    "c_files": [
+      "drivers/pinctrl/pinctrl-axp209.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pinctrl/pinctrl-axp209.c",
+        "func": "axp20x_build_funcs_groups",
+        "buggy_start": 366,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "6f0ce4dfc5a35bcb21f26d5347f4797fdde52810",
+    "subject": "mtd: rawnand: vf610: Avoid a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/mtd/nand/raw/vf610_nfc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/mtd/nand/raw/vf610_nfc.c",
+        "func": "vf610_nfc_probe",
+        "buggy_start": 850,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "75cf4f5aa903604e1bd7bec2c0988d643c6fb946",
+    "subject": "power: charger-manager: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/power/supply/charger-manager.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/power/supply/charger-manager.c",
+        "func": "static",
+        "buggy_start": 1987,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "536cc27deade8f1ec3c1beefa60d5fbe0f6fcb28",
+    "subject": "iio: hmc5843: fix potential NULL pointer dereferences",
+    "c_files": [
+      "drivers/iio/magnetometer/hmc5843_i2c.c;drivers/iio/magnetometer/hmc5843_spi.c"
+    ],
+    "hunks": []
+  },
+  {
+    "fix_sha": "13814627c9658cf8382dd052bc251ee415670a55",
+    "subject": "iio: adc: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/iio/adc/mxs-lradc-adc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/iio/adc/mxs-lradc-adc.c",
+        "func": "mxs_lradc_adc_trigger_init",
+        "buggy_start": 465,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "f0d14edd2ba43b995bef4dd5da5ffe0ae19321a1",
+    "subject": "PCI: rcar: Fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/pci/controller/pcie-rcar.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pci/controller/pcie-rcar.c",
+        "func": "rcar_pcie_enable_msi",
+        "buggy_start": 929,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "765976285a8c8db3f0eb7f033829a899d0c2786e",
+    "subject": "rtlwifi: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/net/wireless/realtek/rtlwifi/base.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/realtek/rtlwifi/base.c",
+        "func": "_rtl_init_deferred_work",
+        "buggy_start": 448,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "e5b9b206f3f6376b9a1406b67eafe4e7bb9f123c",
+    "subject": "net: mwifiex: fix a NULL pointer dereference",
+    "c_files": [
+      "drivers/net/wireless/marvell/mwifiex/cmdevt.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/marvell/mwifiex/cmdevt.c",
+        "func": "mwifiex_dnld_sleep_confirm_cmd",
+        "buggy_start": 341,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "3c77ff8f8bae4d328de662b26921bc4da1d293f1",
+    "subject": "drm/v3d: fix a missing check of pm_runtime_get_sync",
+    "c_files": [
+      "drivers/gpu/drm/v3d/v3d_drv.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/v3d/v3d_drv.c",
+        "func": "v3d_get_param_ioctl",
+        "buggy_start": 102,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "1d84353d205a953e2381044953b7fa31c8c9702d",
+    "subject": "video: imsttfb: fix potential NULL pointer dereferences",
+    "c_files": [
+      "drivers/video/fbdev/imsttfb.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/video/fbdev/imsttfb.c",
+        "func": "imsttfb_probe",
+        "buggy_start": 1515,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "ec7f6aad57ad29e4e66cc2e18e1e1599ddb02542",
+    "subject": "video: hgafb: fix potential NULL pointer dereference",
+    "c_files": [
+      "drivers/video/fbdev/hgafb.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/video/fbdev/hgafb.c",
+        "func": "hga_card_detect",
+        "buggy_start": 285,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "31fa6e2ae65feed0de10823c5d1eea21a93086c9",
+    "subject": "omapfb: Fix potential NULL pointer dereference in kmalloc",
+    "c_files": [
+      "drivers/video/fbdev/omap2/omapfb/dss/omapdss-boot-init.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/video/fbdev/omap2/omapfb/dss/omapdss-boot-init.c",
+        "func": "omapdss_omapify_node",
+        "buggy_start": 111,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "0aab8e4df4702b31314a27ec4b0631dfad0fae0a",
+    "subject": "leds: pca9532: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/leds/leds-pca9532.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/leds/leds-pca9532.c",
+        "func": "pca9532_probe",
+        "buggy_start": 513,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/leds/leds-pca9532.c",
+        "func": "pca9532_probe",
+        "buggy_start": 528,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "b5af36e3e5aa074605a4d90a89dd8f714b30909b",
+    "subject": "staging: greybus: audio_manager: fix a missing check of ida_simple_get",
+    "c_files": [
+      "drivers/staging/greybus/audio_manager.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/greybus/audio_manager.c",
+        "func": "gb_audio_manager_add",
+        "buggy_start": 45,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "f8ee34c3e77afd8cfc13f98e326325f17494f1e5",
+    "subject": "media: usbvision: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/media/usb/usbvision/usbvision-core.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/usb/usbvision/usbvision-core.c",
+        "func": "usbvision_init_isoc",
+        "buggy_start": 2302,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "aeb0d0f581e2079868e64a2e5ee346d340376eae",
+    "subject": "media: video-mux: fix null pointer dereferences",
+    "c_files": [
+      "drivers/media/platform/video-mux.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/video-mux.c",
+        "func": "video_mux_probe",
+        "buggy_start": 419,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "fd21b79e541e4666c938a344f3ad2df74b4f5120",
+    "subject": "thunderbolt: Fix to check the return value of kmemdup",
+    "c_files": [
+      "drivers/thunderbolt/icm.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/thunderbolt/icm.c",
+        "func": "add_switch",
+        "buggy_start": 473,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "6183d5a51866f3acdeeb66b75e87d44025b01a55",
+    "subject": "thunderbolt: property: Fix a missing check of kzalloc",
+    "c_files": [
+      "drivers/thunderbolt/property.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/thunderbolt/property.c",
+        "func": "tb_property_add_text",
+        "buggy_start": 587,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "13bd14a41ce3105d5b1f3cd8b4d1e249d17b6d9b",
+    "subject": "char: hpet: fix a missing check of ioremap",
+    "c_files": [
+      "drivers/char/hpet.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/char/hpet.c",
+        "func": "hpet_resources",
+        "buggy_start": 973,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "41f00e6e9e55546390031996b773e7f3c1d95928",
+    "subject": "usb: usb251xb: fix to avoid potential NULL pointer dereference",
+    "c_files": [
+      "drivers/usb/misc/usb251xb.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/misc/usb251xb.c",
+        "func": "usb251xb_probe",
+        "buggy_start": 612,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "3de3dbe7c13210171ba8411e36b409a2c29c7415",
+    "subject": "usb: u132-hcd: fix potential NULL pointer dereference",
+    "c_files": [
+      "drivers/usb/host/u132-hcd.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/host/u132-hcd.c",
+        "func": "u132_hcd_init",
+        "buggy_start": 3203,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "1a137b47ce6bd4f4b14662d2f5ace913ea7ffbf8",
+    "subject": "usb: sierra: fix a missing check of device_create_file",
+    "c_files": [
+      "drivers/usb/storage/sierra_ms.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/storage/sierra_ms.c",
+        "func": "sierra_ms_init",
+        "buggy_start": 194,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "fba1bdd2a9a93f3e2181ec1936a3c2f6b37e7ed6",
+    "subject": "scsi: qla4xxx: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/scsi/qla4xxx/ql4_os.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/scsi/qla4xxx/ql4_os.c",
+        "func": "qla4xxx_conn_bind",
+        "buggy_start": 3203,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "6cf4511e9729c00a7306cf94085f9cc3c52ee723",
+    "subject": "gpio: aspeed: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/gpio/gpio-aspeed.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpio/gpio-aspeed.c",
+        "func": "aspeed_gpio_probe",
+        "buggy_start": 1224,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "55c1fc0af29a6c1b92f217b7eb7581a882e0c07c",
+    "subject": "libnvdimm/namespace: Fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/nvdimm/namespace_devs.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/nvdimm/namespace_devs.c",
+        "func": "create_namespace_blk",
+        "buggy_start": 2249,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "7ecced0934e574b528a1ba6c237731e682216a74",
+    "subject": "gpio: exar: add a check for the return value of ida_simple_get fails",
+    "c_files": [
+      "drivers/gpio/gpio-exar.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpio/gpio-exar.c",
+        "func": "gpio_exar_probe",
+        "buggy_start": 148,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "48f40b96de2c790eac6114e3e879a48fe9f89349",
+    "subject": "thunderbolt: xdomain: Fix to check return value of kmemdup",
+    "c_files": [
+      "drivers/thunderbolt/xdomain.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/thunderbolt/xdomain.c",
+        "func": "tb_xdp_handle_request",
+        "buggy_start": 526,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/thunderbolt/xdomain.c",
+        "func": "tb_xdp_schedule_request",
+        "buggy_start": 534,
+        "buggy_count": 13
+      },
+      {
+        "file": "drivers/thunderbolt/xdomain.c",
+        "func": "tb_xdomain_handle_request",
+        "buggy_start": 1422,
+        "buggy_count": 10
+      }
+    ]
+  },
+  {
+    "fix_sha": "9aabb68568b473bf2f0b179d053b403961e42e4d",
+    "subject": "thunderbolt: Fix to check return value of ida_simple_get",
+    "c_files": [
+      "drivers/thunderbolt/xdomain.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/thunderbolt/xdomain.c",
+        "func": "enumerate_services",
+        "buggy_start": 740,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/thunderbolt/xdomain.c",
+        "func": "enumerate_services",
+        "buggy_start": 768,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "534c89c22e26b183d838294f0937ee092c82ad3a",
+    "subject": "x86/hyperv: Prevent potential NULL pointer dereference",
+    "c_files": [
+      "arch/x86/hyperv/hv_init.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/x86/hyperv/hv_init.c",
+        "func": "hv_cpu_init",
+        "buggy_start": 103,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "2e84f116afca3719c9d0a1a78b47b48f75fd5724",
+    "subject": "x86/hpet: Prevent potential NULL pointer dereference",
+    "c_files": [
+      "arch/x86/kernel/hpet.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/x86/kernel/hpet.c",
+        "func": "hpet_enable",
+        "buggy_start": 905,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "6a8ca24590a2136921439b376c926c11a6effc0e",
+    "subject": "staging: rtlwifi: Fix potential NULL pointer dereference of kzalloc",
+    "c_files": [
+      "drivers/staging/rtlwifi/phydm/rtl_phydm.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/rtlwifi/phydm/rtl_phydm.c",
+        "func": "rtl_phydm_init_priv",
+        "buggy_start": 180,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "d70d70aec9632679dd00dcc1b1e8b2517e2c7da0",
+    "subject": "staging: rtlwifi: rtl8822b: fix to avoid potential NULL pointer dereference",
+    "c_files": [
+      "drivers/staging/rtlwifi/rtl8822be/fw.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/rtlwifi/rtl8822be/fw.c",
+        "func": "rtl8822be_set_fw_rsvdpagepkt",
+        "buggy_start": 743,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "e4dfdd5804cce1255f99c5dd033526a18135a616",
+    "subject": "thunderbolt: Fix a missing check of kmemdup",
+    "c_files": [
+      "drivers/thunderbolt/property.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/thunderbolt/property.c",
+        "func": "__tb_property_parse_dir",
+        "buggy_start": 176,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "106204b56f60abf1bead7dceb88f2be3e34433da",
+    "subject": "thunderbolt: property: Fix a NULL pointer dereference",
+    "c_files": [
+      "drivers/thunderbolt/property.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/thunderbolt/property.c",
+        "func": "tb_property_add_data",
+        "buggy_start": 548,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "0ab34a08812a3334350dbaf69a018ee0ab3d2ddd",
+    "subject": "media: si2165: fix a missing check of return value",
+    "c_files": [
+      "drivers/media/dvb-frontends/si2165.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/dvb-frontends/si2165.c",
+        "func": "si2165_get_fe_clk",
+        "buggy_start": 275,
+        "buggy_count": 18
+      }
+    ]
+  },
+  {
+    "fix_sha": "63a06181d7ce169d09843645c50fea1901bc9f0a",
+    "subject": "scsi: ufs: fix a missing check of devm_reset_control_get",
+    "c_files": [
+      "drivers/scsi/ufs/ufs-hisi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/scsi/ufs/ufs-hisi.c",
+        "func": "ufs_hisi_init_common",
+        "buggy_start": 587,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "6734330654dac550f12e932996b868c6d0dcb421",
+    "subject": "tty: mxs-auart: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/tty/serial/mxs-auart.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/tty/serial/mxs-auart.c",
+        "func": "mxs_auart_probe",
+        "buggy_start": 1686,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "c85be041065c0be8bc48eda4c45e0319caf1d0e5",
+    "subject": "tty: atmel_serial: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/tty/serial/atmel_serial.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/tty/serial/atmel_serial.c",
+        "func": "atmel_prepare_rx_dma",
+        "buggy_start": 1288,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "3a10e3dd52e80b9a97a3346020024d17b2c272d6",
+    "subject": "serial: max310x: Fix to avoid potential NULL pointer dereference",
+    "c_files": [
+      "drivers/tty/serial/max310x.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/tty/serial/max310x.c",
+        "func": "max310x_spi_probe",
+        "buggy_start": 1415,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "32f47179833b63de72427131169809065db6745e",
+    "subject": "serial: mvebu-uart: Fix to avoid a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/tty/serial/mvebu-uart.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/tty/serial/mvebu-uart.c",
+        "func": "mvebu_uart_probe",
+        "buggy_start": 810,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "6c44b15e1c9076d925d5236ddadf1318b0a25ce2",
+    "subject": "HID: logitech: check the return value of create_singlethread_workqueue",
+    "c_files": [
+      "drivers/hid/hid-logitech-hidpp.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/hid/hid-logitech-hidpp.c",
+        "func": "hidpp_ff_init",
+        "buggy_start": 2111,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/hid/hid-logitech-hidpp.c",
+        "func": "hidpp_ff_init",
+        "buggy_start": 2155,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "6d65561f3d5ec933151939c543d006b79044e7a6",
+    "subject": "netfilter: ip6t_srh: fix NULL pointer dereferences",
+    "c_files": [
+      "net/ipv6/netfilter/ip6t_srh.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/ipv6/netfilter/ip6t_srh.c",
+        "func": "srh1_mt6",
+        "buggy_start": 210,
+        "buggy_count": 6
+      },
+      {
+        "file": "net/ipv6/netfilter/ip6t_srh.c",
+        "func": "srh1_mt6",
+        "buggy_start": 223,
+        "buggy_count": 6
+      },
+      {
+        "file": "net/ipv6/netfilter/ip6t_srh.c",
+        "func": "srh1_mt6",
+        "buggy_start": 233,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "d6cb77228e3ae070061195a6fff6ba7c3c0b8e47",
+    "subject": "pinctrl: baytrail: Fix potential NULL pointer dereference",
+    "c_files": [
+      "drivers/pinctrl/intel/pinctrl-baytrail.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pinctrl/intel/pinctrl-baytrail.c",
+        "func": "byt_gpio_probe",
+        "buggy_start": 1710,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "517ccc2aa50dbd7767a9eb8e1d9987a3ed7ced3e",
+    "subject": "net: tipc: fix a missing check for nla_nest_start",
+    "c_files": [
+      "net/tipc/socket.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/tipc/socket.c",
+        "func": "__tipc_nl_add_sk_con",
+        "buggy_start": 3255,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "4589e28db46ee4961edfd794c5bb43887d38c8e5",
+    "subject": "net: tipc: fix a missing check of nla_nest_start",
+    "c_files": [
+      "net/tipc/group.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/tipc/group.c",
+        "func": "tipc_group_fill_sock_diag",
+        "buggy_start": 919,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "07660ca679da3007d3231938e2dfb415d3440716",
+    "subject": "net: ncsi: fix a missing check for nla_nest_start",
+    "c_files": [
+      "net/ncsi/ncsi-netlink.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/ncsi/ncsi-netlink.c",
+        "func": "ncsi_pkg_info_all_nl",
+        "buggy_start": 251,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "6f19893b644a9454d85e593b5e90914e7a72b7dd",
+    "subject": "net: openvswitch: fix a NULL pointer dereference",
+    "c_files": [
+      "net/openvswitch/datapath.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/openvswitch/datapath.c",
+        "func": "queue_userspace_packet",
+        "buggy_start": 448,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "dcd0feac9bab901d5739de51b3f69840851f8919",
+    "subject": "ALSA: sb8: add a check for request_region",
+    "c_files": [
+      "sound/isa/sb/sb8.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/isa/sb/sb8.c",
+        "func": "snd_sb8_probe",
+        "buggy_start": 111,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "6ade657d6125ec3ec07f95fa51e28138aef6208f",
+    "subject": "ALSA: echoaudio: add a check for ioremap_nocache",
+    "c_files": [
+      "sound/pci/echoaudio/echoaudio.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/pci/echoaudio/echoaudio.c",
+        "func": "snd_echo_create",
+        "buggy_start": 1952,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "228cd2dba27cee9956c1af97e6445be056881e41",
+    "subject": "net: strparser: fix a missing check for create_singlethread_workqueue",
+    "c_files": [
+      "net/strparser/strparser.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/strparser/strparser.c",
+        "func": "EXPORT_SYMBOL_GPL",
+        "buggy_start": 550,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "5bf7295fe34a5251b1d241b9736af4697b590670",
+    "subject": "qlcnic: Avoid potential NULL pointer dereference",
+    "c_files": [
+      "drivers/net/ethernet/qlogic/qlcnic/qlcnic_ethtool.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/qlogic/qlcnic/qlcnic_ethtool.c",
+        "func": "qlcnic_do_lb_test",
+        "buggy_start": 1048,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "a2c6433ee5a35a8de6d563f6512a26f87835ea0f",
+    "subject": "ALSA: usx2y: Fix potential NULL pointer dereference",
+    "c_files": [
+      "sound/usb/usx2y/usb_stream.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/usb/usx2y/usb_stream.c",
+        "func": "init_urbs",
+        "buggy_start": 104,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "2795e8c251614ac0784c9d41008551109f665716",
+    "subject": "net: ieee802154: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/net/ieee802154/adf7242.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ieee802154/adf7242.c",
+        "func": "adf7242_probe",
+        "buggy_start": 1268,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "4ec850e5dfec092b26cf3b7d5a6c9e444ea4babd",
+    "subject": "net: dwmac-sun8i: fix a missing check of of_get_phy_mode",
+    "c_files": [
+      "drivers/net/ethernet/stmicro/stmmac/dwmac-sun8i.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/stmicro/stmmac/dwmac-sun8i.c",
+        "func": "sun8i_dwmac_probe",
+        "buggy_start": 1147,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "035a14e71f27eefa50087963b94cbdb3580d08bf",
+    "subject": "net: sh_eth: fix a missing check of of_get_phy_mode",
+    "c_files": [
+      "drivers/net/ethernet/renesas/sh_eth.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/renesas/sh_eth.c",
+        "func": "sh_eth_parse_dt",
+        "buggy_start": 3181,
+        "buggy_count": 12
+      }
+    ]
+  },
+  {
+    "fix_sha": "c7cbc3e937b885c9394bf9d0ca21ceb75c2ac262",
+    "subject": "net: 8390: fix potential NULL pointer dereferences",
+    "c_files": [
+      "drivers/net/ethernet/8390/pcnet_cs.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/8390/pcnet_cs.c",
+        "func": "get_hwinfo",
+        "buggy_start": 289,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/net/ethernet/8390/pcnet_cs.c",
+        "func": "setup_shmem_window",
+        "buggy_start": 1423,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "9f4d6358e11bbc7b839f9419636188e4151fb6e4",
+    "subject": "net: fujitsu: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/net/ethernet/fujitsu/fmvj18x_cs.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/fujitsu/fmvj18x_cs.c",
+        "func": "fmvj18x_get_hwinfo",
+        "buggy_start": 547,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "eb32cfcdef2305dc0e44a65d42801315669bb27e",
+    "subject": "net: qlogic: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/net/ethernet/qlogic/qla3xxx.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/qlogic/qla3xxx.c",
+        "func": "ql3xxx_probe",
+        "buggy_start": 3886,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "10010493c1261ca3d7444d372f281009890a5ff7",
+    "subject": "isdn: hfcpci: fix potential NULL pointer dereference",
+    "c_files": [
+      "drivers/isdn/hardware/mISDN/hfcpci.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/isdn/hardware/mISDN/hfcpci.c",
+        "func": "setup_hw",
+        "buggy_start": 2032,
+        "buggy_count": 10
+      }
+    ]
+  },
+  {
+    "fix_sha": "5c149314d91876f743ee43efd75b6287ec55480e",
+    "subject": "net: rocker: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/net/ethernet/rocker/rocker_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/rocker/rocker_main.c",
+        "func": "rocker_switchdev_event",
+        "buggy_start": 2805,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "4280b73092fe136d412db9e8e0d69cbc753cdac6",
+    "subject": "net: qlge: fix a potential NULL pointer dereference",
+    "c_files": [
+      "drivers/net/ethernet/qlogic/qlge/qlge_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/qlogic/qlge/qlge_main.c",
+        "func": "ql_init_device",
+        "buggy_start": 4681,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "d721fe99f6ada070ae8fc0ec3e01ce5a42def0d9",
+    "subject": "isdn: mISDNinfineon: fix potential NULL pointer dereference",
+    "c_files": [
+      "drivers/isdn/hardware/mISDN/mISDNinfineon.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/isdn/hardware/mISDN/mISDNinfineon.c",
+        "func": "setup_io",
+        "buggy_start": 712,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "434256833d8eb988cb7f3b8a41699e2fe48d9332",
+    "subject": "libertas: add checks for the return value of sysfs_create_group",
+    "c_files": [
+      "drivers/net/wireless/marvell/libertas/mesh.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/marvell/libertas/mesh.c",
+        "func": "lbs_persist_config_init",
+        "buggy_start": 797,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "9a20b5e35a536d6bb4b2d4a3b14a0457e205356c",
+    "subject": "rtc: hym8563: fix a missing check of block data read",
+    "c_files": [
+      "drivers/rtc/rtc-hym8563.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/rtc/rtc-hym8563.c",
+        "func": "hym8563_rtc_read_time",
+        "buggy_start": 109,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "5910fa0d0d9809c4d8fbf1fb905a8c86fbf2eccb",
+    "subject": "rtc: coh901331: fix a missing check of clk_prepare",
+    "c_files": [
+      "drivers/rtc/rtc-coh901331.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/rtc/rtc-coh901331.c",
+        "func": "coh901331_suspend",
+        "buggy_start": 235,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "6f12e46eebf1a7d4fdd66df5e815df96b8f8b1b5",
+    "subject": "power: twl4030: fix a missing check of return value",
+    "c_files": [
+      "drivers/power/supply/twl4030_charger.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/power/supply/twl4030_charger.c",
+        "func": "twl4030_bci_get_property",
+        "buggy_start": 809,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "b05ae01fdb8966afff5b153e7a7ee24684745e2d",
+    "subject": "misc/ics932s401: Add a missing check to i2c_smbus_read_word_data",
+    "c_files": [
+      "drivers/misc/ics932s401.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/misc/ics932s401.c",
+        "func": "ics932s401_update_device",
+        "buggy_start": 146,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "40619f7dd3ef05ae7861bc60d401585d316e1374",
+    "subject": "PM: clock_ops: fix missing clk_prepare() return value check",
+    "c_files": [
+      "drivers/base/power/clock_ops.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/base/power/clock_ops.c",
+        "func": "pm_clk_acquire",
+        "buggy_start": 65,
+        "buggy_count": 10
+      }
+    ]
+  },
+  {
+    "fix_sha": "248b57015f35c94d4eae2fdd8c6febf5cd703900",
+    "subject": "leds: lp5523: fix a missing check of return value of lp55xx_read",
+    "c_files": [
+      "drivers/leds/leds-lp5523.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/leds/leds-lp5523.c",
+        "func": "lp5523_init_program_engine",
+        "buggy_start": 318,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "467a37fba93f2b4fe3ab597ff6a517b22b566882",
+    "subject": "media: dvb: Add check on sp8870_readreg",
+    "c_files": [
+      "drivers/media/dvb-frontends/sp8870.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/dvb-frontends/sp8870.c",
+        "func": "sp8870_set_frontend_parameters",
+        "buggy_start": 293,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "0f787c12ee7b2b41a74594ed158a0112736f4e4e",
+    "subject": "media: dvb: add return value check on Write16",
+    "c_files": [
+      "drivers/media/dvb-frontends/drxd_hard.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/dvb-frontends/drxd_hard.c",
+        "func": "EnableAndResetMB",
+        "buggy_start": 1144,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/media/dvb-frontends/drxd_hard.c",
+        "func": "InitCC",
+        "buggy_start": 1151,
+        "buggy_count": 14
+      },
+      {
+        "file": "drivers/media/dvb-frontends/drxd_hard.c",
+        "func": "SC_SendCommand",
+        "buggy_start": 1312,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/dvb-frontends/drxd_hard.c",
+        "func": "SC_ProcStartCommand",
+        "buggy_start": 1339,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "9502cdf0807058a10029488052b064cecceb7fc9",
+    "subject": "media: mt312: fix a missing check of mt312 reset",
+    "c_files": [
+      "drivers/media/dvb-frontends/mt312.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/dvb-frontends/mt312.c",
+        "func": "mt312_set_frontend",
+        "buggy_start": 645,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "c9b7d8f252a5a6f8ca6e948151367cbc7bc4b776",
+    "subject": "media: lgdt3306a: fix a missing check of return value",
+    "c_files": [
+      "drivers/media/dvb-frontends/lgdt3306a.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/dvb-frontends/lgdt3306a.c",
+        "func": "lgdt3306a_read_signal_strength",
+        "buggy_start": 1685,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "a21a0eb56b4e8fe4a330243af8030f890cde2283",
+    "subject": "media: gspca: Check the return value of write_bridge for timeout",
+    "c_files": [
+      "drivers/media/usb/gspca/m5602/m5602_po1030.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/usb/gspca/m5602/m5602_po1030.c",
+        "func": "static",
+        "buggy_start": 158,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/media/usb/gspca/m5602/m5602_po1030.c",
+        "func": "po1030_probe",
+        "buggy_start": 177,
+        "buggy_count": 11
+      }
+    ]
+  },
+  {
+    "fix_sha": "5b711870bec4dc9a6d705d41e127e73944fa3650",
+    "subject": "media: usb: gspca: add a missed check for goto_low_power",
+    "c_files": [
+      "drivers/media/usb/gspca/cpia1.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/usb/gspca/cpia1.c",
+        "func": "sd_config",
+        "buggy_start": 1434,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/media/usb/gspca/cpia1.c",
+        "func": "sd_config",
+        "buggy_start": 1445,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "5ceaf5452c1b2a452dadaf377f9f07af7bda9cc3",
+    "subject": "media: usb: gspca: add a missed return-value check for do_command",
+    "c_files": [
+      "drivers/media/usb/gspca/cpia1.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/usb/gspca/cpia1.c",
+        "func": "do_command",
+        "buggy_start": 547,
+        "buggy_count": 10
+      }
+    ]
+  },
+  {
+    "fix_sha": "0a54ea9f481f1a2ca5a171e91ddaacb75040f287",
+    "subject": "staging: rtlwifi: rtl8822b: fix a missing check of alloc_skb",
+    "c_files": [
+      "drivers/staging/rtlwifi/rtl8822be/fw.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/rtlwifi/rtl8822be/fw.c",
+        "func": "rtl8822b_halmac_cb_write_data_h2c",
+        "buggy_start": 486,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "42daad3343be4a4e1ee03e30a5f5cc731dadfef5",
+    "subject": "brcmfmac: add a check for the status of usb_register",
+    "c_files": [
+      "drivers/net/wireless/broadcom/brcm80211/brcmfmac/usb.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/broadcom/brcm80211/brcmfmac/usb.c",
+        "func": "brcmf_usb_exit",
+        "buggy_start": 1550,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "51f689cc11333944c7a457f25ec75fcb41e99410",
+    "subject": "serial: max310x: pass return value of spi_register_driver",
+    "c_files": [
+      "drivers/tty/serial/max310x.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/tty/serial/max310x.c",
+        "func": "max310x_uart_init",
+        "buggy_start": 1467,
+        "buggy_count": 10
+      }
+    ]
+  },
+  {
+    "fix_sha": "e85bb0beb6498c0dffe18a2f1f16d575bc175c32",
+    "subject": "Input: ad7879 - add check for read errors in interrupt",
+    "c_files": [
+      "drivers/input/touchscreen/ad7879.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/input/touchscreen/ad7879.c",
+        "func": "ad7879_timer",
+        "buggy_start": 246,
+        "buggy_count": 11
+      }
+    ]
+  },
+  {
+    "fix_sha": "44fabd8cdaaa3acb80ad2bb3b5c61ae2136af661",
+    "subject": "ASoC: atom: fix a missing check of snd_pcm_lib_malloc_pages",
+    "c_files": [
+      "sound/soc/intel/atom/sst-mfld-platform-pcm.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/intel/atom/sst-mfld-platform-pcm.c",
+        "func": "sst_media_hw_params",
+        "buggy_start": 399,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "beae77170c60aa786f3e4599c18ead2854d8694d",
+    "subject": "ALSA: sb: fix a missing check of snd_ctl_add",
+    "c_files": [
+      "sound/isa/sb/sb16_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/isa/sb/sb16_main.c",
+        "func": "snd_sb16dsp_pcm",
+        "buggy_start": 879,
+        "buggy_count": 10
+      }
+    ]
+  },
+  {
+    "fix_sha": "c99776cc4018e91c66bd448002e924edd4910947",
+    "subject": "ALSA: ice1712: fix a missing check of snd_i2c_sendbytes",
+    "c_files": [
+      "sound/pci/ice1712/ews.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/pci/ice1712/ews.c",
+        "func": "snd_ice1712_6fire_read_pca",
+        "buggy_start": 826,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "0f25e000cb4398081748e54f62a902098aa79ec1",
+    "subject": "ALSA: gus: add a check of the status of snd_ctl_add",
+    "c_files": [
+      "sound/isa/gus/gus_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/isa/gus/gus_main.c",
+        "func": "static",
+        "buggy_start": 92,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "73b69c01cc925d9c48e5b4f78e3d8b88c4e5b924",
+    "subject": "staging: rts5208: Add a check for ms_read_extra_data",
+    "c_files": [
+      "drivers/staging/rts5208/ms.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/rts5208/ms.c",
+        "func": "ms_copy_page",
+        "buggy_start": 1665,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "906b40b246b0acb54c4dc97e815cf734761c9820",
+    "subject": "dmaengine: stm32-mdma: Add a check on read_u32_array",
+    "c_files": [
+      "drivers/dma/stm32-mdma.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/dma/stm32-mdma.c",
+        "func": "stm32_mdma_probe",
+        "buggy_start": 1579,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "7c97381e7a9a5ec359007c0d491a143e3d9f787c",
+    "subject": "dmaengine: mv_xor: Fix a missing check in mv_xor_channel_add",
+    "c_files": [
+      "drivers/dma/mv_xor.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/dma/mv_xor.c",
+        "func": "mv_xor_channel_add",
+        "buggy_start": 1153,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "7fc93f3285b17f4632694efce5ff0160303388a8",
+    "subject": "iio: adc: xilinx: check return value of xadc_write_adc_reg",
+    "c_files": [
+      "drivers/iio/adc/xilinx-xadc-core.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/iio/adc/xilinx-xadc-core.c",
+        "func": "xadc_probe",
+        "buggy_start": 1273,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "ae0b3773721f08526c850e2d8dec85bdb870cd12",
+    "subject": "iio: ad9523: fix a missing check of return value",
+    "c_files": [
+      "drivers/iio/frequency/ad9523.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/iio/frequency/ad9523.c",
+        "func": "ad9523_setup",
+        "buggy_start": 943,
+        "buggy_count": 11
+      }
+    ]
+  },
+  {
+    "fix_sha": "9e28989d41c0eab57ec0bb156617a8757406ff8a",
+    "subject": "mfd: mc13xxx: Fix a missing check of a register-read failure",
+    "c_files": [
+      "drivers/mfd/mc13xxx-core.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/mfd/mc13xxx-core.c",
+        "func": "mc13xxx_adc_do_conversion",
+        "buggy_start": 274,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "9c6260de505b63638dd86fcc33849b17f6146d94",
+    "subject": "infiniband/qedr: Potential null ptr dereference of qp",
+    "c_files": [
+      "drivers/infiniband/hw/qedr/qedr_iw_cm.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/infiniband/hw/qedr/qedr_iw_cm.c",
+        "func": "qedr_iw_connect",
+        "buggy_start": 492,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "94edd87a1c59f3efa6fdf4e98d6d492e6cec6173",
+    "subject": "infiniband: bnxt_re: qplib: Check the return value of send_message",
+    "c_files": [
+      "drivers/infiniband/hw/bnxt_re/qplib_sp.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/infiniband/hw/bnxt_re/qplib_sp.c",
+        "func": "bnxt_qplib_map_tc2cos",
+        "buggy_start": 780,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "92ee77d148bf06d8c52664be4d1b862583fd5c0e",
+    "subject": "net: marvell: fix a missing check of acpi_match_device",
+    "c_files": [
+      "drivers/net/ethernet/marvell/mvpp2/mvpp2_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/marvell/mvpp2/mvpp2_main.c",
+        "func": "mvpp2_probe",
+        "buggy_start": 5255,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "f86a3b83833e7cfe558ca4d70b64ebc48903efec",
+    "subject": "net: stmicro: fix a missing check of clk_prepare",
+    "c_files": [
+      "drivers/net/ethernet/stmicro/stmmac/dwmac-sunxi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/stmicro/stmmac/dwmac-sunxi.c",
+        "func": "sun7i_gmac_init",
+        "buggy_start": 59,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "2d822f2dbab7f4c820f72eb8570aacf3f35855bd",
+    "subject": "net: (cpts) fix a missing check of clk_prepare",
+    "c_files": [
+      "drivers/net/ethernet/ti/cpts.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/ti/cpts.c",
+        "func": "cpts_create",
+        "buggy_start": 590,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "ca19fcb6285bfce1601c073bf4b9d2942e2df8d9",
+    "subject": "net: chelsio: Add a missing check on cudg_get_buffer",
+    "c_files": [
+      "drivers/net/ethernet/chelsio/cxgb4/cudbg_lib.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/chelsio/cxgb4/cudbg_lib.c",
+        "func": "cudbg_collect_hw_sched",
+        "buggy_start": 1229,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "f0fb9b288d0a7e9cc324ae362e2dfd2cc2217ded",
+    "subject": "ipv6/route: Add a missing check on proc_dointvec",
+    "c_files": [
+      "net/ipv6/route.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/ipv6/route.c",
+        "func": "ipv6_sysctl_rtcache_flush",
+        "buggy_start": 5054,
+        "buggy_count": 12
+      }
+    ]
+  },
+  {
+    "fix_sha": "0eb987c874dc93f9c9d85a6465dbde20fdd3884c",
+    "subject": "net/net_namespace: Check the return value of register_pernet_subsys()",
+    "c_files": [
+      "net/core/net_namespace.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/core/net_namespace.c",
+        "func": "net_ns_init",
+        "buggy_start": 917,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "89dfd0083751d00d5d7ead36f6d8b045bf89c5e1",
+    "subject": "net/netlink_compat: Fix a missing check of nla_parse_nested",
+    "c_files": [
+      "net/tipc/netlink_compat.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/tipc/netlink_compat.c",
+        "func": "tipc_nl_compat_sk_dump",
+        "buggy_start": 951,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "9aa3aa15f4c2f74f47afd6c5db4b420fadf3f315",
+    "subject": "hwmon: (lm80) fix a missing check of bus read in lm80 probe",
+    "c_files": [
+      "drivers/hwmon/lm80.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/hwmon/lm80.c",
+        "func": "lm80_probe",
+        "buggy_start": 628,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/hwmon/lm80.c",
+        "func": "lm80_probe",
+        "buggy_start": 640,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "c9c63915519b1def7043b184680f33c24cd49d7b",
+    "subject": "hwmon: (lm80) fix a missing check of the status of SMBus read",
+    "c_files": [
+      "drivers/hwmon/lm80.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/hwmon/lm80.c",
+        "func": "set_fan_div",
+        "buggy_start": 360,
+        "buggy_count": 9
+      },
+      {
+        "file": "drivers/hwmon/lm80.c",
+        "func": "set_fan_div",
+        "buggy_start": 390,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "d134e486e831defd26130770181f01dfc6195f7d",
+    "subject": "net: netxen: fix a missing check and an uninitialized use",
+    "c_files": [
+      "drivers/net/ethernet/qlogic/netxen/netxen_nic_init.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/qlogic/netxen/netxen_nic_init.c",
+        "func": "netxen_validate_firmware",
+        "buggy_start": 1125,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "cd07e3701fa6a4c68f8493ee1d12caa18d46ec6a",
+    "subject": "regulator: tps65910: fix a missing check of return value",
+    "c_files": [
+      "drivers/regulator/tps65910-regulator.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/regulator/tps65910-regulator.c",
+        "func": "tps65910_probe",
+        "buggy_start": 1102,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "966e927bf8cc6a44f8b72582a1d6d3ffc73b12ad",
+    "subject": "drivers/regulator: fix a missing check of return value",
+    "c_files": [
+      "drivers/regulator/palmas-regulator.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/regulator/palmas-regulator.c",
+        "func": "palmas_ldo_write",
+        "buggy_start": 443,
+        "buggy_count": 13
+      }
+    ]
+  }
+]

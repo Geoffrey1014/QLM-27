@@ -160,6 +160,10 @@ qlm-artifact/
 │   │   ├── C3/  (124 .ql + 125 .audit.json)   # QLM (full pipeline)
 │   │   ├── L0/  (123 .ql + 125 .audit.json)   # RQ4 zero-shot
 │   │   └── L1/  ( 63 .ql +  63 .audit.json)   # RQ4 mono + compile self-fix
+│   ├── kbh-bench/             # KBH-Bench: 500 ground-truth fix commits (390 in-DB)
+│   │   ├── README.md
+│   │   ├── kbh-bench.csv      # one row per commit, with in_db flag
+│   │   └── ground-truth/      # per-pattern GT JSON read by the scorer
 │   ├── rq1-findings.csv       # the 49 Linux kernel bugs found in RQ1
 │   ├── schemas/               # bug schema definition + 125 C3 schema instances
 │   │   ├── README.md

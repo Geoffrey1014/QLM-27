@@ -1,0 +1,2117 @@
+[
+  {
+    "fix_sha": "1b22dcf6b33ace39c11a2832260d499d020c3d55",
+    "subject": "pcmcia: pcmcia_resource: Replace mdelay() with msleep()",
+    "c_files": [
+      "drivers/pcmcia/pcmcia_resource.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pcmcia/pcmcia_resource.c",
+        "func": "pcmcia_fixup_iowidth",
+        "buggy_start": 284,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/pcmcia/pcmcia_resource.c",
+        "func": "pcmcia_enable_device",
+        "buggy_start": 567,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "be826ada52f1fcabed5b5217c94609ebf5967211",
+    "subject": "char: pcmcia: cm4000_cs: Replace mdelay with usleep_range in set_protocol",
+    "c_files": [
+      "drivers/char/pcmcia/cm4000_cs.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/char/pcmcia/cm4000_cs.c",
+        "func": "set_protocol",
+        "buggy_start": 530,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/char/pcmcia/cm4000_cs.c",
+        "func": "set_protocol",
+        "buggy_start": 546,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "c6b5eb8dd33480104683d838da10c7ec77d32e8a",
+    "subject": "rtc: rtc-mrst: Replace mdelay() with msleep() in mrst_read_time()",
+    "c_files": [
+      "drivers/rtc/rtc-mrst.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/rtc/rtc-mrst.c",
+        "func": "mrst_read_time",
+        "buggy_start": 90,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "4b991c54ce82e85d89babcf32d72746365163ed5",
+    "subject": "gpu: drm: radeon: radeon_test: Replace mdelay() with msleep()",
+    "c_files": [
+      "drivers/gpu/drm/radeon/radeon_test.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/radeon/radeon_test.c",
+        "func": "radeon_test_ring_sync",
+        "buggy_start": 348,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/gpu/drm/radeon/radeon_test.c",
+        "func": "radeon_test_ring_sync",
+        "buggy_start": 369,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/gpu/drm/radeon/radeon_test.c",
+        "func": "radeon_test_ring_sync2",
+        "buggy_start": 442,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/gpu/drm/radeon/radeon_test.c",
+        "func": "radeon_test_ring_sync2",
+        "buggy_start": 462,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/gpu/drm/radeon/radeon_test.c",
+        "func": "radeon_test_ring_sync2",
+        "buggy_start": 487,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "2f2debb5a162ea9aeb03ad2532827631e3a68b1a",
+    "subject": "gpu: drm: radeon: si: Replace mdelay() with msleep() in si_pcie_gen3_enable()",
+    "c_files": [
+      "drivers/gpu/drm/radeon/si.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/radeon/si.c",
+        "func": "si_pcie_gen3_enable",
+        "buggy_start": 7183,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "c51cebb890dc76260c02354882cf333c8207dd19",
+    "subject": "gpu: drm: radeon: cik: Replace mdelay() with msleep() in cik_pcie_gen3_enable()",
+    "c_files": [
+      "drivers/gpu/drm/radeon/cik.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/radeon/cik.c",
+        "func": "cik_pcie_gen3_enable",
+        "buggy_start": 9600,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "374f78f75be98c72876a4d0311b278cd226effba",
+    "subject": "ixgbe: Replace GFP_ATOMIC with GFP_KERNEL",
+    "c_files": [
+      "drivers/net/ethernet/intel/ixgbe/ixgbe_fcoe.c;drivers/net/ethernet/intel/ixgbe/ixgbe_main.c"
+    ],
+    "hunks": []
+  },
+  {
+    "fix_sha": "69a64658de502c8ca383fe2c5a5208f00b5844cd",
+    "subject": "igb: Replace mdelay() with msleep() in igb_integrated_phy_loopback()",
+    "c_files": [
+      "drivers/net/ethernet/intel/igb/igb_ethtool.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/intel/igb/igb_ethtool.c",
+        "func": "igb_integrated_phy_loopback",
+        "buggy_start": 1649,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "039b1d5e5862375b0da534bb75fc580eaa547d53",
+    "subject": "net: cisco: enic: Replace GFP_ATOMIC with GFP_KERNEL",
+    "c_files": [
+      "drivers/net/ethernet/cisco/enic/vnic_dev.c;drivers/net/ethernet/cisco/enic/vnic_rq.c;drivers/net/ethernet/cisco/enic/vnic_wq.c"
+    ],
+    "hunks": []
+  },
+  {
+    "fix_sha": "8e8c0386b1fdd495173f085c8f58926d2a181c1c",
+    "subject": "crypto: qat/adf_aer - Replace GFP_ATOMIC with GFP_KERNEL in adf_dev_aer_schedule_reset()",
+    "c_files": [
+      "drivers/crypto/qat/qat_common/adf_aer.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/crypto/qat/qat_common/adf_aer.c",
+        "func": "adf_dev_aer_schedule_reset",
+        "buggy_start": 163,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "1c96dde100987149f42bd6dd97013f7c421f27c7",
+    "subject": "crypto: cavium/nitrox - Replace GFP_ATOMIC with GFP_KERNEL in crypto_alloc_context()",
+    "c_files": [
+      "drivers/crypto/cavium/nitrox/nitrox_lib.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/crypto/cavium/nitrox/nitrox_lib.c",
+        "func": "crypto_alloc_context",
+        "buggy_start": 148,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "2c3449fb95c318920ca8dc645d918d408db219ac",
+    "subject": "media: usb: hackrf: Replace GFP_ATOMIC with GFP_KERNEL",
+    "c_files": [
+      "drivers/media/usb/hackrf/hackrf.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/usb/hackrf/hackrf.c",
+        "func": "hackrf_submit_urbs",
+        "buggy_start": 597,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/usb/hackrf/hackrf.c",
+        "func": "hackrf_alloc_stream_bufs",
+        "buggy_start": 636,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/usb/hackrf/hackrf.c",
+        "func": "hackrf_alloc_urbs",
+        "buggy_start": 689,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "7a3369e8a78538e813e96294b8c7fce9feb76e0f",
+    "subject": "media: usb: em28xx: Replace mdelay() with msleep() in em28xx_pre_card_setup()",
+    "c_files": [
+      "drivers/media/usb/em28xx/em28xx-cards.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/usb/em28xx/em28xx-cards.c",
+        "func": "em28xx_pre_card_setup",
+        "buggy_start": 2852,
+        "buggy_count": 13
+      },
+      {
+        "file": "drivers/media/usb/em28xx/em28xx-cards.c",
+        "func": "em28xx_pre_card_setup",
+        "buggy_start": 2866,
+        "buggy_count": 11
+      },
+      {
+        "file": "drivers/media/usb/em28xx/em28xx-cards.c",
+        "func": "em28xx_pre_card_setup",
+        "buggy_start": 2878,
+        "buggy_count": 11
+      }
+    ]
+  },
+  {
+    "fix_sha": "2453e60702e1a4d22720e3b6aac543e1a96fcd6b",
+    "subject": "media: usb: em28xx: Replace GFP_ATOMIC with GFP_KERNEL in em28xx_init_usb_xfer()",
+    "c_files": [
+      "drivers/media/usb/em28xx/em28xx-core.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/usb/em28xx/em28xx-core.c",
+        "func": "em28xx_init_usb_xfer",
+        "buggy_start": 1053,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "730129e9ba4dd668452371eba900e6e46f63b778",
+    "subject": "media: dvb-frontends: rtl2832_sdr: Replace GFP_ATOMIC with GFP_KERNEL",
+    "c_files": [
+      "drivers/media/dvb-frontends/rtl2832_sdr.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/dvb-frontends/rtl2832_sdr.c",
+        "func": "rtl2832_sdr_submit_urbs",
+        "buggy_start": 301,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/dvb-frontends/rtl2832_sdr.c",
+        "func": "rtl2832_sdr_alloc_stream_bufs",
+        "buggy_start": 345,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/dvb-frontends/rtl2832_sdr.c",
+        "func": "rtl2832_sdr_alloc_urbs",
+        "buggy_start": 390,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "bfc55fe65987743e534808a18217ccd5783e00bb",
+    "subject": "ath6kl: replace GFP_ATOMIC with GFP_KERNEL in ath6kl_bmi_init()",
+    "c_files": [
+      "drivers/net/wireless/ath/ath6kl/bmi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/ath/ath6kl/bmi.c",
+        "func": "ath6kl_bmi_init",
+        "buggy_start": 534,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "622e938240db71365958824cc91af1bb5c481f5e",
+    "subject": "rtl818x: Replace mdelay() with msleep() in rtl8225se_rf_init",
+    "c_files": [
+      "drivers/net/wireless/realtek/rtl818x/rtl8180/rtl8225se.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/realtek/rtl818x/rtl8180/rtl8225se.c",
+        "func": "rtl8225se_rf_init",
+        "buggy_start": 363,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/net/wireless/realtek/rtl818x/rtl8180/rtl8225se.c",
+        "func": "rtl8225se_rf_init",
+        "buggy_start": 386,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "5685bee313e9e8577faebcb349706e299f486db5",
+    "subject": "atmel: Replace mdelay() with msleep() in probe_atmel_card()",
+    "c_files": [
+      "drivers/net/wireless/atmel/atmel.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/atmel/atmel.c",
+        "func": "probe_atmel_card",
+        "buggy_start": 3677,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "dcaa0c12661d862bc533239da22ddf2ed90595e7",
+    "subject": "scsi: atp870u: Replace mdelay() with msleep()",
+    "c_files": [
+      "drivers/scsi/atp870u.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/scsi/atp870u.c",
+        "func": "tscam",
+        "buggy_start": 1055,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/scsi/atp870u.c",
+        "func": "atp870_init",
+        "buggy_start": 1286,
+        "buggy_count": 9
+      },
+      {
+        "file": "drivers/scsi/atp870u.c",
+        "func": "atp880_init",
+        "buggy_start": 1370,
+        "buggy_count": 9
+      },
+      {
+        "file": "drivers/scsi/atp870u.c",
+        "func": "atp885_init",
+        "buggy_start": 1454,
+        "buggy_count": 10
+      },
+      {
+        "file": "drivers/scsi/atp870u.c",
+        "func": "atp885_init",
+        "buggy_start": 1473,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "d6aec1ca7c7c69e5b83b2cb24a57e7860d15507f",
+    "subject": "scsi: a100u2w: Replace mdelay() with msleep()",
+    "c_files": [
+      "drivers/scsi/a100u2w.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/scsi/a100u2w.c",
+        "func": "wait_chip_ready",
+        "buggy_start": 143,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/scsi/a100u2w.c",
+        "func": "wait_firmware_ready",
+        "buggy_start": 155,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "508385001c09ee648c46f3d2bf5584e366007fd7",
+    "subject": "scsi: message: fusion: Replace GFP_ATOMIC with GFP_KERNEL",
+    "c_files": [
+      "drivers/message/fusion/mptbase.c;drivers/message/fusion/mptfc.c"
+    ],
+    "hunks": []
+  },
+  {
+    "fix_sha": "a0732548ba03c27fb42da4cf8e1eecc205760f12",
+    "subject": "net: tipc: bcast: Replace GFP_ATOMIC with GFP_KERNEL in tipc_bcast_init()",
+    "c_files": [
+      "net/tipc/bcast.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/tipc/bcast.c",
+        "func": "tipc_bcast_init",
+        "buggy_start": 512,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "ba23dc642dffd1a97dc08480acc788fdb8632425",
+    "subject": "net: usb: sr9700: Replace mdelay() with msleep() in sr9700_bind()",
+    "c_files": [
+      "drivers/net/usb/sr9700.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/usb/sr9700.c",
+        "func": "sr9700_bind",
+        "buggy_start": 358,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "6dff5add089f2cedd597937a3e39a01ebba8b7c8",
+    "subject": "net: usb: pegasus: Replace mdelay() with msleep() in setup_pegasus_II()",
+    "c_files": [
+      "drivers/net/usb/pegasus.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/usb/pegasus.c",
+        "func": "setup_pegasus_II",
+        "buggy_start": 1067,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "0df125d05d19ea71678842289647f35cec6d3314",
+    "subject": "net: phy: marvell: Replace mdelay() with msleep() in m88e1116r_config_init()",
+    "c_files": [
+      "drivers/net/phy/marvell.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/phy/marvell.c",
+        "func": "m88e1116r_config_init",
+        "buggy_start": 679,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "d818c59a8f490ed8d07bdb4cc175dec97030df26",
+    "subject": "net: jme: Replace mdelay() with msleep() and usleep_range() in jme_wait_link()",
+    "c_files": [
+      "drivers/net/ethernet/jme.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/jme.c",
+        "func": "jme_wait_link",
+        "buggy_start": 1911,
+        "buggy_count": 10
+      }
+    ]
+  },
+  {
+    "fix_sha": "89036f233a45d8d17c2de94850bd5e63f185da3d",
+    "subject": "net: hisilicon: hns: Replace mdelay() with msleep()",
+    "c_files": [
+      "drivers/net/ethernet/hisilicon/hns/hns_dsaf_ppe.c;drivers/net/ethernet/hisilicon/hns/hns_dsaf_xgmac.c"
+    ],
+    "hunks": []
+  },
+  {
+    "fix_sha": "2bcd619e6e7b992ddaa1caaeafd3eea6990de75c",
+    "subject": "net: amd: pcnet32: Replace GFP_ATOMIC with GFP_KERNEL in pcnet32_alloc_ring()",
+    "c_files": [
+      "drivers/net/ethernet/amd/pcnet32.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/amd/pcnet32.c",
+        "func": "pcnet32_alloc_ring",
+        "buggy_start": 2036,
+        "buggy_count": 22
+      }
+    ]
+  },
+  {
+    "fix_sha": "53fddb6618db53779d96f6a29a98e2a9c5d05877",
+    "subject": "Input: aiptek - replace GFP_ATOMIC with GFP_KERNEL in aiptek_probe()",
+    "c_files": [
+      "drivers/input/tablet/aiptek.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/input/tablet/aiptek.c",
+        "func": "aiptek_probe",
+        "buggy_start": 1712,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "7a082a24cf9f727868ab4b9ca2b7cd8ce46fa8e6",
+    "subject": "Input: appletouch - replace GFP_ATOMIC with GFP_KERNEL",
+    "c_files": [
+      "drivers/input/mouse/appletouch.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/input/mouse/appletouch.c",
+        "func": "atp_open",
+        "buggy_start": 810,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/input/mouse/appletouch.c",
+        "func": "atp_recover",
+        "buggy_start": 976,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/input/mouse/appletouch.c",
+        "func": "atp_resume",
+        "buggy_start": 994,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "434ca100cfa50de354d88329d7c0a10b80241f10",
+    "subject": "Input: yealink - replace GFP_ATOMIC with GFP_KERNEL in usb_probe()",
+    "c_files": [
+      "drivers/input/misc/yealink.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/input/misc/yealink.c",
+        "func": "usb_probe",
+        "buggy_start": 894,
+        "buggy_count": 12
+      }
+    ]
+  },
+  {
+    "fix_sha": "1f25d9c60cfe28524f1650912bc13d72854206b5",
+    "subject": "Input: powermate - replace GFP_ATOMIC with GFP_KERNEL in powermate_alloc_buffers()",
+    "c_files": [
+      "drivers/input/misc/powermate.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/input/misc/powermate.c",
+        "func": "powermate_input_event",
+        "buggy_start": 277,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "673831da643c31756622963585fc9d6dbb5d3a37",
+    "subject": "Input: keyspan_remote - replace GFP_ATOMIC with GFP_KERNEL in keyspan_probe()",
+    "c_files": [
+      "drivers/input/misc/keyspan_remote.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/input/misc/keyspan_remote.c",
+        "func": "keyspan_probe",
+        "buggy_start": 466,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "e58650b57ee0078ac8986650febeb55263f9ebdf",
+    "subject": "Input: wdt87xx_i2c - replace mdelay() with msleep() in wdt87xx_resume()",
+    "c_files": [
+      "drivers/input/touchscreen/wdt87xx_i2c.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/input/touchscreen/wdt87xx_i2c.c",
+        "func": "wdt87xx_resume",
+        "buggy_start": 1142,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "5bfffa0c86915e5afbfe56d9790457b2a9887f2d",
+    "subject": "media: pci: ivtv: Replace GFP_ATOMIC with GFP_KERNEL",
+    "c_files": [
+      "drivers/media/pci/ivtv/ivtv-driver.c;drivers/media/pci/ivtv/ivtvfb.c"
+    ],
+    "hunks": []
+  },
+  {
+    "fix_sha": "9d08ba6de0c52d87b1f9619df3f6faacde2134b7",
+    "subject": "media: pci: cx88: Replace mdelay() with msleep() in dvb_register()",
+    "c_files": [
+      "drivers/media/pci/cx88/cx88-dvb.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/pci/cx88/cx88-dvb.c",
+        "func": "dvb_register",
+        "buggy_start": 1226,
+        "buggy_count": 9
+      },
+      {
+        "file": "drivers/media/pci/cx88/cx88-dvb.c",
+        "func": "dvb_register",
+        "buggy_start": 1248,
+        "buggy_count": 9
+      },
+      {
+        "file": "drivers/media/pci/cx88/cx88-dvb.c",
+        "func": "dvb_register",
+        "buggy_start": 1267,
+        "buggy_count": 9
+      },
+      {
+        "file": "drivers/media/pci/cx88/cx88-dvb.c",
+        "func": "dvb_register",
+        "buggy_start": 1289,
+        "buggy_count": 9
+      },
+      {
+        "file": "drivers/media/pci/cx88/cx88-dvb.c",
+        "func": "dvb_register",
+        "buggy_start": 1583,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "dddaf754cb3af9fe779be1f6e117dc76e36cfdc2",
+    "subject": "media: pci: cx88: Replace mdelay() with msleep() in cx88_card_setup_pre_i2c()",
+    "c_files": [
+      "drivers/media/pci/cx88/cx88-cards.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/pci/cx88/cx88-cards.c",
+        "func": "cx88_card_setup_pre_i2c",
+        "buggy_start": 3307,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "65155a9bbc18e4312a989a13c137c7410e1568dd",
+    "subject": "media: pci: cx25821: Replace mdelay() with msleep()",
+    "c_files": [
+      "drivers/media/pci/cx25821/cx25821-core.c;drivers/media/pci/cx25821/cx25821-gpio.c"
+    ],
+    "hunks": []
+  },
+  {
+    "fix_sha": "71be8dee6bf13a00bab0f568ce403b3c28c5295f",
+    "subject": "media: pci: cx23885: Replace mdelay() with msleep() in cx23885_reset()",
+    "c_files": [
+      "drivers/media/pci/cx23885/cx23885-core.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/pci/cx23885/cx23885-core.c",
+        "func": "cx23885_reset",
+        "buggy_start": 667,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "ccb2ca78a7278ec0024f281fdc2155b32f995cef",
+    "subject": "media: pci: cx23885: Replace mdelay() with msleep() and usleep_range() in altera_ci_slot_reset()",
+    "c_files": [
+      "drivers/media/pci/cx23885/altera-ci.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/pci/cx23885/altera-ci.c",
+        "func": "altera_ci_slot_reset",
+        "buggy_start": 346,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "da27ef68751f804dbe6c2b84a49848f90ae48fd0",
+    "subject": "media: pci: cobalt: Replace GFP_ATOMIC with GFP_KERNEL in cobalt_probe()",
+    "c_files": [
+      "drivers/media/pci/cobalt/cobalt-driver.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/pci/cobalt/cobalt-driver.c",
+        "func": "cobalt_probe",
+        "buggy_start": 670,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "a8a4d304b1a41105568c1408e4276cd6f32be787",
+    "subject": "media: i2c: vs6624: Replace mdelay() with msleep() and usleep_range() in vs6624_probe()",
+    "c_files": [
+      "drivers/media/i2c/vs6624.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/i2c/vs6624.c",
+        "func": "vs6624_probe",
+        "buggy_start": 770,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/i2c/vs6624.c",
+        "func": "vs6624_probe",
+        "buggy_start": 782,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "2b5c5798750180a34cb1f39cf648d8a8bceec287",
+    "subject": "media: i2c: adv7842: Replace mdelay() with msleep() and usleep_range() in adv7842_ddr_ram_test()",
+    "c_files": [
+      "drivers/media/i2c/adv7842.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/i2c/adv7842.c",
+        "func": "adv7842_ddr_ram_test",
+        "buggy_start": 3102,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/i2c/adv7842.c",
+        "func": "adv7842_ddr_ram_test",
+        "buggy_start": 3116,
+        "buggy_count": 12
+      },
+      {
+        "file": "drivers/media/i2c/adv7842.c",
+        "func": "adv7842_ddr_ram_test",
+        "buggy_start": 3132,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "fad56c895f1f33f9063da558067307b00d44d40d",
+    "subject": "ALSA: ctxfi: cthw20k2: Replace mdelay() with msleep() and usleep_range()",
+    "c_files": [
+      "sound/pci/ctxfi/cthw20k2.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/pci/ctxfi/cthw20k2.c",
+        "func": "hw_pll_init",
+        "buggy_start": 1316,
+        "buggy_count": 12
+      },
+      {
+        "file": "sound/pci/ctxfi/cthw20k2.c",
+        "func": "hw_dac_stop",
+        "buggy_start": 1584,
+        "buggy_count": 7
+      },
+      {
+        "file": "sound/pci/ctxfi/cthw20k2.c",
+        "func": "hw_dac_start",
+        "buggy_start": 1593,
+        "buggy_count": 7
+      },
+      {
+        "file": "sound/pci/ctxfi/cthw20k2.c",
+        "func": "hw_adc_init",
+        "buggy_start": 1864,
+        "buggy_count": 11
+      }
+    ]
+  },
+  {
+    "fix_sha": "08fd8325d94eeddfe49ef8191337e5f54553f6b0",
+    "subject": "ALSA:: ctxfi: cthw20k1: Replace mdelay() with msleep()",
+    "c_files": [
+      "sound/pci/ctxfi/cthw20k1.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/pci/ctxfi/cthw20k1.c",
+        "func": "hw_pll_init",
+        "buggy_start": 1319,
+        "buggy_count": 7
+      },
+      {
+        "file": "sound/pci/ctxfi/cthw20k1.c",
+        "func": "hw_reset_dac",
+        "buggy_start": 1407,
+        "buggy_count": 7
+      },
+      {
+        "file": "sound/pci/ctxfi/cthw20k1.c",
+        "func": "hw_card_init",
+        "buggy_start": 2030,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "c8d4dea2a82b0e1c695646aaabdada130ab71f79",
+    "subject": "can: sja1000: Replace mdelay with usleep_range in pcan_add_channels",
+    "c_files": [
+      "drivers/net/can/sja1000/peak_pcmcia.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/can/sja1000/peak_pcmcia.c",
+        "func": "pcan_add_channels",
+        "buggy_start": 530,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "276b7361bb1be3dccbc10b5be93cfee4bef2249c",
+    "subject": "can: sja1000: Replace mdelay with usleep_range in peak_pci_probe",
+    "c_files": [
+      "drivers/net/can/sja1000/peak_pci.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/can/sja1000/peak_pci.c",
+        "func": "peak_pci_probe",
+        "buggy_start": 608,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "d8ad2f31f88d609e0f8e4a34f6aeeb482ee5423b",
+    "subject": "net: adaptec: Replace mdelay() with msleep() in starfire_init_one()",
+    "c_files": [
+      "drivers/net/ethernet/adaptec/starfire.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/adaptec/starfire.c",
+        "func": "starfire_init_one",
+        "buggy_start": 802,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "055d624facda577d3168951a1d6e2519e4fc30f7",
+    "subject": "isdn: hisax: config: Replace GFP_ATOMIC with GFP_KERNEL",
+    "c_files": [
+      "drivers/isdn/hisax/config.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/isdn/hisax/config.c",
+        "func": "hisax_cs_new",
+        "buggy_start": 1029,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/isdn/hisax/config.c",
+        "func": "hisax_cs_new",
+        "buggy_start": 1059,
+        "buggy_count": 12
+      },
+      {
+        "file": "drivers/isdn/hisax/config.c",
+        "func": "hisax_cs_setup",
+        "buggy_start": 1123,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "87935aa776caae9c8346797271d19fa710b65a6a",
+    "subject": "isdn: hisax: callc: Replace GFP_ATOMIC with GFP_KERNEL in init_PStack()",
+    "c_files": [
+      "drivers/isdn/hisax/callc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/isdn/hisax/callc.c",
+        "func": "dummy_pstack",
+        "buggy_start": 1012,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "9d8009dee92cc97f866403da1b306e6e29fc12cc",
+    "subject": "isdn: mISDN: netjet: Replace GFP_ATOMIC with GFP_KERNEL in nj_probe()",
+    "c_files": [
+      "drivers/isdn/hardware/mISDN/netjet.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/isdn/hardware/mISDN/netjet.c",
+        "func": "nj_probe",
+        "buggy_start": 1084,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "8c957d66d2edb3293ff6a45d660bdaec45f7a5d0",
+    "subject": "isdn: mISDN: hfcpci: Replace GFP_ATOMIC with GFP_KERNEL in hfc_probe()",
+    "c_files": [
+      "drivers/isdn/hardware/mISDN/hfcpci.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/isdn/hardware/mISDN/hfcpci.c",
+        "func": "hfc_probe",
+        "buggy_start": 2220,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "586092ab4b768b01b3184d9a2541e2cf9a8d9740",
+    "subject": "gpu: drm: amdgpu: Replace mdelay with msleep in cik_pcie_gen3_enable()",
+    "c_files": [
+      "drivers/gpu/drm/amd/amdgpu/cik.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/amd/amdgpu/cik.c",
+        "func": "cik_pcie_gen3_enable",
+        "buggy_start": 1476,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "25a13e382de2b0f844cd6303e45f2b33c8fbabac",
+    "subject": "bluetooth: hci_qca: Replace GFP_ATOMIC with GFP_KERNEL",
+    "c_files": [
+      "drivers/bluetooth/hci_qca.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/bluetooth/hci_qca.c",
+        "func": "qca_open",
+        "buggy_start": 405,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/bluetooth/hci_qca.c",
+        "func": "qca_set_baudrate",
+        "buggy_start": 891,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "f6ebfc24e78d99ebfa0f8d1761b1d77b733dcbb9",
+    "subject": "bluetooth: hci_intel: Replace GFP_ATOMIC with GFP_KERNEL in inject_cmd_complete()",
+    "c_files": [
+      "drivers/bluetooth/hci_intel.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/bluetooth/hci_intel.c",
+        "func": "inject_cmd_complete",
+        "buggy_start": 458,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "cf07e3412668ac1d7a346a9b86c8a21e5cffd6b6",
+    "subject": "bluetooth: btusb: Replace GFP_ATOMIC with GFP_KERNEL in inject_cmd_complete()",
+    "c_files": [
+      "drivers/bluetooth/btusb.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/bluetooth/btusb.c",
+        "func": "inject_cmd_complete",
+        "buggy_start": 1895,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "436018eee5eaf1891793efca38ed9455fa21e16c",
+    "subject": "bluetooth: btmrvl_sdio: Replace GFP_ATOMIC with GFP_KERNEL in btmrvl_sdio_card_to_host()",
+    "c_files": [
+      "drivers/bluetooth/btmrvl_sdio.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/bluetooth/btmrvl_sdio.c",
+        "func": "btmrvl_sdio_card_to_host",
+        "buggy_start": 718,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "478113e43162e409bbc6d79e87c2301728f26db2",
+    "subject": "bluetooth: bpa10x: Replace GFP_ATOMIC with GFP_KERNEL in bpa10x_send_frame()",
+    "c_files": [
+      "drivers/bluetooth/bpa10x.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/bluetooth/bpa10x.c",
+        "func": "bpa10x_send_frame",
+        "buggy_start": 289,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/bluetooth/bpa10x.c",
+        "func": "bpa10x_send_frame",
+        "buggy_start": 298,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/bluetooth/bpa10x.c",
+        "func": "bpa10x_send_frame",
+        "buggy_start": 343,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "5f9c6580f6324e279417fc66e80ade0c42bfa9d9",
+    "subject": "bluetooth: bluecard_cs: Replace GFP_ATOMIC with GFP_KERNEL in bluecard_hci_set_baud_rate()",
+    "c_files": [
+      "drivers/bluetooth/bluecard_cs.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/bluetooth/bluecard_cs.c",
+        "func": "bluecard_hci_set_baud_rate",
+        "buggy_start": 565,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "6709514f266e9163f9f579006496fbc8bc986d80",
+    "subject": "bluetooth: bfusb: Replace GFP_ATOMIC with GFP_KERNEL in bfusb_send_frame()",
+    "c_files": [
+      "drivers/bluetooth/bfusb.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/bluetooth/bfusb.c",
+        "func": "bfusb_send_frame",
+        "buggy_start": 490,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "7403bd14d7b545ef89c3443c09ccdb3c631a9a27",
+    "subject": "PCI: hv: Replace GFP_ATOMIC with GFP_KERNEL in new_pcichild_device()",
+    "c_files": [
+      "drivers/pci/controller/pci-hyperv.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pci/controller/pci-hyperv.c",
+        "func": "new_pcichild_device",
+        "buggy_start": 1543,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "c9160b69258ef46ab62c27a09decb8fef311e700",
+    "subject": "ntb: ntb_transport: Replace GFP_ATOMIC with GFP_KERNEL in ntb_transport_create_queue",
+    "c_files": [
+      "drivers/ntb/ntb_transport.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/ntb/ntb_transport.c",
+        "func": "ntb_transport_create_queue",
+        "buggy_start": 1828,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/ntb/ntb_transport.c",
+        "func": "ntb_transport_create_queue",
+        "buggy_start": 1839,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "82edcc758f273ed3afd308746dd69376d5b1024d",
+    "subject": "ntb: ntb_transport: Replace GFP_ATOMIC with GFP_KERNEL in ntb_transport_setup_qp_mw",
+    "c_files": [
+      "drivers/ntb/ntb_transport.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/ntb/ntb_transport.c",
+        "func": "ntb_transport_setup_qp_mw",
+        "buggy_start": 637,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "9f96b9b7d836a71733f83ba813d9e0c658090c5d",
+    "subject": "PCI: endpoint: Replace mdelay with usleep_range() in pci_epf_test_write()",
+    "c_files": [
+      "drivers/pci/endpoint/functions/pci-epf-test.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pci/endpoint/functions/pci-epf-test.c",
+        "func": "pci_epf_test_write",
+        "buggy_start": 230,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "fbfb3a75bd52249bbbbfe6e91b420cf2ae135ad5",
+    "subject": "media: dvb-usb: Replace GFP_ATOMIC with GFP_KERNEL",
+    "c_files": [
+      "drivers/media/usb/dvb-usb/usb-urb.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/usb/dvb-usb/usb-urb.c",
+        "func": "usb_allocate_stream_buffers",
+        "buggy_start": 118,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/usb/dvb-usb/usb-urb.c",
+        "func": "usb_bulk_urb_init",
+        "buggy_start": 145,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/usb/dvb-usb/usb-urb.c",
+        "func": "usb_isoc_urb_init",
+        "buggy_start": 178,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "5f27314141757794378abb2907fb7116947d644b",
+    "subject": "gpu: drm: bridge: adv7511: Replace mdelay with usleep_range in adv7511_probe",
+    "c_files": [
+      "drivers/gpu/drm/bridge/adv7511/adv7511_drv.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/bridge/adv7511/adv7511_drv.c",
+        "func": "adv7511_probe",
+        "buggy_start": 1127,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "04a1e08cc734da60445c417e314a0f35a642861b",
+    "subject": "i40evf: Replace GFP_ATOMIC with GFP_KERNEL in i40evf_add_vlan",
+    "c_files": [
+      "drivers/net/ethernet/intel/i40evf/i40evf_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/intel/i40evf/i40evf_main.c",
+        "func": "i40evf_add_vlan",
+        "buggy_start": 681,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "6e1d8d1470b2c9335715f7d52e864f0bd91a5f59",
+    "subject": "net: wireless: b43legacy: Replace GFP_ATOMIC with GFP_KERNEL in dma_tx_fragment",
+    "c_files": [
+      "drivers/net/wireless/broadcom/b43legacy/dma.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/broadcom/b43legacy/dma.c",
+        "func": "dma_tx_fragment",
+        "buggy_start": 1064,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "7b4b199459f31541141c4510e542bd4533a60585",
+    "subject": "mtd: rawnand: diskonchip: Replace mdelay with usleep_range in doc_probe",
+    "c_files": [
+      "drivers/mtd/nand/raw/diskonchip.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/mtd/nand/raw/diskonchip.c",
+        "func": "doc_probe",
+        "buggy_start": 1481,
+        "buggy_count": 12
+      }
+    ]
+  },
+  {
+    "fix_sha": "de11731278712e0f8b12a2539aa2958ca95200c3",
+    "subject": "video: fbdev: aty: radeon_pm: Replace mdelay with msleep in radeonfb_pci_suspend",
+    "c_files": [
+      "drivers/video/fbdev/aty/radeon_pm.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/video/fbdev/aty/radeon_pm.c",
+        "func": "radeonfb_pci_suspend",
+        "buggy_start": 2678,
+        "buggy_count": 17
+      }
+    ]
+  },
+  {
+    "fix_sha": "86c4e7c350a5bd116ff4b9cea2c75a4a4ae321ff",
+    "subject": "video: fbdev: aty: aty128fb: Replace mdelay with msleep in aty128_set_suspend",
+    "c_files": [
+      "drivers/video/fbdev/aty/aty128fb.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/video/fbdev/aty/aty128fb.c",
+        "func": "aty128_set_suspend",
+        "buggy_start": 2442,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "12f3ac2fb16130e4afcfde986fb97f61cb54eead",
+    "subject": "video: fbdev: savage: Replace mdelay with usleep_range in savage_init_hw",
+    "c_files": [
+      "drivers/video/fbdev/savage/savagefb_driver.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/video/fbdev/savage/savagefb_driver.c",
+        "func": "savage_init_hw",
+        "buggy_start": 1892,
+        "buggy_count": 11
+      },
+      {
+        "file": "drivers/video/fbdev/savage/savagefb_driver.c",
+        "func": "savage_init_hw",
+        "buggy_start": 1906,
+        "buggy_count": 11
+      }
+    ]
+  },
+  {
+    "fix_sha": "f9e628a6645ed4f42a15dfa3c5af45a916a228e4",
+    "subject": "net: ieee802154: atusb: Replace GFP_ATOMIC with GFP_KERNEL in atusb_probe",
+    "c_files": [
+      "drivers/net/ieee802154/atusb.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ieee802154/atusb.c",
+        "func": "atusb_probe",
+        "buggy_start": 1045,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "8fddfb39a4791b3698e4e584681691567a276898",
+    "subject": "platform: x86: intel_scu_ipc: Replace mdelay with usleep_range in intel_scu_ipc_i2c_cntrl",
+    "c_files": [
+      "drivers/platform/x86/intel_scu_ipc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/platform/x86/intel_scu_ipc.c",
+        "func": "intel_scu_ipc_i2c_cntrl",
+        "buggy_start": 584,
+        "buggy_count": 11
+      }
+    ]
+  },
+  {
+    "fix_sha": "72cbd314bc79ba105d9e0184e4b00b2cf6f3b42d",
+    "subject": "staging: rtl8192u: Replace mdelay with usleep_range in dm_TXPowerTrackingCallback_TSSI",
+    "c_files": [
+      "drivers/staging/rtl8192u/r8192U_dm.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/rtl8192u/r8192U_dm.c",
+        "func": "dm_TXPowerTrackingCallback_TSSI",
+        "buggy_start": 539,
+        "buggy_count": 13
+      }
+    ]
+  },
+  {
+    "fix_sha": "6c93c63a634ae7036d699a1e7f2121a9f2dee5fe",
+    "subject": "staging: rtl8192u: Replace mdelay with usleep_range in rtl8192_usb_disconnect",
+    "c_files": [
+      "drivers/staging/rtl8192u/r8192U_core.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/rtl8192u/r8192U_core.c",
+        "func": "rtl8192_usb_disconnect",
+        "buggy_start": 5035,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "a40c973eebe61aa9242f5501d5d5598778e3bea2",
+    "subject": "staging: rtl8192u: Replace GFP_ATOMIC with GFP_KERNEL in ieee80211_softmac_init",
+    "c_files": [
+      "drivers/staging/rtl8192u/ieee80211/ieee80211_softmac.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/rtl8192u/ieee80211/ieee80211_softmac.c",
+        "func": "ieee80211_softmac_init",
+        "buggy_start": 2684,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "a626c4fddd784a76b06573165f44b6bbba2d1808",
+    "subject": "staging: rtl8192u: Replace GFP_ATOMIC with GFP_KERNEL in prism2_wep_init",
+    "c_files": [
+      "drivers/staging/rtl8192u/ieee80211/ieee80211_crypt_wep.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/rtl8192u/ieee80211/ieee80211_crypt_wep.c",
+        "func": "prism2_wep_init",
+        "buggy_start": 41,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "2accd50e15e35276d0ac5e365f75c3a2f514b20f",
+    "subject": "staging: rtl8192u: Replace GFP_ATOMIC with GFP_KERNEL in ieee80211_tkip_init",
+    "c_files": [
+      "drivers/staging/rtl8192u/ieee80211/ieee80211_crypt_tkip.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/rtl8192u/ieee80211/ieee80211_crypt_tkip.c",
+        "func": "ieee80211_tkip_init",
+        "buggy_start": 66,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "98743f8749848abb229ec341e25e4af165843de8",
+    "subject": "staging: rtl8192u: Replace GFP_ATOMIC with GFP_KERNEL in ieee80211_ccmp_init",
+    "c_files": [
+      "drivers/staging/rtl8192u/ieee80211/ieee80211_crypt_ccmp.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/rtl8192u/ieee80211/ieee80211_crypt_ccmp.c",
+        "func": "ieee80211_ccmp_init",
+        "buggy_start": 66,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "95751f19b6942680f2884b44a127490c91aa4291",
+    "subject": "staging: ks7010: Replace mdelay with usleep_range in ks7010_upload_firmware",
+    "c_files": [
+      "drivers/staging/ks7010/ks7010_sdio.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/ks7010/ks7010_sdio.c",
+        "func": "ks7010_upload_firmware",
+        "buggy_start": 725,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "24b6d3eee183ddde814b47aedc7f0c0c5ab7b72d",
+    "subject": "misc: ti-st: Replace GFP_ATOMIC with GFP_KERNEL in kim_probe",
+    "c_files": [
+      "drivers/misc/ti-st/st_kim.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/misc/ti-st/st_kim.c",
+        "func": "kim_probe",
+        "buggy_start": 735,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "13eac05b0581e6f9f5aec93a8ab64c83d7c311bf",
+    "subject": "tty: ipwireless: Replace GFP_ATOMIC with GFP_KERNEL in ipwireless_network_create",
+    "c_files": [
+      "drivers/tty/ipwireless/network.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/tty/ipwireless/network.c",
+        "func": "ipwireless_network_packet_received",
+        "buggy_start": 416,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "de0611b27d15ddc831d4c47d3b4be592c5587948",
+    "subject": "usb: isp1760: Replace mdelay with msleep in isp1760_stop",
+    "c_files": [
+      "drivers/usb/isp1760/isp1760-hcd.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/isp1760/isp1760-hcd.c",
+        "func": "isp1760_stop",
+        "buggy_start": 2093,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "0f0290089abd37ca54db764c294fe7e47624a313",
+    "subject": "usb: isp1760: Replace mdelay with msleep in isp1760_init_core",
+    "c_files": [
+      "drivers/usb/isp1760/isp1760-core.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/isp1760/isp1760-core.c",
+        "func": "isp1760_init_core",
+        "buggy_start": 31,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "2a3dae10d51d262514498fe710c963da946ce6e2",
+    "subject": "usb: storage: Replace mdelay with msleep in init_freecom",
+    "c_files": [
+      "drivers/usb/storage/freecom.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/storage/freecom.c",
+        "func": "init_freecom",
+        "buggy_start": 464,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/usb/storage/freecom.c",
+        "func": "init_freecom",
+        "buggy_start": 472,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "4011f07660e0c909e25ea2c09ad4761c26c0b8df",
+    "subject": "scsi: st: Replace GFP_ATOMIC with GFP_KERNEL in new_tape_buffer",
+    "c_files": [
+      "drivers/scsi/st.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/scsi/st.c",
+        "func": "new_tape_buffer",
+        "buggy_start": 3878,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/scsi/st.c",
+        "func": "new_tape_buffer",
+        "buggy_start": 3889,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "1f618aac2f00d3d9a4942cda14b8c33d28a11840",
+    "subject": "scsi: st: Replace GFP_ATOMIC with GFP_KERNEL in st_probe",
+    "c_files": [
+      "drivers/scsi/st.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/scsi/st.c",
+        "func": "st_probe",
+        "buggy_start": 4290,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "4e56569cee1505846b3dcb15fbf400f6a7e9f015",
+    "subject": "infiniband: i40iw: Replace GFP_ATOMIC with GFP_KERNEL in i40iw_l2param_change",
+    "c_files": [
+      "drivers/infiniband/hw/i40iw/i40iw_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/infiniband/hw/i40iw/i40iw_main.c",
+        "func": "i40iw_l2param_change",
+        "buggy_start": 1758,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "f9af8730143a0fdc572f90b8a388795ee812cd74",
+    "subject": "infiniband: i40iw: Replace GFP_ATOMIC with GFP_KERNEL in i40iw_make_listen_node",
+    "c_files": [
+      "drivers/infiniband/hw/i40iw/i40iw_cm.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/infiniband/hw/i40iw/i40iw_cm.c",
+        "func": "i40iw_make_listen_node",
+        "buggy_start": 2872,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "39e487faaf706fa94bab4d0cf9f543a3430c746e",
+    "subject": "infiniband: i40iw: Replace GFP_ATOMIC with GFP_KERNEL in i40iw_add_mqh_4",
+    "c_files": [
+      "drivers/infiniband/hw/i40iw/i40iw_cm.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/infiniband/hw/i40iw/i40iw_cm.c",
+        "func": "i40iw_add_mqh_4",
+        "buggy_start": 1788,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "de3d01fd8549ec0444fc917aab711b3f884930c5",
+    "subject": "xen: xen-pciback: Replace GFP_ATOMIC with GFP_KERNEL in pcistub_reg_add",
+    "c_files": [
+      "drivers/xen/xen-pciback/pci_stub.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/xen/xen-pciback/pci_stub.c",
+        "func": "pcistub_reg_add",
+        "buggy_start": 1149,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "230d211472d2779253e5a8383353fc44783dd038",
+    "subject": "xen: xen-pciback: Replace GFP_ATOMIC with GFP_KERNEL in xen_pcibk_config_quirks_init",
+    "c_files": [
+      "drivers/xen/xen-pciback/conf_space_quirks.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/xen/xen-pciback/conf_space_quirks.c",
+        "func": "xen_pcibk_config_quirks_init",
+        "buggy_start": 95,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "9eb5f15b47b69847bfceb94350bd68fbdbf829e3",
+    "subject": "xen: xen-pciback: Replace GFP_ATOMIC with GFP_KERNEL in pcistub_device_alloc",
+    "c_files": [
+      "drivers/xen/xen-pciback/pci_stub.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/xen/xen-pciback/pci_stub.c",
+        "func": "pcistub_device_alloc",
+        "buggy_start": 71,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "bb52e3169cb7dd5a9deea39b94342fce36235a5b",
+    "subject": "xen: xen-pciback: Replace GFP_ATOMIC with GFP_KERNEL in pcistub_init_device",
+    "c_files": [
+      "drivers/xen/xen-pciback/pci_stub.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/xen/xen-pciback/pci_stub.c",
+        "func": "pcistub_init_device",
+        "buggy_start": 364,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "cc5cd5079699c7831fdc58e74352736706c3df3c",
+    "subject": "xen: xen-pciback: Replace GFP_ATOMIC with GFP_KERNEL in pcistub_probe",
+    "c_files": [
+      "drivers/xen/xen-pciback/pci_stub.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/xen/xen-pciback/pci_stub.c",
+        "func": "pcistub_probe",
+        "buggy_start": 577,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "1fa350b6e1a14edaeeb4e4f84010f5b0c53d2915",
+    "subject": "ALSA: ad1889: Replace mdelay with usleep_range in snd_ad1889_ac97_ready",
+    "c_files": [
+      "sound/pci/ad1889.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/pci/ad1889.c",
+        "func": "snd_ad1889_ac97_ready",
+        "buggy_start": 258,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "621fdf60ab22dd902d52a670e943371400b4ee20",
+    "subject": "ALSA: ad1889: Replace mdelay with usleep_range in snd_ad1889_init",
+    "c_files": [
+      "sound/pci/ad1889.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/pci/ad1889.c",
+        "func": "snd_ad1889_init",
+        "buggy_start": 872,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "a6b09837ba0ea1c646b74207f676647cf2bbfad9",
+    "subject": "ASoC: intel: skl_rt286: Replace GFP_ATOMIC with GFP_KERNEL in skylake_audio_probe",
+    "c_files": [
+      "sound/soc/intel/boards/skl_rt286.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/intel/boards/skl_rt286.c",
+        "func": "skylake_audio_probe",
+        "buggy_start": 527,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "8faef87e40f9a9b429054fe08b28a65a4b6685e8",
+    "subject": "ASoC: intel: skl_nau88l25_ssm4567: Replace GFP_ATOMIC with GFP_KERNEL in skylake_audio_probe",
+    "c_files": [
+      "sound/soc/intel/boards/skl_nau88l25_ssm4567.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/intel/boards/skl_nau88l25_ssm4567.c",
+        "func": "skylake_audio_probe",
+        "buggy_start": 696,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "3afce6a4d994dcfc03ca7b6ac6dfa5700e26d152",
+    "subject": "ASoC: intel: skl_nau88l25_max98357a: Replace GFP_ATOMIC with GFP_KERNEL in skylake_audio_probe",
+    "c_files": [
+      "sound/soc/intel/boards/skl_nau88l25_max98357a.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/intel/boards/skl_nau88l25_max98357a.c",
+        "func": "skylake_audio_probe",
+        "buggy_start": 643,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "f3cc330a10493ed5948f7019a78dfa89721858c8",
+    "subject": "ASoC: intel: cht_bsw_rt5645: Replace GFP_ATOMIC with GFP_KERNEL in snd_cht_mc_probe",
+    "c_files": [
+      "sound/soc/intel/boards/cht_bsw_rt5645.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/intel/boards/cht_bsw_rt5645.c",
+        "func": "snd_cht_mc_probe",
+        "buggy_start": 539,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "2589bd8242d74430b7a91109cfe59f2e2173e1bd",
+    "subject": "ASoC: intel: cht_bsw_max98090_ti: Replace GFP_ATOMIC with GFP_KERNEL in snd_cht_mc_probe",
+    "c_files": [
+      "sound/soc/intel/boards/cht_bsw_max98090_ti.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/intel/boards/cht_bsw_max98090_ti.c",
+        "func": "snd_cht_mc_probe",
+        "buggy_start": 391,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "7a3a63238fc1d93aa998671de56af2202d776010",
+    "subject": "ASoC: intel: bytcr_rt5640: Replace GFP_ATOMIC with GFP_KERNEL in snd_byt_rt5640_mc_probe",
+    "c_files": [
+      "sound/soc/intel/boards/bytcr_rt5640.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/intel/boards/bytcr_rt5640.c",
+        "func": "snd_byt_rt5640_mc_probe",
+        "buggy_start": 744,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "270e1ad6d1f76dfebea19a277a65cefd185f85b0",
+    "subject": "ASoC: intel: bxt_rt298: Replace GFP_ATOMIC with GFP_KERNEL in broxton_audio_probe",
+    "c_files": [
+      "sound/soc/intel/boards/bxt_rt298.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/intel/boards/bxt_rt298.c",
+        "func": "broxton_audio_probe",
+        "buggy_start": 593,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "f2126f6d4fedfee6065351da4bab6b89d0ba4d1d",
+    "subject": "ASoC: intel: bxt_da7219_max98357a: Replace GFP_ATOMIC with GFP_KERNEL in broxton_audio_probe",
+    "c_files": [
+      "sound/soc/intel/boards/bxt_da7219_max98357a.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/intel/boards/bxt_da7219_max98357a.c",
+        "func": "broxton_audio_probe",
+        "buggy_start": 571,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "1aa3b3e0cbdb32439f04842e88fc7557a0777660",
+    "subject": "fs: quota: Replace GFP_ATOMIC with GFP_KERNEL in dquot_init",
+    "c_files": [
+      "fs/quota/dquot.c"
+    ],
+    "hunks": [
+      {
+        "file": "fs/quota/dquot.c",
+        "func": "dquot_init",
+        "buggy_start": 2966,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "e9acf05255cbf72dc32169957d2895cbfd12c7e1",
+    "subject": "crypto: cavium - Replace mdelay with msleep in cpt_device_init",
+    "c_files": [
+      "drivers/crypto/cavium/cpt/cptpf_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/crypto/cavium/cpt/cptpf_main.c",
+        "func": "cpt_device_init",
+        "buggy_start": 436,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "9f66d8d73e654c5f867daa6aa186300ecaf49d3a",
+    "subject": "x86/efi: Replace GFP_ATOMIC with GFP_KERNEL in efi_query_variable_store()",
+    "c_files": [
+      "arch/x86/platform/efi/quirks.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/x86/platform/efi/quirks.c",
+        "func": "efi_query_variable_store",
+        "buggy_start": 177,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "597ff72f3de850c3b93b41eca21732715d6ffc60",
+    "subject": "hyper-v: use GFP_KERNEL for hv_context.hv_numa_map",
+    "c_files": [
+      "drivers/hv/hv.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/hv/hv.c",
+        "func": "hv_synic_alloc",
+        "buggy_start": 147,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "8100091d02487ff267af0d410ceb9eefebc8ea03",
+    "subject": "bcma: Replace mdelay with usleep_range in bcma_pmu_resources_init",
+    "c_files": [
+      "drivers/bcma/driver_chipcommon_pmu.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/bcma/driver_chipcommon_pmu.c",
+        "func": "bcma_pmu_resources_init",
+        "buggy_start": 203,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "9a69b7ae79d886e27db5164af91fbd75a0e0e89d",
+    "subject": "crypto: user - Replace GFP_ATOMIC with GFP_KERNEL in crypto_report",
+    "c_files": [
+      "crypto/crypto_user.c"
+    ],
+    "hunks": [
+      {
+        "file": "crypto/crypto_user.c",
+        "func": "crypto_report",
+        "buggy_start": 271,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "1ca2809897155f1adc43e4859b4a3582e235c09a",
+    "subject": "crypto: rsa-pkcs1pad - Replace GFP_ATOMIC with GFP_KERNEL in pkcs1pad_encrypt_sign_complete",
+    "c_files": [
+      "crypto/rsa-pkcs1pad.c"
+    ],
+    "hunks": [
+      {
+        "file": "crypto/rsa-pkcs1pad.c",
+        "func": "pkcs1pad_encrypt_sign_complete",
+        "buggy_start": 192,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "4a823c0be80fa996234ebb41c80d40458b1bec1e",
+    "subject": "opp: cpu: Replace GFP_ATOMIC with GFP_KERNEL in dev_pm_opp_init_cpufreq_table",
+    "c_files": [
+      "drivers/opp/cpu.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/opp/cpu.c",
+        "func": "dev_pm_opp_init_cpufreq_table",
+        "buggy_start": 55,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "06633ee14d5c9bff3b46be67be2824138c75594a",
+    "subject": "Bluetooth: hci_ll: Replace mdelay with msleep in download_firmware",
+    "c_files": [
+      "drivers/bluetooth/hci_ll.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/bluetooth/hci_ll.c",
+        "func": "download_firmware",
+        "buggy_start": 650,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "1ebbf046273e50cf3cbf2ec13d520dc74ab454d4",
+    "subject": "Bluetooth: btmrvl_main: Replace GFP_ATOMIC with GFP_KERNEL in btmrvl_send_sync_cmd",
+    "c_files": [
+      "drivers/bluetooth/btmrvl_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/bluetooth/btmrvl_main.c",
+        "func": "btmrvl_send_sync_cmd",
+        "buggy_start": 183,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "688d6240e0646a56ff8bdffb2310dcdeca354814",
+    "subject": "Bluetooth: hci_ath: Replace mdelay with msleep in ath_wakeup_ar3k",
+    "c_files": [
+      "drivers/bluetooth/hci_ath.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/bluetooth/hci_ath.c",
+        "func": "ath_wakeup_ar3k",
+        "buggy_start": 71,
+        "buggy_count": 12
+      }
+    ]
+  },
+  {
+    "fix_sha": "b3506c7ed216dd2db1f06c2845da45018e2c508d",
+    "subject": "ata: pata_pdc2027x: Replace mdelay with msleep",
+    "c_files": [
+      "drivers/ata/pata_pdc2027x.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/ata/pata_pdc2027x.c",
+        "func": "pdc_adjust_pll",
+        "buggy_start": 580,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/ata/pata_pdc2027x.c",
+        "func": "pdc_detect_pll_input_clock",
+        "buggy_start": 620,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "eada8598e69f9ff767c387951f40bab5aafe6a88",
+    "subject": "ata: pata_it821x: Replace mdelay with usleep_range in it821x_firmware_command",
+    "c_files": [
+      "drivers/ata/pata_it821x.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/ata/pata_it821x.c",
+        "func": "it821x_firmware_command",
+        "buggy_start": 683,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "e72685dbd2e7782ce99ccd198e52dc0d9cf1d16f",
+    "subject": "ata: sata_mv: Replace mdelay with usleep_range in mv_reset_channel",
+    "c_files": [
+      "drivers/ata/sata_mv.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/ata/sata_mv.c",
+        "func": "mv_reset_channel",
+        "buggy_start": 3596,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "4330b53e9662f8d105da5916899f98d2138dcb1e",
+    "subject": "b43: Replace mdelay with usleep_range in b43_radio_2057_init_post",
+    "c_files": [
+      "drivers/net/wireless/broadcom/b43/phy_n.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/broadcom/b43/phy_n.c",
+        "func": "b43_radio_2057_init_post",
+        "buggy_start": 1031,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "23cb746b5e9dea31948b159adbc7e77af57ea24e",
+    "subject": "staging: rtl8192u: Replace mdelay with msleep in rtl8192_usb_probe",
+    "c_files": [
+      "drivers/staging/rtl8192u/r8192U_core.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/rtl8192u/r8192U_core.c",
+        "func": "rtl8192_usb_probe",
+        "buggy_start": 4998,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "106b8863069e0fb31468ddd6ffcd162cc8430280",
+    "subject": "i40iw: Replace mdelay with msleep in i40iw_wait_pe_ready",
+    "c_files": [
+      "drivers/infiniband/hw/i40iw/i40iw_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/infiniband/hw/i40iw/i40iw_main.c",
+        "func": "i40iw_wait_pe_ready",
+        "buggy_start": 1290,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "75ce7191eac5972405d1752a991bc002c2957b65",
+    "subject": "sky2: Replace mdelay with msleep in sky2_vpd_wait",
+    "c_files": [
+      "drivers/net/ethernet/marvell/sky2.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/marvell/sky2.c",
+        "func": "sky2_vpd_wait",
+        "buggy_start": 4287,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "88a527c4981847838273703df010eb8aca5ee023",
+    "subject": "staging: vt6655: Use GFP_KERNEL in kzalloc",
+    "c_files": [
+      "drivers/staging/vt6655/device_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/vt6655/device_main.c",
+        "func": "device_init_rd0_ring",
+        "buggy_start": 538,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/staging/vt6655/device_main.c",
+        "func": "device_init_rd1_ring",
+        "buggy_start": 562,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/staging/vt6655/device_main.c",
+        "func": "device_init_td0_ring",
+        "buggy_start": 620,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/staging/vt6655/device_main.c",
+        "func": "device_init_td1_ring",
+        "buggy_start": 645,
+        "buggy_count": 7
+      }
+    ]
+  }
+]

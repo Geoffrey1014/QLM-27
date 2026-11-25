@@ -1,0 +1,413 @@
+[
+  {
+    "fix_sha": "4c2b46c824a78fc8190d8eafaaea5a9078fe7479",
+    "subject": "fs: orangefs: fix error return code of orangefs_revalidate_lookup()",
+    "c_files": [
+      "fs/orangefs/dcache.c"
+    ],
+    "hunks": [
+      {
+        "file": "fs/orangefs/dcache.c",
+        "func": "orangefs_revalidate_lookup",
+        "buggy_start": 26,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "31d82c2c787d5cf65fedd35ebbc0c1bd95c1a679",
+    "subject": "kernel: kexec_file: fix error return code of kexec_calculate_store_digests()",
+    "c_files": [
+      "kernel/kexec_file.c"
+    ],
+    "hunks": [
+      {
+        "file": "kernel/kexec_file.c",
+        "func": "kexec_calculate_store_digests",
+        "buggy_start": 740,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "26594c6bbb60c6bc87e3762a86ceece57d164c66",
+    "subject": "rpmsg: qcom_glink_native: fix error return code of qcom_glink_rx_data()",
+    "c_files": [
+      "drivers/rpmsg/qcom_glink_native.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/rpmsg/qcom_glink_native.c",
+        "func": "qcom_glink_rx_data",
+        "buggy_start": 857,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "9a4619ef6cc1182ba02d9d465903d47a12bdc55a",
+    "subject": "media: i2c: imx274: fix error return code of imx274_s_frame_interval()",
+    "c_files": [
+      "drivers/media/i2c/imx274.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/i2c/imx274.c",
+        "func": "imx274_s_frame_interval",
+        "buggy_start": 1381,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "d225ef6fda7ce9ff7d28764bd1cceea2d0215e8b",
+    "subject": "base: dd: fix error return code of driver_sysfs_add()",
+    "c_files": [
+      "drivers/base/dd.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/base/dd.c",
+        "func": "driver_sysfs_add",
+        "buggy_start": 415,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "3401ecf7fc1b9458a19d42c0e26a228f18ac7dda",
+    "subject": "scsi: mpt3sas: Fix error return code of mpt3sas_base_attach()",
+    "c_files": [
+      "drivers/scsi/mpt3sas/mpt3sas_base.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/scsi/mpt3sas/mpt3sas_base.c",
+        "func": "mpt3sas_base_attach",
+        "buggy_start": 7806,
+        "buggy_count": 14
+      }
+    ]
+  },
+  {
+    "fix_sha": "f69953837ca5d98aa983a138dc0b90a411e9c763",
+    "subject": "scsi: qedi: Fix error return code of qedi_alloc_global_queues()",
+    "c_files": [
+      "drivers/scsi/qedi/qedi_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/scsi/qedi/qedi_main.c",
+        "func": "qedi_alloc_global_queues",
+        "buggy_start": 1675,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "692bd2a02e2dfe128e8451f9bc1806ab87d0b1d5",
+    "subject": "drm/amdgpu/swsmu: fix error return code of smu_v11_0_set_allowed_mask()",
+    "c_files": [
+      "drivers/gpu/drm/amd/pm/swsmu/smu11/smu_v11_0.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/amd/pm/swsmu/smu11/smu_v11_0.c",
+        "func": "smu_v11_0_set_allowed_mask",
+        "buggy_start": 744,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "f2b6ebf61e8fcd0b1f03a084d39742b1f6113ac4",
+    "subject": "usb: gadget: legacy: fix error return code of msg_bind()",
+    "c_files": [
+      "drivers/usb/gadget/legacy/mass_storage.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/gadget/legacy/mass_storage.c",
+        "func": "msg_bind",
+        "buggy_start": 175,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "c021e02357703b959e20c458d64b6d4e0d5b8012",
+    "subject": "usb: gadget: legacy: fix error return code of multi_bind()",
+    "c_files": [
+      "drivers/usb/gadget/legacy/multi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/gadget/legacy/multi.c",
+        "func": "multi_bind",
+        "buggy_start": 399,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "3af32605289e9f508cc40ff1046e15ac6c80d2fa",
+    "subject": "usb: renesas_usbhs: fix error return code of usbhsf_pkt_handler()",
+    "c_files": [
+      "drivers/usb/renesas_usbhs/fifo.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/renesas_usbhs/fifo.c",
+        "func": "usbhsf_pkt_handler",
+        "buggy_start": 160,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "f3d384e36630e2a552d874e422835606d9cf230a",
+    "subject": "media: platform: sunxi: sun6i-csi: fix error return code of sun6i_video_start_streaming()",
+    "c_files": [
+      "drivers/media/platform/sunxi/sun6i-csi/sun6i_video.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/sunxi/sun6i-csi/sun6i_video.c",
+        "func": "sun6i_video_start_streaming",
+        "buggy_start": 151,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "95667791eb6e21a7f6c9ec4b633a8bf480a7675d",
+    "subject": "media: platform: xilinx: fix error return code of xvip_graph_init()",
+    "c_files": [
+      "drivers/media/platform/xilinx/xilinx-vipp.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/xilinx/xilinx-vipp.c",
+        "func": "xvip_graph_init",
+        "buggy_start": 525,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "47386ce36f904583d45c82087d992a50ad612c8b",
+    "subject": "pinctrl: ti: fix error return code of ti_iodelay_probe()",
+    "c_files": [
+      "drivers/pinctrl/ti/pinctrl-ti-iodelay.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pinctrl/ti/pinctrl-ti-iodelay.c",
+        "func": "ti_iodelay_probe",
+        "buggy_start": 867,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "282894556b8349d3c095eedadc4dde9495d48445",
+    "subject": "crypto: sun8i-ce - fix error return code in sun8i_ce_prng_generate()",
+    "c_files": [
+      "drivers/crypto/allwinner/sun8i-ce/sun8i-ce-prng.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/crypto/allwinner/sun8i-ce/sun8i-ce-prng.c",
+        "func": "sun8i_ce_prng_generate",
+        "buggy_start": 99,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "620b90d30c08684dc6ebee07c72755d997f9d1f6",
+    "subject": "mtd: maps: fix error return code of physmap_flash_remove()",
+    "c_files": [
+      "drivers/mtd/maps/physmap-core.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/mtd/maps/physmap-core.c",
+        "func": "physmap_flash_remove",
+        "buggy_start": 69,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "df66617bfe87487190a60783d26175b65d2502ce",
+    "subject": "block: rsxx: fix error return code of rsxx_pci_probe()",
+    "c_files": [
+      "drivers/block/rsxx/core.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/block/rsxx/core.c",
+        "func": "rsxx_pci_probe",
+        "buggy_start": 871,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "45c7eaeb29d67224db4ba935deb575586a1fda09",
+    "subject": "thermal: thermal_of: Fix error return code of thermal_of_populate_bind_params()",
+    "c_files": [
+      "drivers/thermal/thermal_of.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/thermal/thermal_of.c",
+        "func": "thermal_of_populate_bind_params",
+        "buggy_start": 704,
+        "buggy_count": 14
+      }
+    ]
+  },
+  {
+    "fix_sha": "5866bce00deecd87c46e8c3e86e6cf0b3fe2bca1",
+    "subject": "staging: vc04_services: vchiq_arm: fix error return code of vchiq_release_internal() and vchiq_use_internal()",
+    "c_files": [
+      "drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c",
+        "func": "vchiq_use_internal",
+        "buggy_start": 2332,
+        "buggy_count": 8
+      },
+      {
+        "file": "drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c",
+        "func": "vchiq_release_internal",
+        "buggy_start": 2389,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "179d0ba0c454057a65929c46af0d6ad986754781",
+    "subject": "net: qrtr: fix error return code of qrtr_sendmsg()",
+    "c_files": [
+      "net/qrtr/qrtr.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/qrtr/qrtr.c",
+        "func": "qrtr_sendmsg",
+        "buggy_start": 958,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "2055a99da8a253a357bdfd359b3338ef3375a26c",
+    "subject": "net: bonding: fix error return code of bond_neigh_init()",
+    "c_files": [
+      "drivers/net/bonding/bond_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/bonding/bond_main.c",
+        "func": "bond_neigh_init",
+        "buggy_start": 3978,
+        "buggy_count": 11
+      }
+    ]
+  },
+  {
+    "fix_sha": "62765d39553cfd1ad340124fe1e280450e8c89e2",
+    "subject": "net: wan: fix error return code of uhdlc_init()",
+    "c_files": [
+      "drivers/net/wan/fsl_ucc_hdlc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wan/fsl_ucc_hdlc.c",
+        "func": "uhdlc_init",
+        "buggy_start": 204,
+        "buggy_count": 14
+      }
+    ]
+  },
+  {
+    "fix_sha": "143c253f42bad20357e7e4432087aca747c43384",
+    "subject": "net: hisilicon: hns: fix error return code of hns_nic_clear_all_rx_fetch()",
+    "c_files": [
+      "drivers/net/ethernet/hisilicon/hns/hns_enet.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/hisilicon/hns/hns_enet.c",
+        "func": "hns_nic_clear_all_rx_fetch",
+        "buggy_start": 1663,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "715ea61532e731c62392221238906704e63d75b6",
+    "subject": "interconnect: core: fix error return code of icc_link_destroy()",
+    "c_files": [
+      "drivers/interconnect/core.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/interconnect/core.c",
+        "func": "icc_link_destroy",
+        "buggy_start": 942,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "fa8ba6e5dc0e78e409e503ddcfceef5dd96527f4",
+    "subject": "HID: alps: fix error return code in alps_input_configured()",
+    "c_files": [
+      "drivers/hid/hid-alps.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/hid/hid-alps.c",
+        "func": "alps_input_configured",
+        "buggy_start": 761,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "6650d31f21b8a0043613ae0a4a2e42e49dc20b2d",
+    "subject": "net: intel: iavf: fix error return code of iavf_init_get_resources()",
+    "c_files": [
+      "drivers/net/ethernet/intel/iavf/iavf_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/intel/iavf/iavf_main.c",
+        "func": "iavf_init_get_resources",
+        "buggy_start": 1776,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "38c26ff3048af50eee3fcd591921357ee5bfd9ee",
+    "subject": "net: tehuti: fix error return code in bdx_probe()",
+    "c_files": [
+      "drivers/net/ethernet/tehuti/tehuti.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/tehuti/tehuti.c",
+        "func": "bdx_probe",
+        "buggy_start": 2044,
+        "buggy_count": 6
+      }
+    ]
+  }
+]

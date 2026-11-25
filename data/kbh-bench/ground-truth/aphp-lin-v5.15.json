@@ -1,0 +1,2903 @@
+[
+  {
+    "fix_sha": "3b4961313d31e200c9e974bb1536cdea217f78b5",
+    "subject": "usb: dwc3: of-simple: fix clock resource leak in dwc3_of_simple_probe",
+    "c_files": [
+      "drivers/usb/dwc3/dwc3-of-simple.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/dwc3/dwc3-of-simple.c",
+        "func": "dwc3_of_simple_probe",
+        "buggy_start": 70,
+        "buggy_count": 11
+      },
+      {
+        "file": "drivers/usb/dwc3/dwc3-of-simple.c",
+        "func": "dwc3_of_simple_probe",
+        "buggy_start": 82,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "96cf8500934e0ce2a6c486f1dbc3b1fff12f7a5e",
+    "subject": "slimbus: ngd: Fix reference count leak in qcom_slim_ngd_notify_slaves",
+    "c_files": [
+      "drivers/slimbus/qcom-ngd-ctrl.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/slimbus/qcom-ngd-ctrl.c",
+        "func": "qcom_slim_ngd_notify_slaves",
+        "buggy_start": 1241,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "bbde14682eba21d86f5f3d6fe2d371b1f97f1e61",
+    "subject": "pmdomain: imx: Fix reference count leak in imx_gpc_remove",
+    "c_files": [
+      "drivers/pmdomain/imx/gpc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pmdomain/imx/gpc.c",
+        "func": "imx_gpc_remove",
+        "buggy_start": 536,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "445e1658894fd74eab7e53071fa16233887574ed",
+    "subject": "media: renesas: rcar_drif: fix device node reference leak in rcar_drif_bond_enabled",
+    "c_files": [
+      "drivers/media/platform/renesas/rcar_drif.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/renesas/rcar_drif.c",
+        "func": "rcar_drif_bond_enabled",
+        "buggy_start": 1246,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "eb53368f8d6e2dfba84c8a94d245719bcf9ae270",
+    "subject": "fbdev: valkyriefb: Fix reference count leak in valkyriefb_init",
+    "c_files": [
+      "drivers/video/fbdev/valkyriefb.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/video/fbdev/valkyriefb.c",
+        "func": "valkyriefb_init",
+        "buggy_start": 329,
+        "buggy_count": 11
+      }
+    ]
+  },
+  {
+    "fix_sha": "1ec39d2cd88dac2e7cdbac248762f1f057971c5d",
+    "subject": "usb: cdns3: Fix double resource release in cdns3_pci_probe",
+    "c_files": [
+      "drivers/usb/cdns3/cdns3-pci-wrap.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/cdns3/cdns3-pci-wrap.c",
+        "func": "cdns3_pci_probe",
+        "buggy_start": 98,
+        "buggy_count": 10
+      },
+      {
+        "file": "drivers/usb/cdns3/cdns3-pci-wrap.c",
+        "func": "cdns3_pci_probe",
+        "buggy_start": 160,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "9600156bb99852c216a2128cdf9f114eb67c350f",
+    "subject": "cpufreq: nforce2: fix reference count leak in nforce2",
+    "c_files": [
+      "drivers/cpufreq/cpufreq-nforce2.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/cpufreq/cpufreq-nforce2.c",
+        "func": "nforce2_fsb_read",
+        "buggy_start": 145,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/cpufreq/cpufreq-nforce2.c",
+        "func": "nforce2_init",
+        "buggy_start": 426,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "7ebf70cf181651fe3f2e44e95e7e5073d594c9c0",
+    "subject": "um: virtio_uml: Fix use-after-free after put_device in probe",
+    "c_files": [
+      "arch/um/drivers/virtio_uml.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/um/drivers/virtio_uml.c",
+        "func": "virtio_uml_probe",
+        "buggy_start": 1250,
+        "buggy_count": 10
+      }
+    ]
+  },
+  {
+    "fix_sha": "74139a64e8cedb6d971c78d5d17384efeced1725",
+    "subject": "ARM: OMAP2+: pm33xx-core: ix device node reference leaks in amx3_idle_init",
+    "c_files": [
+      "arch/arm/mach-omap2/pm33xx-core.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/arm/mach-omap2/pm33xx-core.c",
+        "func": "amx3_idle_init",
+        "buggy_start": 388,
+        "buggy_count": 12
+      },
+      {
+        "file": "arch/arm/mach-omap2/pm33xx-core.c",
+        "func": "amx3_idle_init",
+        "buggy_start": 403,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "0704a3da7ce50f972e898bbda88d2692a22922d9",
+    "subject": "mISDN: Fix memory leak in dsp_hwec_enable()",
+    "c_files": [
+      "drivers/isdn/mISDN/dsp_hwec.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/isdn/mISDN/dsp_hwec.c",
+        "func": "dsp_hwec_enable",
+        "buggy_start": 51,
+        "buggy_count": 14
+      }
+    ]
+  },
+  {
+    "fix_sha": "7ff37d29fd5c27617b9767e1b8946d115cf93a1e",
+    "subject": "firmware: psci: Fix refcount leak in psci_dt_init",
+    "c_files": [
+      "drivers/firmware/psci/psci.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/firmware/psci/psci.c",
+        "func": "psci_dt_init",
+        "buggy_start": 804,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "176fda56d72a267731f82aa4a3aeca430394f10e",
+    "subject": "spi: Fix reference count leak in slave_show()",
+    "c_files": [
+      "drivers/spi/spi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/spi/spi.c",
+        "func": "slave_show",
+        "buggy_start": 2954,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "5bca3688bdbc3b58a2894b8671a8e2378efe28bd",
+    "subject": "Input: raspberrypi-ts - fix refcount leak in rpi_ts_probe",
+    "c_files": [
+      "drivers/input/touchscreen/raspberrypi-ts.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/input/touchscreen/raspberrypi-ts.c",
+        "func": "rpi_ts_probe",
+        "buggy_start": 134,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/input/touchscreen/raspberrypi-ts.c",
+        "func": "rpi_ts_probe",
+        "buggy_start": 160,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "c766c90faf93897b77c9c5daa603cffab85ba907",
+    "subject": "media: rcar_fdp1: Fix refcount leak in probe and remove function",
+    "c_files": [
+      "drivers/media/platform/renesas/rcar_fdp1.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/renesas/rcar_fdp1.c",
+        "func": "fdp1_probe",
+        "buggy_start": 2313,
+        "buggy_count": 8
+      },
+      {
+        "file": "drivers/media/platform/renesas/rcar_fdp1.c",
+        "func": "fdp1_probe",
+        "buggy_start": 2323,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/platform/renesas/rcar_fdp1.c",
+        "func": "fdp1_probe",
+        "buggy_start": 2393,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/media/platform/renesas/rcar_fdp1.c",
+        "func": "fdp1_remove",
+        "buggy_start": 2404,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "8f3c307b580a4a6425896007325bddefc36e8d91",
+    "subject": "soc: ti: pm33xx: Fix refcount leak in am33xx_pm_probe",
+    "c_files": [
+      "drivers/soc/ti/pm33xx.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/soc/ti/pm33xx.c",
+        "func": "am33xx_pm_probe",
+        "buggy_start": 527,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/soc/ti/pm33xx.c",
+        "func": "am33xx_pm_probe",
+        "buggy_start": 572,
+        "buggy_count": 13
+      }
+    ]
+  },
+  {
+    "fix_sha": "02298b7bae12936ca313975b02e7f98b06670d37",
+    "subject": "irqchip/ti-sci: Fix refcount leak in ti_sci_intr_irq_domain_probe",
+    "c_files": [
+      "drivers/irqchip/irq-ti-sci-intr.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/irqchip/irq-ti-sci-intr.c",
+        "func": "ti_sci_intr_irq_domain_probe",
+        "buggy_start": 236,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "9419e700021a393f67be36abd0c4f3acc6139041",
+    "subject": "irqchip/irq-mvebu-gicp: Fix refcount leak in mvebu_gicp_probe",
+    "c_files": [
+      "drivers/irqchip/irq-mvebu-gicp.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/irqchip/irq-mvebu-gicp.c",
+        "func": "mvebu_gicp_probe",
+        "buggy_start": 221,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "071d068b89e95d1b078aa6bbcb9d0961b77d6aa1",
+    "subject": "irqchip/alpine-msi: Fix refcount leak in alpine_msix_init_domains",
+    "c_files": [
+      "drivers/irqchip/irq-alpine-msi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/irqchip/irq-alpine-msi.c",
+        "func": "alpine_msix_init_domains",
+        "buggy_start": 199,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "6caa5a2b78f5f53c433d3a3781e53325da22f0ac",
+    "subject": "irqchip: Fix refcount leak in platform_irqchip_probe",
+    "c_files": [
+      "drivers/irqchip/irqchip.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/irqchip/irqchip.c",
+        "func": "platform_irqchip_probe",
+        "buggy_start": 38,
+        "buggy_count": 8
+      },
+      {
+        "file": "drivers/irqchip/irqchip.c",
+        "func": "platform_irqchip_probe",
+        "buggy_start": 52,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "da1afe8e6099980fe1e2fd7436dca284af9d3f29",
+    "subject": "leds: led-core: Fix refcount leak in of_led_get()",
+    "c_files": [
+      "drivers/leds/led-class.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/leds/led-class.c",
+        "func": "of_led_get",
+        "buggy_start": 253,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "ed3f83b3459a67a3ab9d806490ac304b567b1c2d",
+    "subject": "wifi: ath11k: Fix memory leak in ath11k_peer_rx_frag_setup",
+    "c_files": [
+      "drivers/net/wireless/ath/ath11k/dp_rx.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/ath/ath11k/dp_rx.c",
+        "func": "ath11k_peer_rx_frag_setup",
+        "buggy_start": 3126,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "c818ae563bf99457f02e8170aabd6b174f629f65",
+    "subject": "pinctrl: rockchip: Fix refcount leak in rockchip_pinctrl_parse_groups",
+    "c_files": [
+      "drivers/pinctrl/pinctrl-rockchip.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pinctrl/pinctrl-rockchip.c",
+        "func": "rockchip_pinctrl_parse_groups",
+        "buggy_start": 3036,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "dcef18c8ac40aa85bb339f64c1dd31dd458b06fb",
+    "subject": "pinctrl: stm32: Fix refcount leak in stm32_pctrl_get_irq_domain",
+    "c_files": [
+      "drivers/pinctrl/stm32/pinctrl-stm32.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pinctrl/stm32/pinctrl-stm32.c",
+        "func": "stm32_pctrl_get_irq_domain",
+        "buggy_start": 1382,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "3da73f102309fe29150e5c35acd20dd82063ff67",
+    "subject": "objtool: Fix memory leak in create_static_call_sections()",
+    "c_files": [
+      "tools/objtool/check.c"
+    ],
+    "hunks": [
+      {
+        "file": "tools/objtool/check.c",
+        "func": "create_static_call_sections",
+        "buggy_start": 679,
+        "buggy_count": 6
+      },
+      {
+        "file": "tools/objtool/check.c",
+        "func": "create_static_call_sections",
+        "buggy_start": 688,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "e7a293658c20a7945014570e1921bf7d25d68a36",
+    "subject": "EDAC/highbank: Fix memory leak in highbank_mc_probe()",
+    "c_files": [
+      "drivers/edac/highbank_mc_edac.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/edac/highbank_mc_edac.c",
+        "func": "highbank_mc_probe",
+        "buggy_start": 174,
+        "buggy_count": 8
+      },
+      {
+        "file": "drivers/edac/highbank_mc_edac.c",
+        "func": "highbank_mc_probe",
+        "buggy_start": 243,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "694175cd8a1643cde3acb45c9294bca44a8e08e9",
+    "subject": "gpio: sifive: Fix refcount leak in sifive_gpio_probe",
+    "c_files": [
+      "drivers/gpio/gpio-sifive.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpio/gpio-sifive.c",
+        "func": "sifive_gpio_probe",
+        "buggy_start": 215,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "d039535850ee47079d59527e96be18d8e0daa84b",
+    "subject": "net: phy: xgmiitorgmii: Fix refcount leak in xgmiitorgmii_probe",
+    "c_files": [
+      "drivers/net/phy/xilinx_gmii2rgmii.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/phy/xilinx_gmii2rgmii.c",
+        "func": "xgmiitorgmii_probe",
+        "buggy_start": 105,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "df49908f3c52d211aea5e2a14a93bbe67a2cb3af",
+    "subject": "nfc: Fix potential resource leaks",
+    "c_files": [
+      "net/nfc/netlink.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/nfc/netlink.c",
+        "func": "nfc_genl_se_io",
+        "buggy_start": 1497,
+        "buggy_count": 6
+      },
+      {
+        "file": "net/nfc/netlink.c",
+        "func": "nfc_genl_se_io",
+        "buggy_start": 1510,
+        "buggy_count": 25
+      },
+      {
+        "file": "net/nfc/netlink.c",
+        "func": "nfc_genl_vendor_cmd",
+        "buggy_start": 1551,
+        "buggy_count": 14
+      },
+      {
+        "file": "net/nfc/netlink.c",
+        "func": "nfc_genl_vendor_cmd",
+        "buggy_start": 1573,
+        "buggy_count": 10
+      }
+    ]
+  },
+  {
+    "fix_sha": "97a48da1619ba6bd42a0e5da0a03aa490a9496b1",
+    "subject": "usb: dwc3: qcom: Fix memory leak in dwc3_qcom_interconnect_init",
+    "c_files": [
+      "drivers/usb/dwc3/dwc3-qcom.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/dwc3/dwc3-qcom.c",
+        "func": "dwc3_qcom_interconnect_init",
+        "buggy_start": 261,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/usb/dwc3/dwc3-qcom.c",
+        "func": "dwc3_qcom_interconnect_init",
+        "buggy_start": 274,
+        "buggy_count": 16
+      }
+    ]
+  },
+  {
+    "fix_sha": "8f4ab7da904ab7027ccd43ddb4f0094e932a5877",
+    "subject": "selftests/powerpc: Fix resource leaks",
+    "c_files": [
+      "tools/testing/selftests/powerpc/dscr/dscr_sysfs_test.c"
+    ],
+    "hunks": [
+      {
+        "file": "tools/testing/selftests/powerpc/dscr/dscr_sysfs_test.c",
+        "func": "check_cpu_dscr_default",
+        "buggy_start": 24,
+        "buggy_count": 6
+      },
+      {
+        "file": "tools/testing/selftests/powerpc/dscr/dscr_sysfs_test.c",
+        "func": "check_all_cpu_dscr_defaults",
+        "buggy_start": 65,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "1d09697ff22908ae487fc8c4fbde1811732be523",
+    "subject": "cxl: Fix refcount leak in cxl_calc_capp_routing",
+    "c_files": [
+      "drivers/misc/cxl/pci.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/misc/cxl/pci.c",
+        "func": "cxl_calc_capp_routing",
+        "buggy_start": 387,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "9c59a01caba26ec06fefd6ca1f22d5fd1de57d63",
+    "subject": "clk: ti: dra7-atl: Fix reference leak in of_dra7_atl_clk_probe",
+    "c_files": [
+      "drivers/clk/ti/clk-dra7-atl.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/clk/ti/clk-dra7-atl.c",
+        "func": "of_dra7_atl_clk_probe",
+        "buggy_start": 245,
+        "buggy_count": 14
+      },
+      {
+        "file": "drivers/clk/ti/clk-dra7-atl.c",
+        "func": "of_dra7_atl_clk_probe",
+        "buggy_start": 285,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "1c78f19c3a0ea312a8178a6bfd8934eb93e9b10a",
+    "subject": "media: xilinx: vipp: Fix refcount leak in xvip_graph_dma_init",
+    "c_files": [
+      "drivers/media/platform/xilinx/xilinx-vipp.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/xilinx/xilinx-vipp.c",
+        "func": "xvip_graph_dma_init",
+        "buggy_start": 471,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/platform/xilinx/xilinx-vipp.c",
+        "func": "xvip_graph_dma_init",
+        "buggy_start": 481,
+        "buggy_count": 13
+      }
+    ]
+  },
+  {
+    "fix_sha": "9a2ea132df860177b33c9fd421b26c4e9a0a9396",
+    "subject": "HSI: omap_ssi: Fix refcount leak in ssi_probe",
+    "c_files": [
+      "drivers/hsi/controllers/omap_ssi_core.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/hsi/controllers/omap_ssi_core.c",
+        "func": "ssi_probe",
+        "buggy_start": 524,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "4e343bafe03ff68a62f48f8235cf98f2c685468b",
+    "subject": "clk: tegra20: Fix refcount leak in tegra20_clock_init",
+    "c_files": [
+      "drivers/clk/tegra/clk-tegra20.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/clk/tegra/clk-tegra20.c",
+        "func": "tegra20_clock_init",
+        "buggy_start": 1131,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "db16a80c76ea395766913082b1e3f939dde29b2c",
+    "subject": "clk: tegra: Fix refcount leak in tegra114_clock_init",
+    "c_files": [
+      "drivers/clk/tegra/clk-tegra114.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/clk/tegra/clk-tegra114.c",
+        "func": "tegra114_clock_init",
+        "buggy_start": 1317,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "56c78cb1f00a9dde8cd762131ce8f4c5eb046fbb",
+    "subject": "clk: tegra: Fix refcount leak in tegra210_clock_init",
+    "c_files": [
+      "drivers/clk/tegra/clk-tegra210.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/clk/tegra/clk-tegra210.c",
+        "func": "tegra210_clock_init",
+        "buggy_start": 3748,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "df5d4b616ee76abc97e5bd348e22659c2b095b1c",
+    "subject": "powerpc/cell/axon_msi: Fix refcount leak in setup_msi_msg_address",
+    "c_files": [
+      "arch/powerpc/platforms/cell/axon_msi.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/powerpc/platforms/cell/axon_msi.c",
+        "func": "setup_msi_msg_address",
+        "buggy_start": 223,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "255b650cbec6849443ce2e0cdd187fd5e61c218c",
+    "subject": "powerpc/xive: Fix refcount leak in xive_get_max_prio",
+    "c_files": [
+      "arch/powerpc/sysdev/xive/spapr.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/powerpc/sysdev/xive/spapr.c",
+        "func": "xive_get_max_prio",
+        "buggy_start": 718,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "6ac059dacffa8ab2f7798f20e4bd3333890c541c",
+    "subject": "powerpc/spufs: Fix refcount leak in spufs_init_isolated_loader",
+    "c_files": [
+      "arch/powerpc/platforms/cell/spufs/inode.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/powerpc/platforms/cell/spufs/inode.c",
+        "func": "spufs_init_isolated_loader",
+        "buggy_start": 660,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "1520669c8255bd637c6b248b2be910e2688d38dd",
+    "subject": "mfd: max77620: Fix refcount leak in max77620_initialise_fps",
+    "c_files": [
+      "drivers/mfd/max77620.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/mfd/max77620.c",
+        "func": "max77620_initialise_fps",
+        "buggy_start": 419,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "65382585f067d4256ba087934f30f85c9b6984de",
+    "subject": "rpmsg: qcom_smd: Fix refcount leak in qcom_smd_parse_edge",
+    "c_files": [
+      "drivers/rpmsg/qcom_smd.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/rpmsg/qcom_smd.c",
+        "func": "qcom_smd_parse_edge",
+        "buggy_start": 1383,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "b5899a3e2f783a27b268e38d37f9b24c71bddf45",
+    "subject": "mmc: sdhci-of-esdhc: Fix refcount leak in esdhc_signal_voltage_switch",
+    "c_files": [
+      "drivers/mmc/host/sdhci-of-esdhc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/mmc/host/sdhci-of-esdhc.c",
+        "func": "esdhc_signal_voltage_switch",
+        "buggy_start": 904,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "e6e0951414a314e7db3e9e24fd924b3e15515288",
+    "subject": "soc: qcom: aoss: Fix refcount leak in qmp_cooling_devices_register",
+    "c_files": [
+      "drivers/soc/qcom/qcom_aoss.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/soc/qcom/qcom_aoss.c",
+        "func": "qmp_cooling_devices_register",
+        "buggy_start": 399,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "92a563fcf14b3093226fb36f12e9b5cf630c5a5d",
+    "subject": "soc: qcom: ocmem: Fix refcount leak in of_get_ocmem",
+    "c_files": [
+      "drivers/soc/qcom/ocmem.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/soc/qcom/ocmem.c",
+        "func": "of_get_ocmem",
+        "buggy_start": 194,
+        "buggy_count": 14
+      }
+    ]
+  },
+  {
+    "fix_sha": "f44b799603a9b5d2e375b0b2d54dd0b791eddfc2",
+    "subject": "PM / devfreq: exynos-ppmu: Fix refcount leak in of_get_devfreq_events",
+    "c_files": [
+      "drivers/devfreq/event/exynos-ppmu.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/devfreq/event/exynos-ppmu.c",
+        "func": "of_get_devfreq_events",
+        "buggy_start": 519,
+        "buggy_count": 15
+      }
+    ]
+  },
+  {
+    "fix_sha": "d1ff2559cef0f6f8d97fba6337b28adb10689e16",
+    "subject": "cpufreq: zynq: Fix refcount leak in zynq_get_revision",
+    "c_files": [
+      "arch/arm/mach-zynq/common.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/arm/mach-zynq/common.c",
+        "func": "zynq_get_revision",
+        "buggy_start": 77,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "942228fbf5d4901112178b93d41225be7c0dd9de",
+    "subject": "ARM: OMAP2+: Fix refcount leak in omap3xxx_prm_late_init",
+    "c_files": [
+      "arch/arm/mach-omap2/prm3xxx.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/arm/mach-omap2/prm3xxx.c",
+        "func": "omap3xxx_prm_late_init",
+        "buggy_start": 708,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "e0b212ec9d8177d6f7c404315293f6a085d6ee42",
+    "subject": "media: tw686x: Fix memory leak in tw686x_video_init",
+    "c_files": [
+      "drivers/media/pci/tw686x/tw686x-video.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/pci/tw686x/tw686x-video.c",
+        "func": "tw686x_video_init",
+        "buggy_start": 1280,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "3a149169e4a2f9127022fec6ef5d71b4e804b3b9",
+    "subject": "drm/mcde: Fix refcount leak in mcde_dsi_bind",
+    "c_files": [
+      "drivers/gpu/drm/mcde/mcde_dsi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/mcde/mcde_dsi.c",
+        "func": "mcde_dsi_bind",
+        "buggy_start": 1111,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "2990f223ffa7bb25422956b9f79f9176a5b38346",
+    "subject": "RDMA/cm: Fix memory leak in ib_cm_insert_listen",
+    "c_files": [
+      "drivers/infiniband/core/cm.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/infiniband/core/cm.c",
+        "func": "ib_cm_insert_listen",
+        "buggy_start": 1252,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "1ba904b6b16e08de5aed7c1349838d9cd0d178c5",
+    "subject": "ARM: cns3xxx: Fix refcount leak in cns3xxx_init",
+    "c_files": [
+      "arch/arm/mach-cns3xxx/core.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/arm/mach-cns3xxx/core.c",
+        "func": "cns3xxx_init",
+        "buggy_start": 372,
+        "buggy_count": 6
+      },
+      {
+        "file": "arch/arm/mach-cns3xxx/core.c",
+        "func": "cns3xxx_init",
+        "buggy_start": 385,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "61afafe8b938bc74841cf4b1a73dd08b9d287c5a",
+    "subject": "remoteproc: imx_rproc: Fix refcount leak in imx_rproc_addr_init",
+    "c_files": [
+      "drivers/remoteproc/imx_rproc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/remoteproc/imx_rproc.c",
+        "func": "imx_rproc_addr_init",
+        "buggy_start": 594,
+        "buggy_count": 16
+      }
+    ]
+  },
+  {
+    "fix_sha": "ada7b0c0dedafd7d059115adf49e48acba3153a8",
+    "subject": "iio: adc: adi-axi-adc: Fix refcount leak in adi_axi_adc_attach_client",
+    "c_files": [
+      "drivers/iio/adc/adi-axi-adc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/iio/adc/adi-axi-adc.c",
+        "func": "adi_axi_adc_attach_client",
+        "buggy_start": 322,
+        "buggy_count": 16
+      }
+    ]
+  },
+  {
+    "fix_sha": "b9cc4598607cb7f7eae5c75fc1e3209cd52ff5e0",
+    "subject": "drm/msm/mdp4: Fix refcount leak in mdp4_modeset_init_intf",
+    "c_files": [
+      "drivers/gpu/drm/msm/disp/mdp4/mdp4_kms.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/msm/disp/mdp4/mdp4_kms.c",
+        "func": "mdp4_modeset_init_intf",
+        "buggy_start": 216,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/gpu/drm/msm/disp/mdp4/mdp4_kms.c",
+        "func": "mdp4_modeset_init_intf",
+        "buggy_start": 225,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "4b32e054335ea0ce50967f63a7bfd4db058b14b9",
+    "subject": "pinctrl: nomadik: Fix refcount leak in nmk_pinctrl_dt_subnode_to_map",
+    "c_files": [
+      "drivers/pinctrl/nomadik/pinctrl-nomadik.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pinctrl/nomadik/pinctrl-nomadik.c",
+        "func": "nmk_pinctrl_dt_subnode_to_map",
+        "buggy_start": 1421,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "fa220c05d282e7479abe08b54e3bdffd06c25e97",
+    "subject": "remoteproc: k3-r5: Fix refcount leak in k3_r5_cluster_of_init",
+    "c_files": [
+      "drivers/remoteproc/ti_k3_r5_remoteproc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/remoteproc/ti_k3_r5_remoteproc.c",
+        "func": "k3_r5_cluster_of_init",
+        "buggy_start": 1655,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/remoteproc/ti_k3_r5_remoteproc.c",
+        "func": "k3_r5_cluster_of_init",
+        "buggy_start": 1663,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "7c7ff68daa93d8c4cdea482da4f2429c0398fcde",
+    "subject": "ARM: Fix refcount leak in axxia_boot_secondary",
+    "c_files": [
+      "arch/arm/mach-axxia/platsmp.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/arm/mach-axxia/platsmp.c",
+        "func": "axxia_boot_secondary",
+        "buggy_start": 39,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "302970b4cad3ebfda2c05ce06c322ccdc447d17e",
+    "subject": "usb: ohci-nxp: Fix refcount leak in ohci_hcd_nxp_probe",
+    "c_files": [
+      "drivers/usb/host/ohci-nxp.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/host/ohci-nxp.c",
+        "func": "ohci_hcd_nxp_probe",
+        "buggy_start": 164,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "b5c5b13cb45e2c88181308186b0001992cb41954",
+    "subject": "usb: host: Fix refcount leak in ehci_hcd_ppc_of_probe",
+    "c_files": [
+      "drivers/usb/host/ehci-ppc-of.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/host/ehci-ppc-of.c",
+        "func": "ehci_hcd_ppc_of_probe",
+        "buggy_start": 148,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "4757c9ade34178b351580133771f510b5ffcf9c8",
+    "subject": "usb: gadget: lpc32xx_udc: Fix refcount leak in lpc32xx_udc_probe",
+    "c_files": [
+      "drivers/usb/gadget/udc/lpc32xx_udc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/gadget/udc/lpc32xx_udc.c",
+        "func": "lpc32xx_udc_probe",
+        "buggy_start": 3016,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "3755278f078460b021cd0384562977bf2039a57a",
+    "subject": "usb: dwc2: Fix memory leak in dwc2_hcd_init",
+    "c_files": [
+      "drivers/usb/dwc2/hcd.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/dwc2/hcd.c",
+        "func": "dwc2_hcd_init",
+        "buggy_start": 5190,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "34d2cd3fccced12b958b8848e3eff0ee4296764c",
+    "subject": "ARM: meson: Fix refcount leak in meson_smp_prepare_cpus",
+    "c_files": [
+      "arch/arm/mach-meson/platsmp.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/arm/mach-meson/platsmp.c",
+        "func": "meson_smp_prepare_cpus",
+        "buggy_start": 71,
+        "buggy_count": 6
+      },
+      {
+        "file": "arch/arm/mach-meson/platsmp.c",
+        "func": "meson_smp_prepare_cpus",
+        "buggy_start": 91,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "80192eff64eee9b3bc0594a47381937b94b9d65a",
+    "subject": "power/reset: arm-versatile: Fix refcount leak in versatile_reboot_probe",
+    "c_files": [
+      "drivers/power/reset/arm-versatile-reboot.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/power/reset/arm-versatile-reboot.c",
+        "func": "versatile_reboot_probe",
+        "buggy_start": 146,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "bf038503d5fe90189743124233fe7aeb0984e961",
+    "subject": "PCI: mediatek-gen3: Fix refcount leak in mtk_pcie_init_irq_domains()",
+    "c_files": [
+      "drivers/pci/controller/pcie-mediatek-gen3.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pci/controller/pcie-mediatek-gen3.c",
+        "func": "mtk_pcie_init_irq_domains",
+        "buggy_start": 600,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/pci/controller/pcie-mediatek-gen3.c",
+        "func": "mtk_pcie_init_irq_domains",
+        "buggy_start": 623,
+        "buggy_count": 13
+      }
+    ]
+  },
+  {
+    "fix_sha": "eff4780f83d0ae3e5b6c02ff5d999dc4c1c5c8ce",
+    "subject": "irqchip/realtek-rtl: Fix refcount leak in map_interrupts",
+    "c_files": [
+      "drivers/irqchip/irq-realtek-rtl.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/irqchip/irq-realtek-rtl.c",
+        "func": "map_interrupts",
+        "buggy_start": 134,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "fa1ad9d4cc47ca2470cd904ad4519f05d7e43a2b",
+    "subject": "irqchip/gic-v3: Fix refcount leak in gic_populate_ppi_partitions",
+    "c_files": [
+      "drivers/irqchip/irq-gic-v3.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/irqchip/irq-gic-v3.c",
+        "func": "gic_populate_ppi_partitions",
+        "buggy_start": 1973,
+        "buggy_count": 12
+      }
+    ]
+  },
+  {
+    "fix_sha": "f4b98e314888cc51486421bcf6d52852452ea48b",
+    "subject": "irqchip/gic/realview: Fix refcount leak in realview_gic_of_init",
+    "c_files": [
+      "drivers/irqchip/irq-gic-realview.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/irqchip/irq-gic-realview.c",
+        "func": "realview_gic_of_init",
+        "buggy_start": 57,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "e607879b0da18c451de5e91daf239cc2f2f8ff2d",
+    "subject": "mtd: parsers: ofpart: Fix refcount leak in bcm4908_partitions_fw_offset",
+    "c_files": [
+      "drivers/mtd/parsers/ofpart_bcm4908.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/mtd/parsers/ofpart_bcm4908.c",
+        "func": "bcm4908_partitions_fw_offset",
+        "buggy_start": 35,
+        "buggy_count": 12
+      }
+    ]
+  },
+  {
+    "fix_sha": "9f7e62815cf3cbbcb1b8cb21649fb4dfdb3aa016",
+    "subject": "mtd: partitions: Fix refcount leak in parse_redboot_of",
+    "c_files": [
+      "drivers/mtd/parsers/redboot.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/mtd/parsers/redboot.c",
+        "func": "parse_redboot_of",
+        "buggy_start": 58,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "615a4bfc426e11dba05c2cf343f9ac752fb381d2",
+    "subject": "dmaengine: ti: Add missing put_device in ti_dra7_xbar_route_allocate",
+    "c_files": [
+      "drivers/dma/ti/dma-crossbar.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/dma/ti/dma-crossbar.c",
+        "func": "ti_dra7_xbar_route_allocate",
+        "buggy_start": 245,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/dma/ti/dma-crossbar.c",
+        "func": "ti_dra7_xbar_route_allocate",
+        "buggy_start": 252,
+        "buggy_count": 12
+      },
+      {
+        "file": "drivers/dma/ti/dma-crossbar.c",
+        "func": "ti_dra7_xbar_route_allocate",
+        "buggy_start": 269,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "c132fe78ad7b4ce8b5d49a501a15c29d08eeb23a",
+    "subject": "dmaengine: ti: Fix refcount leak in ti_dra7_xbar_route_allocate",
+    "c_files": [
+      "drivers/dma/ti/dma-crossbar.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/dma/ti/dma-crossbar.c",
+        "func": "ti_dra7_xbar_route_allocate",
+        "buggy_start": 268,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "11ec18b1d8d92b9df307d31950dcba0b3dd7283c",
+    "subject": "net: altera: Fix refcount leak in altera_tse_mdio_create",
+    "c_files": [
+      "drivers/net/ethernet/altera/altera_tse_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/altera/altera_tse_main.c",
+        "func": "altera_tse_mdio_create",
+        "buggy_start": 163,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/net/ethernet/altera/altera_tse_main.c",
+        "func": "altera_tse_mdio_create",
+        "buggy_start": 180,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/net/ethernet/altera/altera_tse_main.c",
+        "func": "altera_tse_mdio_create",
+        "buggy_start": 189,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "f030304fdeb87ec8f1b518c73703214aec6cc24a",
+    "subject": "PCI: microchip: Fix refcount leak in mc_pcie_init_irq_domains()",
+    "c_files": [
+      "drivers/pci/controller/pcie-microchip-host.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pci/controller/pcie-microchip-host.c",
+        "func": "mc_pcie_init_irq_domains",
+        "buggy_start": 904,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/pci/controller/pcie-microchip-host.c",
+        "func": "mc_pcie_init_irq_domains",
+        "buggy_start": 913,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "cb23389a2458c2e4bfd6c86a513cbbe1c4d35e76",
+    "subject": "ARM: bcm: Fix refcount leak in bcm_kona_smc_init",
+    "c_files": [
+      "arch/arm/mach-bcm/bcm_kona_smc.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/arm/mach-bcm/bcm_kona_smc.c",
+        "func": "bcm_kona_smc_init",
+        "buggy_start": 52,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "37d838de369b07b596c19ff3662bf0293fdb09ee",
+    "subject": "soc: bcm: brcmstb: pm: pm-arm: Fix refcount leak in brcmstb_pm_probe",
+    "c_files": [
+      "drivers/soc/bcm/brcmstb/pm/pm-arm.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/soc/bcm/brcmstb/pm/pm-arm.c",
+        "func": "brcmstb_pm_probe",
+        "buggy_start": 783,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "0737e018a05e2aa352828c52bdeed3b02cff2930",
+    "subject": "net: dsa: lantiq_gswip: Fix refcount leak in gswip_gphy_fw_list",
+    "c_files": [
+      "drivers/net/dsa/lantiq_gswip.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/dsa/lantiq_gswip.c",
+        "func": "gswip_gphy_fw_list",
+        "buggy_start": 2070,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "efe2178d1a32492f99e7f1f2568eea5c88a85729",
+    "subject": "ASoC: mediatek: mt8173-rt5650: Fix refcount leak in mt8173_rt5650_dev_probe",
+    "c_files": [
+      "sound/soc/mediatek/mt8173/mt8173-rt5650.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/mediatek/mt8173/mt8173-rt5650.c",
+        "func": "mt8173_rt5650_dev_probe",
+        "buggy_start": 280,
+        "buggy_count": 7
+      },
+      {
+        "file": "sound/soc/mediatek/mt8173/mt8173-rt5650.c",
+        "func": "mt8173_rt5650_dev_probe",
+        "buggy_start": 293,
+        "buggy_count": 7
+      },
+      {
+        "file": "sound/soc/mediatek/mt8173/mt8173-rt5650.c",
+        "func": "mt8173_rt5650_dev_probe",
+        "buggy_start": 315,
+        "buggy_count": 12
+      }
+    ]
+  },
+  {
+    "fix_sha": "b8d91399775c55162073bb2aca061ec42e3d4bc1",
+    "subject": "net: ethernet: bgmac: Fix refcount leak in bcma_mdio_mii_register",
+    "c_files": [
+      "drivers/net/ethernet/broadcom/bgmac-bcma-mdio.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/broadcom/bgmac-bcma-mdio.c",
+        "func": "bcma_mdio_mii_register",
+        "buggy_start": 234,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "77087a04c8fd554134bddcb8a9ff87b21f357926",
+    "subject": "mtd: maps: Fix refcount leak in ap_flash_init",
+    "c_files": [
+      "drivers/mtd/maps/physmap-versatile.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/mtd/maps/physmap-versatile.c",
+        "func": "ap_flash_init",
+        "buggy_start": 93,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "33ec82a6d2b119938f26e5c8040ed5d92378eb54",
+    "subject": "mtd: maps: Fix refcount leak in of_flash_probe_versatile",
+    "c_files": [
+      "drivers/mtd/maps/physmap-versatile.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/mtd/maps/physmap-versatile.c",
+        "func": "of_flash_probe_versatile",
+        "buggy_start": 207,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "7472eb8d7dd12b6b9b1a4f4527719cc9c7f5965f",
+    "subject": "ASoC: mt6797-mt6351: Fix refcount leak in mt6797_mt6351_dev_probe",
+    "c_files": [
+      "sound/soc/mediatek/mt6797/mt6797-mt6351.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/mediatek/mt6797/mt6797-mt6351.c",
+        "func": "mt6797_mt6351_dev_probe",
+        "buggy_start": 217,
+        "buggy_count": 7
+      },
+      {
+        "file": "sound/soc/mediatek/mt6797/mt6797-mt6351.c",
+        "func": "mt6797_mt6351_dev_probe",
+        "buggy_start": 230,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "ae4f11c1ed2d67192fdf3d89db719ee439827c11",
+    "subject": "ASoC: mediatek: mt8173: Fix refcount leak in mt8173_rt5650_rt5676_dev_probe",
+    "c_files": [
+      "sound/soc/mediatek/mt8173/mt8173-rt5650-rt5676.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/mediatek/mt8173/mt8173-rt5650-rt5676.c",
+        "func": "mt8173_rt5650_rt5676_dev_probe",
+        "buggy_start": 256,
+        "buggy_count": 14
+      },
+      {
+        "file": "sound/soc/mediatek/mt8173/mt8173-rt5650-rt5676.c",
+        "func": "mt8173_rt5650_rt5676_dev_probe",
+        "buggy_start": 276,
+        "buggy_count": 13
+      }
+    ]
+  },
+  {
+    "fix_sha": "0a034d93ee929a9ea89f3fa5f1d8492435b9ee6e",
+    "subject": "ASoC: cros_ec_codec: Fix refcount leak in cros_ec_codec_platform_probe",
+    "c_files": [
+      "sound/soc/codecs/cros_ec_codec.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/codecs/cros_ec_codec.c",
+        "func": "cros_ec_codec_platform_probe",
+        "buggy_start": 995,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "1332661e09304b7b8e84e5edc11811ba08d12abe",
+    "subject": "memory: samsung: exynos5422-dmc: Fix refcount leak in of_get_dram_timings",
+    "c_files": [
+      "drivers/memory/samsung/exynos5422-dmc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/memory/samsung/exynos5422-dmc.c",
+        "func": "of_get_dram_timings",
+        "buggy_start": 1187,
+        "buggy_count": 33
+      },
+      {
+        "file": "drivers/memory/samsung/exynos5422-dmc.c",
+        "func": "of_get_dram_timings",
+        "buggy_start": 1227,
+        "buggy_count": 13
+      }
+    ]
+  },
+  {
+    "fix_sha": "c4c79525042a4a7df96b73477feaf232fe44ae81",
+    "subject": "ARM: exynos: Fix refcount leak in exynos_map_pmu",
+    "c_files": [
+      "arch/arm/mach-exynos/exynos.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/arm/mach-exynos/exynos.c",
+        "func": "exynos_map_pmu",
+        "buggy_start": 149,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "10d6bdf532902be1d8aa5900b3c03c5671612aa2",
+    "subject": "ata: pata_octeon_cf: Fix refcount leak in octeon_cf_probe",
+    "c_files": [
+      "drivers/ata/pata_octeon_cf.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/ata/pata_octeon_cf.c",
+        "func": "octeon_cf_probe",
+        "buggy_start": 856,
+        "buggy_count": 12
+      },
+      {
+        "file": "drivers/ata/pata_octeon_cf.c",
+        "func": "octeon_cf_probe",
+        "buggy_start": 871,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "02ded5a173619b11728b8bf75a3fd995a2c1ff28",
+    "subject": "net: dsa: mv88e6xxx: Fix refcount leak in mv88e6xxx_mdios_register",
+    "c_files": [
+      "drivers/net/dsa/mv88e6xxx/chip.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/dsa/mv88e6xxx/chip.c",
+        "func": "mv88e6xxx_mdios_register",
+        "buggy_start": 3960,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "5dd89d2fc438457811cbbec07999ce0d80051ff5",
+    "subject": "net: ethernet: ti: am65-cpsw-nuss: Fix some refcount leaks",
+    "c_files": [
+      "drivers/net/ethernet/ti/am65-cpsw-nuss.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/ti/am65-cpsw-nuss.c",
+        "func": "am65_cpsw_init_cpts",
+        "buggy_start": 1789,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/net/ethernet/ti/am65-cpsw-nuss.c",
+        "func": "am65_cpsw_nuss_probe",
+        "buggy_start": 2665,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "a2106f38077e78afcb4bf98fdda3e162118cfb3d",
+    "subject": "meson-mx-socinfo: Fix refcount leak in meson_mx_socinfo_init",
+    "c_files": [
+      "drivers/soc/amlogic/meson-mx-socinfo.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/soc/amlogic/meson-mx-socinfo.c",
+        "func": "meson_mx_socinfo_init",
+        "buggy_start": 126,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "fcee96924ba1596ca80a6770b2567ca546f9a482",
+    "subject": "powerpc/fsl_rio: Fix refcount leak in fsl_rio_setup",
+    "c_files": [
+      "arch/powerpc/sysdev/fsl_rio.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/powerpc/sysdev/fsl_rio.c",
+        "func": "fsl_rio_setup",
+        "buggy_start": 505,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "1d1fb9618bdd5a5fbf9a9eb75133da301d33721c",
+    "subject": "powerpc/xive: Fix refcount leak in xive_spapr_init",
+    "c_files": [
+      "arch/powerpc/sysdev/xive/spapr.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/powerpc/sysdev/xive/spapr.c",
+        "func": "xive_spapr_init",
+        "buggy_start": 832,
+        "buggy_count": 12
+      },
+      {
+        "file": "arch/powerpc/sysdev/xive/spapr.c",
+        "func": "xive_spapr_init",
+        "buggy_start": 873,
+        "buggy_count": 6
+      },
+      {
+        "file": "arch/powerpc/sysdev/xive/spapr.c",
+        "func": "xive_spapr_init",
+        "buggy_start": 880,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "5d24df3d690809952528e7a19a43d84bc5b99d44",
+    "subject": "watchdog: ts4800_wdt: Fix refcount leak in ts4800_wdt_probe",
+    "c_files": [
+      "drivers/watchdog/ts4800_wdt.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/watchdog/ts4800_wdt.c",
+        "func": "ts4800_wdt_probe",
+        "buggy_start": 125,
+        "buggy_count": 13
+      }
+    ]
+  },
+  {
+    "fix_sha": "660ba678f9998aca6db74f2dd912fa5124f0fa31",
+    "subject": "firmware: dmi-sysfs: Fix memory leak in dmi_sysfs_register_handle",
+    "c_files": [
+      "drivers/firmware/dmi-sysfs.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/firmware/dmi-sysfs.c",
+        "func": "dmi_sysfs_register_handle",
+        "buggy_start": 604,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "09700c504d8e63faffd2a2235074e8c5d130cb8f",
+    "subject": "thermal/drivers/imx_sc_thermal: Fix refcount leak in imx_sc_thermal_probe",
+    "c_files": [
+      "drivers/thermal/imx_sc_thermal.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/thermal/imx_sc_thermal.c",
+        "func": "imx_sc_thermal_probe",
+        "buggy_start": 94,
+        "buggy_count": 8
+      },
+      {
+        "file": "drivers/thermal/imx_sc_thermal.c",
+        "func": "imx_sc_thermal_probe",
+        "buggy_start": 124,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "b23789a59fa6f00e98a319291819f91fbba0deb8",
+    "subject": "video: fbdev: clcdfb: Fix refcount leak in clcdfb_of_vram_setup",
+    "c_files": [
+      "drivers/video/fbdev/amba-clcd.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/video/fbdev/amba-clcd.c",
+        "func": "clcdfb_of_vram_setup",
+        "buggy_start": 758,
+        "buggy_count": 12
+      }
+    ]
+  },
+  {
+    "fix_sha": "c56de483093d7ad0782327f95dda7da97bc4c315",
+    "subject": "drm/msm/a6xx: Fix refcount leak in a6xx_gpu_init",
+    "c_files": [
+      "drivers/gpu/drm/msm/adreno/a6xx_gpu.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/msm/adreno/a6xx_gpu.c",
+        "func": "a6xx_gpu_init",
+        "buggy_start": 1914,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "68d6c8476fd4f448e70e0ab31ff972838ac41dae",
+    "subject": "regulator: scmi: Fix refcount leak in scmi_regulator_probe",
+    "c_files": [
+      "drivers/regulator/scmi-regulator.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/regulator/scmi-regulator.c",
+        "func": "scmi_regulator_probe",
+        "buggy_start": 352,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "9b59588d8be91c96bfb0371e912ceb4f16315dbf",
+    "subject": "soc: rockchip: Fix refcount leak in rockchip_grf_init",
+    "c_files": [
+      "drivers/soc/rockchip/grf.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/soc/rockchip/grf.c",
+        "func": "rockchip_grf_init",
+        "buggy_start": 165,
+        "buggy_count": 12
+      }
+    ]
+  },
+  {
+    "fix_sha": "c8994b30d71d64d5dcc9bc0edbfdf367171aa96f",
+    "subject": "Input: sparcspkr - fix refcount leak in bbc_beep_probe",
+    "c_files": [
+      "drivers/input/misc/sparcspkr.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/input/misc/sparcspkr.c",
+        "func": "bbc_beep_probe",
+        "buggy_start": 205,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "a34840c4eb3278a7c29c9c57a65ce7541c66f9f2",
+    "subject": "ASoC: ti: j721e-evm: Fix refcount leak in j721e_soc_probe_*",
+    "c_files": [
+      "sound/soc/ti/j721e-evm.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/ti/j721e-evm.c",
+        "func": "j721e_soc_probe_cpb",
+        "buggy_start": 630,
+        "buggy_count": 17
+      },
+      {
+        "file": "sound/soc/ti/j721e-evm.c",
+        "func": "j721e_soc_probe_cpb",
+        "buggy_start": 650,
+        "buggy_count": 8
+      },
+      {
+        "file": "sound/soc/ti/j721e-evm.c",
+        "func": "j721e_soc_probe_cpb",
+        "buggy_start": 702,
+        "buggy_count": 6
+      },
+      {
+        "file": "sound/soc/ti/j721e-evm.c",
+        "func": "j721e_soc_probe_ivi",
+        "buggy_start": 726,
+        "buggy_count": 23
+      },
+      {
+        "file": "sound/soc/ti/j721e-evm.c",
+        "func": "j721e_soc_probe_ivi",
+        "buggy_start": 754,
+        "buggy_count": 8
+      },
+      {
+        "file": "sound/soc/ti/j721e-evm.c",
+        "func": "j721e_soc_probe_ivi",
+        "buggy_start": 816,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "9fadab72a6916c7507d7fedcd644859eef995078",
+    "subject": "media: exynos4-is: Change clk_disable to clk_disable_unprepare",
+    "c_files": [
+      "drivers/media/platform/samsung/exynos4-is/fimc-is.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/samsung/exynos4-is/fimc-is.c",
+        "func": "fimc_is_enable_clocks",
+        "buggy_start": 140,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "395829c61a196a0821a703a49c4db3ac51daff73",
+    "subject": "media: atmel: atmel-isc: Fix PM disable depth imbalance in atmel_isc_probe",
+    "c_files": [
+      "drivers/media/platform/atmel/atmel-sama5d2-isc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/atmel/atmel-sama5d2-isc.c",
+        "func": "atmel_isc_probe",
+        "buggy_start": 562,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/platform/atmel/atmel-sama5d2-isc.c",
+        "func": "atmel_isc_probe",
+        "buggy_start": 580,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "94e3dba710fe0afc772172305444250023fc2d30",
+    "subject": "media: st-delta: Fix PM disable depth imbalance in delta_probe",
+    "c_files": [
+      "drivers/media/platform/st/sti/delta/delta-v4l2.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/st/sti/delta/delta-v4l2.c",
+        "func": "delta_probe",
+        "buggy_start": 1859,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/platform/st/sti/delta/delta-v4l2.c",
+        "func": "delta_probe",
+        "buggy_start": 1873,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/platform/st/sti/delta/delta-v4l2.c",
+        "func": "delta_probe",
+        "buggy_start": 1898,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "5c0db68ce0faeb000c3540d095eb272d671a6e03",
+    "subject": "media: exynos4-is: Fix PM disable depth imbalance in fimc_is_probe",
+    "c_files": [
+      "drivers/media/platform/samsung/exynos4-is/fimc-is.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/samsung/exynos4-is/fimc-is.c",
+        "func": "fimc_is_probe",
+        "buggy_start": 830,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/platform/samsung/exynos4-is/fimc-is.c",
+        "func": "fimc_is_probe",
+        "buggy_start": 864,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "bf4a9b2467b775717d0e9034ad916888e19713a3",
+    "subject": "ASoC: samsung: Fix refcount leak in aries_audio_probe",
+    "c_files": [
+      "sound/soc/samsung/aries_wm8994.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/samsung/aries_wm8994.c",
+        "func": "aries_audio_probe",
+        "buggy_start": 585,
+        "buggy_count": 10
+      }
+    ]
+  },
+  {
+    "fix_sha": "afaa7b933ef00a2d3262f4d1252087613fb5c06d",
+    "subject": "regulator: pfuze100: Fix refcount leak in pfuze_parse_regulators_dt",
+    "c_files": [
+      "drivers/regulator/pfuze100-regulator.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/regulator/pfuze100-regulator.c",
+        "func": "pfuze_parse_regulators_dt",
+        "buggy_start": 521,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/regulator/pfuze100-regulator.c",
+        "func": "pfuze_parse_regulators_dt",
+        "buggy_start": 550,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "2be84f73785fa9ed6443e3c5b158730266f1c2ee",
+    "subject": "ASoC: mxs-saif: Fix refcount leak in mxs_saif_probe",
+    "c_files": [
+      "sound/soc/mxs/mxs-saif.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/mxs/mxs-saif.c",
+        "func": "mxs_saif_probe",
+        "buggy_start": 754,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "ed46731d8e86c8d65f5fc717671e1f1f6c3146d2",
+    "subject": "ASoC: imx-hdmi: Fix refcount leak in imx_hdmi_probe",
+    "c_files": [
+      "sound/soc/fsl/imx-hdmi.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/fsl/imx-hdmi.c",
+        "func": "imx_hdmi_probe",
+        "buggy_start": 127,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "41cd312dfe980af869c3503b4d38e62ed20dd3b7",
+    "subject": "ASoC: fsl: Fix refcount leak in imx_sgtl5000_probe",
+    "c_files": [
+      "sound/soc/fsl/imx-sgtl5000.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/fsl/imx-sgtl5000.c",
+        "func": "imx_sgtl5000_probe",
+        "buggy_start": 120,
+        "buggy_count": 19
+      },
+      {
+        "file": "sound/soc/fsl/imx-sgtl5000.c",
+        "func": "imx_sgtl5000_probe",
+        "buggy_start": 158,
+        "buggy_count": 10
+      },
+      {
+        "file": "sound/soc/fsl/imx-sgtl5000.c",
+        "func": "imx_sgtl5000_probe",
+        "buggy_start": 174,
+        "buggy_count": 7
+      },
+      {
+        "file": "sound/soc/fsl/imx-sgtl5000.c",
+        "func": "imx_sgtl5000_probe",
+        "buggy_start": 182,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "65e54987508b6f0771f56bdfa3ee1926d52785ae",
+    "subject": "drm/amd/display: Fix memory leak in dcn21_clock_source_create",
+    "c_files": [
+      "drivers/gpu/drm/amd/display/dc/dcn21/dcn21_resource.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/amd/display/dc/dcn21/dcn21_resource.c",
+        "func": "dcn21_clock_source_create",
+        "buggy_start": 997,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "533bec143a4c32f7b2014a159d0f5376226e5b4d",
+    "subject": "arm/xen: Fix some refcount leaks",
+    "c_files": [
+      "arch/arm/xen/enlighten.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/arm/xen/enlighten.c",
+        "func": "arch_xen_unpopulated_init",
+        "buggy_start": 337,
+        "buggy_count": 12
+      },
+      {
+        "file": "arch/arm/xen/enlighten.c",
+        "func": "arch_xen_unpopulated_init",
+        "buggy_start": 403,
+        "buggy_count": 8
+      },
+      {
+        "file": "arch/arm/xen/enlighten.c",
+        "func": "xen_dt_guest_init",
+        "buggy_start": 424,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "fc06b2867f4cea543505acfb194c2be4ebf0c7d3",
+    "subject": "net: dsa: Add missing of_node_put() in dsa_port_link_register_of",
+    "c_files": [
+      "net/dsa/port.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/dsa/port.c",
+        "func": "dsa_port_link_register_of",
+        "buggy_start": 1620,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "e4f1e3a282c17cffba6fc7ad316387d5499550d0",
+    "subject": "drm/amd/display: Fix memory leak in dcn21_clock_source_create",
+    "c_files": [
+      "drivers/gpu/drm/amd/display/dc/dcn21/dcn21_resource.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/amd/display/dc/dcn21/dcn21_resource.c",
+        "func": "dcn21_clock_source_create",
+        "buggy_start": 997,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "424bef51fa530389b0b9008c9e144e40c10e8458",
+    "subject": "usb: musb: Fix missing of_node_put() in omap2430_probe",
+    "c_files": [
+      "drivers/usb/musb/omap2430.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/musb/omap2430.c",
+        "func": "omap2430_probe",
+        "buggy_start": 362,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "1af20714fedad238362571620be0bd690ded05b6",
+    "subject": "HID: elan: Fix potential double free in elan_input_configured",
+    "c_files": [
+      "drivers/hid/hid-elan.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/hid/hid-elan.c",
+        "func": "elan_input_configured",
+        "buggy_start": 188,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/hid/hid-elan.c",
+        "func": "elan_input_configured",
+        "buggy_start": 200,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "bcea0f547ec1a2ee44d429aaf0334633e386e67c",
+    "subject": "tty: serial: owl: Fix missing clk_disable_unprepare() in owl_uart_probe",
+    "c_files": [
+      "drivers/tty/serial/owl-uart.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/tty/serial/owl-uart.c",
+        "func": "owl_uart_probe",
+        "buggy_start": 731,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "ce88613e5bd579478653a028291098143f2a5bdf",
+    "subject": "phy: ti: Add missing pm_runtime_disable() in serdes_am654_probe",
+    "c_files": [
+      "drivers/phy/ti/phy-am654-serdes.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/phy/ti/phy-am654-serdes.c",
+        "func": "serdes_am654_probe",
+        "buggy_start": 838,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "0f83e6b4161617014017a694888dd8743f46f071",
+    "subject": "ARM: OMAP2+: Fix refcount leak in omap_gic_of_init",
+    "c_files": [
+      "arch/arm/mach-omap2/omap4-common.c"
+    ],
+    "hunks": [
+      {
+        "file": "arch/arm/mach-omap2/omap4-common.c",
+        "func": "omap_gic_of_init",
+        "buggy_start": 314,
+        "buggy_count": 10
+      }
+    ]
+  },
+  {
+    "fix_sha": "388ec8f079f2f20d5cd183c3bc6f33cbc3ffd3ef",
+    "subject": "phy: samsung: Fix missing of_node_put() in exynos_sata_phy_probe",
+    "c_files": [
+      "drivers/phy/samsung/phy-exynos5250-sata.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/phy/samsung/phy-exynos5250-sata.c",
+        "func": "exynos_sata_phy_probe",
+        "buggy_start": 187,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "214e0d8fe4a813ae6ffd62bc2dfe7544c20914f4",
+    "subject": "PCI: mediatek: Fix refcount leak in mtk_pcie_subsys_powerup()",
+    "c_files": [
+      "drivers/pci/controller/pcie-mediatek.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pci/controller/pcie-mediatek.c",
+        "func": "mtk_pcie_subsys_powerup",
+        "buggy_start": 1008,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "aad66a3c78da668f4506356c2fdb70b7a19ecc76",
+    "subject": "soc: qcom: smsm: Fix missing of_node_put() in smsm_parse_ipc",
+    "c_files": [
+      "drivers/soc/qcom/smsm.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/soc/qcom/smsm.c",
+        "func": "smsm_parse_ipc",
+        "buggy_start": 374,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "8fd3f18ea31a398ecce4a6d3804433658678b0a3",
+    "subject": "soc: qcom: smp2p: Fix missing of_node_put() in smp2p_parse_ipc",
+    "c_files": [
+      "drivers/soc/qcom/smp2p.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/soc/qcom/smp2p.c",
+        "func": "smp2p_parse_ipc",
+        "buggy_start": 493,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "2b04bd4f03bba021959ca339314f6739710f0954",
+    "subject": "dpaa2-ptp: Fix refcount leak in dpaa2_ptp_probe",
+    "c_files": [
+      "drivers/net/ethernet/freescale/dpaa2/dpaa2-ptp.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/freescale/dpaa2/dpaa2-ptp.c",
+        "func": "dpaa2_ptp_probe",
+        "buggy_start": 167,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/net/ethernet/freescale/dpaa2/dpaa2-ptp.c",
+        "func": "dpaa2_ptp_probe",
+        "buggy_start": 210,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "05654431a18fe24e5e46a375d98904134628a102",
+    "subject": "ASoC: mediatek: Fix missing of_node_put in mt2701_wm8960_machine_probe",
+    "c_files": [
+      "sound/soc/mediatek/mt2701/mt2701-wm8960.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/mediatek/mt2701/mt2701-wm8960.c",
+        "func": "mt2701_wm8960_machine_probe",
+        "buggy_start": 129,
+        "buggy_count": 7
+      },
+      {
+        "file": "sound/soc/mediatek/mt2701/mt2701-wm8960.c",
+        "func": "mt2701_wm8960_machine_probe",
+        "buggy_start": 140,
+        "buggy_count": 7
+      },
+      {
+        "file": "sound/soc/mediatek/mt2701/mt2701-wm8960.c",
+        "func": "mt2701_wm8960_machine_probe",
+        "buggy_start": 148,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "6f296a9665ba5ac68937bf11f96214eb9de81baa",
+    "subject": "memory: atmel-ebi: Fix missing of_node_put in atmel_ebi_probe",
+    "c_files": [
+      "drivers/memory/atmel-ebi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/memory/atmel-ebi.c",
+        "func": "atmel_ebi_probe",
+        "buggy_start": 544,
+        "buggy_count": 20
+      },
+      {
+        "file": "drivers/memory/atmel-ebi.c",
+        "func": "atmel_ebi_probe",
+        "buggy_start": 608,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "d055ef3a2c6919cff504ae3b710c96318d545fd2",
+    "subject": "watchdog: rti-wdt: Add missing pm_runtime_disable() in probe function",
+    "c_files": [
+      "drivers/watchdog/rti_wdt.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/watchdog/rti_wdt.c",
+        "func": "rti_wdt_probe",
+        "buggy_start": 228,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "e84ee1a75f944a0fe3c277aaa10c426603d2b0bc",
+    "subject": "mfd: asic3: Add missing iounmap() on error asic3_mfd_probe",
+    "c_files": [
+      "drivers/mfd/asic3.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/mfd/asic3.c",
+        "func": "asic3_mfd_probe",
+        "buggy_start": 906,
+        "buggy_count": 14
+      },
+      {
+        "file": "drivers/mfd/asic3.c",
+        "func": "asic3_mfd_probe",
+        "buggy_start": 927,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "cb0b430b4e3acc88c85e0ad2e25f2a25a5765262",
+    "subject": "net: dsa: Add missing of_node_put() in dsa_port_parse_of",
+    "c_files": [
+      "net/dsa/dsa2.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/dsa/dsa2.c",
+        "func": "dsa_port_parse_of",
+        "buggy_start": 1436,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "9531a631379169d57756b2411178c6238655df88",
+    "subject": "ASoC: codecs: wcd934x: Add missing of_node_put() in wcd934x_codec_parse_data",
+    "c_files": [
+      "sound/soc/codecs/wcd934x.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/codecs/wcd934x.c",
+        "func": "wcd934x_codec_parse_data",
+        "buggy_start": 5883,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "89388f8730699c259f8090ec435fb43569efe4ac",
+    "subject": "pinctrl/rockchip: Add missing of_node_put() in rockchip_pinctrl_probe",
+    "c_files": [
+      "drivers/pinctrl/pinctrl-rockchip.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pinctrl/pinctrl-rockchip.c",
+        "func": "rockchip_pinctrl_probe",
+        "buggy_start": 2693,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/pinctrl/pinctrl-rockchip.c",
+        "func": "rockchip_pinctrl_probe",
+        "buggy_start": 2725,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "c09ac191b1f97cfa06f394dbfd7a5db07986cefc",
+    "subject": "pinctrl: nomadik: Add missing of_node_put() in nmk_pinctrl_probe",
+    "c_files": [
+      "drivers/pinctrl/nomadik/pinctrl-nomadik.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pinctrl/nomadik/pinctrl-nomadik.c",
+        "func": "nmk_pinctrl_probe",
+        "buggy_start": 1883,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "dab4df9ca919f59e5b9dd84385eaf34d4f20dbb0",
+    "subject": "pinctrl: mediatek: Fix missing of_node_put() in mtk_pctrl_init",
+    "c_files": [
+      "drivers/pinctrl/mediatek/pinctrl-mtk-common.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pinctrl/mediatek/pinctrl-mtk-common.c",
+        "func": "mtk_pctrl_init",
+        "buggy_start": 1038,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/pinctrl/mediatek/pinctrl-mtk-common.c",
+        "func": "mtk_pctrl_init",
+        "buggy_start": 1051,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "4528668ca331f7ce5999b7746657b46db5b3b785",
+    "subject": "mips: cdmm: Fix refcount leak in mips_cdmm_phys_base",
+    "c_files": [
+      "drivers/bus/mips_cdmm.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/bus/mips_cdmm.c",
+        "func": "mips_cdmm_phys_base",
+        "buggy_start": 351,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "7f0f1f3ef62ed7a40e30aff28115bd94c4211d1d",
+    "subject": "hwrng: nomadik - Change clk_disable to clk_disable_unprepare",
+    "c_files": [
+      "drivers/char/hw_random/nomadik-rng.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/char/hw_random/nomadik-rng.c",
+        "func": "nmk_rng_probe",
+        "buggy_start": 65,
+        "buggy_count": 14
+      }
+    ]
+  },
+  {
+    "fix_sha": "6d6ef58c2470da85a99119f74d34216c8074b9f0",
+    "subject": "clk: tegra: tegra124-emc: Fix missing put_device() call in emc_ensure_emc_driver",
+    "c_files": [
+      "drivers/clk/tegra/clk-tegra124-emc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/clk/tegra/clk-tegra124-emc.c",
+        "func": "emc_ensure_emc_driver",
+        "buggy_start": 198,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "07a5dcc4bed9d7cae54adf5aa10ff9f037a3204b",
+    "subject": "remoteproc: qcom_q6v5_mss: Fix some leaks in q6v5_alloc_memory_region",
+    "c_files": [
+      "drivers/remoteproc/qcom_q6v5_mss.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/remoteproc/qcom_q6v5_mss.c",
+        "func": "q6v5_alloc_memory_region",
+        "buggy_start": 1806,
+        "buggy_count": 18
+      },
+      {
+        "file": "drivers/remoteproc/qcom_q6v5_mss.c",
+        "func": "q6v5_alloc_memory_region",
+        "buggy_start": 1828,
+        "buggy_count": 14
+      }
+    ]
+  },
+  {
+    "fix_sha": "8f90161a66bc3d6b9fe8dde4d9028d20eae1b62a",
+    "subject": "remoteproc: qcom_wcnss: Add missing of_node_put() in wcnss_alloc_memory_region",
+    "c_files": [
+      "drivers/remoteproc/qcom_wcnss.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/remoteproc/qcom_wcnss.c",
+        "func": "wcnss_alloc_memory_region",
+        "buggy_start": 500,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "505b5b1616e200042999de715dbe7c1e2735cd65",
+    "subject": "remoteproc: qcom: Fix missing of_node_put in adsp_alloc_memory_region",
+    "c_files": [
+      "drivers/remoteproc/qcom_q6v5_adsp.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/remoteproc/qcom_q6v5_adsp.c",
+        "func": "adsp_alloc_memory_region",
+        "buggy_start": 408,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "375a347da4889f64d86e1ab7f4e6702b6e9bf299",
+    "subject": "ASoC: msm8916-wcd-digital: Fix missing clk_disable_unprepare() in msm8916_wcd_digital_probe",
+    "c_files": [
+      "sound/soc/codecs/msm8916-wcd-digital.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/codecs/msm8916-wcd-digital.c",
+        "func": "msm8916_wcd_digital_probe",
+        "buggy_start": 1201,
+        "buggy_count": 7
+      },
+      {
+        "file": "sound/soc/codecs/msm8916-wcd-digital.c",
+        "func": "msm8916_wcd_digital_probe",
+        "buggy_start": 1209,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "cfa5dbcdd7aece76f3415284569f2f384aff0253",
+    "subject": "coresight: syscfg: Fix memleak on registration failure in cscfg_create_device",
+    "c_files": [
+      "drivers/hwtracing/coresight/coresight-syscfg.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/hwtracing/coresight/coresight-syscfg.c",
+        "func": "cscfg_create_device",
+        "buggy_start": 1049,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "2ac5b58e645c66932438bb021cb5b52097ce70b0",
+    "subject": "gianfar: ethtool: Fix refcount leak in gfar_get_ts_info",
+    "c_files": [
+      "drivers/net/ethernet/freescale/gianfar_ethtool.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/freescale/gianfar_ethtool.c",
+        "func": "gfar_get_ts_info",
+        "buggy_start": 1464,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "c9ffa3e2bc451816ce0295e40063514fabf2bd36",
+    "subject": "net: marvell: prestera: Add missing of_node_put() in prestera_switch_set_base_mac_addr",
+    "c_files": [
+      "drivers/net/ethernet/marvell/prestera/prestera_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/marvell/prestera/prestera_main.c",
+        "func": "prestera_switch_set_base_mac_addr",
+        "buggy_start": 554,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "a6b44a2518a08348bd0f0401e4d2b99233bbabc2",
+    "subject": "ASoC: rk817: Fix missing clk_disable_unprepare() in rk817_platform_probe",
+    "c_files": [
+      "sound/soc/codecs/rk817_codec.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/codecs/rk817_codec.c",
+        "func": "rk817_platform_probe",
+        "buggy_start": 508,
+        "buggy_count": 12
+      }
+    ]
+  },
+  {
+    "fix_sha": "5575f7f49134c7386a684335c9007737c606d3b5",
+    "subject": "ASoC: SOF: Add missing of_node_put() in imx8m_probe",
+    "c_files": [
+      "sound/soc/sof/imx/imx8m.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/sof/imx/imx8m.c",
+        "func": "imx8m_probe",
+        "buggy_start": 224,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "f725d20579807a68afbe5dba69e78b8fa05f5ef0",
+    "subject": "ASoC: rockchip: i2s: Fix missing clk_disable_unprepare() in rockchip_i2s_probe",
+    "c_files": [
+      "sound/soc/rockchip/rockchip_i2s.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/rockchip/rockchip_i2s.c",
+        "func": "rockchip_i2s_probe",
+        "buggy_start": 716,
+        "buggy_count": 19
+      },
+      {
+        "file": "sound/soc/rockchip/rockchip_i2s.c",
+        "func": "rockchip_i2s_probe",
+        "buggy_start": 768,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "a58c22cfbbf62fefca090334bbd35fd132e92a23",
+    "subject": "video: fbdev: omapfb: Add missing of_node_put() in dvic_probe_of",
+    "c_files": [
+      "drivers/video/fbdev/omap2/omapfb/displays/connector-dvi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/video/fbdev/omap2/omapfb/displays/connector-dvi.c",
+        "func": "dvic_probe_of",
+        "buggy_start": 246,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "f590797fa3c1bccdd19e55441592a23b46aef449",
+    "subject": "ASoC: atmel: Add missing of_node_put() in at91sam9g20ek_audio_probe",
+    "c_files": [
+      "sound/soc/atmel/sam9g20_wm8731.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/atmel/sam9g20_wm8731.c",
+        "func": "at91sam9g20ek_audio_probe",
+        "buggy_start": 214,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "9826e393e4a8c3df474e7f9eacd3087266f74005",
+    "subject": "iommu/tegra-smmu: Fix missing put_device() call in tegra_smmu_find",
+    "c_files": [
+      "drivers/iommu/tegra-smmu.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/iommu/tegra-smmu.c",
+        "func": "tegra_smmu_find",
+        "buggy_start": 808,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "221e3638feb8bc42143833c9a704fa89b6c366bb",
+    "subject": "drm/tegra: Fix reference leak in tegra_dsi_ganged_probe",
+    "c_files": [
+      "drivers/gpu/drm/tegra/dsi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/tegra/dsi.c",
+        "func": "tegra_dsi_ganged_probe",
+        "buggy_start": 1538,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "e831c7aba950f3ae94002b10321279654525e5ec",
+    "subject": "dmaengine: stm32-dmamux: Fix PM disable depth imbalance in stm32_dmamux_probe",
+    "c_files": [
+      "drivers/dma/stm32-dmamux.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/dma/stm32-dmamux.c",
+        "func": "stm32_dmamux_probe",
+        "buggy_start": 292,
+        "buggy_count": 10
+      }
+    ]
+  },
+  {
+    "fix_sha": "6a4760463dbc6b603690938c468839985189ce0a",
+    "subject": "power: supply: ab8500: Fix memory leak in ab8500_fg_sysfs_init",
+    "c_files": [
+      "drivers/power/supply/ab8500_fg.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/power/supply/ab8500_fg.c",
+        "func": "ab8500_fg_sysfs_init",
+        "buggy_start": 2557,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "8bc69f86328e87a0ffa79438430cc82f3aa6a194",
+    "subject": "Drivers: hv: vmbus: Fix memory leak in vmbus_add_channel_kobj",
+    "c_files": [
+      "drivers/hv/vmbus_drv.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/hv/vmbus_drv.c",
+        "func": "vmbus_add_channel_kobj",
+        "buggy_start": 2028,
+        "buggy_count": 8
+      },
+      {
+        "file": "drivers/hv/vmbus_drv.c",
+        "func": "vmbus_add_channel_kobj",
+        "buggy_start": 2038,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "0ff027027e05a866491bbb53494f0e2a61354c85",
+    "subject": "soc: qcom: ocmem: Fix missing put_device() call in of_get_ocmem",
+    "c_files": [
+      "drivers/soc/qcom/ocmem.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/soc/qcom/ocmem.c",
+        "func": "of_get_ocmem",
+        "buggy_start": 206,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "ca85d271531a1e1c86f24b892f57b7d0a3ddb5a6",
+    "subject": "media: coda: Fix missing put_device() call in coda_get_vdoa_data",
+    "c_files": [
+      "drivers/media/platform/coda/coda-common.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/coda/coda-common.c",
+        "func": "coda_get_vdoa_data",
+        "buggy_start": 409,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "ba1b71b008e97fd747845ff3a818420b11bbe830",
+    "subject": "mtd: rawnand: ingenic: Fix missing put_device in ingenic_ecc_get",
+    "c_files": [
+      "drivers/mtd/nand/raw/ingenic/ingenic_ecc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/mtd/nand/raw/ingenic/ingenic_ecc.c",
+        "func": "ingenic_ecc_get",
+        "buggy_start": 68,
+        "buggy_count": 9
+      }
+    ]
+  },
+  {
+    "fix_sha": "774fe0cd838d1b1419d41ab4ea0613c80d4ecbd7",
+    "subject": "drm/msm/hdmi: Fix missing put_device() call in msm_hdmi_get_phy",
+    "c_files": [
+      "drivers/gpu/drm/msm/hdmi/hdmi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/msm/hdmi/hdmi.c",
+        "func": "msm_hdmi_get_phy",
+        "buggy_start": 97,
+        "buggy_count": 10
+      }
+    ]
+  },
+  {
+    "fix_sha": "d24846a4246b6e61ecbd036880a4adf61681d241",
+    "subject": "parisc: pdc_stable: Fix memory leak in pdcs_register_pathentries",
+    "c_files": [
+      "drivers/parisc/pdc_stable.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/parisc/pdc_stable.c",
+        "func": "pdcs_register_pathentries",
+        "buggy_start": 980,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "c71af3dae3e34d2fde0c19623cf7f8483321f0e3",
+    "subject": "drm/sun4i: dw-hdmi: Fix missing put_device() call in sun8i_hdmi_phy_get",
+    "c_files": [
+      "drivers/gpu/drm/sun4i/sun8i_hdmi_phy.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/sun4i/sun8i_hdmi_phy.c",
+        "func": "sun8i_hdmi_phy_get",
+        "buggy_start": 658,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "69c1b87516e327a60b39f96b778fe683259408bf",
+    "subject": "spi: spi-meson-spifc: Add missing pm_runtime_disable() in meson_spifc_probe",
+    "c_files": [
+      "drivers/spi/spi-meson-spifc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/spi/spi-meson-spifc.c",
+        "func": "meson_spifc_probe",
+        "buggy_start": 349,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "0589e8889dce8e0f0ea5bbf757f38865e2a469c1",
+    "subject": "drivers/firmware: Add missing platform_device_put() in sysfb_create_simplefb",
+    "c_files": [
+      "drivers/firmware/sysfb_simplefb.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/firmware/sysfb_simplefb.c",
+        "func": "sysfb_create_simplefb",
+        "buggy_start": 113,
+        "buggy_count": 12
+      }
+    ]
+  },
+  {
+    "fix_sha": "b146e343a9e05605b491b1bf4a2b62a39d5638d8",
+    "subject": "drm/bridge: nwl-dsi: Fix PM disable depth imbalance in nwl_dsi_probe",
+    "c_files": [
+      "drivers/gpu/drm/bridge/nwl-dsi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/bridge/nwl-dsi.c",
+        "func": "nwl_dsi_probe",
+        "buggy_start": 1206,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "96211b7c56b109a52768e6cc5e23a1f79316eca0",
+    "subject": "drm/bridge: Add missing pm_runtime_disable() in __dw_mipi_dsi_probe",
+    "c_files": [
+      "drivers/gpu/drm/bridge/synopsys/dw-mipi-dsi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/bridge/synopsys/dw-mipi-dsi.c",
+        "func": "__dw_mipi_dsi_probe",
+        "buggy_start": 1202,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "7c442e76c06cb1bef16a6c523487438175584eea",
+    "subject": "drm/bridge: Fix free wrong object in sii8620_init_rcp_input_dev",
+    "c_files": [
+      "drivers/gpu/drm/bridge/sil-sii8620.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/bridge/sil-sii8620.c",
+        "func": "sii8620_init_rcp_input_dev",
+        "buggy_start": 2120,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "bf2b09fedc17248b315f80fb249087b7d28a69a6",
+    "subject": "fsl/fman: Fix missing put_device() call in fman_port_probe",
+    "c_files": [
+      "drivers/net/ethernet/freescale/fman/fman_port.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/freescale/fman/fman_port.c",
+        "func": "fman_port_probe",
+        "buggy_start": 1805,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/net/ethernet/freescale/fman/fman_port.c",
+        "func": "fman_port_probe",
+        "buggy_start": 1813,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/net/ethernet/freescale/fman/fman_port.c",
+        "func": "fman_port_probe",
+        "buggy_start": 1847,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/net/ethernet/freescale/fman/fman_port.c",
+        "func": "fman_port_probe",
+        "buggy_start": 1861,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/net/ethernet/freescale/fman/fman_port.c",
+        "func": "fman_port_probe",
+        "buggy_start": 1871,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/net/ethernet/freescale/fman/fman_port.c",
+        "func": "fman_port_probe",
+        "buggy_start": 1896,
+        "buggy_count": 6
+      }
+    ]
+  }
+]

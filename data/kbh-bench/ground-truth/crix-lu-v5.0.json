@@ -1,0 +1,892 @@
+[
+  {
+    "fix_sha": "f6c992ca7dd4f49042eec61f3fb426c94d901675",
+    "subject": "clk: bcm2835: add missing release if devm_clk_hw_register fails",
+    "c_files": [
+      "drivers/clk/bcm/clk-bcm2835.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/clk/bcm/clk-bcm2835.c",
+        "func": "bcm2835_register_pll",
+        "buggy_start": 1338,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "7dae2aaaf432767ca7aa11fa84643a7c2600dbdd",
+    "subject": "media: ti-vpe: Fix a missing check and reference count leak",
+    "c_files": [
+      "drivers/media/platform/ti-vpe/vpe.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/ti-vpe/vpe.c",
+        "func": "vpe_runtime_get",
+        "buggy_start": 2475,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "88f50a05f907d96a27a9ce3cc9e8cbb91a6f0f22",
+    "subject": "media: stm32-dcmi: Fix a reference count leak",
+    "c_files": [
+      "drivers/media/platform/stm32/stm32-dcmi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/stm32/stm32-dcmi.c",
+        "func": "dcmi_start_streaming",
+        "buggy_start": 733,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/media/platform/stm32/stm32-dcmi.c",
+        "func": "dcmi_start_streaming",
+        "buggy_start": 837,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "78741ce98c2e36188e2343434406b0e0bc50b0e7",
+    "subject": "media: s5p-mfc: Fix a reference count leak",
+    "c_files": [
+      "drivers/media/platform/s5p-mfc/s5p_mfc_pm.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/s5p-mfc/s5p_mfc_pm.c",
+        "func": "s5p_mfc_power_on",
+        "buggy_start": 79,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "d0675b67b42eb4f1a840d1513b5b00f78312f833",
+    "subject": "media: camss: Fix a reference count leak.",
+    "c_files": [
+      "drivers/media/platform/qcom/camss/camss-csiphy.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/qcom/camss/camss-csiphy.c",
+        "func": "csiphy_set_power",
+        "buggy_start": 176,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "63e36a381d92a9cded97e90d481ee22566557dd1",
+    "subject": "media: platform: fcp: Fix a reference count leak.",
+    "c_files": [
+      "drivers/media/platform/rcar-fcp.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/rcar-fcp.c",
+        "func": "rcar_fcp_enable",
+        "buggy_start": 102,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "884d638e0853c4b5f01eb6d048fc3b6239012404",
+    "subject": "media: rockchip/rga: Fix a reference count leak.",
+    "c_files": [
+      "drivers/media/platform/rockchip/rga/rga-buf.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/rockchip/rga/rga-buf.c",
+        "func": "rga_buf_start_streaming",
+        "buggy_start": 81,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "aaffa0126a111d65f4028c503c76192d4cc93277",
+    "subject": "media: rcar-vin: Fix a reference count leak.",
+    "c_files": [
+      "drivers/media/platform/rcar-vin/rcar-dma.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/rcar-vin/rcar-dma.c",
+        "func": "rvin_set_channel_routing",
+        "buggy_start": 1420,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "f141a422159a199f4c8dedb7e0df55b3b2cf16cd",
+    "subject": "ASoC: rockchip: Fix a reference count leak.",
+    "c_files": [
+      "sound/soc/rockchip/rockchip_pdm.c"
+    ],
+    "hunks": [
+      {
+        "file": "sound/soc/rockchip/rockchip_pdm.c",
+        "func": "rockchip_pdm_resume",
+        "buggy_start": 590,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "17ed808ad243192fb923e4e653c1338d3ba06207",
+    "subject": "EDAC: Fix reference count leaks",
+    "c_files": [
+      "drivers/edac/edac_device_sysfs.c;drivers/edac/edac_pci_sysfs.c"
+    ],
+    "hunks": []
+  },
+  {
+    "fix_sha": "4ddf4739be6e375116c375f0a68bf3893ffcee21",
+    "subject": "efi/esrt: Fix reference count leak in esre_create_sysfs_entry.",
+    "c_files": [
+      "drivers/firmware/efi/esrt.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/firmware/efi/esrt.c",
+        "func": "esre_create_sysfs_entry",
+        "buggy_start": 181,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "aa8ba13cae3134b8ef1c1b6879f66372531da738",
+    "subject": "vfio/mdev: Fix reference count leak in add_mdev_supported_type",
+    "c_files": [
+      "drivers/vfio/mdev/mdev_sysfs.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/vfio/mdev/mdev_sysfs.c",
+        "func": "add_mdev_supported_type",
+        "buggy_start": 110,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "7cc31613734c4870ae32f5265d576ef296621343",
+    "subject": "iommu: Fix reference count leak in iommu_group_alloc.",
+    "c_files": [
+      "drivers/iommu/iommu.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/iommu/iommu.c",
+        "func": "iommu_group_alloc",
+        "buggy_start": 510,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "a068aab42258e25094bc2c159948d263ed7d7a77",
+    "subject": "bonding: Fix reference count leak in bond_sysfs_slave_add.",
+    "c_files": [
+      "drivers/net/bonding/bond_sysfs_slave.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/bonding/bond_sysfs_slave.c",
+        "func": "bond_sysfs_slave_add",
+        "buggy_start": 149,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "4d8be4bc94f74bb7d096e1c2e44457b530d5a170",
+    "subject": "ACPI: CPPC: Fix reference count leak in acpi_cppc_processor_probe()",
+    "c_files": [
+      "drivers/acpi/cppc_acpi.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/acpi/cppc_acpi.c",
+        "func": "acpi_cppc_processor_probe",
+        "buggy_start": 846,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "6e6c25283dff866308c87b49434c7dbad4774cc0",
+    "subject": "ACPI: sysfs: Fix reference count leak in acpi_sysfs_add_hotplug_profile()",
+    "c_files": [
+      "drivers/acpi/sysfs.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/acpi/sysfs.c",
+        "func": "acpi_sysfs_add_hotplug_profile",
+        "buggy_start": 993,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "15c973858903009e995b2037683de29dfe968621",
+    "subject": "qlcnic: fix missing release in qlcnic_83xx_interrupt_test.",
+    "c_files": [
+      "drivers/net/ethernet/qlogic/qlcnic/qlcnic_83xx_hw.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/qlogic/qlcnic/qlcnic_83xx_hw.c",
+        "func": "qlcnic_83xx_interrupt_test",
+        "buggy_start": 3651,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/net/ethernet/qlogic/qlcnic/qlcnic_83xx_hw.c",
+        "func": "qlcnic_83xx_interrupt_test",
+        "buggy_start": 3681,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "db857e6ae548f0f4f4a0f63fffeeedf3cca21f9d",
+    "subject": "RDMA/pvrdma: Fix missing pci disable in pvrdma_pci_probe()",
+    "c_files": [
+      "drivers/infiniband/hw/vmw_pvrdma/pvrdma_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/infiniband/hw/vmw_pvrdma/pvrdma_main.c",
+        "func": "pvrdma_pci_probe",
+        "buggy_start": 829,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "44734a594196bf1d474212f38fe3a0d37a73278b",
+    "subject": "usb: gadget: fix potential double-free in m66592_probe.",
+    "c_files": [
+      "drivers/usb/gadget/udc/m66592-udc.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/gadget/udc/m66592-udc.c",
+        "func": "m66592_probe",
+        "buggy_start": 1667,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "febfd9d3c7f74063e8e630b15413ca91b567f963",
+    "subject": "net/mlx4_core: fix a memory leak bug.",
+    "c_files": [
+      "drivers/net/ethernet/mellanox/mlx4/fw.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/mellanox/mlx4/fw.c",
+        "func": "mlx4_opreq_action",
+        "buggy_start": 2734,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "5a730153984dd13f82ffae93d7170d76eba204e9",
+    "subject": "net: sun: fix missing release regions in cas_init_one().",
+    "c_files": [
+      "drivers/net/ethernet/sun/cassini.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/sun/cassini.c",
+        "func": "cas_init_one",
+        "buggy_start": 4963,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/net/ethernet/sun/cassini.c",
+        "func": "cas_init_one",
+        "buggy_start": 5136,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "c54d481d71c6849e044690d3960aaebc730224cc",
+    "subject": "apparmor: Fix use-after-free in aa_audit_rule_init",
+    "c_files": [
+      "security/apparmor/audit.c"
+    ],
+    "hunks": [
+      {
+        "file": "security/apparmor/audit.c",
+        "func": "aa_audit_rule_init",
+        "buggy_start": 197,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "40efb09a7f53125719e49864da008495e39aaa1e",
+    "subject": "drm/vmwgfx: prevent memory leak in vmw_cmdbuf_res_add",
+    "c_files": [
+      "drivers/gpu/drm/vmwgfx/vmwgfx_cmdbuf_res.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/gpu/drm/vmwgfx/vmwgfx_cmdbuf_res.c",
+        "func": "vmw_cmdbuf_res_add",
+        "buggy_start": 209,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "a7c46c0c0e3d62f2764cd08b90934cd2aaaf8545",
+    "subject": "mm/gup: fix memory leak in __gup_benchmark_ioctl",
+    "c_files": [
+      "mm/gup_benchmark.c"
+    ],
+    "hunks": [
+      {
+        "file": "mm/gup_benchmark.c",
+        "func": "__gup_benchmark_ioctl",
+        "buggy_start": 26,
+        "buggy_count": 6
+      },
+      {
+        "file": "mm/gup_benchmark.c",
+        "func": "__gup_benchmark_ioctl",
+        "buggy_start": 63,
+        "buggy_count": 7
+      },
+      {
+        "file": "mm/gup_benchmark.c",
+        "func": "__gup_benchmark_ioctl",
+        "buggy_start": 85,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "4282dc057d750c6a7dd92953564b15c26b54c22c",
+    "subject": "brcmfmac: Fix memory leak in brcmf_usbdev_qinit",
+    "c_files": [
+      "drivers/net/wireless/broadcom/brcm80211/brcmfmac/usb.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/broadcom/brcm80211/brcmfmac/usb.c",
+        "func": "brcmf_usbdev_qinit",
+        "buggy_start": 430,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "5cc509aa83c6acd2c5cd94f99065c39d2bd0a490",
+    "subject": "brcmfmac: Fix memory leak in brcmf_p2p_create_p2pdev()",
+    "c_files": [
+      "drivers/net/wireless/broadcom/brcm80211/brcmfmac/p2p.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/broadcom/brcm80211/brcmfmac/p2p.c",
+        "func": "brcmf_p2p_create_p2pdev",
+        "buggy_start": 2092,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "f37f710353677639bc5d37ee785335994adf2529",
+    "subject": "net: gemini: Fix memory leak in gmac_setup_txqs",
+    "c_files": [
+      "drivers/net/ethernet/cortina/gemini.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/cortina/gemini.c",
+        "func": "gmac_setup_txqs",
+        "buggy_start": 576,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "8c386cc817878588195dde38e919aa6ba9409d58",
+    "subject": "PCI/IOV: Fix memory leak in pci_iov_add_virtfn()",
+    "c_files": [
+      "drivers/pci/iov.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/pci/iov.c",
+        "func": "pci_iov_add_virtfn",
+        "buggy_start": 186,
+        "buggy_count": 10
+      },
+      {
+        "file": "drivers/pci/iov.c",
+        "func": "pci_iov_add_virtfn",
+        "buggy_start": 197,
+        "buggy_count": 11
+      }
+    ]
+  },
+  {
+    "fix_sha": "6645d42d79d33e8a9fe262660a75d5f4556bbea9",
+    "subject": "dma-buf: Fix memory leak in sync_file_merge()",
+    "c_files": [
+      "drivers/dma-buf/sync_file.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/dma-buf/sync_file.c",
+        "func": "sync_file_merge",
+        "buggy_start": 221,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "b6631c6031c746ed004c4221ec0616d7a520f441",
+    "subject": "sctp: Fix memory leak in sctp_sf_do_5_2_4_dupcook",
+    "c_files": [
+      "net/sctp/sm_statefuns.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/sctp/sm_statefuns.c",
+        "func": "sctp_sf_do_5_2_4_dupcook",
+        "buggy_start": 2160,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "d088337c38a5cd8f0230fbf2d514ff7672f9d0d3",
+    "subject": "Bluetooth: Fix memory leak in hci_connect_le_scan",
+    "c_files": [
+      "net/bluetooth/hci_conn.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/bluetooth/hci_conn.c",
+        "func": "hci_connect_le_scan",
+        "buggy_start": 1176,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "450c3d4166837c496ebce03650c08800991f2150",
+    "subject": "affs: fix a memory leak in affs_remount",
+    "c_files": [
+      "fs/affs/super.c"
+    ],
+    "hunks": [
+      {
+        "file": "fs/affs/super.c",
+        "func": "affs_remount",
+        "buggy_start": 561,
+        "buggy_count": 14
+      },
+      {
+        "file": "fs/affs/super.c",
+        "func": "affs_remount",
+        "buggy_start": 579,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "c3df30a01da4955e04fa068c503cd784b31dad92",
+    "subject": "media: aspeed-video: Fix memory leaks in aspeed_video_probe",
+    "c_files": [
+      "drivers/media/platform/aspeed-video.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/platform/aspeed-video.c",
+        "func": "aspeed_video_probe",
+        "buggy_start": 1657,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "fb5be6a7b4863ecc44963bb80ca614584b6c7817",
+    "subject": "can: gs_usb: gs_can_open(): prevent memory leak",
+    "c_files": [
+      "drivers/net/can/usb/gs_usb.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/can/usb/gs_usb.c",
+        "func": "gs_can_open",
+        "buggy_start": 623,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "9bbfceea12a8f145097a27d7c7267af25893c060",
+    "subject": "usb: dwc3: pci: prevent memory leak in dwc3_pci_probe",
+    "c_files": [
+      "drivers/usb/dwc3/dwc3-pci.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/usb/dwc3/dwc3-pci.c",
+        "func": "dwc3_pci_probe",
+        "buggy_start": 258,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "2289adbfa559050d2a38bcd9caac1c18b800e928",
+    "subject": "media: usb: fix memory leak in af9005_identify_state",
+    "c_files": [
+      "drivers/media/usb/dvb-usb/af9005.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/media/usb/dvb-usb/af9005.c",
+        "func": "af9005_identify_state",
+        "buggy_start": 976,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "e13de8fe0d6a51341671bbe384826d527afe8d44",
+    "subject": "of: unittest: fix memory leak in unittest_data_add",
+    "c_files": [
+      "drivers/of/unittest.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/of/unittest.c",
+        "func": "unittest_data_add",
+        "buggy_start": 1207,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "4aa7afb0ee20a97fbf0c5bab3df028d5fb85fdab",
+    "subject": "ipmi: Fix memory leak in __ipmi_bmc_register",
+    "c_files": [
+      "drivers/char/ipmi/ipmi_msghandler.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/char/ipmi/ipmi_msghandler.c",
+        "func": "__ipmi_bmc_register",
+        "buggy_start": 3020,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "c8c2a057fdc7de1cd16f4baa51425b932a42eb39",
+    "subject": "net/mlx5: prevent memory leak in mlx5_fpga_conn_create_cq",
+    "c_files": [
+      "drivers/net/ethernet/mellanox/mlx5/core/fpga/conn.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/mellanox/mlx5/core/fpga/conn.c",
+        "func": "mlx5_fpga_conn_create_cq",
+        "buggy_start": 464,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "e0b0cb9388642c104838fac100a4af32745621e2",
+    "subject": "virt: vbox: fix memory leak in hgcm_call_preprocess_linaddr",
+    "c_files": [
+      "drivers/virt/vboxguest/vboxguest_utils.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/virt/vboxguest/vboxguest_utils.c",
+        "func": "hgcm_call_preprocess_linaddr",
+        "buggy_start": 220,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/virt/vboxguest/vboxguest_utils.c",
+        "func": "hgcm_call_preprocess_linaddr",
+        "buggy_start": 228,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "c03b04dcdba1da39903e23cc4d072abf8f68f2dd",
+    "subject": "crypto: user - fix memory leak in crypto_reportstat",
+    "c_files": [
+      "crypto/crypto_user_stat.c"
+    ],
+    "hunks": [
+      {
+        "file": "crypto/crypto_user_stat.c",
+        "func": "crypto_reportstat",
+        "buggy_start": 328,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "ffdde5932042600c6807d46c1550b28b0db6a3bc",
+    "subject": "crypto: user - fix memory leak in crypto_report",
+    "c_files": [
+      "crypto/crypto_user_base.c"
+    ],
+    "hunks": [
+      {
+        "file": "crypto/crypto_user_base.c",
+        "func": "crypto_report",
+        "buggy_start": 213,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "0f4f199443faca715523b0659aa536251d8b978f",
+    "subject": "iwlwifi: pcie: fix memory leaks in iwl_pcie_ctxt_info_gen3_init",
+    "c_files": [
+      "drivers/net/wireless/intel/iwlwifi/pcie/ctxt-info-gen3.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/intel/iwlwifi/pcie/ctxt-info-gen3.c",
+        "func": "iwl_pcie_ctxt_info_gen3_init",
+        "buggy_start": 107,
+        "buggy_count": 13
+      },
+      {
+        "file": "drivers/net/wireless/intel/iwlwifi/pcie/ctxt-info-gen3.c",
+        "func": "iwl_pcie_ctxt_info_gen3_init",
+        "buggy_start": 121,
+        "buggy_count": 16
+      },
+      {
+        "file": "drivers/net/wireless/intel/iwlwifi/pcie/ctxt-info-gen3.c",
+        "func": "iwl_pcie_ctxt_info_gen3_init",
+        "buggy_start": 186,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "d10dcb615c8e29d403a24d35f8310a7a53e3050c",
+    "subject": "mwifiex: pcie: Fix memory leak in mwifiex_pcie_init_evt_ring",
+    "c_files": [
+      "drivers/net/wireless/marvell/mwifiex/pcie.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/marvell/mwifiex/pcie.c",
+        "func": "mwifiex_pcie_init_evt_ring",
+        "buggy_start": 687,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "db8fd2cde93227e566a412cf53173ffa227998bc",
+    "subject": "mwifiex: pcie: Fix memory leak in mwifiex_pcie_alloc_cmdrsp_buf",
+    "c_files": [
+      "drivers/net/wireless/marvell/mwifiex/pcie.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/wireless/marvell/mwifiex/pcie.c",
+        "func": "mwifiex_pcie_alloc_cmdrsp_buf",
+        "buggy_start": 1029,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "1399c59fa92984836db90538cf92397fe7caaa57",
+    "subject": "nl80211: fix memory leak in nl80211_get_ftm_responder_stats",
+    "c_files": [
+      "net/wireless/nl80211.c"
+    ],
+    "hunks": [
+      {
+        "file": "net/wireless/nl80211.c",
+        "func": "nl80211_get_ftm_responder_stats",
+        "buggy_start": 13682,
+        "buggy_count": 7
+      }
+    ]
+  },
+  {
+    "fix_sha": "80b15db5e1e9c3300de299b2d43d1aafb593e6ac",
+    "subject": "staging: vt6655: Fix memory leak in vt6655_probe",
+    "c_files": [
+      "drivers/staging/vt6655/device_main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/vt6655/device_main.c",
+        "func": "vt6655_probe",
+        "buggy_start": 1748,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "1acb8f2a7a9f10543868ddd737e37424d5c36cf4",
+    "subject": "net: qlogic: Fix memory leak in ql_alloc_large_buffers",
+    "c_files": [
+      "drivers/net/ethernet/qlogic/qla3xxx.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/qlogic/qla3xxx.c",
+        "func": "ql_alloc_large_buffers",
+        "buggy_start": 2787,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "5bdea6060618cfcf1459dca137e89aee038ac8b9",
+    "subject": "Staging: fbtft: fix memory leak in fbtft_framebuffer_alloc",
+    "c_files": [
+      "drivers/staging/fbtft/fbtft-core.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/staging/fbtft/fbtft-core.c",
+        "func": "fbtft_framebuffer_alloc",
+        "buggy_start": 714,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/staging/fbtft/fbtft-core.c",
+        "func": "fbtft_framebuffer_alloc",
+        "buggy_start": 731,
+        "buggy_count": 7
+      },
+      {
+        "file": "drivers/staging/fbtft/fbtft-core.c",
+        "func": "fbtft_framebuffer_alloc",
+        "buggy_start": 753,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "34b3be18a04ecdc610aae4c48e5d1b799d8689f6",
+    "subject": "RDMA/hfi1: Prevent memory leak in sdma_init",
+    "c_files": [
+      "drivers/infiniband/hw/hfi1/sdma.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/infiniband/hw/hfi1/sdma.c",
+        "func": "sdma_init",
+        "buggy_start": 1526,
+        "buggy_count": 8
+      }
+    ]
+  },
+  {
+    "fix_sha": "8ce39eb5a67aee25d9f05b40b673c95b23502e3e",
+    "subject": "nfp: flower: fix memory leak in nfp_flower_spawn_vnic_reprs",
+    "c_files": [
+      "drivers/net/ethernet/netronome/nfp/flower/main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/netronome/nfp/flower/main.c",
+        "func": "nfp_flower_spawn_vnic_reprs",
+        "buggy_start": 400,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/net/ethernet/netronome/nfp/flower/main.c",
+        "func": "nfp_flower_spawn_vnic_reprs",
+        "buggy_start": 413,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/net/ethernet/netronome/nfp/flower/main.c",
+        "func": "nfp_flower_spawn_vnic_reprs",
+        "buggy_start": 433,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "8572cea1461a006bce1d06c0c4b0575869125fa4",
+    "subject": "nfp: flower: prevent memory leak in nfp_flower_spawn_phy_reprs",
+    "c_files": [
+      "drivers/net/ethernet/netronome/nfp/flower/main.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/netronome/nfp/flower/main.c",
+        "func": "nfp_flower_spawn_phy_reprs",
+        "buggy_start": 515,
+        "buggy_count": 6
+      },
+      {
+        "file": "drivers/net/ethernet/netronome/nfp/flower/main.c",
+        "func": "nfp_flower_spawn_phy_reprs",
+        "buggy_start": 525,
+        "buggy_count": 11
+      },
+      {
+        "file": "drivers/net/ethernet/netronome/nfp/flower/main.c",
+        "func": "nfp_flower_spawn_phy_reprs",
+        "buggy_start": 542,
+        "buggy_count": 6
+      }
+    ]
+  },
+  {
+    "fix_sha": "8e949363f017e2011464812a714fb29710fb95b4",
+    "subject": "net: mlx5: Add a missing check on idr_find, free buf",
+    "c_files": [
+      "drivers/net/ethernet/mellanox/mlx5/core/fpga/tls.c"
+    ],
+    "hunks": [
+      {
+        "file": "drivers/net/ethernet/mellanox/mlx5/core/fpga/tls.c",
+        "func": "mlx5_fpga_tls_resync_rx",
+        "buggy_start": 217,
+        "buggy_count": 15
+      },
+      {
+        "file": "drivers/net/ethernet/mellanox/mlx5/core/fpga/tls.c",
+        "func": "mlx5_fpga_tls_resync_rx",
+        "buggy_start": 238,
+        "buggy_count": 6
+      }
+    ]
+  }
+]
