@@ -3,6 +3,39 @@
 Reproduction package for the paper *"Seed Patches to CodeQL Queries: Compositional
 Synthesis with Proof-of-Concept Validation"* (submission version).
 
+## Abstract
+
+Automating the synthesis of CodeQL vulnerability detectors from bug-fix patches is an
+appealing alternative to manual query authoring, but using LLM to generate queries in a
+single monolithic pass frequently compiles yet fails to generalize beyond the seed
+instance. We present QLM, a compositional synthesis framework that tackles this problem
+along two axes. First, QLM constructs a minimal Proof-of-Concept (PoC) program from each
+patch and gates it through a deterministic structural verifier that checks feature counts
+against the original bug-relevant slice, producing a faithful oracle for the synthesis
+loop. Second, a top-down planner decomposes each query into atomic predicates whose
+correctness is validated individually against the PoC before the full query is
+assembled. Predicates that miss known-buggy cases or fire on safe cases are rejected and
+refined with targeted diagnostic feedback. On the Linux kernel, QLM discovered 49
+previously unknown vulnerabilities, of which 5 have been confirmed by maintainers and 17
+merged upstream, while another 10 were fixed by other developers; these 32 already fixed
+or confirmed bugs had persisted undetected for a median of 8.3 years (up to 15.3 years).
+On KBH-Bench, a new benchmark of 500 ground-truth kernel bug-fix commits, QLM raises
+normalized recall 2.6× over a monolithic baseline (5.6% → 14.8%) and doubles
+analyze-survival on the full kernel database (46% → 92%).
+
+## Overview
+
+![Overview of QLM](figures/overview.png)
+
+Given a seed bug-fix patch, QLM first extracts a bug schema that captures the semantic
+obligation restored by the patch. It then synthesizes a compact PoC containing buggy and
+safe cases, checks it against the seed with a structural fidelity check
+([`code/verifier/`](code/verifier/)), and compiles it into a lightweight CodeQL database.
+Top-down query planning translates the schema into a query skeleton and a set of
+predicate specifications; the predicates are then generated bottom-up, each validated by
+compilation and PoC execution, and assembled into the final query, which is run on the
+full codebase.
+
 QLM synthesizes CodeQL queries that detect a bug pattern, using a
 single bug-fix commit (the *seed*) as the specification. This artifact
 lets you inspect the exact prompts, the queries the LLM produced, and
@@ -32,6 +65,8 @@ qlm-artifact/
 ├── README.md                  # this file
 ├── canonical-queries/         # reserved for hand-written reference
 │                              #   queries (empty in this release)
+├── figures/
+│   └── overview.png           # QLM workflow (paper Fig. overview)
 ├── data/
 │   ├── seeds/                 # 25 seeds × 5 patterns (metadata only)
 │   │   ├── seeds.json
