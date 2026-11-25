@@ -145,8 +145,6 @@ The 32 bugs that are fixed or confirmed had persisted for a median of 8.3 years 
 ```
 qlm-artifact/
 ├── README.md                  # this file
-├── canonical-queries/         # reserved for hand-written reference
-│                              #   queries (empty in this release)
 ├── figures/
 │   └── overview.png           # QLM workflow (paper Fig. overview)
 ├── data/
@@ -154,7 +152,7 @@ qlm-artifact/
 │   │   ├── seeds.json
 │   │   └── seeds.csv
 │   ├── generated-queries/     # LLM-generated CodeQL queries + audit logs
-│   │   ├── C0/  (125 .ql + 125 .audit.json)   # KNighter-style baseline
+│   │   ├── C0/  (125 .ql + 125 .audit.json)   # monolithic baseline
 │   │   ├── C1/  (120 .ql + 121 .audit.json)   # monolithic + PoC
 │   │   ├── C2/  (125 .ql + 125 .audit.json)   # compositional
 │   │   ├── C3/  (124 .ql + 125 .audit.json)   # QLM (full pipeline)
