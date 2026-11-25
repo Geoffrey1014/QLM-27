@@ -38,6 +38,107 @@ the scoring metrics behind the paper's tables — and gives you the
 scripts to re-run the scoring pipeline once the (large, regenerable)
 CodeQL databases are rebuilt locally.
 
+## Linux kernel findings (RQ1)
+
+QLM-synthesized queries found **49 previously unknown bugs** in mainline Linux (v6.19-rc), status as of 2026-11-20. Reports from different queries were deduplicated by source location, so each bug is counted once; one function can hold several bugs (e.g. two separate leaks). Lifetime is measured from the commit that introduced the bug (found with `git blame`, the patch's `Fixes:` tag) to our fix. The full list is also in [`data/rq1-findings.csv`](data/rq1-findings.csv).
+
+| Status | Bugs |
+|---|---:|
+| Fixed — our patch merged upstream | 17 |
+| Confirmed by maintainer | 5 |
+| Fixed upstream by another developer | 10 |
+| Patch under LKML review | 11 |
+| Pending — patch prepared, not yet sent | 6 |
+| **Total** | **49** |
+
+The 32 bugs that are fixed or confirmed had persisted for a median of 8.3 years (up to 15.3).
+
+| Bug type | Bugs |
+|---|---:|
+| Refcount leak | 27 |
+| Unbounded buffer accumulation | 5 |
+| Integer overflow | 5 |
+| Out-of-bounds index | 4 |
+| Memory leak | 2 |
+| sysfs buffer overflow | 2 |
+| ERR_PTR dereference | 2 |
+| Sleep in atomic context | 1 |
+| Out-of-bounds read | 1 |
+
+### Fixed — our patch merged upstream (17)
+
+| No. | File | Function | Bug type | Introduced | Lifetime (y) |
+|---:|---|---|---|---:|---:|
+| 1 | `drivers/video/of_display_timing.c` | `of_get_display_timings` | Refcount leak | 2012 | 13.3 |
+| 2 | `arch/arm/mach-imx/src.c` | `imx_src_init` | Refcount leak | 2013 | 13.3 |
+| 3 | `arch/arm/mach-imx/src.c` | `imx7_src_init` (first lookup) | Refcount leak | 2021 | 5.1 |
+| 4 | `arch/arm/mach-imx/src.c` | `imx7_src_init` (second lookup) | Refcount leak | 2021 | 5.1 |
+| 5 | `scripts/tracepoint-update.c` | `add_string` | Memory leak | 2025 | 0.3 |
+| 6 | `drivers/greybus/gb-beagleplay.c` | `hdlc_tx_frames` | Sleep in atomic context | 2023 | 2.7 |
+| 7 | `drivers/media/cec/platform/stm32/stm32-cec.c` | `stm32_rx_done` | Out-of-bounds index | 2017 | 9.0 |
+| 8 | `drivers/mtd/parsers/ofpart_core.c` | `parse_fixed_partitions` | Refcount leak | 2021 | 4.7 |
+| 9 | `drivers/of/base.c` | `of_alias_scan` | Refcount leak | 2011 | 14.4 |
+| 10 | `drivers/pinctrl/pinctrl-single.c` | `pcs_add_gpio_func` | Refcount leak | 2012 | 13.5 |
+| 11 | `drivers/soc/samsung/exynos-pmu.c` | `exynos_get_pmu_regmap` | Refcount leak | 2017 | 9.4 |
+| 27 | `arch/arm/mach-versatile/platsmp-vexpress.c` | `vexpress_smp_dt_prepare_cpus` | Refcount leak | 2013 | 13.0 |
+| 28 | `arch/arm/mach-versatile/v2m.c` | `vexpress_flags_set` | Refcount leak | 2014 | 12.4 |
+| 33 | `drivers/media/rc/fintek-cir.c` | `fintek_get_rx_ir_data` | Unbounded buffer accumulation | 2011 | 15.3 |
+| 34 | `drivers/mtd/parsers/qcomsmempart.c` | `parse_qcomsmem_part` (offset) | Integer overflow | 2021 | 5.7 |
+| 35 | `drivers/mtd/parsers/qcomsmempart.c` | `parse_qcomsmem_part` (size) | Integer overflow | 2021 | 5.7 |
+| 42 | `drivers/thermal/sprd_thermal.c` | `sprd_thm_probe` | Out-of-bounds index | 2020 | 6.6 |
+
+### Confirmed by maintainer (5)
+
+| No. | File | Function | Bug type | Introduced | Lifetime (y) |
+|---:|---|---|---|---:|---:|
+| 21 | `arch/arm/mach-mstar/mstarv7.c` | `mstarv7_boot_secondary` | Refcount leak | 2020 | 5.5 |
+| 22 | `arch/arm/mach-mstar/mstarv7.c` | `mstarv7_init` | Refcount leak | 2020 | 5.9 |
+| 23 | `drivers/bus/ti-sysc.c` | `sysc_init_static_data` | Refcount leak | 2017 | 8.3 |
+| 24 | `drivers/bus/vexpress-config.c` | `vexpress_syscfg_probe` | Refcount leak | 2020 | 6.2 |
+| 25 | `tools/objtool/elf.c` | `elf_alloc_reloc` | Memory leak | 2016 | 9.9 |
+
+### Fixed upstream by another developer (10)
+
+| No. | File | Function | Bug type | Introduced | Lifetime (y) |
+|---:|---|---|---|---:|---:|
+| 12 | `drivers/thermal/thermal_of.c` | `thermal_of_cm_lookup` | Refcount leak | 2025 | 0.9 |
+| 13 | `arch/arm/mach-imx/avic.c` | `mxc_init_irq` (fsl,avic node) | Refcount leak | 2012 | 14.0 |
+| 14 | `drivers/memory/emif.c` | `of_get_memory_device_details` | Refcount leak | 2012 | 13.8 |
+| 15 | `drivers/bus/ti-sysc.c` | `sysc_init_stdout_path` | Refcount leak | 2017 | 8.3 |
+| 16 | `arch/arm/mach-imx/avic.c` | `mxc_init_irq` (fsl,imx25-ccm node) | Refcount leak | 2018 | 8.3 |
+| 17 | `arch/arm/mach-tegra/irq.c` | `tegra_init_irq` | Refcount leak | 2015 | 11.2 |
+| 18 | `arch/arm/mach-tegra/irq.c` | `tegra114_gic_cpu_pm_registration` | Refcount leak | 2013 | 12.9 |
+| 19 | `drivers/platform/chrome/cros_ec_typec.c` | `cros_typec_register_partner_pdos` (sink caps) | Unbounded buffer accumulation | 2022 | 3.8 |
+| 20 | `drivers/platform/chrome/cros_ec_typec.c` | `cros_typec_register_partner_pdos` (source caps) | Unbounded buffer accumulation | 2022 | 3.8 |
+| 43 | `drivers/iio/imu/bno055/bno055.c` | `BNO055_SCAN_CH_COUNT` | Unbounded buffer accumulation | 2022 | 3.4 |
+
+### Patch under LKML review (11)
+
+| No. | File | Function | Bug type | Introduced | Lifetime (y) |
+|---:|---|---|---|---:|---:|
+| 26 | `arch/arm/mach-alpine/alpine_cpu_pm.c` | `alpine_cpu_pm_init` | Refcount leak | 2015 | 11.5 |
+| 29 | `drivers/bus/ti-sysc.c` | `sysc_exit` (module unload) | Refcount leak | 2017 | 8.3 |
+| 30 | `drivers/firmware/trusted_foundations.c` | `of_register_trusted_foundations` | Refcount leak | 2013 | 12.6 |
+| 31 | `drivers/iio/adc/xilinx-ams.c` | `ams_init_module` | Unbounded buffer accumulation | 2021 | 4.8 |
+| 32 | `drivers/mailbox/omap-mailbox.c` | `omap_mbox_probe` | Refcount leak | 2014 | 11.3 |
+| 36 | `drivers/net/ethernet/freescale/fman/fman.c` | `fman_set_port_params` (LIODN tables) | Out-of-bounds index | 2015 | 10.8 |
+| 37 | `drivers/net/ethernet/freescale/fman/fman.c` | `fman_set_port_params` (MAC tables) | Out-of-bounds index | 2015 | 10.8 |
+| 38 | `drivers/soc/dove/pmu.c` | `dove_init_pmu` (domains_node) | Refcount leak | 2015 | 10.9 |
+| 39 | `drivers/soc/dove/pmu.c` | `dove_init_pmu` (np_pmu) | Refcount leak | 2015 | 10.9 |
+| 40 | `drivers/soundwire/master.c` | `clock_frequencies_show` | sysfs buffer overflow | 2020 | 6.4 |
+| 41 | `drivers/soundwire/master.c` | `clock_gears_show` | sysfs buffer overflow | 2020 | 6.4 |
+
+### Pending — patch prepared, not yet sent (6)
+
+| No. | File | Function | Bug type | Introduced | Lifetime (y) |
+|---:|---|---|---|---:|---:|
+| 44 | `drivers/mtd/nand/raw/diskonchip.c` | `inftl_partscan` (offset) | Integer overflow | 2005 | 21.4 |
+| 45 | `drivers/mtd/nand/raw/diskonchip.c` | `inftl_partscan` (size) | Integer overflow | 2005 | 21.4 |
+| 46 | `drivers/mtd/nand/raw/diskonchip.c` | `nftl_partscan` (size) | Integer overflow | 2005 | 21.5 |
+| 47 | `drivers/mtd/nand/raw/nand_toshiba.c` | `toshiba_nand_benand_read_eccstatus_op` | ERR_PTR dereference | 2020 | 6.5 |
+| 48 | `drivers/thermal/ti-soc-thermal/ti-thermal-common.c` | `ti_thermal_report_sensor_temperature` | ERR_PTR dereference | 2012 | 14.2 |
+| 49 | `sound/usb/midi.c` | `find_usb_ijack` | Out-of-bounds read | 2024 | 2.6 |
+
 ## What's in here
 
 - **Prompts** — the LLM prompt template for every ablation cell
@@ -50,6 +151,7 @@ CodeQL databases are rebuilt locally.
   2–4 are computed from these.
 - **Pipeline scripts** — the batched scoring driver, the per-query
   scorer, and the seed↔PoC consistency verifier.
+- **RQ1 findings** — the 49 Linux kernel bugs, as a CSV.
 - **Seed metadata** — the 25 seeds (5 patterns × 5 seeds), as JSON and
   CSV.
 
@@ -73,6 +175,7 @@ qlm-artifact/
 │   │   ├── C3/  (124 .ql + 125 .audit.json)   # QLM (full pipeline)
 │   │   ├── L0/  (123 .ql + 125 .audit.json)   # RQ4 zero-shot
 │   │   └── L1/  ( 63 .ql +  63 .audit.json)   # RQ4 mono + compile self-fix
+│   ├── rq1-findings.csv       # the 49 Linux kernel bugs found in RQ1
 │   ├── schemas/               # bug schema definition + 125 C3 schema instances
 │   │   ├── README.md
 │   │   └── instances/  (125 .json)

@@ -1,0 +1,50 @@
+no,file,function,bug_type,introduced,lifetime_years,status
+1,drivers/video/of_display_timing.c,of_get_display_timings,Refcount leak,2012,13.3,Fixed (our patch merged)
+2,arch/arm/mach-imx/src.c,imx_src_init,Refcount leak,2013,13.3,Fixed (our patch merged)
+3,arch/arm/mach-imx/src.c,"imx7_src_init, first lookup",Refcount leak,2021,5.1,Fixed (our patch merged)
+4,arch/arm/mach-imx/src.c,"imx7_src_init, second lookup",Refcount leak,2021,5.1,Fixed (our patch merged)
+5,scripts/tracepoint-update.c,add_string,Memory leak,2025,0.3,Fixed (our patch merged)
+6,drivers/greybus/gb-beagleplay.c,hdlc_tx_frames,Sleep in atomic context,2023,2.7,Fixed (our patch merged)
+7,drivers/media/cec/platform/stm32/stm32-cec.c,stm32_rx_done,Out-of-bounds index,2017,9.0,Fixed (our patch merged)
+8,drivers/mtd/parsers/ofpart_core.c,parse_fixed_partitions,Refcount leak,2021,4.7,Fixed (our patch merged)
+9,drivers/of/base.c,of_alias_scan,Refcount leak,2011,14.4,Fixed (our patch merged)
+10,drivers/pinctrl/pinctrl-single.c,pcs_add_gpio_func,Refcount leak,2012,13.5,Fixed (our patch merged)
+11,drivers/soc/samsung/exynos-pmu.c,exynos_get_pmu_regmap,Refcount leak,2017,9.4,Fixed (our patch merged)
+12,drivers/thermal/thermal_of.c,thermal_of_cm_lookup,Refcount leak,2025,0.9,Fixed upstream by another developer
+13,arch/arm/mach-imx/avic.c,"mxc_init_irq, fsl,avic node",Refcount leak,2012,14.0,Fixed upstream by another developer
+14,drivers/memory/emif.c,of_get_memory_device_details,Refcount leak,2012,13.8,Fixed upstream by another developer
+15,drivers/bus/ti-sysc.c,sysc_init_stdout_path,Refcount leak,2017,8.3,Fixed upstream by another developer
+16,arch/arm/mach-imx/avic.c,"mxc_init_irq, fsl,imx25-ccm node",Refcount leak,2018,8.3,Fixed upstream by another developer
+17,arch/arm/mach-tegra/irq.c,tegra_init_irq,Refcount leak,2015,11.2,Fixed upstream by another developer
+18,arch/arm/mach-tegra/irq.c,tegra114_gic_cpu_pm_registration,Refcount leak,2013,12.9,Fixed upstream by another developer
+19,drivers/platform/chrome/cros_ec_typec.c,"cros_typec_register_partner_pdos, sink caps",Unbounded buffer accumulation,2022,3.8,Fixed upstream by another developer
+20,drivers/platform/chrome/cros_ec_typec.c,"cros_typec_register_partner_pdos, source caps",Unbounded buffer accumulation,2022,3.8,Fixed upstream by another developer
+21,arch/arm/mach-mstar/mstarv7.c,mstarv7_boot_secondary,Refcount leak,2020,5.5,Confirmed by maintainer
+22,arch/arm/mach-mstar/mstarv7.c,mstarv7_init,Refcount leak,2020,5.9,Confirmed by maintainer
+23,drivers/bus/ti-sysc.c,sysc_init_static_data,Refcount leak,2017,8.3,Confirmed by maintainer
+24,drivers/bus/vexpress-config.c,vexpress_syscfg_probe,Refcount leak,2020,6.2,Confirmed by maintainer
+25,tools/objtool/elf.c,elf_alloc_reloc,Memory leak,2016,9.9,Confirmed by maintainer
+26,arch/arm/mach-alpine/alpine_cpu_pm.c,alpine_cpu_pm_init,Refcount leak,2015,11.5,Patch under review
+27,arch/arm/mach-versatile/platsmp-vexpress.c,vexpress_smp_dt_prepare_cpus,Refcount leak,2013,13.0,Fixed (our patch merged)
+28,arch/arm/mach-versatile/v2m.c,vexpress_flags_set,Refcount leak,2014,12.4,Fixed (our patch merged)
+29,drivers/bus/ti-sysc.c,"sysc_exit, module unload",Refcount leak,2017,8.3,Patch under review
+30,drivers/firmware/trusted_foundations.c,of_register_trusted_foundations,Refcount leak,2013,12.6,Patch under review
+31,drivers/iio/adc/xilinx-ams.c,ams_init_module,Unbounded buffer accumulation,2021,4.8,Patch under review
+32,drivers/mailbox/omap-mailbox.c,omap_mbox_probe,Refcount leak,2014,11.3,Patch under review
+33,drivers/media/rc/fintek-cir.c,fintek_get_rx_ir_data,Unbounded buffer accumulation,2011,15.3,Fixed (our patch merged)
+34,drivers/mtd/parsers/qcomsmempart.c,"parse_qcomsmem_part, offset",Integer overflow,2021,5.7,Fixed (our patch merged)
+35,drivers/mtd/parsers/qcomsmempart.c,"parse_qcomsmem_part, size",Integer overflow,2021,5.7,Fixed (our patch merged)
+36,drivers/net/ethernet/freescale/fman/fman.c,"fman_set_port_params, LIODN tables",Out-of-bounds index,2015,10.8,Patch under review
+37,drivers/net/ethernet/freescale/fman/fman.c,"fman_set_port_params, MAC tables",Out-of-bounds index,2015,10.8,Patch under review
+38,drivers/soc/dove/pmu.c,"dove_init_pmu, domains_node",Refcount leak,2015,10.9,Patch under review
+39,drivers/soc/dove/pmu.c,"dove_init_pmu, np_pmu",Refcount leak,2015,10.9,Patch under review
+40,drivers/soundwire/master.c,clock_frequencies_show,sysfs buffer overflow,2020,6.4,Patch under review
+41,drivers/soundwire/master.c,clock_gears_show,sysfs buffer overflow,2020,6.4,Patch under review
+42,drivers/thermal/sprd_thermal.c,sprd_thm_probe,Out-of-bounds index,2020,6.6,Fixed (our patch merged)
+43,drivers/iio/imu/bno055/bno055.c,BNO055_SCAN_CH_COUNT,Unbounded buffer accumulation,2022,3.4,Fixed upstream by another developer
+44,drivers/mtd/nand/raw/diskonchip.c,"inftl_partscan, offset",Integer overflow,2005,21.4,Patch under our review
+45,drivers/mtd/nand/raw/diskonchip.c,"inftl_partscan, size",Integer overflow,2005,21.4,Patch under our review
+46,drivers/mtd/nand/raw/diskonchip.c,"nftl_partscan, size",Integer overflow,2005,21.5,Patch under our review
+47,drivers/mtd/nand/raw/nand_toshiba.c,toshiba_nand_benand_read_eccstatus_op,ERR_PTR dereference,2020,6.5,Patch under our review
+48,drivers/thermal/ti-soc-thermal/ti-thermal-common.c,ti_thermal_report_sensor_temperature,ERR_PTR dereference,2012,14.2,Patch under our review
+49,sound/usb/midi.c,find_usb_ijack,Out-of-bounds read,2024,2.6,Patch under our review
