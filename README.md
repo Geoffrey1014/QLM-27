@@ -181,6 +181,7 @@ qlm-artifact/
     │   ├── L0-prompt.md       # RQ4 zero-shot compositional
     │   ├── L1-prompt.md       # RQ4 monolithic + compile self-fix
     │   └── L3-prompt.md       # RQ4 closed-list surgical edits (future work)
+    ├── qlm/                          # generation pipeline: python3 -m qlm (see its README)
     ├── scoring/
     │   ├── score-cell-pattern.py     # per (cell, pattern) scorer
     │   ├── run-d4-batched.sh         # pattern-serial × 5-parallel driver
