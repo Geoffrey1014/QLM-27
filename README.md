@@ -203,86 +203,6 @@ qlm-artifact/
         └── seeds/                    # 25 verbatim seed slices + fix patches
 ```
 
-> **Note on file counts.** A handful of *(cell × seed × repeat)* slots
-> are missing a `.ql` or `.audit.json` because the corresponding
-> generation hit an iteration cap or a transient LLM/API error and was
-> not retried. Every `.audit.json` records the outcome, so the missing
-> slots are visible as gaps in the audit set and are reflected in the
-> per-cell `n_queries` fields in the scoring JSON. L1 is a
-> synthesis-cost side experiment and was only run to partial depth.
-
-## The five bug patterns
-
-Each seed belongs to one of five patterns; the seed↔pattern mapping is
-in [`data/seeds/seeds.json`](data/seeds/seeds.json) (and `.csv`).
-
-| pattern             | seed prefix | description                                   |
-|---------------------|-------------|-----------------------------------------------|
-| `four-features-Lin` | `lin-*`     | reference-count / device-node leaks           |
-| `four-features-Lu`  | `lu-*`      | memory leaks on error paths                   |
-| `missing-check`     | `mc-*`      | missing return-value / validity checks        |
-| `delay-gfp`         | `dg-*`      | sleeping allocation (`GFP_KERNEL`) in atomic  |
-| `error-return`      | `er-*`      | incorrect / missing error-code propagation    |
-
-## The ablation cells
-
-Cells sweep two axes — *compositional* synthesis and *PoC*
-(proof-of-concept) grounding:
-
-| cell | compositional | PoC | description                                 |
-|------|:-------------:|:---:|---------------------------------------------|
-| C0   | off           | off | KNighter-style monolithic baseline          |
-| C1   | off           | on  | monolithic generation grounded on a PoC     |
-| C2   | on            | off | compositional, no PoC                       |
-| C3   | on            | on  | **QLM** — the full pipeline                 |
-
-The RQ4 ladder (L0/L1/L3) probes synthesis cost at lower levels of the
-compositional pipeline; L3 (closed-list surgical edits) is described as
-future work and ships as a prompt only.
-
-## Scoring metrics
-
-Each scoring JSON reports both per-query and pattern-aggregate metrics.
-The key fields (see [`data/scoring/run-summary.json`](data/scoring/run-summary.json)):
-
-- **`pair_wise`** — over the seed's held-out buggy/fixed function
-  pairs, the query *fires on buggy AND stays silent on fixed*. The
-  headline correctness signal.
-- **`recall_in_db`** — of the known ground-truth bug sites in the
-  KBH-Bench CodeQL database, the fraction the query flags.
-- **`fires_buggy_rate`** — the query fires on the buggy version of a
-  pair (ignoring the fixed-version check).
-- `*_mean` / `*_best` — averaged across the repeats of a seed vs. the
-  single best repeat.
-
-## Path convention
-
-All script paths use `<REPO_ROOT>` for the local repository root and
-`<HOME_DIR>` for the user's home directory. When you re-run a script,
-replace these tokens (or export equivalent shell variables) with your
-local paths.
-
-## What is *not* in this artifact (and why)
-
-- **Full per-generation working directories.** Each generation spawns a
-  workdir under `experiments/rq3/d3-prep/<cell>/<seed>-rep<N>/`
-  containing the extracted seed slice, PoC source, PoC mini-DB
-  (`poc-db/`), per-predicate `.ql` files, and stage-by-stage logs.
-  These are ~2 GB in aggregate and are reproducible from the prompts +
-  seeds; excluded to keep the artifact small.
-- **The KBH-Bench CodeQL databases.** Five kernel databases
-  (linux-v4.14 / v4.19 / v5.0 / v5.10 / v5.15, built with CodeQL 2.23.0
-  or 2.25.6, ARM `allmodconfig`) total ~40 GB. Expected paths are in
-  [`code/scoring/score-cell-pattern.py`](code/scoring/score-cell-pattern.py)
-  (`PATTERN_CONFIG`); build scripts are in the paper's supplementary
-  material.
-- **The 126 pair-wise mini-databases.** Built per seed from the buggy
-  and fixed versions of each touched function via `codeql database
-  create --language=cpp --command="gcc -O0 -w -c <slice>.c"`. Total
-  ~1 GB; regeneration script is in the supplementary material.
-- **The Linux kernel source tree.** Any recent tag (v6.19-rc5 in our
-  runs) suffices; build databases against the same tag used for scoring.
-
 ## How to re-run the scoring pipeline
 
 **Prerequisites**
@@ -323,16 +243,6 @@ tmux new-window -n watchdog 'bash code/scoring/orphan-watchdog.sh'
 #    The scorer writes data/scoring/<cell>-<pattern>.json; the paper's
 #    Tables 2-4 are built from these plus run-summary.json.
 ```
-
-## Contents check summary
-
-| category                                   | count        | size    |
-|--------------------------------------------|--------------|---------|
-| seeds metadata                             | 2 files      | <10 KB  |
-| generated queries + audit logs (all cells) | ~1,300 files | ~5 MB   |
-| D4 scoring aggregates                       | 20 + 1 files | ~2 MB   |
-| prompts + scripts + verifier (incl. seed slices) | ~120 files | ~800 KB |
-| **total**                                  | **~1,400 files** | **~8 MB** |
 
 ## Licence
 
